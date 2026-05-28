@@ -1,0 +1,136 @@
+import type { SondageConfig } from "./types";
+
+const vendeur: SondageConfig = {
+  id: "vendeur",
+  title: "Vendeur en ligne",
+  subtitle: "Boutique en ligne, marketplace, dropship...",
+  heroTitle: "Audit de visibilité — Vendeur en ligne",
+  heroSubtitle: "Évaluons la performance de votre présence e-commerce",
+  tone: "vous",
+  image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&h=600&q=80&auto=format&fit=crop",
+  imageAlt: "Femme africaine vendant en ligne",
+  maxScore: 125,
+  questions: [
+    {
+      id: 1,
+      text: "Quel type de vendeur êtes-vous ?",
+      type: "single",
+      options: ["Boutique en ligne indépendante", "Vendeur sur marketplace (Jumia, etc.)", "Vente via réseaux sociaux uniquement", "Mixte (boutique + réseaux)", "En cours de lancement"],
+      points: [0, 0, 0, 0, 0],
+    },
+    {
+      id: 2,
+      text: "Avez-vous un site e-commerce ou une boutique en ligne ?",
+      type: "single",
+      options: [
+        "Oui, boutique pro avec paiement en ligne intégré",
+        "Oui, mais sans paiement en ligne direct",
+        "Non, je vends uniquement sur les réseaux",
+        "Pas encore de présence en ligne",
+      ],
+      points: [20, 10, 5, 0],
+    },
+    {
+      id: 3,
+      text: "Sur quelles plateformes vendez-vous ou faites-vous votre promotion ?",
+      type: "multi",
+      options: ["Instagram Shop", "Facebook Shop", "WhatsApp Business", "TikTok Shop", "Jumia", "Site propre", "Marketplace locale", "Pinterest"],
+      points: [5, 4, 4, 4, 3, 5, 3, 2],
+    },
+    {
+      id: 4,
+      text: "À quelle fréquence publiez-vous vos produits sur les réseaux ?",
+      type: "single",
+      options: [
+        "Plusieurs fois par jour",
+        "1 à 2 fois par jour",
+        "Quelques fois par semaine",
+        "Rarement, selon les arrivages",
+        "Rarement ou jamais",
+      ],
+      points: [18, 13, 8, 4, 0],
+    },
+    {
+      id: 5,
+      text: "La qualité de vos photos produits est-elle professionnelle ?",
+      type: "single",
+      options: [
+        "Oui, fond blanc, éclairage pro, multiples angles",
+        "Correctes mais perfectibles",
+        "Photos téléphone sans mise en scène",
+        "Peu de photos de qualité",
+      ],
+      points: [15, 8, 3, 0],
+    },
+    {
+      id: 6,
+      text: "Avez-vous un système de paiement mobile intégré (Wave, Orange Money...) ?",
+      type: "single",
+      options: [
+        "Oui, plusieurs options de paiement mobile disponibles",
+        "Un seul moyen de paiement",
+        "Paiement à la livraison uniquement",
+        "Pas encore de système de paiement",
+      ],
+      points: [15, 8, 4, 0],
+    },
+    {
+      id: 7,
+      text: "Faites-vous de la publicité pour vos produits en ligne ?",
+      type: "single",
+      options: [
+        "Oui, Facebook/Instagram Ads régulièrement",
+        "Oui, ponctuellement lors des promotions",
+        "Uniquement du contenu organique",
+        "Jamais fait de publicité",
+      ],
+      points: [15, 8, 3, 0],
+    },
+    {
+      id: 8,
+      text: "Comment gérez-vous vos avis clients et votre réputation en ligne ?",
+      type: "single",
+      options: [
+        "Activement — je collecte et réponds aux avis",
+        "Partiellement — quelques témoignages",
+        "Peu — je ne gère pas vraiment ça",
+        "Pas du tout",
+      ],
+      points: [10, 5, 2, 0],
+    },
+    {
+      id: 9,
+      text: "Avez-vous un catalogue produits organisé et facilement navigable ?",
+      type: "single",
+      options: [
+        "Oui, catalogue structuré par catégories avec filtres",
+        "Partiellement organisé",
+        "Peu structuré",
+        "Pas de catalogue organisé",
+      ],
+      points: [10, 5, 2, 0],
+    },
+    {
+      id: 10,
+      text: "Relancez-vous vos anciens clients avec des offres personnalisées ?",
+      type: "single",
+      options: [
+        "Oui, newsletters, WhatsApp et promotions régulières",
+        "Parfois, sans stratégie définie",
+        "Rarement",
+        "Jamais",
+      ],
+      points: [7, 4, 1, 0],
+    },
+  ],
+  recommendations: [
+    { icon: "ShoppingBag", title: "Créer votre boutique en ligne professionnelle", desc: "Un site e-commerce avec paiement Wave/Orange Money intégré — le standard pour vendre au Sénégal.", relatedQuestions: [2, 6] },
+    { icon: "Camera",      title: "Investir dans des photos produits pro",          desc: "Fond blanc, éclairage parfait, multiples angles — des visuels qui convertissent.",                 relatedQuestions: [5] },
+    { icon: "Megaphone",   title: "Lancer des campagnes Facebook Ads produits",     desc: "Ciblage précis des acheteurs à Dakar. KEKELI gère vos campagnes de A à Z.",                      relatedQuestions: [7, 4] },
+    { icon: "Star",        title: "Collecter et afficher les avis clients",          desc: "La preuve sociale est le levier n°1 pour convertir les visiteurs en acheteurs.",                  relatedQuestions: [8] },
+    { icon: "Users",       title: "Mettre en place une stratégie de fidélisation",   desc: "WhatsApp Business + newsletters = vos anciens clients achètent à nouveau.",                       relatedQuestions: [10, 3] },
+    { icon: "TrendingUp",  title: "Structurer votre catalogue produits",             desc: "Des catégories claires, des descriptions complètes et des fiches optimisées pour vendre plus.",   relatedQuestions: [9, 2] },
+  ],
+};
+
+export default vendeur;

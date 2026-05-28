@@ -1,0 +1,136 @@
+import type { SondageConfig } from "./types";
+
+const artiste: SondageConfig = {
+  id: "artiste",
+  title: "Artiste & Musicien",
+  subtitle: "Artiste solo, groupe, beatmaker...",
+  heroTitle: "Audit de visibilité — Artiste & Musicien",
+  heroSubtitle: "Ta musique mérite d'être entendue. Évaluons ta présence digitale.",
+  tone: "tu",
+  image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&q=80&auto=format&fit=crop",
+  imageAlt: "Artiste africain en studio d'enregistrement",
+  maxScore: 120,
+  questions: [
+    {
+      id: 1,
+      text: "Quel est ton profil artistique ?",
+      type: "single",
+      options: ["Artiste solo (chanteur/rappeur/artiste)", "Groupe ou collectif", "Beatmaker / Producteur", "DJ", "Autre artiste créatif"],
+      points: [0, 0, 0, 0, 0],
+    },
+    {
+      id: 2,
+      text: "As-tu un site web ou une page EPK (Electronic Press Kit) ?",
+      type: "single",
+      options: [
+        "Oui, un site pro avec bio, musique, photos et contacts presse",
+        "Oui, mais basique et peu mis à jour",
+        "J'utilise seulement Linktree ou un lien bio",
+        "Non, pas encore",
+      ],
+      points: [20, 8, 4, 0],
+    },
+    {
+      id: 3,
+      text: "Sur quelles plateformes es-tu actif ?",
+      type: "multi",
+      options: ["Instagram", "TikTok", "YouTube", "Facebook", "Spotify", "Apple Music", "SoundCloud", "Audiomack"],
+      points: [5, 5, 4, 2, 4, 3, 2, 2],
+    },
+    {
+      id: 4,
+      text: "À quelle fréquence publies-tu du contenu (posts, reels, clips...) ?",
+      type: "single",
+      options: [
+        "Tous les jours ou presque",
+        "3 à 5 fois par semaine",
+        "1 à 2 fois par semaine",
+        "Quelques fois par mois",
+        "Rarement, surtout à la sortie de musique",
+      ],
+      points: [18, 13, 8, 4, 1],
+    },
+    {
+      id: 5,
+      text: "La qualité visuelle de tes contenus (photos, clips, covers) est-elle professionnelle ?",
+      type: "single",
+      options: [
+        "Oui, je travaille avec des photographes/vidéastes pros",
+        "Parfois pro, parfois je fais moi-même",
+        "Principalement amateur mais je m'améliore",
+        "Tout est fait avec mon téléphone sans post-prod",
+      ],
+      points: [15, 8, 3, 0],
+    },
+    {
+      id: 6,
+      text: "Quel est l'engagement de ta communauté ?",
+      type: "single",
+      options: [
+        "Très fort — commentaires, partages, messages quotidiens",
+        "Correct — quelques réactions par publication",
+        "Faible — peu d'interactions même avec des abonnés",
+        "Très faible — quasi aucune interaction",
+      ],
+      points: [15, 8, 3, 0],
+    },
+    {
+      id: 7,
+      text: "Comment gères-tu tes sorties musicales ?",
+      type: "single",
+      options: [
+        "Stratégie complète : teaser, campagne promo, pitching presse",
+        "Quelques posts avant la sortie",
+        "Je mets en ligne et j'espère que ça tourne",
+        "Pas vraiment de stratégie de sortie",
+      ],
+      points: [15, 7, 2, 0],
+    },
+    {
+      id: 8,
+      text: "As-tu une identité artistique visuelle cohérente ?",
+      type: "single",
+      options: [
+        "Oui, univers visuel fort et reconnaissable",
+        "En cours de construction",
+        "Peu définie, mon image change souvent",
+        "Pas vraiment réfléchi à ça",
+      ],
+      points: [10, 5, 2, 0],
+    },
+    {
+      id: 9,
+      text: "Fais-tu de la publicité digitale pour promouvoir ta musique ?",
+      type: "single",
+      options: [
+        "Oui, régulièrement avec budget dédié",
+        "Oui, lors des sorties",
+        "Rarement, j'ai testé",
+        "Jamais",
+      ],
+      points: [10, 5, 2, 0],
+    },
+    {
+      id: 10,
+      text: "As-tu des collaborations avec d'autres artistes ou des médias ?",
+      type: "single",
+      options: [
+        "Oui, régulièrement — collabs, interviews, playlists",
+        "Parfois, quelques collabs",
+        "Rarement",
+        "Pas encore",
+      ],
+      points: [8, 4, 1, 0],
+    },
+  ],
+  recommendations: [
+    { icon: "Music",     title: "Créer ton EPK professionnel",           desc: "Bio, photos HD, liens streaming, contacts presse — ton passeport pour les bookings et les médias.",                     relatedQuestions: [2] },
+    { icon: "Camera",   title: "Investir dans un shooting photo pro",    desc: "Tes visuels sont ta carte de visite. Un shooting pro change tout pour ton image et ta crédibilité.",                    relatedQuestions: [5] },
+    { icon: "Monitor",  title: "Développer une stratégie TikTok / Reels",desc: "Les formats courts sont ton meilleur allié pour toucher de nouveaux fans gratuitement.",                                relatedQuestions: [3, 4] },
+    { icon: "Megaphone",title: "Planifier tes sorties musicales",         desc: "Un bon plan de sortie (6 semaines) multiplie ton audience. KEKELI construit ce plan pour toi.",                         relatedQuestions: [7, 4] },
+    { icon: "Palette",  title: "Définir ton univers artistique visuel",   desc: "Couleurs, typographie, style photo cohérents — une identité forte te rend mémorable.",                                   relatedQuestions: [8] },
+    { icon: "Globe",    title: "Créer ton site web artiste",              desc: "Un hub centralisé pour tes fans, la presse et les bookeurs. Professionnel et sur-mesure.",                               relatedQuestions: [2, 6] },
+  ],
+};
+
+export default artiste;

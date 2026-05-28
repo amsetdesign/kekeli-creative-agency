@@ -1,0 +1,135 @@
+import type { SondageConfig } from "./types";
+
+const evenement: SondageConfig = {
+  id: "evenement",
+  title: "Événement",
+  subtitle: "Concert, festival, conférence, mariage...",
+  heroTitle: "Audit de visibilité — Événement",
+  heroSubtitle: "Évaluons la communication digitale de vos événements",
+  tone: "vous",
+  image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&q=80&auto=format&fit=crop",
+  imageAlt: "Foule lors d'un festival africain",
+  maxScore: 125,
+  questions: [
+    {
+      id: 1,
+      text: "Quel type d'événements organisez-vous ?",
+      type: "single",
+      options: ["Concert / Show musical", "Festival", "Conférence / Forum", "Événement d'entreprise", "Mariage / Événement privé"],
+      points: [0, 0, 0, 0, 0],
+    },
+    {
+      id: 2,
+      text: "Avez-vous un site web dédié à vos événements ?",
+      type: "single",
+      options: [
+        "Oui, site pro avec programme, billetterie et galerie",
+        "Oui, page ou site simple",
+        "Non, seulement les réseaux sociaux",
+        "Pas de présence en ligne dédiée",
+      ],
+      points: [20, 8, 4, 0],
+    },
+    {
+      id: 3,
+      text: "Sur quelles plateformes communiquez-vous vos événements ?",
+      type: "multi",
+      options: ["Facebook Events", "Instagram", "TikTok", "YouTube", "WhatsApp (groupes/statuts)", "Eventbrite", "Affiches numériques", "Radio / TV"],
+      points: [4, 4, 4, 3, 3, 3, 3, 2],
+    },
+    {
+      id: 4,
+      text: "Combien de temps avant l'événement démarrez-vous la communication ?",
+      type: "single",
+      options: [
+        "2 mois ou plus avant",
+        "1 mois avant",
+        "2 à 3 semaines avant",
+        "Moins de 2 semaines",
+      ],
+      points: [18, 12, 6, 1],
+    },
+    {
+      id: 5,
+      text: "Créez-vous du contenu teaser (vidéos, countdowns, affiches) avant l'événement ?",
+      type: "single",
+      options: [
+        "Oui, campagne teaser complète et planifiée",
+        "Quelques posts et affiches",
+        "Juste une annonce basique",
+        "Peu ou pas de teaser",
+      ],
+      points: [15, 8, 3, 0],
+    },
+    {
+      id: 6,
+      text: "Avez-vous un système de billetterie en ligne ?",
+      type: "single",
+      options: [
+        "Oui, billetterie en ligne avec paiement mobile",
+        "Oui, vente via WhatsApp/réseaux",
+        "Non, vente physique uniquement",
+        "Entrée libre ou pas encore",
+      ],
+      points: [15, 7, 2, 0],
+    },
+    {
+      id: 7,
+      text: "Faites-vous une couverture live de vos événements ?",
+      type: "single",
+      options: [
+        "Oui, équipe dédiée photo/vidéo + live streaming",
+        "Quelques photos/vidéos pendant l'événement",
+        "Juste quelques stories",
+        "Pas de couverture live",
+      ],
+      points: [15, 8, 3, 0],
+    },
+    {
+      id: 8,
+      text: "Publiez-vous du contenu after-event (photos, vidéos, remerciements) ?",
+      type: "single",
+      options: [
+        "Oui, dans les 24h après l'événement",
+        "Oui, dans la semaine",
+        "Rarement, après plusieurs semaines",
+        "Jamais ou très rarement",
+      ],
+      points: [10, 5, 2, 0],
+    },
+    {
+      id: 9,
+      text: "Avez-vous des partenaires médias ou sponsors qui relayent vos événements ?",
+      type: "single",
+      options: [
+        "Oui, plusieurs partenaires médias et sponsors actifs",
+        "Quelques partenaires occasionnels",
+        "Rarement",
+        "Pas encore",
+      ],
+      points: [8, 4, 1, 0],
+    },
+    {
+      id: 10,
+      text: "Analysez-vous les retombées de vos événements (portée, engagement, ventes) ?",
+      type: "single",
+      options: [
+        "Oui, rapport complet post-événement",
+        "Quelques indicateurs suivis",
+        "Rarement",
+        "Jamais",
+      ],
+      points: [7, 4, 1, 0],
+    },
+  ],
+  recommendations: [
+    { icon: "Globe",       title: "Créer un site événement professionnel",       desc: "Programme, billetterie Wave/OM, galerie — un site complet qui vend vos billets 24h/24.",                           relatedQuestions: [2, 3] },
+    { icon: "Camera",      title: "Planifier une couverture photo/vidéo complète",desc: "Captation live + aftermovie = contenu réutilisable pour vos prochaines éditions.",                                  relatedQuestions: [7, 8] },
+    { icon: "Megaphone",   title: "Lancer une campagne teaser 6 semaines avant",  desc: "Countdowns, teasers vidéo, annonces progressives — créez l'anticipation autour de votre événement.",               relatedQuestions: [4, 5] },
+    { icon: "Users",       title: "Développer un réseau de partenaires médias",   desc: "Des relais médias locaux multiplient votre portée sans coût publicitaire supplémentaire.",                         relatedQuestions: [9, 3] },
+    { icon: "ShoppingBag", title: "Intégrer la billetterie mobile Wave/OM",        desc: "Le paiement mobile est incontournable pour vendre des billets au Sénégal. KEKELI l'intègre pour vous.",           relatedQuestions: [6] },
+    { icon: "BarChart2",   title: "Mesurer les retombées post-événement",          desc: "Portée, engagement, ventes, ROI — des données essentielles pour améliorer chaque édition.",                       relatedQuestions: [10] },
+  ],
+};
+
+export default evenement;

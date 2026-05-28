@@ -1,0 +1,136 @@
+import type { SondageConfig } from "./types";
+
+const entreprise: SondageConfig = {
+  id: "entreprise",
+  title: "Entreprise",
+  subtitle: "PME, startup, commerce, société...",
+  heroTitle: "Audit de visibilité — Entreprise",
+  heroSubtitle: "Évaluons la présence digitale de votre entreprise",
+  tone: "vous",
+  image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=600&q=80&auto=format&fit=crop",
+  imageAlt: "Businesswoman africaine avec tablette",
+  maxScore: 120,
+  questions: [
+    {
+      id: 1,
+      text: "Quel type d'entreprise êtes-vous ?",
+      type: "single",
+      options: ["PME / Startup", "Commerce / Boutique", "Prestataire de services", "Société industrielle / BTP", "Autre"],
+      points: [0, 0, 0, 0, 0],
+    },
+    {
+      id: 2,
+      text: "Votre entreprise a-t-elle un site web professionnel ?",
+      type: "single",
+      options: [
+        "Oui, moderne, responsive et mis à jour régulièrement",
+        "Oui, mais il est ancien ou rarement mis à jour",
+        "En cours de création",
+        "Non, pas encore",
+      ],
+      points: [20, 8, 5, 0],
+    },
+    {
+      id: 3,
+      text: "Sur quelles plateformes avez-vous une présence professionnelle ?",
+      type: "multi",
+      options: ["Facebook", "Instagram", "LinkedIn", "TikTok", "YouTube", "WhatsApp Business", "Google My Business", "Twitter / X"],
+      points: [3, 3, 5, 3, 2, 3, 4, 1],
+    },
+    {
+      id: 4,
+      text: "À quelle fréquence publiez-vous du contenu sur vos réseaux ?",
+      type: "single",
+      options: [
+        "Tous les jours ou presque",
+        "3 à 5 fois par semaine",
+        "1 à 2 fois par semaine",
+        "Quelques fois par mois",
+        "Rarement ou jamais",
+      ],
+      points: [18, 13, 8, 4, 0],
+    },
+    {
+      id: 5,
+      text: "Vos visuels de communication (photos, vidéos, affiches) sont-ils professionnels ?",
+      type: "single",
+      options: [
+        "Oui, créés par un professionnel ou une agence",
+        "Partiellement, on mélange pro et amateur",
+        "Non, on fait nous-mêmes avec les moyens du bord",
+        "On ne publie presque pas de visuels",
+      ],
+      points: [15, 8, 3, 0],
+    },
+    {
+      id: 6,
+      text: "Votre entreprise fait-elle de la publicité digitale payante ?",
+      type: "single",
+      options: [
+        "Oui, avec un budget mensuel dédié",
+        "Oui, ponctuellement selon les besoins",
+        "On a testé quelques fois",
+        "Jamais",
+      ],
+      points: [15, 8, 3, 0],
+    },
+    {
+      id: 7,
+      text: "Vos clients peuvent-ils vous trouver facilement en ligne ?",
+      type: "single",
+      options: [
+        "Oui, on apparaît sur Google et les réseaux",
+        "Partiellement, surtout par bouche-à-oreille",
+        "Difficilement, notre présence est faible",
+        "Non, on n'est pas trouvable en ligne",
+      ],
+      points: [15, 8, 3, 0],
+    },
+    {
+      id: 8,
+      text: "Avez-vous une stratégie de communication définie ?",
+      type: "single",
+      options: [
+        "Oui, avec un plan annuel et un budget com",
+        "On a quelques axes mais rien de formalisé",
+        "On communique au fil des besoins",
+        "Pas de stratégie définie",
+      ],
+      points: [12, 6, 2, 0],
+    },
+    {
+      id: 9,
+      text: "Collectez-vous et analysez-vous vos données marketing ?",
+      type: "single",
+      options: [
+        "Oui, Google Analytics, CRM et rapports réguliers",
+        "On regarde les stats de temps en temps",
+        "Rarement et sans vraiment les exploiter",
+        "Jamais",
+      ],
+      points: [10, 5, 2, 0],
+    },
+    {
+      id: 10,
+      text: "Votre identité visuelle (logo, couleurs, charte) est-elle cohérente partout ?",
+      type: "single",
+      options: [
+        "Oui, charte graphique professionnelle et respectée",
+        "Partiellement cohérente",
+        "Peu cohérente, chaque support est différent",
+        "Pas d'identité visuelle définie",
+      ],
+      points: [10, 5, 2, 0],
+    },
+  ],
+  recommendations: [
+    { icon: "Globe",     title: "Créer ou refondre votre site web",                 desc: "Un site professionnel optimisé SEO est votre vitrine permanente. KEKELI peut le développer en 3 semaines.", relatedQuestions: [2, 7] },
+    { icon: "MapPin",    title: "Optimiser votre fiche Google My Business",          desc: "Soyez trouvable localement sur Google Maps et Search — essentiel pour toute entreprise à Dakar.",          relatedQuestions: [7, 3] },
+    { icon: "BarChart2", title: "Mettre en place un tableau de bord analytics",      desc: "Mesurez votre ROI et prenez des décisions basées sur des données réelles, pas des intuitions.",            relatedQuestions: [9] },
+    { icon: "Palette",   title: "Créer votre identité visuelle professionnelle",     desc: "Logo, charte graphique, templates — une identité cohérente inspire confiance et crédibilité.",              relatedQuestions: [10, 5] },
+    { icon: "Megaphone", title: "Lancer des campagnes publicité ciblées",            desc: "Facebook et Instagram Ads permettent de toucher précisément vos clients à Dakar et au Sénégal.",            relatedQuestions: [6, 4] },
+    { icon: "Users",     title: "Structurer votre community management",             desc: "Une présence active et cohérente sur les réseaux crée la confiance et fidélise vos clients.",                relatedQuestions: [3, 4] },
+  ],
+};
+
+export default entreprise;

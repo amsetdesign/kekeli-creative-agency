@@ -1,0 +1,135 @@
+import type { SondageConfig } from "./types";
+
+const marque: SondageConfig = {
+  id: "marque",
+  title: "Marque",
+  subtitle: "Mode, beauté, lifestyle...",
+  heroTitle: "Audit de visibilité — Votre Marque",
+  heroSubtitle: "Évaluons le rayonnement et la cohérence de votre marque en ligne",
+  tone: "vous",
+  image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&q=80&auto=format&fit=crop",
+  imageAlt: "Femme africaine en tenue de marque, style éditorial",
+  maxScore: 120,
+  questions: [
+    {
+      id: 1,
+      text: "Dans quel secteur évolue votre marque ?",
+      type: "single",
+      options: ["Mode & Vêtements", "Beauté & Cosmétiques", "Food & Boissons", "Lifestyle & Maison", "Tech & Gadgets"],
+      points: [0, 0, 0, 0, 0],
+    },
+    {
+      id: 2,
+      text: "Votre marque possède-t-elle une identité visuelle professionnelle ?",
+      type: "single",
+      options: [
+        "Oui — logo, charte graphique et guidelines complets",
+        "Logo existant mais pas de charte formelle",
+        "Logo simple, identité peu définie",
+        "Pas encore d'identité visuelle définie",
+      ],
+      points: [20, 10, 4, 0],
+    },
+    {
+      id: 3,
+      text: "Sur quelles plateformes votre marque est-elle présente ?",
+      type: "multi",
+      options: ["Instagram", "TikTok", "Pinterest", "YouTube", "Facebook", "LinkedIn", "Site web", "Marketplace"],
+      points: [5, 5, 3, 3, 3, 2, 5, 3],
+    },
+    {
+      id: 4,
+      text: "Votre contenu de marque est-il visuellement cohérent ?",
+      type: "single",
+      options: [
+        "Oui — couleurs, filtres, mise en page reconnaissables",
+        "Partiellement cohérent",
+        "Peu cohérent selon les publications",
+        "Pas de cohérence visuelle",
+      ],
+      points: [18, 9, 3, 0],
+    },
+    {
+      id: 5,
+      text: "Publiez-vous du contenu de marque régulièrement ?",
+      type: "single",
+      options: [
+        "Oui, avec un planning éditorial hebdomadaire",
+        "3 à 5 fois par semaine",
+        "Quelques fois par mois",
+        "Irrégulièrement",
+      ],
+      points: [15, 10, 4, 1],
+    },
+    {
+      id: 6,
+      text: "Travaillez-vous avec des influenceurs ou ambassadeurs ?",
+      type: "single",
+      options: [
+        "Oui, programme ambassadeurs structuré",
+        "Oui, quelques collaborations ponctuelles",
+        "Rarement",
+        "Pas encore",
+      ],
+      points: [15, 8, 2, 0],
+    },
+    {
+      id: 7,
+      text: "Votre storytelling de marque est-il fort et cohérent ?",
+      type: "single",
+      options: [
+        "Oui — histoire, valeurs, mission clairement communiqués",
+        "Partiellement défini",
+        "Peu développé",
+        "Pas de storytelling",
+      ],
+      points: [12, 6, 2, 0],
+    },
+    {
+      id: 8,
+      text: "Faites-vous des campagnes publicitaires pour votre marque ?",
+      type: "single",
+      options: [
+        "Oui, régulièrement avec budget dédié",
+        "Lors des lancements et promotions",
+        "Rarement",
+        "Jamais",
+      ],
+      points: [10, 5, 2, 0],
+    },
+    {
+      id: 9,
+      text: "Avez-vous une communauté engagée autour de votre marque ?",
+      type: "single",
+      options: [
+        "Oui, communauté active avec fort engagement",
+        "Communauté en construction",
+        "Peu d'engagement",
+        "Quasi aucune communauté",
+      ],
+      points: [8, 4, 1, 0],
+    },
+    {
+      id: 10,
+      text: "Mesurez-vous la notoriété et la perception de votre marque ?",
+      type: "single",
+      options: [
+        "Oui, brand monitoring et reportings réguliers",
+        "Partiellement, quelques indicateurs",
+        "Rarement",
+        "Jamais",
+      ],
+      points: [7, 4, 1, 0],
+    },
+  ],
+  recommendations: [
+    { icon: "Palette",   title: "Créer une identité visuelle de marque forte", desc: "Logo, charte graphique, guidelines — la base d'une marque mémorable et professionnelle.",          relatedQuestions: [2, 4] },
+    { icon: "Users",     title: "Lancer un programme ambassadeurs",             desc: "Les micro-influenceurs locaux sont le levier le plus efficace pour une marque africaine.",          relatedQuestions: [6, 9] },
+    { icon: "TrendingUp",title: "Développer votre storytelling de marque",      desc: "Histoire, valeurs, mission — donnez une âme à votre marque et créez une connexion émotionnelle.",  relatedQuestions: [7, 4] },
+    { icon: "Megaphone", title: "Structurer votre planning de contenu",          desc: "Cohérence visuelle et régularité — les deux piliers d'une marque forte sur les réseaux.",         relatedQuestions: [5, 4] },
+    { icon: "BarChart2", title: "Mettre en place le brand monitoring",           desc: "Suivez votre notoriété, vos mentions et la perception de votre marque en temps réel.",            relatedQuestions: [10, 9] },
+    { icon: "Globe",     title: "Créer votre site vitrine de marque",            desc: "Un site élégant qui raconte votre histoire et convertit les visiteurs en clients fidèles.",        relatedQuestions: [3, 8] },
+  ],
+};
+
+export default marque;

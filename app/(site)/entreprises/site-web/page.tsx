@@ -1,0 +1,113 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ChevronRight, Monitor, Check, ArrowRight } from "lucide-react";
+import FadeIn from "@/components/animations/FadeIn";
+import EntreprisesForm from "@/components/entreprises/EntreprisesForm";
+
+export const metadata: Metadata = {
+  title: "Site Web & Digitalisation Entreprise — KEKELI Creative Agency Dakar",
+  description: "Site vitrine, e-commerce et landing pages pour les entreprises à Dakar. Intégration Wave et Orange Money. Développement web professionnel au Sénégal.",
+  alternates: { canonical: "/entreprises/site-web" },
+};
+
+const COLOR = "#0EA5E9";
+
+const services = [
+  { title: "Site Vitrine", desc: "Présence professionnelle en ligne pour présenter vos services, équipe et contacts.", items: ["Design sur-mesure", "Mobile responsive", "SEO optimisé", "Formulaire de contact"] },
+  { title: "E-commerce", desc: "Boutique en ligne complète avec catalogue, panier et paiement mobile intégré.", items: ["Catalogue produits", "Panier & commandes", "Wave & Orange Money", "Gestion stock"] },
+  { title: "Landing Page", desc: "Page de conversion optimisée pour vos campagnes publicitaires et événements.", items: ["Design haute conversion", "Formulaire leads", "A/B testing", "Tracking pixels"] },
+  { title: "Espace Client", desc: "Portail sécurisé pour vos clients : suivi commandes, documents, communications.", items: ["Authentification", "Dashboard client", "Téléchargements", "Messagerie"] },
+];
+
+const process = [
+  { n: "01", title: "Brief & Specs", desc: "Définition des fonctionnalités, design et objectifs du site." },
+  { n: "02", title: "Maquettes", desc: "Wireframes et prototypes pour valider la structure avant développement." },
+  { n: "03", title: "Développement", desc: "Codage du site avec Next.js ou selon la technologie adaptée." },
+  { n: "04", title: "Tests & SEO", desc: "Tests multi-appareils, optimisation vitesse et référencement." },
+  { n: "05", title: "Mise en ligne", desc: "Déploiement, formation et support post-lancement." },
+];
+
+export default function SiteWebPage() {
+  return (
+    <>
+      <section className="relative min-h-[45vh] flex items-end pb-16 overflow-hidden" style={{ background: "#050A14" }}>
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full opacity-20" style={{ background: `radial-gradient(circle, ${COLOR} 0%, transparent 70%)`, filter: "blur(80px)" }} />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <FadeIn direction="down" className="mb-6">
+            <nav className="flex items-center gap-2 text-xs font-body text-white/40">
+              <Link href="/" className="hover:text-white/70 transition-colors">Accueil</Link>
+              <ChevronRight size={12} />
+              <Link href="/entreprises" className="hover:text-white/70 transition-colors">Entreprises</Link>
+              <ChevronRight size={12} />
+              <span className="text-white/70">Site Web & Digital</span>
+            </nav>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.1}>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: `${COLOR}22` }}>
+                <Monitor size={20} style={{ color: COLOR }} />
+              </div>
+              <p className="font-body text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: COLOR }}>Site Web & Digitalisation</p>
+            </div>
+            <h1 className="font-display text-5xl sm:text-6xl text-white leading-tight mb-4">
+              Votre entreprise,<br /><em className="not-italic" style={{ color: COLOR }}>présente partout.</em>
+            </h1>
+            <p className="font-body text-lg text-white/50 max-w-xl mb-8">
+              Site vitrine, e-commerce ou landing page — une présence digitale professionnelle avec paiement mobile intégré (Wave, Orange Money).
+            </p>
+            <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-white"
+              style={{ background: `linear-gradient(135deg, #0369A1, ${COLOR})` }}>
+              Lancer mon site <ArrowRight size={16} />
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+
+      <section className="py-20" style={{ background: "#F7F4EE" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn direction="up" className="mb-12 text-center">
+            <h2 className="font-display text-3xl md:text-4xl text-[#0C0B09]">Nos solutions <span style={{ color: COLOR }}>web</span></h2>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {services.map(({ title, desc, items }) => (
+              <div key={title} className="bg-white rounded-2xl p-7" style={{ border: "1px solid rgba(0,0,0,0.07)", boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}>
+                <h3 className="font-display text-xl text-[#0C0B09] mb-2">{title}</h3>
+                <p className="font-body text-sm text-[#78716C] mb-4">{desc}</p>
+                <ul className="space-y-2">
+                  {items.map((item) => (
+                    <li key={item} className="flex items-center gap-2 font-body text-sm text-[#57534E]">
+                      <Check size={14} style={{ color: COLOR }} />{item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#0C0B09]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn direction="up" className="mb-12 text-center">
+            <h2 className="font-display text-3xl md:text-4xl text-white">Notre <span style={{ color: COLOR }}>processus</span></h2>
+          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-5 gap-4">
+            {process.map(({ n, title, desc }) => (
+              <FadeIn key={n} direction="up" delay={parseInt(n) * 0.08}>
+                <div className="p-5 rounded-2xl" style={{ border: "1px solid rgba(255,255,255,0.07)" }}>
+                  <span className="font-display text-3xl font-bold mb-3 block" style={{ color: `${COLOR}60` }}>{n}</span>
+                  <h3 className="font-display text-base text-white mb-2">{title}</h3>
+                  <p className="font-body text-xs text-white/40 leading-relaxed">{desc}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <EntreprisesForm />
+    </>
+  );
+}
