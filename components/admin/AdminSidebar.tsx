@@ -6,7 +6,7 @@ import { useTransition } from "react";
 import { useRouter } from "next/navigation";
 import {
   LayoutDashboard, MessageSquare, Mic2, Building2,
-  Users, FolderOpen, Sparkles, ExternalLink, LogOut, Map, BookOpen, Music, Briefcase,
+  Users, FolderOpen, Sparkles, ExternalLink, LogOut, Map, BookOpen, Music, Briefcase, Mail, FileText,
 } from "lucide-react";
 import { logout } from "@/app/admin/actions";
 
@@ -31,6 +31,8 @@ const NAV = [
       { id: "clients",       icon: Users,       label: "Clients",           tab: "clients",       color: "#8B5CF6" },
       { id: "projects",      icon: FolderOpen,  label: "Projets",           tab: "projects",      color: "#F97316" },
       { id: "conversations", icon: Sparkles,    label: "Conversations IA",  tab: "conversations", color: "#06B6D4" },
+      { id: "newsletter",    icon: Mail,        label: "Newsletter",        tab: "newsletter",    color: "#10B981" },
+      { id: "blog",          icon: FileText,    label: "Blog",              tab: "blog",          color: "#C8A84B" },
     ],
   },
   {
@@ -57,6 +59,8 @@ interface Props {
     projects: number;
     active: number;
     conversations: number;
+    newsletter: number;
+    blog: number;
   };
 }
 
@@ -82,6 +86,8 @@ export default function AdminSidebar({ counts }: Props) {
     clients: counts.clients,
     projects: counts.projects,
     conversations: counts.conversations,
+    newsletter: counts.newsletter,
+    blog: counts.blog,
   };
 
   const pathname = usePathname();

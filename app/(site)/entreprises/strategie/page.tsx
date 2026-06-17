@@ -57,8 +57,8 @@ export default function StrategiePage() {
             <p className="font-body text-lg text-white/50 max-w-xl mb-8">
               Audit digital, stratégie de contenu et growth roadmap — un plan d'action sur-mesure pour faire croître votre entreprise durablement.
             </p>
-            <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-white"
-              style={{ background: `linear-gradient(135deg, #047857, ${COLOR})` }}>
+            <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-black"
+              style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)", boxShadow: "0 6px 20px rgba(200,168,75,0.35)" }}>
               Définir ma stratégie <ArrowRight size={16} />
             </Link>
           </FadeIn>

@@ -27,6 +27,9 @@ const t = {
       impactDesc: "Notre portée internationale",
       teamLabel: "À propos",
       teamDesc: "L'équipe et les valeurs",
+      blogLabel: "Blog",
+      blogDesc: "Conseils & actualités digitales",
+      portfolioNavDesc: "Nos projets & succès clients",
       aiToolsFree: "Outils IA · Gratuit",
       // Artist dropdown
       artistDir: "Direction Artistique",
@@ -86,6 +89,21 @@ const t = {
       toolNetworkDesc: "Quel réseau pour toi · Gratuit",
       toolDiag: "Diagnostic Entreprise",
       toolDiagDesc: "Que manque-t-il ? · Gratuit",
+      // Personnalités nav
+      personnalites: "Personnalités",
+      persoServicesTitle: "Nos services personnalités",
+      taglinePersonnalites: "Votre image, votre impact.",
+      seePagePersonnalites: "Voir la page →",
+      persoPersonalBranding: "Personal Branding",
+      persoPersonalBrandingDesc: "Logo, monogramme & charte visuelle",
+      persoImageDigitale: "Image Digitale",
+      persoImageDigitaleDesc: "Bio, photos & profils optimisés",
+      persoStrategieInfluence: "Stratégie d'Influence",
+      persoStrategieInfluenceDesc: "Contenu, édito & croissance",
+      persoGestionReputation: "Gestion de Réputation",
+      persoGestionReputationDesc: "E-réputation & crise",
+      // Tarifs
+      pricing: "Tarifs",
     },
 
     /* ── Hero ────────────────────────────────── */
@@ -332,6 +350,12 @@ const t = {
       companyApps: "Applications Mobile & Web",
       companyPhotoVideo: "Photo & Vidéo Business",
       companyCoach: "Business Coach 2 Mois",
+      // Personnalités links
+      persoCol: "Personnalités",
+      persoPersonalBranding: "Personal Branding",
+      persoImageDigitale: "Image Digitale",
+      persoStrategieInfluence: "Stratégie d'Influence",
+      persoGestionReputation: "Gestion de Réputation",
     },
 
     /* ── Pages ───────────────────────────────── */
@@ -556,6 +580,9 @@ const t = {
       impactDesc: "Our international reach",
       teamLabel: "About us",
       teamDesc: "The team and values",
+      blogLabel: "Blog",
+      blogDesc: "Tips & digital news",
+      portfolioNavDesc: "Our projects & client success",
       aiToolsFree: "AI Tools · Free",
       artistDir: "Artistic Direction",
       artistDirDesc: "Identity & visual universe",
@@ -611,6 +638,21 @@ const t = {
       toolNetworkDesc: "Which social network for you · Free",
       toolDiag: "Business Diagnostic",
       toolDiagDesc: "What's missing? · Free",
+      // Personnalités nav
+      personnalites: "Personalities",
+      persoServicesTitle: "Our personality services",
+      taglinePersonnalites: "Your image, your impact.",
+      seePagePersonnalites: "See the page →",
+      persoPersonalBranding: "Personal Branding",
+      persoPersonalBrandingDesc: "Logo, monogram & visual identity",
+      persoImageDigitale: "Digital Image",
+      persoImageDigitaleDesc: "Bio, photos & optimized profiles",
+      persoStrategieInfluence: "Influence Strategy",
+      persoStrategieInfluenceDesc: "Content, editorial & growth",
+      persoGestionReputation: "Reputation Management",
+      persoGestionReputationDesc: "E-reputation & crisis",
+      // Pricing
+      pricing: "Pricing",
     },
 
     hero: {
@@ -842,6 +884,12 @@ const t = {
       companyApps: "Mobile & Web Apps",
       companyPhotoVideo: "Business Photo & Video",
       companyCoach: "Business Coach 2 Months",
+      // Personnalités links
+      persoCol: "Personalities",
+      persoPersonalBranding: "Personal Branding",
+      persoImageDigitale: "Digital Image",
+      persoStrategieInfluence: "Influence Strategy",
+      persoGestionReputation: "Reputation Management",
     },
 
     pages: {

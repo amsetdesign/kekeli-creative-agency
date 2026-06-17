@@ -332,7 +332,7 @@ export default function ClipsForm() {
 
       <button type="submit" disabled={status === "loading" || !form.productionType || !form.nomArtiste || !form.email}
         className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-body font-bold text-base text-black transition-all disabled:opacity-50"
-        style={{ background: "linear-gradient(135deg, #EC4899 0%, #C2185B 100%)", boxShadow: "0 8px 30px rgba(236,72,153,0.35)" }}>
+        style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)", boxShadow: "0 8px 30px rgba(200,168,75,0.35)" }}>
         {status === "loading"
           ? <><Loader2 size={18} className="animate-spin" /> Envoi en cours...</>
           : "Envoyer mon brief vidéo →"}

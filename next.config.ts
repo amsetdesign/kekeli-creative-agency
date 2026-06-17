@@ -22,8 +22,10 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 7, // 7 jours
   },
   experimental: {
-    // Tree-shake les gros packages d'icônes et d'animations
     optimizePackageImports: ["lucide-react", "framer-motion", "@supabase/supabase-js"],
+  },
+  turbopack: {
+    root: __dirname,
   },
   async headers() {
     return [{ source: "/(.*)", headers: securityHeaders }];

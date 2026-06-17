@@ -37,6 +37,13 @@ export interface ClientProfile {
   artist_profile: ArtistProfile | null;
 }
 
+export interface ProjectFinancial {
+  quoted: number;
+  paid: number;
+  currency: string;
+  notes?: string;
+}
+
 export interface Project {
   id: string;
   created_at: string;
@@ -46,6 +53,7 @@ export interface Project {
   description: string | null;
   status: "en_attente" | "en_cours" | "termine" | "suspendu";
   progress: number;
+  financial?: ProjectFinancial | null;
   client_profiles?: Pick<ClientProfile, "full_name" | "company" | "email">;
 }
 
@@ -60,6 +68,13 @@ export interface ProjectUpdate {
   attachments: Array<{ name: string; url: string }>;
 }
 
+export interface MessageAttachment {
+  name: string;
+  url: string;
+  size: number;
+  type: string;
+}
+
 export interface ProjectMessage {
   id: string;
   created_at: string;
@@ -68,4 +83,5 @@ export interface ProjectMessage {
   sender_name: string;
   content: string;
   read_at: string | null;
+  attachments?: MessageAttachment[];
 }

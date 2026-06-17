@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase-ssr";
 import AnalyseReseauxClient from "@/components/analyse/AnalyseReseauxClient";
 
 export const metadata: Metadata = {
-  title: "IA Analyse Réseaux Sociaux | KEKELI Creative Agency",
-  description: "Notre IA analyse votre branding Instagram, TikTok et YouTube : score de cohérence, points à améliorer et plan d'action 30 jours.",
-  keywords: ["analyse réseaux sociaux IA artiste", "audit Instagram artiste Dakar", "TikTok musique Sénégal", "score cohérence branding", "plan action réseaux sociaux"],
+  title: "IA Analyse RÃ©seaux Sociaux | KEKELI Creative Agency",
+  description: "Notre IA analyse votre branding Instagram, TikTok et YouTube : score de cohÃ©rence, points Ã  amÃ©liorer et plan d'action 30 jours.",
+  keywords: ["analyse rÃ©seaux sociaux IA artiste", "audit Instagram artiste Dakar", "TikTok musique SÃ©nÃ©gal", "score cohÃ©rence branding", "plan action rÃ©seaux sociaux"],
   alternates: { canonical: "/artistes/analyse-reseaux" },
   openGraph: {
-    title: "IA Analyse Réseaux Sociaux — KEKELI Creative Agency",
-    description: "Score de cohérence, points faibles et plan d'action 30 jours pour votre présence Instagram, TikTok et YouTube.",
+    title: "IA Analyse RÃ©seaux Sociaux â€” KEKELI Creative Agency",
+    description: "Score de cohÃ©rence, points faibles et plan d'action 30 jours pour votre prÃ©sence Instagram, TikTok et YouTube.",
     url: "/artistes/analyse-reseaux",
   },
 };

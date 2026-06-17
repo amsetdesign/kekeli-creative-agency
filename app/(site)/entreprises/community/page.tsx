@@ -57,8 +57,8 @@ export default function CommunityPage() {
             <p className="font-body text-lg text-white/50 max-w-xl mb-8">
               Gestion professionnelle de vos réseaux sociaux, création de contenus et reels pour attirer et fidéliser vos clients.
             </p>
-            <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-white"
-              style={{ background: `linear-gradient(135deg, #5B21B6, ${COLOR})` }}>
+            <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-black"
+              style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)" }}>
               Gérer mes réseaux <ArrowRight size={16} />
             </Link>
           </FadeIn>

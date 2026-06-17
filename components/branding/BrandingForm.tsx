@@ -298,8 +298,8 @@ export default function BrandingForm() {
       {status === "error" && <p className="font-body text-sm text-red-400 text-center">{errorMsg}</p>}
 
       <button type="submit" disabled={status === "loading" || form.packs.length === 0 || !form.nomArtiste || !form.email}
-        className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-body font-bold text-base text-white transition-all disabled:opacity-50 hover:scale-[1.02]"
-        style={{ background: "linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)", boxShadow: "0 8px 30px rgba(139,92,246,0.35)" }}>
+        className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-body font-bold text-base text-black transition-all disabled:opacity-50 hover:scale-[1.02]"
+        style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)", boxShadow: "0 8px 30px rgba(200,168,75,0.35)" }}>
         {status === "loading"
           ? <><Loader2 size={18} className="animate-spin" /> Envoi en cours...</>
           : "Envoyer mon brief →"}

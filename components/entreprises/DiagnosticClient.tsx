@@ -244,7 +244,7 @@ export default function DiagnosticClient() {
         {error && <p className="text-red-400 text-sm font-body mb-4 text-center">{error}</p>}
         <button onClick={handleSubmit} disabled={!form.secteur}
           className="w-full flex items-center justify-center gap-2 py-4 rounded-xl font-body font-semibold text-sm text-white disabled:opacity-40 transition-all hover:opacity-90"
-          style={{ background: "linear-gradient(135deg, #047857, #10B981)" }}>
+          style={{ background: "linear-gradient(135deg, #C8A84B, #D4A83A)", color: "#000" }}>
           <Map size={16} /> Lancer le diagnostic
         </button>
       </div>

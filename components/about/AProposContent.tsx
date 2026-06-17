@@ -9,26 +9,6 @@ import Button from "@/components/ui/Button";
 import { useT } from "@/hooks/useT";
 import { useLanguage } from "@/providers/LanguageProvider";
 
-const TEAM_FR = [
-  { role: "Direction créative", desc: "Vision artistique et direction de l'ensemble des productions visuelles de l'agence.", skills: ["Branding", "Direction artistique", "Stratégie créative"] },
-  { role: "Stratégie digitale", desc: "Élaboration des plans de communication et supervision des campagnes publicitaires.", skills: ["SEO/SEA", "Analytics", "Content strategy"] },
-  { role: "Développement", desc: "Conception et développement des solutions web et mobiles performantes.", skills: ["Next.js", "React", "Mobile"] },
-  { role: "Production visuelle", desc: "Photo et vidéo événementielles, shootings et montages pour tous les supports.", skills: ["Photographie", "Vidéo", "Post-production"] },
-];
-
-const TEAM_EN = [
-  { role: "Creative Direction", desc: "Artistic vision and direction of all visual productions at the agency.", skills: ["Branding", "Artistic direction", "Creative strategy"] },
-  { role: "Digital Strategy", desc: "Development of communication plans and supervision of advertising campaigns.", skills: ["SEO/SEA", "Analytics", "Content strategy"] },
-  { role: "Development", desc: "Design and development of high-performance web and mobile solutions.", skills: ["Next.js", "React", "Mobile"] },
-  { role: "Visual Production", desc: "Event photo and video, shoots and editing for all media.", skills: ["Photography", "Video", "Post-production"] },
-];
-
-const TEAM_IMAGES = [
-  { image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&q=80&auto=format&fit=crop&face", imageAlt: "Directrice créative KEKELI Creative Agency" },
-  { image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&q=80&auto=format&fit=crop&face", imageAlt: "Stratège digitale KEKELI Creative Agency" },
-  { image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&q=80&auto=format&fit=crop&face", imageAlt: "Développeur KEKELI Creative Agency" },
-  { image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=400&q=80&auto=format&fit=crop&face", imageAlt: "Photographe KEKELI Creative Agency" },
-];
 
 const VALUES_FR = [
   { icon: Lightbulb, emoji: "💡", title: "Lumière", desc: "Révéler le potentiel de chaque projet. Donner à votre marque la visibilité qu'elle mérite." },
@@ -62,7 +42,6 @@ export default function AProposContent() {
   const tr = useT();
   const a = tr.pages.about;
   const { locale } = useLanguage();
-  const team = (locale === "fr" ? TEAM_FR : TEAM_EN).map((t, i) => ({ ...t, ...TEAM_IMAGES[i] }));
   const values = locale === "fr" ? VALUES_FR : VALUES_EN;
   const steps = locale === "fr" ? STEPS_FR : STEPS_EN;
 
@@ -136,42 +115,7 @@ export default function AProposContent() {
         </div>
       </section>
 
-      {/* SECTION 3 : TEAM */}
-      <section className="py-24 bg-bg-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn direction="up" className="text-center mb-14">
-            <SectionHeader
-              centered
-              eyebrow={a.teamEyebrow}
-              title={<>{a.teamTitle1}<br /><em className="text-gold not-italic">{a.teamTitleHL}</em></>}
-              subtitle={a.teamSubtitle}
-            />
-          </FadeIn>
-          <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member) => (
-              <FadeInItem key={member.role}>
-                <div className="group bg-bg-primary rounded-2xl border border-border overflow-hidden [box-shadow:var(--shadow-sm)] hover:[box-shadow:var(--shadow-md)] hover:-translate-y-1.5 transition-all duration-300">
-                  <div className="relative aspect-square overflow-hidden">
-                    <Image src={member.image} alt={member.imageAlt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-display text-xl font-semibold text-text-primary mb-2">{member.role}</h3>
-                    <p className="font-body text-sm text-text-muted leading-relaxed mb-4">{member.desc}</p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {member.skills.map((skill) => (
-                        <span key={skill} className="px-2 py-0.5 rounded-full text-[10px] font-body font-medium bg-purple-pale text-purple">{skill}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </FadeInItem>
-            ))}
-          </FadeInStagger>
-        </div>
-      </section>
-
-      {/* SECTION 4 : VALUES */}
+      {/* SECTION 3 : VALUES */}
       <section className="py-24" style={{ background: "var(--gradient-teaser)" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn direction="up" className="text-center mb-14">

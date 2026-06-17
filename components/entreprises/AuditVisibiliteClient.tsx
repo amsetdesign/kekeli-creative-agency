@@ -142,8 +142,8 @@ export default function AuditVisibiliteClient() {
             <div className="flex flex-wrap justify-center gap-3">
               {results.services_recommandes.map((slug) => (
                 <Link key={slug} href={`/entreprises/${slug}`}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-body text-sm font-semibold text-white"
-                  style={{ background: "linear-gradient(135deg, #1E40AF, #0EA5E9)" }}>
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-body text-sm font-semibold text-black"
+                  style={{ background: "linear-gradient(135deg, #C8A84B, #D4A83A)" }}>
                   {slug} <ArrowRight size={13} />
                 </Link>
               ))}
@@ -189,7 +189,7 @@ export default function AuditVisibiliteClient() {
         {error && <p className="text-red-400 text-sm font-body mb-4 text-center">{error}</p>}
         <button onClick={handleSubmit} disabled={!nom}
           className="w-full flex items-center justify-center gap-2 py-4 rounded-xl font-body font-semibold text-sm text-white disabled:opacity-40 transition-all hover:opacity-90"
-          style={{ background: "linear-gradient(135deg, #1D4ED8, #3B82F6)" }}>
+          style={{ background: "linear-gradient(135deg, #C8A84B, #D4A83A)", color: "#000" }}>
           <Search size={16} /> Analyser ma visibilité
         </button>
       </div>

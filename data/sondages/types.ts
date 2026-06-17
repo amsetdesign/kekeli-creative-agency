@@ -32,4 +32,11 @@ export interface UserInfo {
   email: string;
   telephone?: string;
   structure?: string;
+  // Profil démographique
+  sexe?: "homme" | "femme" | "non_precise";
+  age?: "moins_25" | "25_35" | "35_45" | "45_plus";
+  ville?: string;
+  budget?: string;
+  source?: string;
+  urgence?: string;
 }

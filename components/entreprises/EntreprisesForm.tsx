@@ -79,7 +79,7 @@ export default function EntreprisesForm() {
                 value={form.nom_entreprise}
                 onChange={(e) => setForm((f) => ({ ...f, nom_entreprise: e.target.value }))}
                 placeholder="Ex : Boutique Mariama"
-                className="w-full px-4 py-3 rounded-xl font-body text-sm text-white placeholder-white/20 bg-white/[0.06] border border-white/10 focus:outline-none focus:border-[#0EA5E9]/50 transition-colors"
+                className="w-full px-4 py-3 rounded-xl font-body text-sm text-white placeholder-white/20 bg-white/[0.06] border border-white/10 focus:outline-none focus:border-[#C8A84B]/50 transition-colors"
               />
             </div>
             <div>
@@ -87,7 +87,7 @@ export default function EntreprisesForm() {
               <select
                 value={form.secteur}
                 onChange={(e) => setForm((f) => ({ ...f, secteur: e.target.value }))}
-                className="w-full px-4 py-3 rounded-xl font-body text-sm text-white bg-white/[0.06] border border-white/10 focus:outline-none focus:border-[#0EA5E9]/50 transition-colors"
+                className="w-full px-4 py-3 rounded-xl font-body text-sm text-white bg-white/[0.06] border border-white/10 focus:outline-none focus:border-[#C8A84B]/50 transition-colors"
               >
                 <option value="" className="bg-[#0C0B09]">Choisir...</option>
                 {SECTEURS.map((s) => <option key={s} value={s} className="bg-[#0C0B09]">{s}</option>)}
@@ -103,7 +103,7 @@ export default function EntreprisesForm() {
                 value={form.email}
                 onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                 placeholder="votre@email.com"
-                className="w-full px-4 py-3 rounded-xl font-body text-sm text-white placeholder-white/20 bg-white/[0.06] border border-white/10 focus:outline-none focus:border-[#0EA5E9]/50 transition-colors"
+                className="w-full px-4 py-3 rounded-xl font-body text-sm text-white placeholder-white/20 bg-white/[0.06] border border-white/10 focus:outline-none focus:border-[#C8A84B]/50 transition-colors"
               />
             </div>
             <div>
@@ -112,7 +112,7 @@ export default function EntreprisesForm() {
                 value={form.telephone}
                 onChange={(e) => setForm((f) => ({ ...f, telephone: e.target.value }))}
                 placeholder="+221 XX XXX XX XX"
-                className="w-full px-4 py-3 rounded-xl font-body text-sm text-white placeholder-white/20 bg-white/[0.06] border border-white/10 focus:outline-none focus:border-[#0EA5E9]/50 transition-colors"
+                className="w-full px-4 py-3 rounded-xl font-body text-sm text-white placeholder-white/20 bg-white/[0.06] border border-white/10 focus:outline-none focus:border-[#C8A84B]/50 transition-colors"
               />
             </div>
           </div>
@@ -127,7 +127,7 @@ export default function EntreprisesForm() {
                   onClick={() => toggleBesoin(b)}
                   className="px-3 py-1.5 rounded-full font-body text-xs font-medium transition-all duration-150"
                   style={form.besoins.includes(b)
-                    ? { background: "#0EA5E9", color: "#fff", border: "1.5px solid #0EA5E9" }
+                    ? { background: "#C8A84B", color: "#000", border: "1.5px solid #C8A84B" }
                     : { background: "transparent", color: "rgba(255,255,255,0.5)", border: "1.5px solid rgba(255,255,255,0.12)" }}
                 >
                   {b}
@@ -162,7 +162,7 @@ export default function EntreprisesForm() {
               value={form.description}
               onChange={(e) => setForm((f) => ({ ...f, description: e.target.value }))}
               placeholder="Parlez-nous de votre entreprise, vos objectifs, vos défis..."
-              className="w-full px-4 py-3 rounded-xl font-body text-sm text-white placeholder-white/20 bg-white/[0.06] border border-white/10 focus:outline-none focus:border-[#0EA5E9]/50 transition-colors resize-none"
+              className="w-full px-4 py-3 rounded-xl font-body text-sm text-white placeholder-white/20 bg-white/[0.06] border border-white/10 focus:outline-none focus:border-[#C8A84B]/50 transition-colors resize-none"
             />
           </div>
 
@@ -176,8 +176,8 @@ export default function EntreprisesForm() {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="w-full flex items-center justify-center gap-2 py-4 rounded-xl font-body font-semibold text-sm text-white transition-all duration-200 hover:opacity-90 disabled:opacity-60"
-            style={{ background: "linear-gradient(135deg, #1E40AF, #0EA5E9)" }}
+            className="w-full flex items-center justify-center gap-2 py-4 rounded-xl font-body font-semibold text-sm text-black transition-all duration-200 hover:opacity-90 disabled:opacity-60"
+            style={{ background: "linear-gradient(135deg, #C8A84B, #D4A83A)" }}
           >
             {status === "loading" ? <><Loader2 size={16} className="animate-spin" /> Envoi en cours...</> : <><Send size={16} /> Envoyer ma demande</>}
           </button>

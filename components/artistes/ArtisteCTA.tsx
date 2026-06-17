@@ -14,9 +14,9 @@ export default function ArtisteCTA() {
     <section className="py-24 relative overflow-hidden">
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(135deg, #0C0B09 0%, #1A0A2E 50%, #0C1A2E 100%)" }}
+        style={{ background: "#0C0B09" }}
       />
-      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-[120px] opacity-20 pointer-events-none" style={{ background: "#8B5CF6" }} />
+      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-[120px] opacity-15 pointer-events-none" style={{ background: "#C8A84B" }} />
       <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full blur-[100px] opacity-20 pointer-events-none" style={{ background: "#C8A84B" }} />
 
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

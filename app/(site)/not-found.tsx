@@ -3,70 +3,93 @@ import { Home, MessageCircle } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <main className="min-h-[calc(100vh-10rem)] flex items-center justify-center bg-[#FAFAF8] px-4">
-      <div className="max-w-lg w-full text-center">
-        {/* 404 display */}
-        <div className="relative mb-8 inline-block">
-          <p
-            className="font-display text-[10rem] leading-none font-bold select-none"
-            style={{
-              background: "linear-gradient(135deg, #C8A84B 0%, rgba(200,168,75,0.15) 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            404
-          </p>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div
-              className="w-40 h-40 rounded-full blur-3xl opacity-20"
-              style={{ background: "radial-gradient(circle, #C8A84B, transparent)" }}
-            />
-          </div>
-        </div>
+    <main
+      className="min-h-screen flex items-center justify-center relative overflow-hidden px-4"
+      style={{ background: "#0C0B09" }}
+    >
+      {/* Atmospheric glows */}
+      <div aria-hidden className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-[140px] opacity-20"
+          style={{ background: "#C8A84B" }} />
+        <div className="absolute bottom-0 right-1/4 w-72 h-72 rounded-full blur-[120px] opacity-10"
+          style={{ background: "#8B5CF6" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full blur-[100px] opacity-8"
+          style={{ background: "#C8A84B" }} />
+      </div>
 
-        <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-[#C8A84B] mb-3">
-          Page introuvable
+      <div className="relative z-10 max-w-lg w-full text-center">
+        {/* 404 */}
+        <p
+          className="font-display text-[9rem] md:text-[11rem] leading-none font-bold select-none"
+          style={{
+            background: "linear-gradient(135deg, #C8A84B 0%, rgba(200,168,75,0.18) 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          404
         </p>
-        <h1 className="font-display text-4xl text-[#0C0B09] mb-4">
-          Cette page est dans l&apos;ombre
+
+        <span
+          className="inline-block px-4 py-1.5 text-xs font-body font-semibold uppercase tracking-[0.18em] rounded-full mb-5"
+          style={{ color: "#C8A84B", border: "1px solid rgba(200,168,75,0.30)", background: "rgba(200,168,75,0.08)" }}
+        >
+          Page introuvable
+        </span>
+
+        <h1 className="font-display text-4xl md:text-5xl text-white mb-4 leading-tight">
+          Cette page est<br />
+          <em className="not-italic" style={{ color: "#C8A84B" }}>dans l&apos;ombre</em>
         </h1>
-        <p className="font-body text-[#78716C] leading-relaxed mb-10 max-w-sm mx-auto">
-          Il semblerait que cette page n&apos;existe pas ou ait été déplacée.
+
+        <p className="font-body text-base mb-10 max-w-sm mx-auto leading-relaxed"
+          style={{ color: "rgba(255,255,255,0.50)" }}>
+          Cette page n&apos;existe pas ou a été déplacée.<br />
           Laissez-nous vous guider vers la lumière.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 bg-[#0C0B09] text-white px-6 py-3.5 rounded-xl font-body font-medium text-sm hover:bg-[#1c1917] transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-body font-semibold text-sm text-black transition-all hover:brightness-110 active:scale-95"
+            style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)", boxShadow: "0 4px 20px rgba(200,168,75,0.30)" }}
           >
             <Home size={15} />
             Retour à l&apos;accueil
           </Link>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 border border-[#E7E5E4] text-[#0C0B09] px-6 py-3.5 rounded-xl font-body font-medium text-sm hover:border-[#C8A84B] hover:text-[#C8A84B] transition-colors"
+          <a
+            href="https://wa.me/221781672819"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-body font-medium text-sm transition-all hover:border-gold/60"
+            style={{ border: "1px solid rgba(200,168,75,0.30)", color: "rgba(255,255,255,0.80)" }}
           >
-            <MessageCircle size={15} />
+            <MessageCircle size={15} style={{ color: "#C8A84B" }} />
             Nous contacter
-          </Link>
+          </a>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-[#E7E5E4]">
-          <p className="font-body text-xs text-[#A8A29E] mb-4">Vous cherchez peut-être&hellip;</p>
+        {/* Quick links */}
+        <div className="pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+          <p className="font-body text-xs mb-4" style={{ color: "rgba(255,255,255,0.30)" }}>
+            Vous cherchez peut-être&hellip;
+          </p>
           <div className="flex flex-wrap justify-center gap-2">
             {[
-              { href: "/services", label: "Nos services" },
+              { href: "/artistes",   label: "Artistes" },
+              { href: "/entreprises", label: "Entreprises" },
+              { href: "/tarifs",     label: "Tarifs" },
+              { href: "/sondage",    label: "Audit gratuit" },
+              { href: "/brief",      label: "Brief Express" },
               { href: "/realisations", label: "Réalisations" },
-              { href: "/sondage", label: "Audit gratuit" },
-              { href: "/brief", label: "Brief Express" },
             ].map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="px-3 py-1.5 rounded-full border border-[#E7E5E4] text-xs font-body text-[#78716C] hover:border-[#C8A84B] hover:text-[#C8A84B] transition-colors"
+                className="px-3 py-1.5 rounded-full text-xs font-body transition-all hover:text-white"
+                style={{ border: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.45)" }}
               >
                 {label}
               </Link>

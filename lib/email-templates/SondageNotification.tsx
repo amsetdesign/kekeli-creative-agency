@@ -100,14 +100,14 @@ export default function SondageNotification({ config, score, userInfo, receivedA
           </Section>
 
           {/* Contact info */}
-          <Section style={{ backgroundColor: "#FFFFFF", borderRadius: 16, padding: "20px 24px", marginBottom: 24, border: `1px solid ${border}` }}>
+          <Section style={{ backgroundColor: "#FFFFFF", borderRadius: 16, padding: "20px 24px", marginBottom: 16, border: `1px solid ${border}` }}>
             <Text style={{ color: muted, fontSize: 11, fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.15em", margin: "0 0 14px" }}>
               Contact
             </Text>
             {[
               { label: "Prénom", value: userInfo.prenom },
               { label: "Email", value: userInfo.email },
-              ...(userInfo.telephone ? [{ label: "Téléphone", value: userInfo.telephone }] : []),
+              ...(userInfo.telephone ? [{ label: "Téléphone / WhatsApp", value: userInfo.telephone }] : []),
               ...(userInfo.structure ? [{ label: "Structure", value: userInfo.structure }] : []),
             ].map(({ label, value }) => (
               <Row key={label} style={{ marginBottom: 10 }}>
@@ -120,6 +120,32 @@ export default function SondageNotification({ config, score, userInfo, receivedA
               </Row>
             ))}
           </Section>
+
+          {/* Profil démographique */}
+          {(userInfo.sexe || userInfo.age || userInfo.ville || userInfo.budget || userInfo.urgence || userInfo.source) && (
+            <Section style={{ backgroundColor: "#FFFBEB", borderRadius: 16, padding: "20px 24px", marginBottom: 24, border: "1px solid #C8A84B40" }}>
+              <Text style={{ color: "#92400E", fontSize: 11, fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.15em", margin: "0 0 14px" }}>
+                🎯 Profil démographique
+              </Text>
+              {[
+                ...(userInfo.sexe ? [{ label: "Genre", value: userInfo.sexe === "homme" ? "Homme" : userInfo.sexe === "femme" ? "Femme" : "Non précisé" }] : []),
+                ...(userInfo.age ? [{ label: "Tranche d'âge", value: { moins_25: "Moins de 25 ans", "25_35": "25–35 ans", "35_45": "35–45 ans", "45_plus": "45 ans et plus" }[userInfo.age] ?? userInfo.age }] : []),
+                ...(userInfo.ville ? [{ label: "Ville", value: userInfo.ville }] : []),
+                ...(userInfo.budget ? [{ label: "Budget estimé", value: { moins_50k: "< 50k FCFA", "50k_150k": "50k–150k FCFA", "150k_500k": "150k–500k FCFA", "500k_2M": "500k–2M FCFA", "plus_2M": "> 2M FCFA" }[userInfo.budget] ?? userInfo.budget }] : []),
+                ...(userInfo.urgence ? [{ label: "Délai démarrage", value: { immediat: "🔥 Immédiat", "1_mois": "Dans 1 mois", "1_3_mois": "1–3 mois", "plus_3_mois": "3 mois ou +" }[userInfo.urgence] ?? userInfo.urgence }] : []),
+                ...(userInfo.source ? [{ label: "Source", value: { instagram: "Instagram", facebook: "Facebook", tiktok: "TikTok", youtube: "YouTube", bouche_a_oreille: "Bouche à oreille", google: "Google", evenement: "Événement", autre: "Autre" }[userInfo.source] ?? userInfo.source }] : []),
+              ].map(({ label, value }) => (
+                <Row key={label} style={{ marginBottom: 10 }}>
+                  <Column style={{ width: "40%" }}>
+                    <Text style={{ color: muted, fontSize: 12, margin: 0 }}>{label}</Text>
+                  </Column>
+                  <Column style={{ width: "60%" }}>
+                    <Text style={{ color: dark, fontSize: 13, fontWeight: "600", margin: 0 }}>{value}</Text>
+                  </Column>
+                </Row>
+              ))}
+            </Section>
+          )}
 
           <Hr style={{ borderColor: border, margin: "0 0 20px" }} />
           <Text style={{ color: muted, fontSize: 11, textAlign: "center", margin: 0 }}>

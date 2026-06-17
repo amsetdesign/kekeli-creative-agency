@@ -24,16 +24,37 @@ export default async function EspaceClientLayout({
     );
   }
 
-  const { data: profile } = await getSupabase()
+  const db = getSupabase();
+
+  const { data: profile } = await db
     .from("client_profiles")
     .select("full_name, company, email, artist_profile")
     .eq("id", user.id)
     .single();
 
+  /* ── Notifications : messages agence non lus ── */
+  const { data: userProjects } = await db.from("projects").select("id").eq("client_id", user.id);
+  const projectIds = (userProjects ?? []).map((p) => p.id);
+  let unreadMessages = 0;
+  if (projectIds.length > 0) {
+    const { count } = await db
+      .from("project_messages")
+      .select("id", { count: "exact", head: true })
+      .eq("sender_type", "agency")
+      .is("read_at", null)
+      .in("project_id", projectIds);
+    unreadMessages = count ?? 0;
+  }
+
   const displayName = profile?.full_name ?? user.email ?? "Client";
   const displayCompany = profile?.company ?? null;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const hasArtistProfile = !!(profile as any)?.artist_profile;
+
+  // Determine account type: metadata first, then infer from profile
+  const metaType = user.user_metadata?.account_type as "artiste" | "entrepreneur" | "personnalite" | undefined;
+  const accountType: "artiste" | "entrepreneur" | "personnalite" = metaType
+    ?? (hasArtistProfile ? "artiste" : "entrepreneur");
 
   return (
     <div className="min-h-screen bg-[#F5F5F4] flex">
@@ -41,7 +62,9 @@ export default async function EspaceClientLayout({
         displayName={displayName}
         displayCompany={displayCompany}
         hasArtistProfile={hasArtistProfile}
+        accountType={accountType}
         logoutAction={logoutClient}
+        unreadMessages={unreadMessages}
       />
 
       {/* Mobile top bar */}
@@ -60,7 +83,7 @@ export default async function EspaceClientLayout({
         </div>
       </main>
 
-      <MobileClientNav />
+      <MobileClientNav accountType={accountType} unreadMessages={unreadMessages} />
       <OnboardingTour />
     </div>
   );

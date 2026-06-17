@@ -197,8 +197,8 @@ export default function BrandScoreClient() {
             <div className="flex flex-wrap justify-center gap-3">
               {results.services_recommandes.map((slug) => (
                 <Link key={slug} href={`/entreprises/${slug}`}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-body text-sm font-semibold text-white transition-all hover:opacity-90"
-                  style={{ background: "linear-gradient(135deg, #1E40AF, #0EA5E9)" }}>
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-body text-sm font-semibold text-black transition-all hover:opacity-90"
+                  style={{ background: "linear-gradient(135deg, #C8A84B, #D4A83A)" }}>
                   {SERVICE_LABELS[slug] ?? slug} <ArrowRight size={13} />
                 </Link>
               ))}

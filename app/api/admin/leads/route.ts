@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { getSupabase } from "@/lib/supabase";
 
 const LEAD_STATUSES = ["new", "read", "archived"] as const;
-const LEAD_TYPES = ["sondage", "contact", "brief", "artistes", "photo", "clips", "monetisation", "marketing", "branding", "identite", "accompagnement", "distribution", "strategie", "direction", "espace-client"] as const;
+const LEAD_TYPES = ["sondage", "contact", "brief", "artiste", "entreprise", "projet"] as const;
 
 async function isAuthorized(): Promise<boolean> {
   const jar = await cookies();
@@ -17,6 +17,7 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const type = searchParams.get("type");
   const status = searchParams.get("status");
+  const format = searchParams.get("format"); // "csv" pour export
 
   if (type && type !== "all" && !LEAD_TYPES.includes(type as typeof LEAD_TYPES[number])) {
     return NextResponse.json({ error: "Type invalide." }, { status: 400 });
@@ -31,6 +32,59 @@ export async function GET(request: Request) {
 
   const { data, error } = await query;
   if (error) { console.error("Leads GET error:", error.message); return NextResponse.json({ error: "Une erreur est survenue." }, { status: 500 }); }
+
+  // ── Export CSV ────────────────────────────────────────────────────────────
+  if (format === "csv") {
+    const rows = (data ?? []).map((lead) => {
+      const d = lead.data as Record<string, unknown>;
+      const ui = (d.userInfo ?? {}) as Record<string, string | undefined>;
+      const name =
+        lead.type === "sondage" ? ui.prenom
+        : lead.type === "artiste" ? d.nom_artiste as string
+        : `${d.prenom ?? ""} ${d.nom ?? ""}`.trim();
+      const email =
+        lead.type === "sondage" ? ui.email
+        : lead.type === "projet" ? d.client_email as string
+        : d.email as string;
+      const phone =
+        lead.type === "sondage" ? ui.telephone
+        : d.telephone as string | undefined;
+      const score = lead.type === "sondage" ? String(d.score ?? "") : "";
+      const sondageType = lead.type === "sondage" ? String(d.sondage_type ?? d.type ?? "") : "";
+
+      return [
+        lead.id,
+        new Date(lead.created_at).toLocaleDateString("fr-SN"),
+        lead.type,
+        lead.status,
+        name ?? "",
+        email ?? "",
+        phone ?? "",
+        // Sondage demographics
+        lead.type === "sondage" ? (ui.sexe ?? "") : "",
+        lead.type === "sondage" ? (ui.age ?? "") : "",
+        lead.type === "sondage" ? (ui.ville ?? "") : "",
+        lead.type === "sondage" ? (ui.budget ?? "") : "",
+        lead.type === "sondage" ? (ui.urgence ?? "") : "",
+        lead.type === "sondage" ? (ui.source ?? "") : "",
+        score,
+        sondageType,
+        d.structure as string ?? ui.structure ?? "",
+      ].map((v) => `"${String(v).replace(/"/g, '""')}"`).join(",");
+    });
+
+    const header = ["ID","Date","Type","Statut","Prénom/Nom","Email","Téléphone","Sexe","Âge","Ville","Budget","Urgence","Source","Score","Profil sondage","Structure"].join(",");
+    const csv = [header, ...rows].join("\n");
+
+    return new NextResponse(csv, {
+      status: 200,
+      headers: {
+        "Content-Type": "text/csv; charset=utf-8",
+        "Content-Disposition": `attachment; filename="leads-kekeli-${new Date().toISOString().split("T")[0]}.csv"`,
+      },
+    });
+  }
+
   return NextResponse.json(data);
 }
 

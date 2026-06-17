@@ -116,7 +116,7 @@ export default function ClipsPage() {
       {/* ── HERO ──────────────────────────────────────────── */}
       <section
         className="relative py-32 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #08060F 0%, #130A28 35%, #1C0A40 60%, #0A0618 100%)" }}
+        style={{ background: "#0C0B09" }}
       >
         {/* Blobs */}
         <div aria-hidden className="absolute inset-0 pointer-events-none">
@@ -128,12 +128,12 @@ export default function ClipsPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <FadeIn direction="down" className="mb-8">
-            <nav className="flex items-center gap-2 text-xs font-body" style={{ color: "rgba(220,210,255,0.45)" }}>
+            <nav className="flex items-center gap-2 text-xs font-body" style={{ color: "rgba(255,255,255,0.45)" }}>
               <Link href="/" className="hover:text-gold transition-colors">Accueil</Link>
               <ChevronRight size={12} />
               <Link href="/artistes" className="hover:text-gold transition-colors">Artistes</Link>
               <ChevronRight size={12} />
-              <span style={{ color: "rgba(220,210,255,0.70)" }}>Clips & Vidéos</span>
+              <span style={{ color: "rgba(255,255,255,0.70)" }}>Clips & Vidéos</span>
             </nav>
           </FadeIn>
 
@@ -153,7 +153,7 @@ export default function ClipsPage() {
             </FadeIn>
 
             <FadeIn direction="up" delay={0.22}>
-              <p className="font-body text-lg leading-relaxed mb-8 max-w-xl" style={{ color: "rgba(220,210,255,0.70)" }}>
+              <p className="font-body text-lg leading-relaxed mb-8 max-w-xl" style={{ color: "rgba(255,255,255,0.70)" }}>
                 Clip officiel, Lyric video, Teaser, Pack complet — KEKELI Creative Agency réalise des
                 vidéos cinématiques qui portent votre univers artistique et explosent sur les réseaux.
                 Devis personnalisé sous 24h.
@@ -164,8 +164,8 @@ export default function ClipsPage() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href="#formulaire"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-body font-bold text-base text-white transition-all hover:scale-105"
-                  style={{ background: "linear-gradient(135deg, #EC4899 0%, #C2185B 100%)", boxShadow: "0 8px 30px rgba(236,72,153,0.40)" }}
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-body font-bold text-base text-black transition-all hover:scale-105"
+                  style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)", boxShadow: "0 8px 30px rgba(200,168,75,0.40)" }}
                 >
                   <Film size={18} />
                   Demander un devis
@@ -256,7 +256,7 @@ export default function ClipsPage() {
                 <div className="flex flex-col items-center text-center p-6 rounded-2xl" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
                   <span className="text-4xl mb-3">{loc.emoji}</span>
                   <h3 className="font-body font-bold text-white text-sm mb-2">{loc.name}</h3>
-                  <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(220,210,255,0.50)" }}>{loc.desc}</p>
+                  <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>{loc.desc}</p>
                 </div>
               </FadeInItem>
             ))}
@@ -308,7 +308,7 @@ export default function ClipsPage() {
                   </div>
                   <div>
                     <p className="font-body font-semibold text-white text-sm mb-1">{title}</p>
-                    <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(220,210,255,0.55)" }}>{desc}</p>
+                    <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{desc}</p>
                   </div>
                 </div>
               </FadeInItem>
@@ -321,7 +321,7 @@ export default function ClipsPage() {
       <section
         id="formulaire"
         className="py-24 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #08060F 0%, #130A28 35%, #1C0A40 60%, #0A0618 100%)" }}
+        style={{ background: "#0C0B09" }}
       >
         {/* Blobs */}
         <div aria-hidden className="absolute inset-0 pointer-events-none">
@@ -335,7 +335,7 @@ export default function ClipsPage() {
             <h2 className="font-display text-4xl md:text-5xl text-white leading-tight mb-4">
               Parlons de votre <em className="text-gold not-italic">clip</em>
             </h2>
-            <p className="font-body text-base" style={{ color: "rgba(220,210,255,0.60)" }}>
+            <p className="font-body text-base" style={{ color: "rgba(255,255,255,0.60)" }}>
               Remplissez le formulaire ci-dessous. Notre équipe vous répond dans les 24h avec un devis détaillé et sur-mesure.
             </p>
           </FadeIn>

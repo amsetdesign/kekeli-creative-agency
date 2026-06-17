@@ -38,6 +38,7 @@ const categoryLabels: Record<string, string> = {
   com: "Communication",
   branding: "Branding",
   ecommerce: "E-commerce",
+  video: "Vidéo & Production",
 };
 
 export default async function ProjectDetailPage({
@@ -196,6 +197,24 @@ export default async function ProjectDetailPage({
             </div>
           </FadeIn>
 
+          {/* YouTube embed */}
+          {project.youtubeId && (
+            <FadeIn direction="up" className="mb-20">
+              <p className="font-body text-xs text-[#A8A29E] uppercase tracking-widest mb-6">
+                Vidéo de réalisation
+              </p>
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden [box-shadow:0_8px_40px_rgba(12,11,9,0.15)]">
+                <iframe
+                  src={`https://www.youtube.com/embed/${project.youtubeId}?rel=0&modestbranding=1`}
+                  title={project.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </FadeIn>
+          )}
+
           {/* Extra images */}
           {project.images && project.images.length > 0 && (
             <FadeIn direction="up" className="mb-20">
@@ -204,6 +223,53 @@ export default async function ProjectDetailPage({
                   <div key={img.src} className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                     <Image src={img.src} alt={img.alt} fill className="object-cover" />
                   </div>
+                ))}
+              </div>
+            </FadeIn>
+          )}
+
+          {/* Instagram posts */}
+          {project.instagramPosts && project.instagramPosts.length > 0 && (
+            <FadeIn direction="up" className="mb-20">
+              <p className="font-body text-xs text-[#A8A29E] uppercase tracking-widest mb-6">
+                Publications Instagram
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {project.instagramPosts.map((url, i) => (
+                  <a
+                    key={url}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative flex flex-col items-center justify-center gap-3 bg-white border border-[#E7E5E4] rounded-2xl p-6 hover:[box-shadow:0_8px_32px_rgba(12,11,9,0.12)] hover:-translate-y-0.5 transition-all duration-300 overflow-hidden"
+                  >
+                    {/* Instagram gradient accent */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-300 bg-gradient-to-br from-[#f09433] via-[#e6683c] via-[#dc2743] via-[#cc2366] to-[#bc1888]" />
+
+                    {/* Instagram icon */}
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-8 h-8 text-[#E1306C] group-hover:scale-110 transition-transform duration-300"
+                    >
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+                    </svg>
+
+                    <div className="text-center">
+                      <p className="font-body text-xs font-semibold text-[#0C0B09] mb-0.5">
+                        Publication {i + 1}
+                      </p>
+                      <p className="font-body text-[11px] text-[#A8A29E] group-hover:text-[#E1306C] transition-colors">
+                        Voir sur Instagram →
+                      </p>
+                    </div>
+                  </a>
                 ))}
               </div>
             </FadeIn>

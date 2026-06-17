@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase-ssr";
 import MoodboardClient from "@/components/moodboard/MoodboardClient";
 
 export const metadata: Metadata = {
   title: "IA Moodboard & Direction Visuelle | KEKELI Creative Agency",
-  description: "Notre IA génère ta direction visuelle complète : palette de couleurs, typographie, références esthétiques et guide de contenu personnalisé.",
-  keywords: ["moodboard artiste IA", "direction visuelle musicien Dakar", "palette couleurs artiste", "identité visuelle IA Sénégal", "guide contenu artiste africain"],
+  description: "Notre IA gÃ©nÃ¨re ta direction visuelle complÃ¨te : palette de couleurs, typographie, rÃ©fÃ©rences esthÃ©tiques et guide de contenu personnalisÃ©.",
+  keywords: ["moodboard artiste IA", "direction visuelle musicien Dakar", "palette couleurs artiste", "identitÃ© visuelle IA SÃ©nÃ©gal", "guide contenu artiste africain"],
   alternates: { canonical: "/artistes/moodboard" },
   openGraph: {
-    title: "IA Moodboard & Direction Visuelle — KEKELI Creative Agency",
-    description: "Palette, typographie, références esthétiques et guide de contenu — généré par IA pour ta direction visuelle.",
+    title: "IA Moodboard & Direction Visuelle â€” KEKELI Creative Agency",
+    description: "Palette, typographie, rÃ©fÃ©rences esthÃ©tiques et guide de contenu â€” gÃ©nÃ©rÃ© par IA pour ta direction visuelle.",
     url: "/artistes/moodboard",
   },
 };

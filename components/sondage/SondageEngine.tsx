@@ -211,6 +211,12 @@ export default function SondageEngine({ config }: { config: SondageConfig }) {
         email: fd.get("email") as string,
         telephone: (fd.get("telephone") as string) || undefined,
         structure: (fd.get("structure") as string) || undefined,
+        sexe: (fd.get("sexe") as UserInfo["sexe"]) || undefined,
+        age: (fd.get("age") as UserInfo["age"]) || undefined,
+        ville: (fd.get("ville") as string) || undefined,
+        budget: (fd.get("budget") as string) || undefined,
+        source: (fd.get("source") as string) || undefined,
+        urgence: (fd.get("urgence") as string) || undefined,
       };
       dispatch({ type: "SUBMIT_EMAIL", userInfo });
       dispatch({ type: "SUBMIT_START" });
@@ -634,52 +640,173 @@ function EmailCaptureView({
           </div>
         </div>
 
-        <form onSubmit={onSubmit} className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-xs font-medium text-[#374151] mb-1.5">
-                Prénom *
-              </label>
-              <input
-                name="prenom"
-                required
-                className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-sm focus:outline-none focus:border-[#C8A84B] transition-colors"
-                placeholder="Votre prénom"
-              />
-            </div>
-            <div>
-              <label className="block text-xs font-medium text-[#374151] mb-1.5">
-                Email *
-              </label>
-              <input
-                name="email"
-                type="email"
-                required
-                className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-sm focus:outline-none focus:border-[#C8A84B] transition-colors"
-                placeholder="votre@email.com"
-              />
+        <form onSubmit={onSubmit} className="space-y-5">
+          {/* ── Coordonnées ── */}
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#C8A84B] mb-3">
+              Vos coordonnées
+            </p>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block text-xs font-medium text-[#374151] mb-1.5">
+                  Prénom *
+                </label>
+                <input
+                  name="prenom"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-sm focus:outline-none focus:border-[#C8A84B] transition-colors"
+                  placeholder="Votre prénom"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-[#374151] mb-1.5">
+                  Email *
+                </label>
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-sm focus:outline-none focus:border-[#C8A84B] transition-colors"
+                  placeholder="votre@email.com"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-[#374151] mb-1.5">
+                  Téléphone / WhatsApp
+                </label>
+                <input
+                  name="telephone"
+                  className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-sm focus:outline-none focus:border-[#C8A84B] transition-colors"
+                  placeholder="+221 77..."
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-[#374151] mb-1.5">
+                  {config.id === "artiste" ? "Nom d'artiste" : "Structure / Marque"}
+                </label>
+                <input
+                  name="structure"
+                  className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-sm focus:outline-none focus:border-[#C8A84B] transition-colors"
+                  placeholder="Optionnel"
+                />
+              </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-xs font-medium text-[#374151] mb-1.5">
-                Téléphone
-              </label>
-              <input
-                name="telephone"
-                className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-sm focus:outline-none focus:border-[#C8A84B] transition-colors"
-                placeholder="+221 77..."
-              />
+
+          {/* ── Profil démographique ── */}
+          <div className="pt-1">
+            <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#6B21A8] mb-3">
+              Votre profil <span className="font-normal text-[#9CA3AF] normal-case tracking-normal">(aide à personnaliser vos recommandations)</span>
+            </p>
+
+            {/* Genre */}
+            <div className="mb-3">
+              <label className="block text-xs font-medium text-[#374151] mb-2">Vous êtes</label>
+              <div className="flex gap-2">
+                {[
+                  { value: "homme", label: "Homme" },
+                  { value: "femme", label: "Femme" },
+                  { value: "non_precise", label: "Préfère ne pas préciser" },
+                ].map(({ value, label }) => (
+                  <label key={value} className="flex-1 cursor-pointer">
+                    <input type="radio" name="sexe" value={value} className="sr-only peer" />
+                    <span className="flex items-center justify-center px-3 py-2.5 rounded-lg border border-[#E5E7EB] text-xs text-[#374151] peer-checked:border-[#6B21A8] peer-checked:bg-[#6B21A8]/8 peer-checked:text-[#6B21A8] peer-checked:font-semibold transition-all text-center leading-tight">
+                      {label}
+                    </span>
+                  </label>
+                ))}
+              </div>
             </div>
-            <div>
-              <label className="block text-xs font-medium text-[#374151] mb-1.5">
-                {config.id === "artiste" ? "Nom d'artiste" : "Structure / Marque"}
-              </label>
-              <input
-                name="structure"
-                className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-sm focus:outline-none focus:border-[#C8A84B] transition-colors"
-                placeholder="Optionnel"
-              />
+
+            <div className="grid grid-cols-2 gap-3">
+              {/* Âge */}
+              <div>
+                <label className="block text-xs font-medium text-[#374151] mb-1.5">Tranche d&apos;âge</label>
+                <select
+                  name="age"
+                  className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-sm focus:outline-none focus:border-[#C8A84B] transition-colors bg-white text-[#374151]"
+                >
+                  <option value="">Sélectionner</option>
+                  <option value="moins_25">Moins de 25 ans</option>
+                  <option value="25_35">25 – 35 ans</option>
+                  <option value="35_45">35 – 45 ans</option>
+                  <option value="45_plus">45 ans et plus</option>
+                </select>
+              </div>
+
+              {/* Ville */}
+              <div>
+                <label className="block text-xs font-medium text-[#374151] mb-1.5">Ville / Localisation</label>
+                <select
+                  name="ville"
+                  className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-sm focus:outline-none focus:border-[#C8A84B] transition-colors bg-white text-[#374151]"
+                >
+                  <option value="">Sélectionner</option>
+                  <option value="Dakar">Dakar</option>
+                  <option value="Thiès">Thiès</option>
+                  <option value="Saint-Louis">Saint-Louis</option>
+                  <option value="Ziguinchor">Ziguinchor</option>
+                  <option value="Kaolack">Kaolack</option>
+                  <option value="Mbour">Mbour</option>
+                  <option value="Autre ville SN">Autre ville SN</option>
+                  <option value="Diaspora - France">Diaspora — France</option>
+                  <option value="Diaspora - Autre">Diaspora — Autre pays</option>
+                </select>
+              </div>
+
+              {/* Budget */}
+              <div>
+                <label className="block text-xs font-medium text-[#374151] mb-1.5">
+                  {config.id === "artiste" ? "Budget communication / mois" :
+                   config.id === "evenement" ? "Budget événement" :
+                   "Budget communication estimé"}
+                </label>
+                <select
+                  name="budget"
+                  className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-sm focus:outline-none focus:border-[#C8A84B] transition-colors bg-white text-[#374151]"
+                >
+                  <option value="">Sélectionner</option>
+                  <option value="moins_50k">Moins de 50 000 FCFA</option>
+                  <option value="50k_150k">50 000 – 150 000 FCFA</option>
+                  <option value="150k_500k">150 000 – 500 000 FCFA</option>
+                  <option value="500k_2M">500 000 – 2 000 000 FCFA</option>
+                  <option value="plus_2M">Plus de 2 000 000 FCFA</option>
+                </select>
+              </div>
+
+              {/* Urgence */}
+              <div>
+                <label className="block text-xs font-medium text-[#374151] mb-1.5">Délai de démarrage</label>
+                <select
+                  name="urgence"
+                  className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-sm focus:outline-none focus:border-[#C8A84B] transition-colors bg-white text-[#374151]"
+                >
+                  <option value="">Sélectionner</option>
+                  <option value="immediat">Immédiat (cette semaine)</option>
+                  <option value="1_mois">Dans 1 mois</option>
+                  <option value="1_3_mois">1 à 3 mois</option>
+                  <option value="plus_3_mois">Dans 3 mois ou plus</option>
+                </select>
+              </div>
+            </div>
+
+            {/* Source */}
+            <div className="mt-3">
+              <label className="block text-xs font-medium text-[#374151] mb-1.5">Comment vous avez entendu parler de nous ?</label>
+              <select
+                name="source"
+                className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-sm focus:outline-none focus:border-[#C8A84B] transition-colors bg-white text-[#374151]"
+              >
+                <option value="">Sélectionner</option>
+                <option value="instagram">Instagram</option>
+                <option value="facebook">Facebook</option>
+                <option value="tiktok">TikTok</option>
+                <option value="youtube">YouTube</option>
+                <option value="bouche_a_oreille">Bouche à oreille / Recommandation</option>
+                <option value="google">Google / Recherche internet</option>
+                <option value="evenement">Événement / Rencontre</option>
+                <option value="autre">Autre</option>
+              </select>
             </div>
           </div>
 

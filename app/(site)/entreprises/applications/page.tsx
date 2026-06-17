@@ -95,8 +95,8 @@ export default function ApplicationsPage() {
             </p>
             <Link
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-white"
-              style={{ background: `linear-gradient(135deg, #4F46E5, ${COLOR})` }}
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-black"
+              style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)" }}
             >
               Démarrer votre projet <ArrowRight size={16} />
             </Link>

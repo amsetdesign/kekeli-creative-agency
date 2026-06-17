@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { X, Mail, Phone, MessageSquare, ChevronRight, Archive, Eye } from "lucide-react";
+import { X, Mail, Phone, ChevronRight, Archive, Eye, Download, CheckSquare, Square, CheckCheck } from "lucide-react";
 import type { Lead } from "@/lib/supabase";
 
 const TYPE_LABELS = {
@@ -164,18 +164,35 @@ function LeadDrawer({ lead, onClose }: { lead: Lead; onClose: () => void }) {
           )}
 
           {lead.type === "sondage" && (() => {
-            const ui = d.userInfo as Record<string, string>;
+            const ui = d.userInfo as Record<string, string | undefined>;
+            const sexeMap: Record<string, string> = { homme: "Homme", femme: "Femme", non_precise: "Non précisé" };
+            const ageMap: Record<string, string> = { moins_25: "< 25 ans", "25_35": "25–35 ans", "35_45": "35–45 ans", "45_plus": "45+ ans" };
+            const budgetMap: Record<string, string> = { moins_50k: "< 50k FCFA", "50k_150k": "50–150k FCFA", "150k_500k": "150–500k FCFA", "500k_2M": "500k–2M FCFA", "plus_2M": "> 2M FCFA" };
+            const urgenceMap: Record<string, string> = { immediat: "🔥 Immédiat", "1_mois": "1 mois", "1_3_mois": "1–3 mois", "plus_3_mois": "3 mois+" };
+            const sourceMap: Record<string, string> = { instagram: "Instagram", facebook: "Facebook", tiktok: "TikTok", youtube: "YouTube", bouche_a_oreille: "Bouche à oreille", google: "Google", evenement: "Événement", autre: "Autre" };
             return (
               <div className="space-y-3">
-                <Field label="Prénom" value={ui?.prenom} />
-                {ui?.entreprise && <Field label="Entreprise" value={ui.entreprise} />}
-                <Field label="Type de profil" value={d.type as string} />
+                {ui?.structure && <Field label="Structure" value={ui.structure} />}
+                <Field label="Type de profil" value={(d.sondage_type ?? d.type) as string} />
+                {/* Score badge */}
                 <div className="flex items-center justify-between bg-[#C8A84B]/10 border border-[#C8A84B]/20 rounded-xl px-4 py-3">
                   <span className="font-body text-sm text-[#78716C]">Score</span>
                   <span className="font-display text-2xl font-bold text-[#C8A84B]">
                     {d.score as number}/100
                   </span>
                 </div>
+                {/* Données démographiques */}
+                {(ui?.sexe || ui?.age || ui?.ville || ui?.budget || ui?.urgence || ui?.source) && (
+                  <div className="bg-[#F5F5F4] rounded-xl p-4 space-y-2">
+                    <p className="font-body text-[10px] font-bold uppercase tracking-[0.15em] text-[#A8A29E] mb-3">Profil démographique</p>
+                    {ui.sexe && <Field label="Genre" value={sexeMap[ui.sexe] ?? ui.sexe} />}
+                    {ui.age && <Field label="Âge" value={ageMap[ui.age] ?? ui.age} />}
+                    {ui.ville && <Field label="Ville" value={ui.ville} />}
+                    {ui.budget && <Field label="Budget" value={budgetMap[ui.budget] ?? ui.budget} />}
+                    {ui.urgence && <Field label="Délai" value={urgenceMap[ui.urgence] ?? ui.urgence} />}
+                    {ui.source && <Field label="Source" value={sourceMap[ui.source] ?? ui.source} />}
+                  </div>
+                )}
               </div>
             );
           })()}
@@ -197,14 +214,28 @@ function LeadDrawer({ lead, onClose }: { lead: Lead; onClose: () => void }) {
             >
               <Mail size={12} /> Envoyer un email
             </a>
-            <a
-              href={`https://wa.me/221781672819`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl border border-[#E7E5E4] font-body text-xs text-[#78716C] hover:border-emerald-400 hover:text-emerald-600 transition-colors"
-            >
-              <Phone size={12} /> WhatsApp
-            </a>
+            {(() => {
+              const phone = lead.type === "sondage"
+                ? (lead.data.userInfo as Record<string, string>)?.telephone
+                : lead.data.telephone as string | undefined;
+              const name = getLeadName(lead);
+              const waPhone = phone
+                ? phone.replace(/\D/g, "").replace(/^00/, "").replace(/^0/, "221")
+                : "221781672819";
+              const msg = encodeURIComponent(
+                `Bonjour ${name} 👋, je suis KEKELI Creative Agency. Suite à votre ${lead.type === "sondage" ? "audit de visibilité" : "demande"}, je voulais vous contacter pour en discuter. Avez-vous un moment ?`
+              );
+              return (
+                <a
+                  href={`https://wa.me/${waPhone}?text=${msg}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl border border-[#E7E5E4] font-body text-xs text-[#78716C] hover:border-emerald-400 hover:text-emerald-600 transition-colors"
+                >
+                  <Phone size={12} /> WhatsApp
+                </a>
+              );
+            })()}
           </div>
         </div>
 
@@ -279,9 +310,35 @@ const TYPES = ["all", "contact", "brief", "sondage", "artiste", "projet"] as con
 const STATUSES = ["all", "new", "read", "archived"] as const;
 
 export default function LeadsTable({ leads }: { leads: Lead[] }) {
+  const router = useRouter();
   const [typeFilter, setTypeFilter] = useState<(typeof TYPES)[number]>("all");
   const [statusFilter, setStatusFilter] = useState<(typeof STATUSES)[number]>("all");
   const [selected, setSelected] = useState<Lead | null>(null);
+  const [exporting, setExporting] = useState(false);
+  const [checked, setChecked] = useState<Set<string>>(new Set());
+  const [bulkLoading, setBulkLoading] = useState(false);
+
+  async function exportCSV() {
+    setExporting(true);
+    try {
+      const params = new URLSearchParams({ format: "csv" });
+      if (typeFilter !== "all")   params.set("type", typeFilter);
+      if (statusFilter !== "all") params.set("status", statusFilter);
+      const res = await fetch(`/api/admin/leads?${params}`);
+      if (!res.ok) throw new Error("Export échoué");
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `leads-kekeli-${new Date().toISOString().split("T")[0]}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } finally {
+      setExporting(false);
+    }
+  }
 
   const filtered = leads.filter((l) => {
     if (typeFilter !== "all" && l.type !== typeFilter) return false;
@@ -290,6 +347,48 @@ export default function LeadsTable({ leads }: { leads: Lead[] }) {
   });
 
   const newCount = leads.filter((l) => l.status === "new").length;
+  const allChecked = filtered.length > 0 && filtered.every((l) => checked.has(l.id));
+  const someChecked = filtered.some((l) => checked.has(l.id));
+
+  function toggleAll() {
+    if (allChecked) {
+      setChecked(new Set());
+    } else {
+      setChecked(new Set(filtered.map((l) => l.id)));
+    }
+  }
+
+  function toggleOne(id: string) {
+    setChecked((prev) => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+  }
+
+  async function bulkMarkRead() {
+    const ids = [...checked].filter((id) => {
+      const lead = leads.find((l) => l.id === id);
+      return lead?.status === "new";
+    });
+    if (!ids.length) return;
+    setBulkLoading(true);
+    try {
+      await Promise.all(
+        ids.map((id) =>
+          fetch("/api/admin/leads", {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id, status: "read" }),
+          })
+        )
+      );
+      setChecked(new Set());
+      router.refresh();
+    } finally {
+      setBulkLoading(false);
+    }
+  }
 
   return (
     <>
@@ -329,14 +428,45 @@ export default function LeadsTable({ leads }: { leads: Lead[] }) {
           ))}
         </div>
 
-        <span className="ml-auto self-center font-body text-xs text-[#A8A29E]">
-          {filtered.length} résultat{filtered.length !== 1 ? "s" : ""}
-          {newCount > 0 && (
-            <span className="ml-2 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
-              {newCount} nouveau{newCount !== 1 ? "x" : ""}
-            </span>
+        <div className="ml-auto flex items-center gap-3">
+          {someChecked && (
+            <div className="flex items-center gap-2 px-3 py-2 rounded-xl border border-emerald-200 bg-emerald-50">
+              <span className="font-body text-xs text-emerald-700 font-medium">
+                {checked.size} sélectionné{checked.size > 1 ? "s" : ""}
+              </span>
+              <button
+                onClick={bulkMarkRead}
+                disabled={bulkLoading}
+                className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-600 text-white font-body text-xs font-medium hover:bg-emerald-700 disabled:opacity-50 transition-colors"
+              >
+                <CheckCheck size={12} />
+                {bulkLoading ? "…" : "Marquer lus"}
+              </button>
+              <button
+                onClick={() => setChecked(new Set())}
+                className="text-emerald-400 hover:text-emerald-700 transition-colors"
+              >
+                <X size={13} />
+              </button>
+            </div>
           )}
-        </span>
+          <span className="font-body text-xs text-[#A8A29E]">
+            {filtered.length} résultat{filtered.length !== 1 ? "s" : ""}
+            {newCount > 0 && (
+              <span className="ml-2 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                {newCount} nouveau{newCount !== 1 ? "x" : ""}
+              </span>
+            )}
+          </span>
+          <button
+            onClick={exportCSV}
+            disabled={exporting}
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl border border-[#C8A84B] bg-[#FFFBEB] text-[#92400E] font-body text-xs font-medium hover:bg-[#FEF3C7] transition-colors disabled:opacity-50"
+          >
+            <Download size={13} />
+            {exporting ? "Export…" : "CSV"}
+          </button>
+        </div>
       </div>
 
       {/* Table */}
@@ -350,6 +480,11 @@ export default function LeadsTable({ leads }: { leads: Lead[] }) {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-[#E7E5E4] bg-[#F5F5F4]">
+                  <th className="px-4 py-3 w-10">
+                    <button onClick={toggleAll} className="text-[#A8A29E] hover:text-[#0C0B09] transition-colors">
+                      {allChecked ? <CheckSquare size={15} /> : <Square size={15} />}
+                    </button>
+                  </th>
                   <th className="text-left px-5 py-3 font-body text-xs font-semibold text-[#A8A29E] uppercase tracking-wide">Date</th>
                   <th className="text-left px-5 py-3 font-body text-xs font-semibold text-[#A8A29E] uppercase tracking-wide">Type</th>
                   <th className="text-left px-5 py-3 font-body text-xs font-semibold text-[#A8A29E] uppercase tracking-wide">Contact</th>
@@ -362,39 +497,39 @@ export default function LeadsTable({ leads }: { leads: Lead[] }) {
                 {filtered.map((lead) => (
                   <tr
                     key={lead.id}
-                    onClick={() => setSelected(lead)}
-                    className={`cursor-pointer hover:bg-[#FAFAF8] transition-colors ${
+                    className={`hover:bg-[#FAFAF8] transition-colors ${
                       lead.status === "new" ? "bg-white" : "bg-white/60"
-                    }`}
+                    } ${checked.has(lead.id) ? "bg-emerald-50/40" : ""}`}
                   >
-                    <td className="px-5 py-3.5 font-body text-xs text-[#A8A29E] whitespace-nowrap">
+                    <td className="px-4 py-3.5" onClick={(e) => e.stopPropagation()}>
+                      <button onClick={() => toggleOne(lead.id)} className="text-[#A8A29E] hover:text-emerald-600 transition-colors">
+                        {checked.has(lead.id) ? <CheckSquare size={15} className="text-emerald-600" /> : <Square size={15} />}
+                      </button>
+                    </td>
+                    <td className="px-5 py-3.5 font-body text-xs text-[#A8A29E] whitespace-nowrap cursor-pointer" onClick={() => setSelected(lead)}>
                       {new Date(lead.created_at).toLocaleDateString("fr-SN", {
                         day: "2-digit",
                         month: "short",
                         year: "numeric",
                       })}
                     </td>
-                    <td className="px-5 py-3.5">
-                      <span
-                        className={`inline-flex px-2 py-0.5 rounded-full text-[11px] font-body font-semibold border ${TYPE_COLORS[lead.type]}`}
-                      >
+                    <td className="px-5 py-3.5 cursor-pointer" onClick={() => setSelected(lead)}>
+                      <span className={`inline-flex px-2 py-0.5 rounded-full text-[11px] font-body font-semibold border ${TYPE_COLORS[lead.type]}`}>
                         {TYPE_LABELS[lead.type]}
                       </span>
                     </td>
-                    <td className="px-5 py-3.5 font-body text-sm font-medium text-[#0C0B09]">
+                    <td className="px-5 py-3.5 font-body text-sm font-medium text-[#0C0B09] cursor-pointer" onClick={() => setSelected(lead)}>
                       {getLeadName(lead)}
                     </td>
-                    <td className="px-5 py-3.5 font-body text-sm text-[#78716C] hidden md:table-cell">
+                    <td className="px-5 py-3.5 font-body text-sm text-[#78716C] hidden md:table-cell cursor-pointer" onClick={() => setSelected(lead)}>
                       {getLeadEmail(lead)}
                     </td>
-                    <td className="px-5 py-3.5">
-                      <span
-                        className={`inline-flex px-2 py-0.5 rounded-full text-[11px] font-body font-semibold border ${STATUS_COLORS[lead.status]}`}
-                      >
+                    <td className="px-5 py-3.5 cursor-pointer" onClick={() => setSelected(lead)}>
+                      <span className={`inline-flex px-2 py-0.5 rounded-full text-[11px] font-body font-semibold border ${STATUS_COLORS[lead.status]}`}>
                         {STATUS_LABELS[lead.status]}
                       </span>
                     </td>
-                    <td className="px-3 py-3.5 text-[#A8A29E]">
+                    <td className="px-3 py-3.5 text-[#A8A29E] cursor-pointer" onClick={() => setSelected(lead)}>
                       <ChevronRight size={14} />
                     </td>
                   </tr>

@@ -20,7 +20,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const { type, score, userInfo } = parsed.data;
+    const { type, score, userInfo, answers } = parsed.data;
     const config = sondageConfigs[type];
 
     if (!config) {
@@ -73,9 +73,17 @@ export async function POST(request: Request) {
       );
     }
 
-    // Save to Supabase
-    getSupabase().from("leads").insert({ type: "sondage", data: { type, score, userInfo } })
-      .then(({ error: dbErr }) => { if (dbErr) console.error("Supabase insert error:", dbErr.message); });
+    // Save to Supabase — with full answers for detailed analysis
+    getSupabase().from("leads").insert({
+      type: "sondage",
+      data: {
+        sondage_type: type,
+        score,
+        userInfo,
+        answers,           // réponses détaillées question par question
+        submitted_at: new Date().toISOString(),
+      },
+    }).then(({ error: dbErr }) => { if (dbErr) console.error("Supabase insert error:", dbErr.message); });
 
     return NextResponse.json({ success: true });
   } catch (err) {

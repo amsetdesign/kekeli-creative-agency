@@ -121,6 +121,58 @@ export function generateSondageReport(
 
   y += 56;
 
+  // ── PROFIL DÉMOGRAPHIQUE ─────────────────────────────────────────────────────
+  const profileFields: { label: string; value: string }[] = [];
+
+  if (userInfo.sexe) {
+    const sexeMap: Record<string, string> = { homme: "Homme", femme: "Femme", non_precise: "Non précisé" };
+    profileFields.push({ label: "Genre", value: sexeMap[userInfo.sexe] ?? userInfo.sexe });
+  }
+  if (userInfo.age) {
+    const ageMap: Record<string, string> = { moins_25: "Moins de 25 ans", "25_35": "25–35 ans", "35_45": "35–45 ans", "45_plus": "45 ans et plus" };
+    profileFields.push({ label: "Âge", value: ageMap[userInfo.age] ?? userInfo.age });
+  }
+  if (userInfo.ville) profileFields.push({ label: "Ville", value: userInfo.ville });
+  if (userInfo.budget) {
+    const budgetMap: Record<string, string> = { moins_50k: "< 50 000 FCFA", "50k_150k": "50 000–150 000 FCFA", "150k_500k": "150 000–500 000 FCFA", "500k_2M": "500 000–2 000 000 FCFA", "plus_2M": "> 2 000 000 FCFA" };
+    profileFields.push({ label: "Budget", value: budgetMap[userInfo.budget] ?? userInfo.budget });
+  }
+  if (userInfo.urgence) {
+    const urgenceMap: Record<string, string> = { immediat: "Immédiat", "1_mois": "Dans 1 mois", "1_3_mois": "1–3 mois", "plus_3_mois": "3 mois ou plus" };
+    profileFields.push({ label: "Délai", value: urgenceMap[userInfo.urgence] ?? userInfo.urgence });
+  }
+  if (userInfo.source) {
+    const sourceMap: Record<string, string> = { instagram: "Instagram", facebook: "Facebook", tiktok: "TikTok", youtube: "YouTube", bouche_a_oreille: "Bouche à oreille", google: "Google", evenement: "Événement", autre: "Autre" };
+    profileFields.push({ label: "Source", value: sourceMap[userInfo.source] ?? userInfo.source });
+  }
+
+  if (profileFields.length > 0) {
+    const profileH = 14 + profileFields.length * 9;
+    doc.setFillColor(250, 248, 243);
+    doc.roundedRect(ml, y, cw, profileH, 4, 4, "F");
+    doc.setDrawColor(200, 168, 75);
+    doc.setLineWidth(0.4);
+    doc.roundedRect(ml, y, cw, profileH, 4, 4, "D");
+
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(8);
+    doc.setTextColor(200, 168, 75);
+    doc.text("PROFIL", ml + 5, y + 8);
+
+    profileFields.forEach((f, i) => {
+      const fy = y + 14 + i * 9;
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(8);
+      doc.setTextColor(120, 113, 108);
+      doc.text(f.label, ml + 5, fy);
+      doc.setFont("helvetica", "bold");
+      doc.setTextColor(12, 11, 9);
+      doc.text(f.value, ml + 40, fy);
+    });
+
+    y += profileH + 8;
+  }
+
   // ── RECOMMENDATIONS ─────────────────────────────────────────────────────────
   doc.setFont("helvetica", "bold");
   doc.setFontSize(13);

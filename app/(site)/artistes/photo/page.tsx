@@ -115,7 +115,7 @@ export default function PhotoPage() {
       {/* ── HERO ──────────────────────────────────────────── */}
       <section
         className="relative py-32 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #08060F 0%, #130A28 35%, #1C0A40 60%, #0A0618 100%)" }}
+        style={{ background: "#0C0B09" }}
       >
         <div aria-hidden className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-[160px] opacity-20" style={{ background: ACCENT }} />
@@ -125,12 +125,12 @@ export default function PhotoPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn direction="down" className="mb-8">
-            <nav className="flex items-center gap-2 text-xs font-body" style={{ color: "rgba(220,210,255,0.45)" }}>
+            <nav className="flex items-center gap-2 text-xs font-body" style={{ color: "rgba(255,255,255,0.45)" }}>
               <Link href="/" className="hover:text-gold transition-colors">Accueil</Link>
               <ChevronRight size={12} />
               <Link href="/artistes" className="hover:text-gold transition-colors">Artistes</Link>
               <ChevronRight size={12} />
-              <span style={{ color: "rgba(220,210,255,0.70)" }}>Photo Shooting</span>
+              <span style={{ color: "rgba(255,255,255,0.70)" }}>Photo Shooting</span>
             </nav>
           </FadeIn>
 
@@ -150,7 +150,7 @@ export default function PhotoPage() {
             </FadeIn>
 
             <FadeIn direction="up" delay={0.22}>
-              <p className="font-body text-lg leading-relaxed mb-8 max-w-xl" style={{ color: "rgba(220,210,255,0.70)" }}>
+              <p className="font-body text-lg leading-relaxed mb-8 max-w-xl" style={{ color: "rgba(255,255,255,0.70)" }}>
                 Portraits artiste, shootings thématiques, studio ou extérieur à Dakar —
                 KEKELI Creative Agency crée des visuels percutants qui racontent qui vous êtes
                 et captivent votre audience au premier regard.
@@ -193,7 +193,7 @@ export default function PhotoPage() {
                 <div className="flex flex-col items-center text-center p-5 rounded-2xl" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
                   <span className="text-3xl mb-3">{d.emoji}</span>
                   <p className="font-body font-semibold text-white text-sm mb-1">{d.label}</p>
-                  <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(220,210,255,0.50)" }}>{d.desc}</p>
+                  <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>{d.desc}</p>
                 </div>
               </FadeInItem>
             ))}
@@ -264,7 +264,7 @@ export default function PhotoPage() {
                 <div className="flex flex-col items-center text-center p-6 rounded-2xl" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
                   <span className="text-4xl mb-3">{loc.emoji}</span>
                   <h3 className="font-body font-bold text-white text-sm mb-2">{loc.name}</h3>
-                  <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(220,210,255,0.50)" }}>{loc.desc}</p>
+                  <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>{loc.desc}</p>
                 </div>
               </FadeInItem>
             ))}
@@ -316,7 +316,7 @@ export default function PhotoPage() {
                   </div>
                   <div>
                     <p className="font-body font-semibold text-white text-sm mb-1">{title}</p>
-                    <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(220,210,255,0.55)" }}>{desc}</p>
+                    <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{desc}</p>
                   </div>
                 </div>
               </FadeInItem>
@@ -329,7 +329,7 @@ export default function PhotoPage() {
       <section
         id="formulaire"
         className="py-24 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #08060F 0%, #130A28 35%, #1C0A40 60%, #0A0618 100%)" }}
+        style={{ background: "#0C0B09" }}
       >
         <div aria-hidden className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-96 h-96 rounded-full blur-[140px] opacity-18" style={{ background: ACCENT }} />
@@ -342,7 +342,7 @@ export default function PhotoPage() {
             <h2 className="font-display text-4xl md:text-5xl text-white leading-tight mb-4">
               Parlons de votre <em className="text-gold not-italic">shooting</em>
             </h2>
-            <p className="font-body text-base" style={{ color: "rgba(220,210,255,0.60)" }}>
+            <p className="font-body text-base" style={{ color: "rgba(255,255,255,0.60)" }}>
               Décrivez votre vision. Notre photographe vous répond sous 24h avec un devis personnalisé et des suggestions de lieux.
             </p>
           </FadeIn>

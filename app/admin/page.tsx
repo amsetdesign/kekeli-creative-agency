@@ -8,9 +8,11 @@ import ProjectsPanel from "@/components/admin/ProjectsPanel";
 import AdminCharts from "@/components/admin/AdminCharts";
 import AdminSidebar from "@/components/admin/AdminSidebar";
 import RoadmapGuide from "@/components/admin/RoadmapGuide";
+import NewsletterPanel, { type NewsletterSubscriber } from "@/components/admin/NewsletterPanel";
+import BlogPanel, { type BlogPost as AdminBlogPost } from "@/components/admin/BlogPanel";
 import {
   Users, MessageSquare, Zap, BarChart2, Sparkles,
-  FolderOpen, Mic2, Building2, TrendingUp, Clock,
+  FolderOpen, Mic2, Building2, Mail, FileText,
 } from "lucide-react";
 
 export const metadata: Metadata = { title: "Dashboard — KEKELI Admin" };
@@ -18,17 +20,21 @@ export const dynamic = "force-dynamic";
 
 async function getData() {
   const db = getSupabase();
-  const [leadsRes, convsRes, clientsRes, projectsRes] = await Promise.all([
+  const [leadsRes, convsRes, clientsRes, projectsRes, newsletterRes, blogRes] = await Promise.all([
     db.from("leads").select("*").order("created_at", { ascending: false }),
     db.from("conversations").select("*").order("updated_at", { ascending: false }),
     db.from("client_profiles").select("*").order("created_at", { ascending: false }),
     db.from("projects").select("*, client_profiles(full_name, company, email)").order("updated_at", { ascending: false }),
+    db.from("newsletter_subscribers").select("*").order("subscribed_at", { ascending: false }),
+    db.from("blog_posts").select("*").order("created_at", { ascending: false }),
   ]);
   return {
     leads: (leadsRes.data ?? []) as Lead[],
     conversations: (convsRes.data ?? []) as Conversation[],
     clients: (clientsRes.data ?? []) as ClientProfile[],
     projects: (projectsRes.data ?? []) as (Project & { client_profiles: Pick<ClientProfile, "full_name" | "company" | "email"> | null })[],
+    newsletter: (newsletterRes.data ?? []) as NewsletterSubscriber[],
+    blogPosts: (blogRes.data ?? []) as AdminBlogPost[],
   };
 }
 
@@ -79,7 +85,7 @@ export default async function AdminDashboard({
   searchParams: Promise<{ tab?: string }>;
 }) {
   const { tab } = await searchParams;
-  const { leads, conversations, clients, projects } = await getData();
+  const { leads, conversations, clients, projects, newsletter, blogPosts } = await getData();
 
   /* ── Stats ── */
   const newLeads        = leads.filter((l) => l.status === "new").length;
@@ -95,6 +101,8 @@ export default async function AdminDashboard({
   const activeProjects  = projects.filter((p) => p.status === "en_cours").length;
   const qualifiedConvs  = conversations.filter((c) => c.status === "qualified").length;
 
+  const activeSubscribers = newsletter.filter((s) => !s.unsubscribed_at).length;
+
   const sidebarCounts = {
     leads: leads.length, newLeads,
     artistes: artisteLeads, newArtistes: newArtiste,
@@ -102,6 +110,8 @@ export default async function AdminDashboard({
     clients: clients.length, pending: pendingClients,
     projects: projects.length, active: activeProjects,
     conversations: conversations.length,
+    newsletter: activeSubscribers,
+    blog: blogPosts.filter((p) => p.published).length,
   };
 
   /* ── Filtered leads for sub-tabs ── */
@@ -236,6 +246,28 @@ export default async function AdminDashboard({
               <ProjectsPanel projects={projects} clients={clients} />
             </>
           )}
+
+          {/* ── NEWSLETTER ── */}
+          {tab === "newsletter" && (
+            <>
+              <div className="mb-6 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#10B98120" }}>
+                  <Mail size={18} style={{ color: "#10B981" }} />
+                </div>
+                <div>
+                  <h1 className="font-display text-2xl text-[#0C0B09]">Newsletter</h1>
+                  <p className="font-body text-sm text-[#78716C]">
+                    {activeSubscribers} abonné{activeSubscribers !== 1 ? "s" : ""} actif{activeSubscribers !== 1 ? "s" : ""}
+                    {newsletter.length > activeSubscribers && ` · ${newsletter.length - activeSubscribers} désabonné${newsletter.length - activeSubscribers !== 1 ? "s" : ""}`}
+                  </p>
+                </div>
+              </div>
+              <NewsletterPanel subscribers={newsletter} />
+            </>
+          )}
+
+          {/* ── BLOG ── */}
+          {tab === "blog" && <BlogPanel posts={blogPosts} />}
 
           {/* ── ROADMAP ── */}
           {tab === "roadmap" && <RoadmapGuide />}

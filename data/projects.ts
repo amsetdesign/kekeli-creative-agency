@@ -18,6 +18,8 @@ export interface Project {
   featured?: boolean;
   // YouTube video embed
   youtubeId?: string;
+  // Instagram posts
+  instagramPosts?: string[];
   // Case study fields
   challenge?: string;
   solution?: string;
@@ -74,6 +76,11 @@ export const projects: Project[] = [
     imageAlt: "Galsen Gospel Urbain 3 — Festival gospel Sénégal",
     featured: true,
     timeline: "2 semaines",
+    youtubeId: "YvtkEgJyEwk",
+    instagramPosts: [
+      "https://www.instagram.com/p/DTngjXLiJRF/",
+      "https://www.instagram.com/p/DTIdaE-CMGE/",
+    ],
     challenge:
       "Créer une plateforme digitale pour Galsen Gospel Urbain 3 qui reflète l'énergie du festival, facilite les dons via mobile money (Wave, Orange Money) et présente les ambassadeurs et partenaires de manière premium — en un temps record.",
     solution:
@@ -117,46 +124,20 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "campagne-ads-pme",
-    title: "Campagne Facebook & Instagram Ads",
-    subtitle: "Publicité digitale · PME Dakar",
+    id: "campagne-ads-o-bon-prix",
+    title: "Campagne Meta Ads — O BON PRIX",
+    subtitle: "Publicité digitale · Superette O BON PRIX",
     category: ["com"],
     description:
-      "Gestion de campagnes publicitaires pour une PME locale. Ciblage Dakar, visuels sur-mesure et optimisation ROI sur 3 mois.",
-    tags: ["Facebook Ads", "Instagram", "Ciblage local"],
-    image: "/images/campagne-ads-pme.jpg",
-    imageAlt: "Campagne Facebook & Instagram Ads — PME Dakar",
-    timeline: "3 mois",
+      "Conception et pilotage d'une campagne publicitaire Facebook & Instagram pour la superette O BON PRIX. Visuels sur-mesure, ciblage local et optimisation du retour sur investissement.",
+    tags: ["Facebook Ads", "Instagram Ads", "Meta", "Ciblage local", "Visuels pub"],
+    image: "/images/promo-o-bon-prix.jpeg",
+    imageAlt: "Campagne Meta Ads O BON PRIX — KEKELI Creative Agency",
+    timeline: "Campagne continue",
     challenge:
-      "Une PME de services à Dakar investissait dans la publicité Facebook sans stratégie claire et obtenait de mauvais résultats. Budget gaspillé, audiences non ciblées, visuels génériques.",
+      "O BON PRIX cherchait à augmenter sa visibilité locale et à attirer de nouveaux clients en dehors de son périmètre habituel, sans avoir de présence publicitaire structurée ni de visuels professionnels adaptés aux réseaux sociaux.",
     solution:
-      "Audit complet, refonte de la stratégie publicitaire, création de visuels sur-mesure et mise en place d'audiences lookalike hyper-ciblées sur Dakar. Suivi hebdomadaire et optimisation continue sur 3 mois.",
-    results: [
-      { label: "Coût par lead réduit de", value: "−62 %" },
-      { label: "Taux de conversion", value: "×3,4" },
-      { label: "ROAS moyen", value: "4,8×" },
-    ],
-  },
-  {
-    id: "branding-marque-mode",
-    title: "Identité visuelle — Marque de mode",
-    subtitle: "Branding · Dakar",
-    category: ["branding"],
-    description:
-      "Création complète de l'identité visuelle d'une marque de mode africaine contemporaine. Logo, charte graphique et templates réseaux sociaux.",
-    tags: ["Logo", "Charte graphique", "Mode", "Identité"],
-    image: "/images/branding-marque-mode.jpg",
-    imageAlt: "Identité visuelle marque de mode africaine — KEKELI Creative Agency",
-    timeline: "4 semaines",
-    challenge:
-      "Une nouvelle marque de mode africaine contemporaine cherchait une identité forte capable de la positionner sur les marchés locaux et internationaux, en valorisant le savoir-faire africain dans un langage visuel moderne.",
-    solution:
-      "Création d'un logo épuré et distinctif, d'une palette chromatique inspirée des teintes africaines et d'une typographie exclusive. Livraison d'une charte graphique complète et de 20+ templates réseaux sociaux prêts à l'emploi.",
-    results: [
-      { label: "Déclinaisons livrées", value: "20+" },
-      { label: "Formats templates", value: "8" },
-      { label: "Délai de création", value: "4 semaines" },
-    ],
+      "Création de visuels publicitaires percutants adaptés aux formats Facebook et Instagram, mise en place d'un ciblage géographique précis autour de la superette et pilotage des campagnes Meta Ads pour maximiser la portée locale et le trafic en magasin.",
   },
   // ── Clips & Documentaires ──────────────────────────────
   {
@@ -233,6 +214,31 @@ export const projects: Project[] = [
       { label: "Cause", value: "AVC & drépanocytose" },
       { label: "Date", value: "30 nov. 2024" },
     ],
+  },
+
+  // ── Partenariats Communication ────────────────────────
+  {
+    id: "o-bon-prix",
+    title: "Superette O BON PRIX",
+    subtitle: "Communication digitale 360° · Sénégal",
+    category: ["com", "video", "branding"],
+    description:
+      "Prise en charge complète de la communication digitale de la superette O BON PRIX : stratégie de contenu, vidéos publicitaires, campagnes Meta Ads et gestion des réseaux sociaux.",
+    tags: ["Facebook Ads", "Instagram", "Vidéo publicitaire", "Réseaux sociaux", "Stratégie digitale", "Meta Ads"],
+    image: "/images/o-bon-prix-logo.png",
+    imageAlt: "Superette O BON PRIX — Communication digitale KEKELI",
+    featured: true,
+    timeline: "Partenariat continu",
+    instagramPosts: [
+      "https://www.instagram.com/p/DZDJ_4Doohd/",
+      "https://www.instagram.com/p/DYXLrCUoX9D/",
+      "https://www.instagram.com/p/DV39dyDCAuA/",
+      "https://www.instagram.com/p/DUGHy_0COZ5/",
+    ],
+    challenge:
+      "O BON PRIX, une superette de proximité sénégalaise, voulait se démarquer de la concurrence et attirer une clientèle locale grâce au digital — sans infrastructure de contenu ni stratégie de communication structurée. Aucune présence professionnelle sur les réseaux, zéro vidéo publicitaire, et un potentiel client inexploité.",
+    solution:
+      "KEKELI prend en charge l'intégralité de la communication digitale de O BON PRIX : production de vidéos publicitaires professionnelles adaptées aux réseaux sociaux, pilotage de campagnes Facebook & Instagram Ads ciblées localement, création de contenu visuel percutant et gestion quotidienne de la présence en ligne. Un partenariat de communication à 360° pour ancrer O BON PRIX dans le paysage digital local.",
   },
 
   // ── Autres réalisations ────────────────────────────────

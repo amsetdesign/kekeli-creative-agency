@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Claude Code memory (données privées)
 .claude/
+
+# Agent skills (outils de développement, pas du code source)
+.agents/

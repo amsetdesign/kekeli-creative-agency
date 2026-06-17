@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, Mail, MapPin, MessageCircle, ArrowRight } from "lucide-react";
 import FadeIn from "@/components/animations/FadeIn";
@@ -100,15 +99,6 @@ export default function ContactContent() {
                       <p className="font-body text-sm font-medium text-text-primary">Dakar, Sénégal</p>
                     </div>
                   </div>
-                </div>
-
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden [box-shadow:var(--shadow-sm)] mb-8">
-                  <Image
-                    src="https://images.unsplash.com/photo-1573164713712-03d486899f8f?w=700&h=500&q=80&auto=format&fit=crop"
-                    alt="Équipe KEKELI Creative Agency — Dakar"
-                    fill
-                    className="object-cover"
-                  />
                 </div>
 
                 <div className="p-5 rounded-2xl bg-bg-dark border border-gold/20 [box-shadow:var(--shadow-gold)]">

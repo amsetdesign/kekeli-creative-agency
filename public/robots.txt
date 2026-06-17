@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Zones privées — ne pas indexer
+Disallow: /admin/
+Disallow: /espace-client/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://kekeli.agency/sitemap.xml

@@ -12,7 +12,7 @@ export default function CataloguePage() {
     entreprises: 0, newEntreprises: 0,
     clients: 0, pending: 0,
     projects: 0, active: 0,
-    conversations: 0,
+    conversations: 0, newsletter: 0, blog: 0,
   };
 
   return (

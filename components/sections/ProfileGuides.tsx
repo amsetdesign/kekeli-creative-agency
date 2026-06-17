@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
 import { useT } from "@/hooks/useT";
@@ -14,10 +15,10 @@ export default function ProfileGuides() {
       emoji: "🎵",
       title: g.artistProfile,
       subtitle: g.artistSub,
-      color: "#8B5CF6",
-      borderColor: "rgba(139,92,246,0.25)",
-      glowColor: "rgba(139,92,246,0.12)",
-      tagBg: "rgba(139,92,246,0.12)",
+      color: "#C8A84B",
+      borderColor: "rgba(200,168,75,0.20)",
+      glowColor: "rgba(200,168,75,0.08)",
+      tagBg: "rgba(200,168,75,0.10)",
       steps: [
         { n: "01", title: g.step1, tag: g.step1Duration, desc: g.step1Desc,   href: "/sondage/artiste" },
         { n: "02", title: g.step2, tag: g.step2Sub,      desc: g.step2Desc,   href: "/artistes" },
@@ -52,17 +53,38 @@ export default function ProfileGuides() {
   return (
     <section
       className="relative py-24 px-6 overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #0D0820 0%, #0A0618 100%)" }}
     >
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&h=900&q=80&auto=format&fit=crop"
+          alt=""
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        {/* Cinematic overlay — mirrors the Hero */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(135deg, rgba(8,6,18,0.96) 0%, rgba(20,8,45,0.90) 35%, rgba(30,10,60,0.84) 60%, rgba(12,8,25,0.92) 100%)",
+          }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(to right, rgba(6,4,14,0.50) 0%, transparent 70%)" }}
+        />
+      </div>
+
       {/* Decorative blobs */}
       <div aria-hidden className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-[160px] opacity-15"
-          style={{ background: "#6D28D9" }}
+          className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-[160px] opacity-12"
+          style={{ background: "#C8A84B" }}
         />
         <div
-          className="absolute bottom-0 right-1/4 w-72 h-72 rounded-full blur-[140px] opacity-10"
-          style={{ background: "#C8A84B" }}
+          className="absolute bottom-0 right-1/4 w-72 h-72 rounded-full blur-[140px] opacity-08"
+          style={{ background: "#4B0082" }}
         />
       </div>
 
@@ -85,7 +107,7 @@ export default function ProfileGuides() {
           </h2>
           <p
             className="font-body text-base max-w-lg mx-auto leading-relaxed"
-            style={{ color: "rgba(220,210,255,0.55)" }}
+            style={{ color: "rgba(255,255,255,0.55)" }}
           >
             Choisissez votre profil. Suivez les 4 étapes. Téléchargez le guide
             PDF pour l&apos;avoir toujours sous la main.
@@ -118,7 +140,7 @@ export default function ProfileGuides() {
                   </h3>
                   <p
                     className="text-xs mt-0.5"
-                    style={{ color: "rgba(220,210,255,0.40)" }}
+                    style={{ color: "rgba(255,255,255,0.40)" }}
                   >
                     {p.subtitle}
                   </p>
@@ -153,7 +175,7 @@ export default function ProfileGuides() {
                       </div>
                       <p
                         className="text-xs leading-snug"
-                        style={{ color: "rgba(220,210,255,0.40)" }}
+                        style={{ color: "rgba(255,255,255,0.40)" }}
                       >
                         {s.desc}
                       </p>
@@ -200,7 +222,7 @@ export default function ProfileGuides() {
         {/* Bottom note */}
         <p
           className="text-center text-xs mt-10"
-          style={{ color: "rgba(220,210,255,0.30)" }}
+          style={{ color: "rgba(255,255,255,0.30)" }}
         >
           Tous les audits sont gratuits et sans engagement · Réponse KEKELI sous
           30 minutes

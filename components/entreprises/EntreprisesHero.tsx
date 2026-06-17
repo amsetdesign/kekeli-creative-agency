@@ -17,10 +17,10 @@ export default function EntreprisesHero() {
     <section ref={ref} className="relative min-h-[92vh] flex items-center overflow-hidden bg-[#050A14]">
       {/* Gradient blobs */}
       <motion.div style={{ y }} className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-10%] left-[10%] w-[600px] h-[600px] rounded-full opacity-20"
-          style={{ background: "radial-gradient(circle, #1E40AF 0%, transparent 70%)", filter: "blur(80px)" }} />
-        <div className="absolute bottom-[0%] right-[5%] w-[500px] h-[500px] rounded-full opacity-15"
-          style={{ background: "radial-gradient(circle, #0EA5E9 0%, transparent 70%)", filter: "blur(80px)" }} />
+        <div className="absolute top-[-10%] left-[10%] w-[600px] h-[600px] rounded-full opacity-15"
+          style={{ background: "radial-gradient(circle, #C8A84B 0%, transparent 70%)", filter: "blur(80px)" }} />
+        <div className="absolute bottom-[0%] right-[5%] w-[500px] h-[500px] rounded-full opacity-10"
+          style={{ background: "radial-gradient(circle, #C8A84B 0%, transparent 70%)", filter: "blur(80px)" }} />
         <div className="absolute top-[40%] left-[50%] w-[400px] h-[400px] rounded-full opacity-10"
           style={{ background: "radial-gradient(circle, #C8A84B 0%, transparent 70%)", filter: "blur(80px)" }} />
       </motion.div>
@@ -34,7 +34,7 @@ export default function EntreprisesHero() {
           {/* Badge */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-body font-semibold uppercase tracking-[0.2em] mb-8"
-              style={{ color: "#0EA5E9", border: "1px solid rgba(14,165,233,0.3)", background: "rgba(14,165,233,0.08)" }}>
+              style={{ color: "#C8A84B", border: "1px solid rgba(200,168,75,0.30)", background: "rgba(200,168,75,0.08)" }}>
               <Sparkles size={10} />
               {c.heroBadge}
             </span>
@@ -55,7 +55,7 @@ export default function EntreprisesHero() {
               initial={{ y: "100%" }} animate={{ y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05]"
-              style={{ color: "#0EA5E9" }}
+              style={{ color: "#C8A84B" }}
             >
               {c.heroLine2}
             </motion.h1>
@@ -95,8 +95,8 @@ export default function EntreprisesHero() {
           >
             <Link
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-white transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5"
-              style={{ background: "linear-gradient(135deg, #1E40AF, #0EA5E9)" }}
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-black transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5"
+              style={{ background: "linear-gradient(135deg, #C8A84B, #D4A83A)" }}
             >
               {c.heroCta1} <ArrowRight size={16} />
             </Link>

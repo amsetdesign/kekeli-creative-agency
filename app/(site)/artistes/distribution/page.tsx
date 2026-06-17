@@ -160,7 +160,7 @@ export default function DistributionPage() {
       {/* ── HERO ──────────────────────────────────────────── */}
       <section
         className="relative py-32 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #08060F 0%, #130A28 35%, #1C0A40 60%, #0A0618 100%)" }}
+        style={{ background: "#0C0B09" }}
       >
         {/* Blobs */}
         <div aria-hidden className="absolute inset-0 pointer-events-none">
@@ -172,12 +172,12 @@ export default function DistributionPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <FadeIn direction="down" className="mb-8">
-            <nav className="flex items-center gap-2 text-xs font-body" style={{ color: "rgba(220,210,255,0.45)" }}>
+            <nav className="flex items-center gap-2 text-xs font-body" style={{ color: "rgba(255,255,255,0.45)" }}>
               <Link href="/" className="hover:text-gold transition-colors">Accueil</Link>
               <ChevronRight size={12} />
               <Link href="/artistes" className="hover:text-gold transition-colors">Artistes</Link>
               <ChevronRight size={12} />
-              <span style={{ color: "rgba(220,210,255,0.70)" }}>Distribution</span>
+              <span style={{ color: "rgba(255,255,255,0.70)" }}>Distribution</span>
             </nav>
           </FadeIn>
 
@@ -197,7 +197,7 @@ export default function DistributionPage() {
             </FadeIn>
 
             <FadeIn direction="up" delay={0.22}>
-              <p className="font-body text-lg leading-relaxed mb-8 max-w-xl" style={{ color: "rgba(220,210,255,0.70)" }}>
+              <p className="font-body text-lg leading-relaxed mb-8 max-w-xl" style={{ color: "rgba(255,255,255,0.70)" }}>
                 Single, EP, Album ou Mixtape — KEKELI Creative Agency distribue votre musique sur Spotify,
                 Apple Music, Boomplay, Deezer et 40+ plateformes mondiales. ISRC, UPC,
                 métadonnées, cover art : on s'occupe de tout.
@@ -316,7 +316,7 @@ export default function DistributionPage() {
                   </div>
                   <div>
                     <p className="font-body font-semibold text-white text-sm mb-1">{title}</p>
-                    <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(220,210,255,0.55)" }}>{desc}</p>
+                    <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{desc}</p>
                   </div>
                 </div>
               </FadeInItem>
@@ -395,7 +395,7 @@ export default function DistributionPage() {
       <section
         id="formulaire"
         className="py-24 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #08060F 0%, #130A28 35%, #1C0A40 60%, #0A0618 100%)" }}
+        style={{ background: "#0C0B09" }}
       >
         {/* Blobs */}
         <div aria-hidden className="absolute inset-0 pointer-events-none">
@@ -409,7 +409,7 @@ export default function DistributionPage() {
             <h2 className="font-display text-4xl md:text-5xl text-white leading-tight mb-4">
               Prêt à lancer votre <em className="text-gold not-italic">release ?</em>
             </h2>
-            <p className="font-body text-base" style={{ color: "rgba(220,210,255,0.60)" }}>
+            <p className="font-body text-base" style={{ color: "rgba(255,255,255,0.60)" }}>
               Remplissez le formulaire ci-dessous. Notre équipe vous contacte dans les 24h pour confirmer votre dossier et démarrer la distribution.
             </p>
           </FadeIn>

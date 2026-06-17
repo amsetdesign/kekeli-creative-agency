@@ -18,21 +18,25 @@ export default function KELIBanner() {
   return (
     <section
       className="relative py-16 overflow-hidden"
-      style={{
-        background: "linear-gradient(135deg, #0C0B09 0%, #1A0A2E 55%, #0D1B2E 100%)",
-      }}
     >
-      {/* Background blobs */}
+      {/* Violet gradient — mirrors ContactCTA */}
       <div
-        className="absolute top-0 left-1/3 w-72 h-72 rounded-full blur-[90px] opacity-25 pointer-events-none"
-        style={{ background: "#8B5CF6" }}
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(135deg, #0D0520 0%, #1E0040 35%, #2A0060 60%, #0A0B09 100%)" }}
+      />
+
+      {/* Violet blobs */}
+      <div
+        className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-[130px] opacity-30 pointer-events-none"
+        style={{ background: "#4B0082" }}
       />
       <div
-        className="absolute bottom-0 right-1/3 w-60 h-60 rounded-full blur-[70px] opacity-20 pointer-events-none"
-        style={{ background: "#4C9BFF" }}
+        className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full blur-[110px] opacity-25 pointer-events-none"
+        style={{ background: "#6B21A8" }}
       />
+      {/* Gold center glow */}
       <div
-        className="absolute top-1/2 -translate-y-1/2 right-8 w-48 h-48 rounded-full blur-[60px] opacity-15 pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full blur-[90px] opacity-15 pointer-events-none"
         style={{ background: "#C8A84B" }}
       />
 

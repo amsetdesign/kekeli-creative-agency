@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
@@ -8,11 +9,11 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import { useT } from "@/hooks/useT";
 
 const PROFILES_STATIC = [
-  { emoji: "🏢", href: "/sondage/entreprise", from: "#3B82F6", to: "#1D4ED8", glow: "#60A5FA", tk: "company",  descTk: "companyDesc"  },
-  { emoji: "🎤", href: "/sondage/artiste",    from: "#8B5CF6", to: "#6D28D9", glow: "#A78BFA", tk: "artist",   descTk: "artistDesc"   },
-  { emoji: "🛒", href: "/sondage/vendeur",    from: "#F97316", to: "#C2410C", glow: "#FB923C", tk: "seller",   descTk: "sellerDesc"   },
-  { emoji: "✨", href: "/sondage/marque",     from: "#EC4899", to: "#BE185D", glow: "#F472B6", tk: "brand",    descTk: "brandDesc"    },
-  { emoji: "🎪", href: "/sondage/evenement",  from: "#10B981", to: "#065F46", glow: "#34D399", tk: "event",    descTk: "eventDesc"    },
+  { emoji: "🏢", href: "/sondage/entreprise", accent: "#3B82F6", tk: "company",  descTk: "companyDesc"  },
+  { emoji: "🎤", href: "/sondage/artiste",    accent: "#C8A84B", tk: "artist",   descTk: "artistDesc"   },
+  { emoji: "🛒", href: "/sondage/vendeur",    accent: "#F97316", tk: "seller",   descTk: "sellerDesc"   },
+  { emoji: "✨", href: "/sondage/marque",     accent: "#EC4899", tk: "brand",    descTk: "brandDesc"    },
+  { emoji: "🎪", href: "/sondage/evenement",  accent: "#10B981", tk: "event",    descTk: "eventDesc"    },
 ] as const;
 
 export default function SondageTeaser() {
@@ -20,7 +21,7 @@ export default function SondageTeaser() {
 
   const profiles = PROFILES_STATIC.map((p) => ({
     ...p,
-    title: tr.sondage[p.tk  as keyof typeof tr.sondage] as string,
+    title: tr.sondage[p.tk as keyof typeof tr.sondage] as string,
     desc:  tr.sondage[p.descTk as keyof typeof tr.sondage] as string,
   }));
 
@@ -41,53 +42,65 @@ export default function SondageTeaser() {
             <FadeIn key={profile.href} delay={i * 0.09} direction="up">
               <Link href={profile.href} className="block h-full">
                 <motion.div
-                  whileHover={{ y: -10, scale: 1.04 }}
+                  whileHover={{ y: -5, scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ duration: 0.22, ease: "easeOut" }}
-                  className="group relative rounded-2xl p-6 text-center flex flex-col items-center justify-center gap-4 cursor-pointer overflow-hidden h-full min-h-[210px]"
+                  className="group relative rounded-2xl overflow-hidden cursor-pointer h-full min-h-[210px] flex flex-col"
                   style={{
-                    background: `linear-gradient(145deg, ${profile.from} 0%, ${profile.to} 100%)`,
-                    boxShadow: `0 8px 32px ${profile.glow}40, 0 2px 8px rgba(0,0,0,0.15)`,
+                    border: `1px solid ${profile.accent}30`,
+                    boxShadow: `0 4px 24px rgba(0,0,0,0.30), 0 0 0 1px ${profile.accent}12`,
                   }}
                 >
-                  {/* Deco circles */}
-                  <div
-                    className="absolute -top-8 -right-8 w-32 h-32 rounded-full opacity-20"
-                    style={{ background: "rgba(255,255,255,0.4)" }}
-                  />
-                  <div
-                    className="absolute -bottom-6 -left-6 w-24 h-24 rounded-full opacity-15"
-                    style={{ background: "rgba(255,255,255,0.3)" }}
-                  />
-
-                  {/* Shine line on hover */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%)" }}
-                  />
-
-                  {/* Emoji bubble */}
-                  <div
-                    className="relative z-10 w-16 h-16 rounded-2xl flex items-center justify-center"
-                    style={{ background: "rgba(255,255,255,0.22)", backdropFilter: "blur(8px)" }}
-                  >
-                    <span className="text-3xl">{profile.emoji}</span>
+                  {/* Background image — geometric violet */}
+                  <div className="absolute inset-0">
+                    <Image
+                      src="/images/bg-ia-violet.jpg"
+                      alt=""
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                    />
+                    {/* Overlay léger — laisse les formes géométriques visibles */}
+                    <div
+                      className="absolute inset-0"
+                      style={{ background: "rgba(6,2,16,0.45)" }}
+                    />
+                    {/* Tint coloré subtil selon l'accent de chaque carte */}
+                    <div
+                      className="absolute inset-0"
+                      style={{ background: `${profile.accent}0D` }}
+                    />
                   </div>
 
-                  <div className="relative z-10">
-                    <p className="font-body font-bold text-sm text-white mb-1">
-                      {profile.title}
-                    </p>
-                    <p className="font-body text-[11px] leading-tight" style={{ color: "rgba(255,255,255,0.70)" }}>
-                      {profile.desc}
-                    </p>
-                  </div>
+                  {/* Colored top bar */}
+                  <div
+                    className="relative h-0.5 w-full shrink-0"
+                    style={{ background: `linear-gradient(90deg, ${profile.accent} 0%, transparent 100%)` }}
+                  />
 
-                  <span
-                    className="relative z-10 px-3 py-1 rounded-full font-body text-[10px] font-bold"
-                    style={{ background: "rgba(255,255,255,0.20)", color: "rgba(255,255,255,0.95)" }}
-                  >
-                    {tr.sondage.startCta}
-                  </span>
+                  <div className="relative flex-1 p-5 flex flex-col items-center justify-center gap-4 text-center">
+                    {/* Emoji bubble */}
+                    <div
+                      className="w-14 h-14 rounded-2xl flex items-center justify-center backdrop-blur-sm"
+                      style={{ background: `${profile.accent}25`, border: `1px solid ${profile.accent}35` }}
+                    >
+                      <span className="text-2xl">{profile.emoji}</span>
+                    </div>
+
+                    <div>
+                      <p className="font-body font-bold text-sm text-white mb-1">{profile.title}</p>
+                      <p className="font-body text-[11px] leading-tight" style={{ color: "rgba(255,255,255,0.55)" }}>
+                        {profile.desc}
+                      </p>
+                    </div>
+
+                    <span
+                      className="px-3 py-1 rounded-full font-body text-[10px] font-bold backdrop-blur-sm"
+                      style={{ background: `${profile.accent}25`, color: profile.accent, border: `1px solid ${profile.accent}30` }}
+                    >
+                      {tr.sondage.startCta}
+                    </span>
+                  </div>
                 </motion.div>
               </Link>
             </FadeIn>

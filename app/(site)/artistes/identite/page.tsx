@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const ACCENT       = "#FF6B6B";
 const ACCENT_LIGHT = "#FECACA";
-const DARK_BG      = "linear-gradient(135deg, #08060F 0%, #130A28 35%, #1C0A40 60%, #0A0618 100%)";
+const DARK_BG      = "#0C0B09";
 const CREAM_BG     = "linear-gradient(160deg, #FBF6EC 0%, #F5EDD8 50%, #FAF4E8 100%)";
 
 const services = [
@@ -84,8 +84,8 @@ export default function IdentitePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#formulaire"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-body font-bold text-base text-white transition-all hover:scale-[1.02]"
-                style={{ background: `linear-gradient(135deg, ${ACCENT} 0%, #E63946 100%)`, boxShadow: `0 8px 30px ${ACCENT}40` }}>
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-body font-bold text-base text-black transition-all hover:scale-[1.02]"
+                style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)", boxShadow: "0 8px 30px rgba(200,168,75,0.40)" }}>
                 Créer mon identité →
               </a>
               <div className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl font-body text-sm text-white/60"

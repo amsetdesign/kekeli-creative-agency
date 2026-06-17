@@ -57,8 +57,8 @@ export default function PublicitePage() {
             <p className="font-body text-lg text-white/50 max-w-xl mb-8">
               Facebook, Instagram, TikTok et Google Ads — des campagnes ciblées qui attirent vos clients idéaux et maximisent votre retour sur investissement.
             </p>
-            <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-white"
-              style={{ background: `linear-gradient(135deg, #EA580C, ${COLOR})` }}>
+            <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-black"
+              style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)" }}>
               Lancer ma campagne <ArrowRight size={16} />
             </Link>
           </FadeIn>

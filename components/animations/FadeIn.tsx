@@ -45,10 +45,12 @@ export default function FadeIn({
 export function FadeInStagger({
   children,
   className,
+  style,
   staggerDelay = 0.1,
 }: {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
   staggerDelay?: number;
 }) {
   return (
@@ -61,6 +63,7 @@ export function FadeInStagger({
         visible: { opacity: 1, transition: { staggerChildren: staggerDelay } },
       }}
       className={className}
+      style={style}
     >
       {children}
     </motion.div>

@@ -57,8 +57,8 @@ export default function SiteWebPage() {
             <p className="font-body text-lg text-white/50 max-w-xl mb-8">
               Site vitrine, e-commerce ou landing page — une présence digitale professionnelle avec paiement mobile intégré (Wave, Orange Money).
             </p>
-            <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-white"
-              style={{ background: `linear-gradient(135deg, #0369A1, ${COLOR})` }}>
+            <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-black"
+              style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)" }}>
               Lancer mon site <ArrowRight size={16} />
             </Link>
           </FadeIn>

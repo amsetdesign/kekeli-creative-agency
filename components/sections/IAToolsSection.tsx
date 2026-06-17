@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Sparkles, BarChart2, Rocket, Wand2, Star, Search, Share2, Map, ArrowRight } from "lucide-react";
@@ -62,8 +63,38 @@ export default function IAToolsSection() {
   }));
 
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8" style={{ background: "#0C0B09" }}>
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Background — festival image + violet gradient */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/bg-ia-violet.jpg"
+          alt=""
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        {/* Light tint to preserve text readability over the geometric image */}
+        <div
+          className="absolute inset-0"
+          style={{ background: "rgba(6,2,16,0.55)" }}
+        />
+      </div>
+
+      {/* Violet blobs */}
+      <div
+        className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full blur-[160px] opacity-25 pointer-events-none"
+        style={{ background: "#4B0082" }}
+      />
+      <div
+        className="absolute bottom-0 right-1/3 w-80 h-80 rounded-full blur-[130px] opacity-20 pointer-events-none"
+        style={{ background: "#6B21A8" }}
+      />
+      <div
+        className="absolute top-1/2 right-0 w-72 h-72 rounded-full blur-[120px] opacity-15 pointer-events-none"
+        style={{ background: "#C8A84B" }}
+      />
+
+      <div className="relative z-10 max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
@@ -97,7 +128,7 @@ export default function IAToolsSection() {
         {/* Artistes */}
         <div className="mb-10">
           <div className="flex items-center justify-between mb-4">
-            <p className="font-body text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "#8B5CF6" }}>
+            <p className="font-body text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "#C8A84B" }}>
               {tr.ia.artistLabel}
             </p>
             <Link href="/artistes" className="inline-flex items-center gap-1 font-body text-xs text-white/30 hover:text-white transition-colors">
@@ -125,7 +156,7 @@ export default function IAToolsSection() {
         {/* Entreprises */}
         <div>
           <div className="flex items-center justify-between mb-4">
-            <p className="font-body text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "#0EA5E9" }}>
+            <p className="font-body text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "#C8A84B" }}>
               {tr.ia.companyLabel}
             </p>
             <Link href="/entreprises" className="inline-flex items-center gap-1 font-body text-xs text-white/30 hover:text-white transition-colors">

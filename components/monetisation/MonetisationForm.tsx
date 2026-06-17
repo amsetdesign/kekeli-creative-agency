@@ -276,8 +276,8 @@ export default function MonetisationForm() {
       {status === "error" && <p className="font-body text-sm text-red-400 text-center">{errorMsg}</p>}
 
       <button type="submit" disabled={status === "loading" || !form.serviceType || !form.nomArtiste || !form.email}
-        className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-body font-bold text-base text-white transition-all disabled:opacity-50 hover:scale-[1.02]"
-        style={{ background: "linear-gradient(135deg, #16A34A 0%, #059669 100%)", boxShadow: "0 8px 30px rgba(22,163,74,0.35)" }}>
+        className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-body font-bold text-base text-black transition-all disabled:opacity-50 hover:scale-[1.02]"
+        style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)", boxShadow: "0 8px 30px rgba(200,168,75,0.35)" }}>
         {status === "loading"
           ? <><Loader2 size={18} className="animate-spin" /> Envoi en cours...</>
           : "Envoyer ma demande →"}

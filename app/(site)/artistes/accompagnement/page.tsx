@@ -111,7 +111,7 @@ export default function AccompagnementPage() {
       {/* ── HERO ──────────────────────────────────────────── */}
       <section
         className="relative py-32 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #08060F 0%, #130A28 35%, #1C0A40 60%, #0A0618 100%)" }}
+        style={{ background: "#0C0B09" }}
       >
         <div aria-hidden className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-[160px] opacity-20" style={{ background: ACCENT }} />
@@ -121,12 +121,12 @@ export default function AccompagnementPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn direction="down" className="mb-8">
-            <nav className="flex items-center gap-2 text-xs font-body" style={{ color: "rgba(220,210,255,0.45)" }}>
+            <nav className="flex items-center gap-2 text-xs font-body" style={{ color: "rgba(255,255,255,0.45)" }}>
               <Link href="/" className="hover:text-gold transition-colors">Accueil</Link>
               <ChevronRight size={12} />
               <Link href="/artistes" className="hover:text-gold transition-colors">Artistes</Link>
               <ChevronRight size={12} />
-              <span style={{ color: "rgba(220,210,255,0.70)" }}>Accompagnement</span>
+              <span style={{ color: "rgba(255,255,255,0.70)" }}>Accompagnement</span>
             </nav>
           </FadeIn>
 
@@ -146,7 +146,7 @@ export default function AccompagnementPage() {
             </FadeIn>
 
             <FadeIn direction="up" delay={0.22}>
-              <p className="font-body text-lg leading-relaxed mb-8 max-w-xl" style={{ color: "rgba(220,210,255,0.70)" }}>
+              <p className="font-body text-lg leading-relaxed mb-8 max-w-xl" style={{ color: "rgba(255,255,255,0.70)" }}>
                 Mentoring, gestion de carrière, coaching image, préparation aux médias —
                 KEKELI Creative Agency marche à vos côtés à chaque étape de votre parcours
                 pour faire de votre passion une carrière professionnelle.
@@ -157,8 +157,8 @@ export default function AccompagnementPage() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href="#formulaire"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-body font-bold text-base text-white transition-all hover:scale-105"
-                  style={{ background: "linear-gradient(135deg, #10B981 0%, #059669 100%)", boxShadow: "0 8px 30px rgba(16,185,129,0.40)" }}
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-body font-bold text-base text-black transition-all hover:scale-105"
+                  style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)", boxShadow: "0 8px 30px rgba(200,168,75,0.40)" }}
                 >
                   <Users size={18} />
                   Démarrer mon accompagnement
@@ -184,7 +184,7 @@ export default function AccompagnementPage() {
               <FadeInItem key={c.value}>
                 <div className="text-center p-6 rounded-2xl" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
                   <p className="font-body font-bold text-3xl mb-2" style={{ color: ACCENT }}>{c.value}</p>
-                  <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(220,210,255,0.55)" }}>{c.label}</p>
+                  <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{c.label}</p>
                 </div>
               </FadeInItem>
             ))}
@@ -253,7 +253,7 @@ export default function AccompagnementPage() {
                     <span className="text-xl">{s.icon}</span>
                   </div>
                   <h3 className="font-body font-bold text-white text-sm mb-2">{s.title}</h3>
-                  <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(220,210,255,0.50)" }}>{s.desc}</p>
+                  <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>{s.desc}</p>
                 </div>
               </FadeInItem>
             ))}
@@ -305,7 +305,7 @@ export default function AccompagnementPage() {
                   </div>
                   <div>
                     <p className="font-body font-semibold text-white text-sm mb-1">{title}</p>
-                    <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(220,210,255,0.55)" }}>{desc}</p>
+                    <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{desc}</p>
                   </div>
                 </div>
               </FadeInItem>
@@ -318,7 +318,7 @@ export default function AccompagnementPage() {
       <section
         id="formulaire"
         className="py-24 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #08060F 0%, #130A28 35%, #1C0A40 60%, #0A0618 100%)" }}
+        style={{ background: "#0C0B09" }}
       >
         <div aria-hidden className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-96 h-96 rounded-full blur-[140px] opacity-18" style={{ background: ACCENT }} />
@@ -331,7 +331,7 @@ export default function AccompagnementPage() {
             <h2 className="font-display text-4xl md:text-5xl text-white leading-tight mb-4">
               Commencez votre <em className="text-gold not-italic">parcours</em>
             </h2>
-            <p className="font-body text-base" style={{ color: "rgba(220,210,255,0.60)" }}>
+            <p className="font-body text-base" style={{ color: "rgba(255,255,255,0.60)" }}>
               Partagez votre situation et vos ambitions. Notre équipe vous répond sous 24h pour un premier échange sans engagement.
             </p>
           </FadeIn>

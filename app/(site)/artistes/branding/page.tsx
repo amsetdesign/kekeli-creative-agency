@@ -111,7 +111,7 @@ export default function BrandingPage() {
       {/* ── HERO ──────────────────────────────────────────── */}
       <section
         className="relative py-32 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #08060F 0%, #130A28 35%, #1C0A40 60%, #0A0618 100%)" }}
+        style={{ background: "#0C0B09" }}
       >
         {/* Blobs */}
         <div aria-hidden className="absolute inset-0 pointer-events-none">
@@ -123,12 +123,12 @@ export default function BrandingPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <FadeIn direction="down" className="mb-8">
-            <nav className="flex items-center gap-2 text-xs font-body" style={{ color: "rgba(220,210,255,0.45)" }}>
+            <nav className="flex items-center gap-2 text-xs font-body" style={{ color: "rgba(255,255,255,0.45)" }}>
               <Link href="/" className="hover:text-gold transition-colors">Accueil</Link>
               <ChevronRight size={12} />
               <Link href="/artistes" className="hover:text-gold transition-colors">Artistes</Link>
               <ChevronRight size={12} />
-              <span style={{ color: "rgba(220,210,255,0.70)" }}>Branding Artiste</span>
+              <span style={{ color: "rgba(255,255,255,0.70)" }}>Branding Artiste</span>
             </nav>
           </FadeIn>
 
@@ -148,7 +148,7 @@ export default function BrandingPage() {
             </FadeIn>
 
             <FadeIn direction="up" delay={0.22}>
-              <p className="font-body text-lg leading-relaxed mb-8 max-w-xl" style={{ color: "rgba(220,210,255,0.70)" }}>
+              <p className="font-body text-lg leading-relaxed mb-8 max-w-xl" style={{ color: "rgba(255,255,255,0.70)" }}>
                 Logo, charte graphique, templates réseaux, Press Kit — KEKELI Creative Agency construit une
                 identité visuelle forte et cohérente qui fait reconnaître votre talent au premier coup d'œil.
               </p>
@@ -158,8 +158,8 @@ export default function BrandingPage() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href="#formulaire"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-body font-bold text-base text-white transition-all hover:scale-105"
-                  style={{ background: "linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)", boxShadow: "0 8px 30px rgba(139,92,246,0.40)" }}
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-body font-bold text-base text-black transition-all hover:scale-105"
+                  style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)", boxShadow: "0 8px 30px rgba(200,168,75,0.40)" }}
                 >
                   <Palette size={18} />
                   Créer mon identité
@@ -194,7 +194,7 @@ export default function BrandingPage() {
                   <span className="text-2xl shrink-0">{b.emoji}</span>
                   <div>
                     <p className="font-body font-semibold text-white text-sm mb-1">{b.name}</p>
-                    <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(220,210,255,0.50)" }}>{b.desc}</p>
+                    <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>{b.desc}</p>
                   </div>
                 </div>
               </FadeInItem>
@@ -269,7 +269,7 @@ export default function BrandingPage() {
                     <span className="text-xl">{s.icon}</span>
                   </div>
                   <h3 className="font-body font-bold text-white text-sm mb-2">{s.title}</h3>
-                  <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(220,210,255,0.50)" }}>{s.desc}</p>
+                  <p className="font-body text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>{s.desc}</p>
                 </div>
               </FadeInItem>
             ))}
@@ -308,7 +308,7 @@ export default function BrandingPage() {
       <section
         id="formulaire"
         className="py-24 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #08060F 0%, #130A28 35%, #1C0A40 60%, #0A0618 100%)" }}
+        style={{ background: "#0C0B09" }}
       >
         {/* Blobs */}
         <div aria-hidden className="absolute inset-0 pointer-events-none">
@@ -322,7 +322,7 @@ export default function BrandingPage() {
             <h2 className="font-display text-4xl md:text-5xl text-white leading-tight mb-4">
               Construisons votre <em className="text-gold not-italic">marque</em>
             </h2>
-            <p className="font-body text-base" style={{ color: "rgba(220,210,255,0.60)" }}>
+            <p className="font-body text-base" style={{ color: "rgba(255,255,255,0.60)" }}>
               Partagez votre univers et vos ambitions. Notre équipe créative vous répond sous 24h avec des idées et un devis personnalisé.
             </p>
           </FadeIn>

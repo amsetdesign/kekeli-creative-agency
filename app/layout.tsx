@@ -36,12 +36,14 @@ export const metadata: Metadata = {
     siteName: "KEKELI Creative Agency",
     title: "KEKELI Creative Agency — Mettre la lumière sur votre projet",
     description: "Agence de communication basée à Dakar, Sénégal. Communication, stratégie digitale, photo & vidéo.",
+    /* opengraph-image.tsx génère l'image dynamiquement */
   },
   twitter: {
     card: "summary_large_image",
     site: "@kekeli_agency",
     title: "KEKELI Creative Agency — Mettre la lumière sur votre projet",
     description: "Agence de communication basée à Dakar, Sénégal.",
+    /* opengraph-image.tsx génère l'image dynamiquement */
   },
 };
 

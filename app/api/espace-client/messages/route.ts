@@ -5,6 +5,48 @@ import { getSupabase } from "@/lib/supabase";
 import { resend, AGENCY_EMAIL, SITE_URL } from "@/lib/resend";
 import MessageNotification from "@/lib/email-templates/MessageNotification";
 
+export async function GET(request: Request) {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) return NextResponse.json({ error: "Non authentifié." }, { status: 401 });
+
+    const { searchParams } = new URL(request.url);
+    const project_id = searchParams.get("project_id");
+    const before     = searchParams.get("before"); // ISO timestamp
+    const limit      = Math.min(parseInt(searchParams.get("limit") ?? "30"), 50);
+
+    if (!project_id) return NextResponse.json({ error: "project_id manquant." }, { status: 400 });
+
+    const db = getSupabase();
+
+    const { data: project } = await db
+      .from("projects")
+      .select("id")
+      .eq("id", project_id)
+      .eq("client_id", user.id)
+      .single();
+
+    if (!project) return NextResponse.json({ error: "Projet introuvable." }, { status: 404 });
+
+    let query = db
+      .from("project_messages")
+      .select("*")
+      .eq("project_id", project_id)
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (before) query = query.lt("created_at", before);
+
+    const { data, error } = await query;
+    if (error) return NextResponse.json({ error: "Erreur serveur." }, { status: 500 });
+
+    return NextResponse.json({ messages: (data ?? []).reverse() });
+  } catch {
+    return NextResponse.json({ error: "Erreur inattendue." }, { status: 500 });
+  }
+}
+
 export async function POST(request: Request) {
   try {
     const supabase = await createSupabaseServerClient();
@@ -16,9 +58,9 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Non authentifié." }, { status: 401 });
     }
 
-    const { project_id, content } = await request.json();
+    const { project_id, content, attachments } = await request.json();
 
-    if (!project_id || !content?.trim()) {
+    if (!project_id || (!content?.trim() && !attachments?.length)) {
       return NextResponse.json({ error: "Données manquantes." }, { status: 422 });
     }
 
@@ -52,7 +94,8 @@ export async function POST(request: Request) {
         project_id,
         sender_type: "client",
         sender_name: senderName,
-        content: content.trim(),
+        content: content?.trim() || "",
+        attachments: attachments ?? [],
       })
       .select()
       .single();

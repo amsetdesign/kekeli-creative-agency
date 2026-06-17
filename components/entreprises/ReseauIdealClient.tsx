@@ -132,7 +132,7 @@ export default function ReseauIdealClient() {
           <div className="text-center mb-8">
             <Link href="/entreprises/community"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-white"
-              style={{ background: "linear-gradient(135deg, #5B21B6, #8B5CF6)" }}>
+              style={{ background: "linear-gradient(135deg, #C8A84B, #D4A83A)", color: "#000" }}>
               Déléguer ma gestion réseaux <ArrowRight size={14} />
             </Link>
           </div>
@@ -210,7 +210,7 @@ export default function ReseauIdealClient() {
         {error && <p className="text-red-400 text-sm font-body mb-4 text-center">{error}</p>}
         <button onClick={handleSubmit} disabled={!form.secteur || !form.cible}
           className="w-full flex items-center justify-center gap-2 py-4 rounded-xl font-body font-semibold text-sm text-white disabled:opacity-40 transition-all hover:opacity-90"
-          style={{ background: "linear-gradient(135deg, #5B21B6, #8B5CF6)" }}>
+          style={{ background: "linear-gradient(135deg, #C8A84B, #D4A83A)", color: "#000" }}>
           <Share2 size={16} /> Trouver mon réseau idéal
         </button>
       </div>

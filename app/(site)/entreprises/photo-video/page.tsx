@@ -57,8 +57,8 @@ export default function PhotoVideoPage() {
             <p className="font-body text-lg text-white/50 max-w-xl mb-8">
               Shooting corporate, vidéos publicitaires et reels — des contenus visuels premium qui donnent envie de travailler avec vous.
             </p>
-            <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-white"
-              style={{ background: `linear-gradient(135deg, #BE185D, ${COLOR})` }}>
+            <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-body font-semibold text-sm text-black"
+              style={{ background: "linear-gradient(135deg, #C8A84B 0%, #D4A83A 100%)" }}>
               Réserver un shooting <ArrowRight size={16} />
             </Link>
           </FadeIn>

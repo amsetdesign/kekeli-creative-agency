@@ -172,7 +172,7 @@ export async function PATCH(request: Request) {
   const { id, ...updates } = await request.json();
   if (!id) return NextResponse.json({ error: "id requis." }, { status: 422 });
 
-  const allowed = ["title", "description", "status", "progress"];
+  const allowed = ["title", "description", "status", "progress", "financial"];
   const filtered = Object.fromEntries(
     Object.entries(updates).filter(([k]) => allowed.includes(k)),
   );

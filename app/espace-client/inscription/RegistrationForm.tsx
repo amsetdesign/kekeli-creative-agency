@@ -3,8 +3,122 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Eye, EyeOff, ArrowRight, ArrowLeft, Mail, Info } from "lucide-react";
+import { Eye, EyeOff, ArrowRight, ArrowLeft, Mail, Info, ChevronRight } from "lucide-react";
 import { createBrowserClient } from "@supabase/ssr";
+
+/* ── Account type selection ───────────────────────────────── */
+type AccountType = "artiste" | "entrepreneur" | "personnalite";
+
+const ACCOUNT_TYPES: {
+  id: AccountType;
+  emoji: string;
+  label: string;
+  desc: string;
+  tags: string[];
+  color: string;
+  bg: string;
+  border: string;
+  activeBorder: string;
+}[] = [
+  {
+    id: "artiste",
+    emoji: "🎤",
+    label: "Artiste",
+    desc: "Musicien, rappeur, chanteur, beatmaker, producteur…",
+    tags: ["Distribution", "Clips", "Branding"],
+    color: "#8B5CF6",
+    bg: "rgba(139,92,246,0.06)",
+    border: "rgba(139,92,246,0.18)",
+    activeBorder: "#8B5CF6",
+  },
+  {
+    id: "entrepreneur",
+    emoji: "🏢",
+    label: "Entrepreneur / Marque",
+    desc: "Entreprise, startup, commerce, marque, ONG…",
+    tags: ["Site web", "Pub digitale", "CM"],
+    color: "#C8A84B",
+    bg: "rgba(200,168,75,0.06)",
+    border: "rgba(200,168,75,0.18)",
+    activeBorder: "#C8A84B",
+  },
+  {
+    id: "personnalite",
+    emoji: "🌟",
+    label: "Personnalité publique",
+    desc: "Influenceur, coach, politicien, sportif, PDG…",
+    tags: ["Personal brand", "Image", "Réputation"],
+    color: "#10B981",
+    bg: "rgba(16,185,129,0.06)",
+    border: "rgba(16,185,129,0.18)",
+    activeBorder: "#10B981",
+  },
+];
+
+function AccountTypeStep({ onSelect }: { onSelect: (t: AccountType) => void }) {
+  const [hovered, setHovered] = useState<AccountType | null>(null);
+  return (
+    <div className="min-h-screen flex items-center justify-center px-4 py-16 relative overflow-hidden"
+      style={{ background: "linear-gradient(145deg, #F8F7F4 0%, #EDE8F7 55%, #F6F4F0 100%)" }}>
+      <div aria-hidden className="absolute top-[-8%] right-[-8%] w-[420px] h-[420px] rounded-full blur-[150px] opacity-40 pointer-events-none" style={{ background: "#DDD0FF" }} />
+      <div aria-hidden className="absolute bottom-[-5%] left-[-5%] w-[320px] h-[320px] rounded-full blur-[120px] opacity-30 pointer-events-none" style={{ background: "#FFF3C0" }} />
+
+      <Link href="/" className="absolute top-5 left-5 flex items-center gap-1.5 px-3 py-2 rounded-xl font-body text-xs font-medium text-[#78716C] hover:text-[#0C0B09] hover:bg-black/5 transition-all group">
+        <ArrowLeft size={14} className="group-hover:-translate-x-0.5 transition-transform" />
+        Retour au site
+      </Link>
+
+      <div className="w-full max-w-lg relative z-10">
+        <div className="mb-8 text-center">
+          <Link href="/" className="inline-block mb-6">
+            <span className="font-display text-xl font-semibold text-[#0C0B09]">KEKELI <span className="text-[#C8A84B]">.</span></span>
+          </Link>
+          <h1 className="font-display text-2xl text-[#0C0B09] mb-2">Qui êtes-vous ?</h1>
+          <p className="font-body text-sm text-[#78716C]">
+            Choisissez votre profil pour personnaliser votre espace
+          </p>
+        </div>
+
+        <div className="space-y-3">
+          {ACCOUNT_TYPES.map((t) => (
+            <button
+              key={t.id}
+              onClick={() => onSelect(t.id)}
+              onMouseEnter={() => setHovered(t.id)}
+              onMouseLeave={() => setHovered(null)}
+              className="w-full text-left flex items-center gap-4 p-5 rounded-2xl border-2 transition-all duration-200 group"
+              style={{
+                background: hovered === t.id ? t.bg : "white",
+                borderColor: hovered === t.id ? t.activeBorder : t.border,
+                boxShadow: hovered === t.id ? `0 4px 20px ${t.color}18` : "none",
+              }}
+            >
+              <span className="text-3xl shrink-0 select-none">{t.emoji}</span>
+              <div className="flex-1 min-w-0">
+                <p className="font-body text-base font-semibold text-[#0C0B09] mb-0.5">{t.label}</p>
+                <p className="font-body text-xs text-[#78716C] mb-2">{t.desc}</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {t.tags.map((tag) => (
+                    <span key={tag} className="px-2 py-0.5 rounded-full font-body text-[10px] font-semibold"
+                      style={{ background: `${t.color}18`, color: t.color }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <ChevronRight size={18} className="shrink-0 transition-transform group-hover:translate-x-0.5" style={{ color: t.color }} />
+            </button>
+          ))}
+        </div>
+
+        <p className="text-center font-body text-sm text-[#78716C] mt-6">
+          Déjà un compte ?{" "}
+          <Link href="/espace-client/login" className="text-[#C8A84B] hover:underline">Se connecter</Link>
+        </p>
+      </div>
+    </div>
+  );
+}
 
 function getSupabaseBrowser() {
   return createBrowserClient(
@@ -17,6 +131,8 @@ export default function RegistrationForm() {
   const searchParams = useSearchParams();
   const googleNotFound = searchParams.get("notice") === "google-not-found";
 
+  const [step, setStep] = useState<0 | 1>(0);
+  const [accountType, setAccountType] = useState<AccountType>("entrepreneur");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
@@ -76,6 +192,7 @@ export default function RegistrationForm() {
             full_name: form.full_name,
             company: form.company || null,
             phone: form.phone || null,
+            account_type: accountType,
           },
           emailRedirectTo: `${window.location.origin}/auth/callback`,
         },
@@ -96,6 +213,10 @@ export default function RegistrationForm() {
     } finally {
       setLoading(false);
     }
+  }
+
+  if (step === 0) {
+    return <AccountTypeStep onSelect={(t) => { setAccountType(t); setStep(1); }} />;
   }
 
   if (success) {
@@ -135,14 +256,14 @@ export default function RegistrationForm() {
       <div aria-hidden className="absolute bottom-[-5%] left-[-5%] w-[320px] h-[320px] rounded-full blur-[120px] opacity-30 pointer-events-none" style={{ background: "#FFF3C0" }} />
       <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-[180px] opacity-10 pointer-events-none" style={{ background: "#C8A84B" }} />
 
-      {/* Back to site */}
-      <Link
-        href="/"
+      {/* Back to type selection */}
+      <button
+        onClick={() => setStep(0)}
         className="absolute top-5 left-5 flex items-center gap-1.5 px-3 py-2 rounded-xl font-body text-xs font-medium text-[#78716C] hover:text-[#0C0B09] hover:bg-black/5 transition-all group"
       >
         <ArrowLeft size={14} className="group-hover:-translate-x-0.5 transition-transform" />
-        Retour au site
-      </Link>
+        Retour
+      </button>
 
       <div className="w-full max-w-md relative z-10">
         {/* Header */}
@@ -153,6 +274,15 @@ export default function RegistrationForm() {
             </span>
           </Link>
           <h1 className="font-display text-2xl text-[#0C0B09] mb-2">Créer un compte</h1>
+          {(() => {
+            const t = ACCOUNT_TYPES.find((x) => x.id === accountType);
+            return t ? (
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-body text-xs font-semibold mb-1"
+                style={{ background: t.bg, color: t.color, border: `1px solid ${t.border}` }}>
+                {t.emoji} {t.label}
+              </span>
+            ) : null;
+          })()}
           <p className="font-body text-sm text-[#78716C]">
             Accédez à votre espace client et aux outils IA
           </p>

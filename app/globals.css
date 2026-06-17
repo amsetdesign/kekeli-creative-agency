@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source not "../.agents";
 
 /* ─── DESIGN TOKENS ──────────────────────────────────── */
 @theme inline {
@@ -21,21 +22,21 @@
   --color-purple-pale:  #F3E8FF;
   --color-purple-dark:  #4C1D95;
 
-  /* Vibrant accent palette */
-  --color-coral:        #FF6B6B;
-  --color-coral-pale:   #FFF0F0;
-  --color-blue-vivid:   #4C9BFF;
+  /* Segment accents */
+  --color-violet:       #8B5CF6;
+  --color-violet-light: #A78BFA;
+  --color-violet-pale:  #EDE9FE;
+  --color-blue:         #0EA5E9;
+  --color-blue-deep:    #1E40AF;
   --color-blue-pale:    #EFF6FF;
   --color-emerald:      #10B981;
   --color-emerald-pale: #ECFDF5;
-  --color-pink:         #EC4899;
-  --color-pink-pale:    #FDF2F8;
+
+  /* Status */
   --color-amber:        #F59E0B;
   --color-amber-pale:   #FFFBEB;
-  --color-cyan:         #06B6D4;
-  --color-cyan-pale:    #ECFEFF;
-  --color-orange:       #F97316;
-  --color-orange-pale:  #FFF7ED;
+  --color-red:          #DC2626;
+  --color-red-pale:     #FEF2F2;
 
   /* Neutrals */
   --color-black:        #0C0B09;

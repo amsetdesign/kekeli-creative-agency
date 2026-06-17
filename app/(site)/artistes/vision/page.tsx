@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase-ssr";
 import VisionClient from "@/components/vision/VisionClient";
 
 export const metadata: Metadata = {
-  title: "IA Vision de Carrière | KEKELI Creative Agency",
-  description: "Notre IA analyse votre profil artistique et génère une roadmap personnalisée : score artiste, points forts, stratégie 90 jours.",
-  keywords: ["IA vision carrière artiste", "roadmap artiste africain", "stratégie musicale IA", "score artiste Dakar", "plan carrière musique Sénégal"],
+  title: "IA Vision de CarriÃ¨re | KEKELI Creative Agency",
+  description: "Notre IA analyse votre profil artistique et gÃ©nÃ¨re une roadmap personnalisÃ©e : score artiste, points forts, stratÃ©gie 90 jours.",
+  keywords: ["IA vision carriÃ¨re artiste", "roadmap artiste africain", "stratÃ©gie musicale IA", "score artiste Dakar", "plan carriÃ¨re musique SÃ©nÃ©gal"],
   alternates: { canonical: "/artistes/vision" },
   openGraph: {
-    title: "IA Vision de Carrière — KEKELI Creative Agency",
-    description: "Score artiste, points forts, roadmap 90 jours — généré par IA pour les artistes africains.",
+    title: "IA Vision de CarriÃ¨re â€” KEKELI Creative Agency",
+    description: "Score artiste, points forts, roadmap 90 jours â€” gÃ©nÃ©rÃ© par IA pour les artistes africains.",
     url: "/artistes/vision",
   },
 };
