@@ -1,11 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { cookies } from "next/headers";
 import { getSupabase } from "@/lib/supabase";
-
-async function requireAdmin() {
-  const store = await cookies();
-  return store.get("kekeli_admin")?.value === process.env.ADMIN_SESSION_SECRET;
-}
+import { requireAdmin } from "@/lib/auth";
 
 export async function GET() {
   if (!(await requireAdmin())) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

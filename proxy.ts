@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { createHmac, timingSafeEqual } from "crypto";
 import { createServerClient } from "@supabase/ssr";
 import { createClient } from "@supabase/supabase-js";
 
@@ -52,6 +53,22 @@ function maybeClean() {
   lastClean = Date.now();
 }
 
+// ── Admin session validation (timing-safe) ───────────────────────
+function isValidAdminSession(value: string): boolean {
+  const dot = value.lastIndexOf(".");
+  if (dot === -1) return false;
+  const token    = value.slice(0, dot);
+  const received = value.slice(dot + 1);
+  const secret   = process.env.ADMIN_SESSION_SECRET;
+  if (!secret) return false;
+  const expected = createHmac("sha256", secret).update(token).digest("hex");
+  try {
+    return timingSafeEqual(Buffer.from(received, "hex"), Buffer.from(expected, "hex"));
+  } catch {
+    return false;
+  }
+}
+
 // ── Public paths (espace-client) ──────────────────────────────────
 const PUBLIC_CLIENT_PATHS = [
   "/espace-client/login",
@@ -80,10 +97,10 @@ export async function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // ── Admin protection (cookie-based) ──────────────────────────
+  // ── Admin protection (cookie-based, timing-safe) ─────────────
   if (pathname.startsWith("/admin") && pathname !== "/admin/login") {
-    const session = request.cookies.get("kekeli_admin")?.value;
-    if (!session || session !== process.env.ADMIN_SESSION_SECRET) {
+    const value = request.cookies.get("kekeli_admin")?.value ?? "";
+    if (!isValidAdminSession(value)) {
       const url = new URL("/admin/login", request.url);
       url.searchParams.set("from", pathname);
       return NextResponse.redirect(url);

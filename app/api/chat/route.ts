@@ -118,7 +118,7 @@ ${messages.map((m) => `${m.role === "user" ? "Client" : "KELI"}: ${m.content}`).
           model: "claude-sonnet-4-6",
           max_tokens: 500,
           system: SYSTEM_PROMPT,
-          messages,
+          messages: messages.slice(-20),
         });
 
         for await (const event of stream) {

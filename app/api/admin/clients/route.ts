@@ -1,18 +1,12 @@
 ﻿import { NextResponse } from "next/server";
-import { cookies } from "next/headers";
 import { render } from "@react-email/components";
 import { getSupabase } from "@/lib/supabase";
 import { resend, SITE_URL } from "@/lib/resend";
 import ClientActivation from "@/lib/email-templates/ClientActivation";
-
-async function isAuthorized() {
-  const store = await cookies();
-  const session = store.get("kekeli_admin")?.value;
-  return session === process.env.ADMIN_SESSION_SECRET;
-}
+import { requireAdmin } from "@/lib/auth";
 
 export async function GET() {
-  if (!(await isAuthorized())) {
+  if (!(await requireAdmin())) {
     return NextResponse.json({ error: "Non autorisé." }, { status: 401 });
   }
 
@@ -30,7 +24,7 @@ export async function GET() {
 }
 
 export async function PATCH(request: Request) {
-  if (!(await isAuthorized())) {
+  if (!(await requireAdmin())) {
     return NextResponse.json({ error: "Non autorisé." }, { status: 401 });
   }
 

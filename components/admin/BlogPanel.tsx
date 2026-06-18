@@ -20,6 +20,15 @@ export interface BlogPost {
   updated_at: string;
 }
 
+function isSafeImageUrl(url: string): boolean {
+  try {
+    const { protocol, hostname } = new URL(url);
+    return protocol === "https:" && hostname.length > 0;
+  } catch {
+    return false;
+  }
+}
+
 const CATEGORIES = [
   { value: "communication", label: "Communication digitale" },
   { value: "artiste",       label: "Artistes & musique" },
@@ -232,9 +241,12 @@ function BlogEditor({
               placeholder="https://…"
               className="w-full border border-[#E7E5E4] rounded-lg px-3 py-2 font-body text-xs text-[#0C0B09] focus:outline-none focus:border-[#C8A84B]"
             />
-            {form.cover_image && (
+            {form.cover_image && isSafeImageUrl(form.cover_image) && (
               // eslint-disable-next-line @next/next/no-img-element
               <img src={form.cover_image} alt="" className="mt-2 w-full aspect-video object-cover rounded-lg" />
+            )}
+            {form.cover_image && !isSafeImageUrl(form.cover_image) && (
+              <p className="mt-1 text-xs text-red-500">URL invalide — doit commencer par https://</p>
             )}
           </div>
 
@@ -293,7 +305,7 @@ function BlogEditor({
             </>
           ) : (
             <div className="flex-1 overflow-y-auto px-8 py-6">
-              {form.cover_image && (
+              {form.cover_image && isSafeImageUrl(form.cover_image) && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={form.cover_image} alt="" className="w-full aspect-video object-cover rounded-2xl mb-8" />
               )}

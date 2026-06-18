@@ -38,7 +38,9 @@ export async function POST(request: Request) {
     `,
   });
 
-  console.log("[2FA] Resend result:", JSON.stringify(emailResult));
+  if (process.env.NODE_ENV !== "production") {
+    console.log("[2FA] Resend result:", JSON.stringify(emailResult));
+  }
 
   const res = NextResponse.json({ step: "otp" });
   res.cookies.set("kekeli_otp_challenge", token, {

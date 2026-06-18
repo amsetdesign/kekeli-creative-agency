@@ -1,20 +1,14 @@
 ﻿import { NextResponse } from "next/server";
-import { cookies } from "next/headers";
 import { render } from "@react-email/components";
 import { getSupabase } from "@/lib/supabase";
 import { resend, SITE_URL } from "@/lib/resend";
 import ProjectUpdateNotification from "@/lib/email-templates/ProjectUpdateNotification";
 import MessageNotification from "@/lib/email-templates/MessageNotification";
-
-async function isAuthorized() {
-  const store = await cookies();
-  const session = store.get("kekeli_admin")?.value;
-  return session === process.env.ADMIN_SESSION_SECRET;
-}
+import { requireAdmin } from "@/lib/auth";
 
 // GET /api/admin/projects — list all projects with client info
 export async function GET() {
-  if (!(await isAuthorized())) {
+  if (!(await requireAdmin())) {
     return NextResponse.json({ error: "Non autorisé." }, { status: 401 });
   }
 
@@ -29,7 +23,7 @@ export async function GET() {
 
 // POST /api/admin/projects — create a project OR add update OR reply to message
 export async function POST(request: Request) {
-  if (!(await isAuthorized())) {
+  if (!(await requireAdmin())) {
     return NextResponse.json({ error: "Non autorisé." }, { status: 401 });
   }
 
@@ -165,7 +159,7 @@ export async function POST(request: Request) {
 
 // PATCH /api/admin/projects — update project status/progress
 export async function PATCH(request: Request) {
-  if (!(await isAuthorized())) {
+  if (!(await requireAdmin())) {
     return NextResponse.json({ error: "Non autorisé." }, { status: 401 });
   }
 

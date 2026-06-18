@@ -1,10 +1,6 @@
 import { NextResponse } from "next/server";
-import { createHmac } from "crypto";
 import { cookies } from "next/headers";
-
-function sign(data: string) {
-  return createHmac("sha256", process.env.ADMIN_SESSION_SECRET!).update(data).digest("hex");
-}
+import { generateSessionToken, signOtp, safeEqual } from "@/lib/auth";
 
 export async function POST(request: Request) {
   const { code } = await request.json();
@@ -24,9 +20,9 @@ export async function POST(request: Request) {
 
   const [storedCode, expiry, storedHmac] = parts;
 
-  /* Vérifier signature */
-  const expected = sign(`${storedCode}:${expiry}`);
-  if (expected !== storedHmac) {
+  /* Vérifier signature (timing-safe) */
+  const expected = signOtp(`${storedCode}:${expiry}`);
+  if (!safeEqual(expected, storedHmac)) {
     return NextResponse.json({ error: "Token invalide." }, { status: 400 });
   }
 
@@ -35,15 +31,16 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Code expiré. Recommencez." }, { status: 400 });
   }
 
-  /* Vérifier code */
-  if (code.trim() !== storedCode) {
+  /* Vérifier code OTP (timing-safe) */
+  if (!safeEqual(code.trim(), storedCode)) {
     return NextResponse.json({ error: "Code incorrect." }, { status: 401 });
   }
 
-  /* Tout bon → session */
+  /* Tout bon → session token signé (jamais le secret brut) */
+  const sessionToken = generateSessionToken();
   const res = NextResponse.json({ success: true });
 
-  res.cookies.set("kekeli_admin", process.env.ADMIN_SESSION_SECRET!, {
+  res.cookies.set("kekeli_admin", sessionToken, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "strict",

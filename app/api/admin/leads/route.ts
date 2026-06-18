@@ -1,18 +1,12 @@
 import { NextResponse } from "next/server";
-import { cookies } from "next/headers";
 import { getSupabase } from "@/lib/supabase";
+import { requireAdmin } from "@/lib/auth";
 
 const LEAD_STATUSES = ["new", "read", "archived"] as const;
 const LEAD_TYPES = ["sondage", "contact", "brief", "artiste", "entreprise", "projet"] as const;
 
-async function isAuthorized(): Promise<boolean> {
-  const jar = await cookies();
-  const session = jar.get("kekeli_admin")?.value;
-  return !!session && session === process.env.ADMIN_SESSION_SECRET;
-}
-
 export async function GET(request: Request) {
-  if (!(await isAuthorized())) return NextResponse.json({ error: "Non autorisé" }, { status: 401 });
+  if (!(await requireAdmin())) return NextResponse.json({ error: "Non autorisé" }, { status: 401 });
 
   const { searchParams } = new URL(request.url);
   const type = searchParams.get("type");
@@ -89,7 +83,7 @@ export async function GET(request: Request) {
 }
 
 export async function PATCH(request: Request) {
-  if (!(await isAuthorized())) return NextResponse.json({ error: "Non autorisé" }, { status: 401 });
+  if (!(await requireAdmin())) return NextResponse.json({ error: "Non autorisé" }, { status: 401 });
 
   const { id, status } = await request.json();
   if (!id) return NextResponse.json({ error: "Paramètres manquants" }, { status: 400 });
