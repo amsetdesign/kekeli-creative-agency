@@ -28,13 +28,13 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://kekeli.agency/#business",
+  "@id": "https://kekelicreativeagency.com/#business",
   name: "KEKELI Creative Agency",
   description: "Agence de communication basée à Dakar, Sénégal. Communication, stratégie digitale, photo & vidéo, branding et couverture événementielle.",
-  url: "https://kekeli.agency",
-  logo: "https://kekeli.agency/images/hero-portrait.jpg",
-  image: "https://kekeli.agency/images/hero-portrait.jpg",
-  email: "contact@kekeli.agency",
+  url: "https://kekelicreativeagency.com",
+  logo: "https://kekelicreativeagency.com/images/hero-portrait.jpg",
+  image: "https://kekelicreativeagency.com/images/hero-portrait.jpg",
+  email: "contact@kekelicreativeagency.com",
   telephone: "+221781672819",
   priceRange: "$$",
   address: {

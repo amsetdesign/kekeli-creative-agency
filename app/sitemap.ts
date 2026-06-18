@@ -3,7 +3,7 @@ import { projects } from "@/data/projects";
 import { services } from "@/data/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://kekeli.agency";
+  const base = "https://kekelicreativeagency.com";
   const now = new Date();
 
   const projectPages: MetadataRoute.Sitemap = projects.map((p) => ({

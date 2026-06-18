@@ -21,7 +21,7 @@ export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   await resend.emails
     .send({
-      from: "KELI — KEKELI Creative Agency <noreply@kekeli.agency>",
+      from: "KELI — KEKELI Creative Agency <noreply@kekelicreativeagency.com>",
       to: process.env.AGENCY_EMAIL ?? "kekelicreativeagency@gmail.com",
       subject: `🎤 Nouveau contact artiste — ${data.nom_artiste}`,
       html: `

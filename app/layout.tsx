@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   keywords: ["agence communication Dakar", "agence digitale Sénégal", "stratégie digitale Afrique", "photo shooting Dakar", "développement web Sénégal", "communication artiste"],
   authors: [{ name: "KEKELI Creative Agency" }],
   creator: "KEKELI Creative Agency",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://kekeli.agency"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://kekelicreativeagency.com"),
   openGraph: {
     type: "website",
     locale: "fr_SN",

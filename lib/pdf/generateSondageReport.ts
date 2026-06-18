@@ -235,7 +235,7 @@ export function generateSondageReport(
   doc.setFontSize(7.5);
   doc.setTextColor(120, 113, 108);
   doc.text(
-    "KEKELI Creative Agency  ·  Dakar, Sénégal  ·  kekelicreativeagency@gmail.com  ·  kekeli.agency",
+    "KEKELI Creative Agency  ·  Dakar, Sénégal  ·  kekelicreativeagency@gmail.com  ·  kekelicreativeagency.com",
     W / 2,
     footY + 6,
     { align: "center" }
@@ -248,7 +248,7 @@ export function generateSondageReport(
   doc.setFontSize(8.5);
   doc.setTextColor(12, 11, 9);
   doc.text(
-    "Prêt à passer à l'action ? Contactez-nous → kekeli.agency/contact",
+    "Prêt à passer à l'action ? Contactez-nous → kekelicreativeagency.com/contact",
     W / 2,
     footY + 18,
     { align: "center" }

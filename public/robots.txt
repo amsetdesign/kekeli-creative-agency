@@ -7,4 +7,4 @@ Disallow: /espace-client/
 Disallow: /api/
 
 # Sitemap
-Sitemap: https://kekeli.agency/sitemap.xml
+Sitemap: https://kekelicreativeagency.com/sitemap.xml

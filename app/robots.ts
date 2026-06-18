@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const base = "https://kekeli.agency";
+  const base = "https://kekelicreativeagency.com";
   return {
     rules: [
       { userAgent: "*", allow: "/", disallow: ["/api/"] },

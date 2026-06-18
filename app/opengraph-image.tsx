@@ -91,7 +91,7 @@ export default function OGImage() {
           color: "rgba(200,168,75,0.45)", fontSize: 14,
           fontFamily: "sans-serif", letterSpacing: "1px",
         }}>
-          kekeli.agency
+          kekelicreativeagency.com
         </span>
 
         {/* Ligne dorée bas */}

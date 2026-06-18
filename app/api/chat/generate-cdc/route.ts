@@ -184,7 +184,7 @@ ${conversationText}`,
   // Send email to client
   if (email) {
     await resend.emails.send({
-      from: "KELI — KEKELI Creative Agency <noreply@kekeli.agency>",
+      from: "KELI — KEKELI Creative Agency <noreply@kekelicreativeagency.com>",
       to: email,
       subject: `✨ Votre cahier des charges KEKELI Creative Agency — ${today}`,
       html: buildEmailHtml(firstName, cdc, today),
@@ -194,7 +194,7 @@ ${conversationText}`,
   // Notify agency
   const agencyEmail = process.env.AGENCY_EMAIL ?? "kekelicreativeagency@gmail.com";
   await resend.emails.send({
-    from: "KELI — KEKELI Creative Agency <noreply@kekeli.agency>",
+    from: "KELI — KEKELI Creative Agency <noreply@kekelicreativeagency.com>",
     to: agencyEmail,
     subject: `📋 Nouveau cahier des charges généré — ${firstName}`,
     html: buildEmailHtml(firstName, cdc, today, true),

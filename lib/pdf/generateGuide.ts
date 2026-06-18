@@ -33,25 +33,25 @@ const CONTENT: Record<GuideType, GuideContent> = {
         num: "01",
         title: "Faites l'audit gratuit",
         desc: "10 questions · 3 minutes · Résultats immédiats. Identifiez vos forces et vos points d'amélioration.",
-        url: "kekeli.agency/sondage/artiste",
+        url: "kekelicreativeagency.com/sondage/artiste",
       },
       {
         num: "02",
         title: "Explorez les services artiste",
         desc: "EPK professionnel, shooting photo pro, stratégie TikTok & Reels, plan de sortie musicale sur 6 semaines.",
-        url: "kekeli.agency/artistes",
+        url: "kekelicreativeagency.com/artistes",
       },
       {
         num: "03",
         title: "Soumettez votre brief",
         desc: "Décrivez votre projet en 4 étapes. Estimation personnalisée sur WhatsApp dans les 30 minutes.",
-        url: "kekeli.agency/brief",
+        url: "kekelicreativeagency.com/brief",
       },
       {
         num: "04",
         title: "Recevez votre accompagnement",
         desc: "Stratégie sur mesure, production de contenu, gestion de votre visibilité digitale. KEKELI s'occupe de tout.",
-        url: "kekeli.agency/contact",
+        url: "kekelicreativeagency.com/contact",
       },
     ],
     benefits: [
@@ -76,25 +76,25 @@ const CONTENT: Record<GuideType, GuideContent> = {
         num: "01",
         title: "Faites l'audit de visibilité",
         desc: "10 questions · 3 minutes · Diagnostic complet. Évaluez votre présence digitale et identifiez les priorités.",
-        url: "kekeli.agency/sondage",
+        url: "kekelicreativeagency.com/sondage",
       },
       {
         num: "02",
         title: "Découvrez nos services",
         desc: "Site web professionnel, gestion des réseaux sociaux, publicité digitale, branding et identité visuelle.",
-        url: "kekeli.agency/services",
+        url: "kekelicreativeagency.com/services",
       },
       {
         num: "03",
         title: "Soumettez votre brief",
         desc: "Décrivez votre projet en 4 étapes. Recevez un devis personnalisé et un plan d'action sous 24 heures.",
-        url: "kekeli.agency/brief",
+        url: "kekelicreativeagency.com/brief",
       },
       {
         num: "04",
         title: "Lancez votre présence digitale",
         desc: "Stratégie sur mesure, production de contenu, campagnes publicitaires, suivi et reporting mensuel.",
-        url: "kekeli.agency/contact",
+        url: "kekelicreativeagency.com/contact",
       },
     ],
     benefits: [
@@ -261,7 +261,7 @@ export function generateGuide(type: GuideType): ArrayBuffer {
   doc.setFontSize(7.5);
   doc.setTextColor(120, 113, 108);
   doc.text(
-    "KEKELI Creative Agency  ·  Dakar, Sénégal  ·  kekelicreativeagency@gmail.com  ·  kekeli.agency",
+    "KEKELI Creative Agency  ·  Dakar, Sénégal  ·  kekelicreativeagency@gmail.com  ·  kekelicreativeagency.com",
     W / 2,
     footY + 6,
     { align: "center" }
@@ -273,7 +273,7 @@ export function generateGuide(type: GuideType): ArrayBuffer {
   doc.setFontSize(8.5);
   doc.setTextColor(12, 11, 9);
   doc.text(
-    "Démarrez maintenant → kekeli.agency/brief",
+    "Démarrez maintenant → kekelicreativeagency.com/brief",
     W / 2,
     footY + 18,
     { align: "center" }
