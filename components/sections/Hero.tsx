@@ -248,8 +248,8 @@ export default function Hero() {
               style={{ background: "rgba(200,168,75,0.10)", border: "1px solid rgba(200,168,75,0.28)", color: "rgba(220,210,255,0.75)" }}
             >
               <Sparkles size={13} style={{ color: "#C8A84B", flexShrink: 0 }} />
-              {tr.hero.nudge}
-              <span className="font-semibold" style={{ color: "#C8A84B" }}>{tr.hero.nudgeCta}</span>
+              <span className="whitespace-nowrap">{tr.hero.nudge}</span>
+              <span className="font-semibold whitespace-nowrap" style={{ color: "#C8A84B" }}>{tr.hero.nudgeCta}</span>
             </button>
           </motion.div>
 

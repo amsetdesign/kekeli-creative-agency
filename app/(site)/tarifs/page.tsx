@@ -509,8 +509,7 @@ export default function TarifsPage() {
               </FadeIn>
 
               <FadeInStagger
-                className="grid grid-cols-1 sm:grid-cols-2 gap-5"
-                style={{ gridTemplateColumns: `repeat(${Math.min(packs.length, 4)}, minmax(220px, 1fr))` }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
               >
                 {packs.map((pack) => (
                   <FadeInItem key={pack.name}>
