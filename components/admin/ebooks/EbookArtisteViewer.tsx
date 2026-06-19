@@ -4911,6 +4911,78 @@ export default function EbookArtisteViewer() {
         <Banner text="La maquette imparfaite enregistrée vaut plus que la chanson parfaite dans ta tête." sub="Commence avec ce que tu as. Améliore avec ce que tu gagnes." color={AMB} dark />
       </ContentPage>
 
+      {/* ── PAGE 214 — BUDGET 500 000 FCFA & COMMANDER EN CHINE ── */}
+      <ContentPage chapter="PRO 41 — Home Studio · Budget 500 000 FCFA & Chine" accent={AMB} pageNum={214} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>Budget 500 000 FCFA : Setup Pro depuis la Chine</SH2>
+        <Body>Avec 500 000 FCFA et une commande intelligente sur <strong>AliExpress</strong>, tu peux te construire un home studio de niveau intermédiaire-pro pour <strong>deux à trois fois moins cher</strong> qu'en achetant localement ou en Europe. Voici exactement quoi acheter, où, et comment faire arriver tout ça à Dakar.</Body>
+        <Callout color={"#DC2626"} title="Important : Shein ≠ équipement audio" text="Shein (shein.com) est un site de vêtements — tu n'y trouveras pas de micros ni d'interfaces audio. La bonne plateforme pour le matériel audio depuis la Chine est AliExpress (aliexpress.com). Alibaba (alibaba.com) existe aussi mais c'est pour les achats en gros (minimum 10-50 unités) — pas pour un artiste qui commande 1 micro." />
+        <SH3 color={AMB}>Liste d'équipement 500 000 FCFA — commande AliExpress</SH3>
+        <MiniTable color={AMB}
+          headers={["Équipement", "Modèle recommandé", "Prix AliExpress", "À quoi il sert"]}
+          rows={[
+            ["Micro condensateur XLR", "FIFINE AM8 ou Maono AU-PM420", "20 000–35 000 FCFA", "Enregistrer la voix en qualité studio"],
+            ["Interface audio", "Focusrite Scarlett Solo (3rd gen)", "55 000–75 000 FCFA", "Connecter le micro XLR à l'ordinateur + améliore le son"],
+            ["Casque studio fermé", "OneOdio Monitor 60 ou ATH-M20x", "20 000–35 000 FCFA", "Écouter sans coloration — indispensable pour mixer"],
+            ["Pied de micro + bras articulé", "Bras de bureau réglable (générique)", "8 000–15 000 FCFA", "Tenir le micro à la bonne hauteur, libérer tes mains"],
+            ["Câble XLR mâle-femelle 3m", "Cable XLR 3m (générique)", "3 000–5 000 FCFA", "Relier le micro à l'interface audio"],
+            ["Bonnette anti-pop", "Filtre pop double couche (générique)", "2 000–4 000 FCFA", "Éliminer les sons explosifs P/B/T dans la voix"],
+            ["Panneaux mousse acoustique x12", "Lot 12 panneaux 30x30 cm", "10 000–18 000 FCFA", "Traitement acoustique de la pièce d'enregistrement"],
+            ["Clavier MIDI (optionnel)", "AKAI MPK Mini MK3 ou Arteck", "20 000–40 000 FCFA", "Programmer des beats et des mélodies dans le DAW"],
+            ["Frais de livraison (estimation)", "AliExpress Standard Shipping", "10 000–30 000 FCFA", "Livraison au Sénégal en 15-35 jours"],
+          ]}
+        />
+        <Body><strong>Total équipement : 148 000 — 257 000 FCFA.</strong> Il te reste entre <strong>243 000 et 352 000 FCFA</strong> du budget pour investir dans :</Body>
+        <BulletList color={AMB} items={[
+          { bold: "FL Studio (licence à vie) :", text: "150 000 FCFA — ton DAW principal pour produire des beats et mixer. image-line.com/fl-studio" },
+          { bold: "LANDR (mastering en ligne) :", text: "8 000 FCFA/mois — pour finaliser tes sons en qualité radio. landr.com" },
+          { bold: "Antares Auto-Tune (abonnement) :", text: "~50 000 FCFA/an — correction vocale professionnelle. antarestech.com" },
+          { bold: "Premières sessions de promotion :", text: "Budget publicité Meta Ads pour lancer tes premiers sons sur Facebook/Instagram." },
+        ]} />
+      </ContentPage>
+
+      {/* ── PAGE 215 — COMMANDER SUR ALIEXPRESS DEPUIS LE SÉNÉGAL ── */}
+      <ContentPage chapter="PRO 41 — Home Studio · Commander depuis la Chine" accent={AMB} pageNum={215} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>Comment Commander sur AliExpress depuis le Sénégal</SH2>
+        <Body>Commander depuis la Chine n'est pas compliqué — mais il y a des étapes précises à suivre pour recevoir ta commande sans problème. Voici le guide complet pas à pas.</Body>
+        <SH3 color={AMB}>Les plateformes à connaître</SH3>
+        <MiniTable color={AMB}
+          headers={["Plateforme", "Site web", "Pour qui", "Conseil"]}
+          rows={[
+            ["AliExpress", "aliexpress.com", "Particuliers — acheter 1 à 5 articles", "La meilleure option pour toi. Pas de minimum de commande."],
+            ["Alibaba", "alibaba.com", "Entreprises — acheter en gros (50-1000 unités)", "Pas adapté pour un artiste solo. Réservé aux revendeurs."],
+            ["DHgate", "dhgate.com", "Intermédiaire — quelques unités", "Alternative à AliExpress, moins connu mais fiable."],
+            ["Temu", "temu.com", "Particuliers — prix très bas", "Bon pour les accessoires (câbles, supports) mais pas pour le matériel audio sérieux."],
+            ["Shein", "shein.com", "Vêtements uniquement", "Ne vend pas d'équipement audio. Mauvaise option."],
+          ]}
+        />
+        <SH3 color={AMB}>Guide pas à pas — Commander sur AliExpress</SH3>
+        <NumberedList color={AMB} items={[
+          "CRÉER TON COMPTE (5 minutes) — Va sur aliexpress.com. Clique sur «Sign in / Register». Crée un compte avec ton adresse email ou via Google. C'est gratuit et sans engagement.",
+          "CHERCHER LE PRODUIT EN ANGLAIS — Les résultats sont meilleurs en anglais. Exemples : «USB condenser microphone», «audio interface focusrite», «studio headphones». Filtre par 4+ étoiles et minimum 50 avis.",
+          "VÉRIFIER LE VENDEUR — Cherche le badge «AliExpress Choice» ou «Top Brand». Vérifie le taux de satisfaction (minimum 95%). Lis les avis avec photos — ce sont les plus fiables.",
+          "VÉRIFIER LA LIVRAISON AU SÉNÉGAL — Sur la fiche produit, clique sur «Shipping». Entre «Senegal» comme destination. Vérifie les délais et le coût. Si la livraison au Sénégal n'est pas disponible, cherche un autre vendeur.",
+          "CHOISIR LE MODE DE LIVRAISON — AliExpress Standard (gratuit, 20-35 jours) = option économique. AliExpress Premium (3 000-8 000 FCFA, 15-22 jours) = bon équilibre. DHL Express (20 000-50 000 FCFA, 5-8 jours) = quand tu es pressé.",
+          "PAYER — Carte Visa/Mastercard internationale (UBA, Ecobank, Société Générale, CBAO). Certaines banques sénégalaises bloquent les paiements internationaux : appelle ta banque avant pour les prévenir. Alternative : carte Visa prépayée Ecobank ou UBA disponible à Dakar (sans compte bancaire).",
+          "SUIVRE TA COMMANDE — AliExpress t'envoie un numéro de tracking automatiquement. Utilise 17track.net pour suivre la position de ton colis en temps réel depuis la Chine jusqu'à Dakar.",
+        ]} />
+        <SH3 color={AMB}>La Douane au Sénégal — Ce qu'il Faut Savoir</SH3>
+        <MiniTable color={AMB}
+          headers={["Valeur déclarée du colis", "Ce qui se passe", "Conseil"]}
+          rows={[
+            ["Moins de 150 000 FCFA", "Généralement exempt de droits de douane — livraison directe", "Commande en plusieurs petits colis si tu achètes beaucoup"],
+            ["150 000 à 500 000 FCFA", "Possible TVA (18%) + droits de douane (5-20%)", "Prévoir 15-25% du montant en plus pour les frais de douane"],
+            ["Plus de 500 000 FCFA", "Déclaration obligatoire, dédouanement formel", "Faire appel à un transitaire local pour gérer le dédouanement"],
+          ]}
+        />
+        <BulletList color={AMB} items={[
+          { bold: "Astuce livraison :", text: "Demande au vendeur AliExpress de marquer le colis comme «Gift» (cadeau) avec une valeur déclarée basse. C'est une pratique très courante sur AliExpress — beaucoup de vendeurs le font automatiquement." },
+          { bold: "Si ton colis est retenu à la douane :", text: "Tu reçois un avis de la Direction Générale des Douanes (douanes.sn). Tu dois te présenter avec ta facture AliExpress, ton passeport ou CNI, et payer les frais indiqués. En général, les délais sont de 3-7 jours ouvrés pour récupérer le colis." },
+          { bold: "Transitaires locaux à Dakar :", text: "Pour les grosses commandes (+500 000 FCFA), utilise un transitaire professionnel. Exemples : DHL Express Dakar (dhl.com/sn), Chronopost Sénégal, ou contacte l'agence SAGA/Bolloré Logistics au Port de Dakar." },
+        ]} />
+        <Callout color={GOLD} title="Sites web essentiels à sauvegarder"
+          text="AliExpress : aliexpress.com · Alibaba (grossiste) : alibaba.com · Thomann (Europe) : thomann.de · Suivi colis universel : 17track.net · Douanes Sénégal : douanes.sn · DHL Sénégal : dhl.com/sn · LANDR mastering : landr.com · FL Studio : image-line.com/fl-studio · Auto-Tune : antarestech.com" />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════════════════════ */}
       {/* AVERTISSEMENT — LA FAUSSE CROISSANCE (P191–P194)                 */}
       {/* ══════════════════════════════════════════════════════════════════ */}
