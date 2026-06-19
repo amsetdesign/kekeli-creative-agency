@@ -120,18 +120,6 @@ export default function EbookArtisteViewer() {
               </p>
             </div>
 
-            {/* Bloc ISBN / Dépôt légal — PLACEHOLDER */}
-            <div style={{ padding: "12px 16px", borderRadius: "8px", background: "#FFF8E7", border: "2px dashed #C8A84B", marginBottom: "16px" }}>
-              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: GOLD, textTransform: "uppercase", letterSpacing: "0.15em", margin: "0 0 6px" }}>
-                [DESIGNER / ÉDITEUR — À compléter avant diffusion]
-              </p>
-              <p style={{ fontFamily: F, fontSize: "9px", color: "#92400E", lineHeight: 1.65, margin: 0 }}>
-                <strong>ISBN :</strong> À obtenir auprès du Centre National du Livre du Sénégal (CNLS) ou de l'Agence Francophone pour la Numérotation Internationale du Livre (AFNIL)<br />
-                <strong>Dépôt légal :</strong> Bibliothèque nationale du Sénégal — à effectuer dès la première édition<br />
-                <strong>Enregistrement BSDA :</strong> À déclarer comme œuvre littéraire auprès du Bureau Sénégalais du Droit d'Auteur
-              </p>
-            </div>
-
             {/* Contacts éditeur */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "16px" }}>
               {[
@@ -5184,14 +5172,6 @@ export default function EbookArtisteViewer() {
           { bold: "ARTP Sénégal —", text: "Rapport annuel sur la pénétration internet et mobile au Sénégal." },
         ]} />
 
-        <div style={{ marginTop: "10px", padding: "10px 14px", borderRadius: "8px", background: "#FFF8E7", border: "1px dashed #C8A84B" }}>
-          <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 700, color: GOLD, textTransform: "uppercase", letterSpacing: "0.1em", margin: "0 0 4px" }}>
-            [DESIGNER / AMSET — À compléter si nécessaire]
-          </p>
-          <p style={{ fontFamily: F, fontSize: "8.5px", color: "#92400E", margin: 0 }}>
-            Ajouter toute source ou citation supplémentaire utilisée dans la version finale du livre. Vérifier les liens et disponibilités avant impression.
-          </p>
-        </div>
       </ContentPage>
 
       <ContentPage chapter="Index & Contacts utiles" accent={ACC} pageNum={175} total={TOTAL} guideLabel={LABEL}>
