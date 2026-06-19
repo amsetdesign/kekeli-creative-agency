@@ -20,7 +20,7 @@ export async function POST(request: Request) {
 
   /* ── Envoyer le code par email ── */
   const emailResult = await resend.emails.send({
-    from: "KEKELI Admin <onboarding@resend.dev>",
+    from: "KEKELI Admin <noreply@kekelicreativeagency.com>",
     to: [process.env.ADMIN_EMAIL!],
     subject: `🔐 Code de connexion KEKELI : ${code}`,
     html: `
