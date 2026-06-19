@@ -181,15 +181,29 @@ export default function EbookArtisteViewer() {
           <p style={{ fontFamily: F, fontSize: "9px", fontWeight: 700, color: GOLD, letterSpacing: "0.3em", textTransform: "uppercase", margin: "0 0 32px" }}>Dédicace</p>
           <div style={{ width: "36px", height: "1px", background: GOLD, margin: "0 auto 32px" }} />
 
-          {/* PLACEHOLDER dédicace */}
-          <div style={{ padding: "16px 20px", borderRadius: "10px", background: "rgba(200,168,75,0.06)", border: "2px dashed rgba(200,168,75,0.30)", marginBottom: "32px" }}>
-            <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 700, color: GOLD, textTransform: "uppercase", letterSpacing: "0.15em", margin: "0 0 8px" }}>
-              [AMSET — À compléter : ta dédicace personnelle]
-            </p>
-            <p style={{ fontFamily: F, fontSize: "10px", color: "rgba(255,255,255,0.30)", fontStyle: "italic", margin: 0, lineHeight: 1.7 }}>
-              Exemples possibles : dédié à ta famille, à la communauté gospel sénégalaise, aux artistes qui n'ont jamais abandonné, à Dieu...
-            </p>
-          </div>
+          {/* Dédicace */}
+          <p style={{ fontFamily: FD, fontSize: "15px", fontWeight: 400, fontStyle: "italic", color: "rgba(255,255,255,0.90)", lineHeight: 1.85, margin: "0 0 28px", textAlign: "center" }}>
+            À Dieu, celui qui est tout pour moi —<br />
+            pour qui je vis et j'avance chaque jour de ma vie.
+          </p>
+          <div style={{ width: "28px", height: "1px", background: "rgba(200,168,75,0.50)", margin: "0 auto 28px" }} />
+          <p style={{ fontFamily: FD, fontSize: "13px", fontWeight: 400, fontStyle: "italic", color: "rgba(255,255,255,0.70)", lineHeight: 1.85, margin: "0 0 28px", textAlign: "center" }}>
+            À ma femme <strong style={{ color: GOLD, fontStyle: "normal" }}>Anna DeSion</strong>,<br />
+            à mon fils <strong style={{ color: GOLD, fontStyle: "normal" }}>Jotham</strong>,<br />
+            et à toute ma famille, de près et de loin.
+          </p>
+          <div style={{ width: "28px", height: "1px", background: "rgba(200,168,75,0.50)", margin: "0 auto 28px" }} />
+          <p style={{ fontFamily: FD, fontSize: "13px", fontWeight: 400, fontStyle: "italic", color: "rgba(255,255,255,0.60)", lineHeight: 1.85, margin: "0 0 28px", textAlign: "center" }}>
+            À tous les artistes Gospel Urbain au Sénégal,<br />
+            à la communauté <strong style={{ color: GOLD, fontStyle: "normal" }}>Galsen Gospel Urbain</strong>,<br />
+            et à tous ceux qui, partout dans le monde,<br />
+            vivent pour la musique et savent — avec une conviction profonde —<br />
+            qu'un jour ils se retrouveront au sommet.
+          </p>
+          <div style={{ width: "28px", height: "1px", background: "rgba(200,168,75,0.50)", margin: "0 auto 28px" }} />
+          <p style={{ fontFamily: FD, fontSize: "12px", fontWeight: 400, fontStyle: "italic", color: "rgba(255,255,255,0.45)", lineHeight: 1.85, margin: 0, textAlign: "center" }}>
+            Ne baissez jamais les bras.
+          </p>
 
           <div style={{ width: "36px", height: "1px", background: "rgba(200,168,75,0.30)", margin: "0 auto 24px" }} />
           <p style={{ fontFamily: FD, fontSize: "13px", fontStyle: "italic", color: "rgba(255,255,255,0.35)", margin: 0 }}>
