@@ -7,7 +7,7 @@ import ServicesGrid from "@/components/sections/ServicesGrid";
 const KELIBanner     = dynamic(() => import("@/components/sections/KELIBanner"));
 const IAToolsSection = dynamic(() => import("@/components/sections/IAToolsSection"));
 const PortfolioPreview = dynamic(() => import("@/components/sections/PortfolioPreview"));
-const ProfileGuides  = dynamic(() => import("@/components/sections/ProfileGuides"));
+const BooksDownload  = dynamic(() => import("@/components/sections/BooksDownload"));
 const SondageTeaser  = dynamic(() => import("@/components/sections/SondageTeaser"));
 const ContactCTA     = dynamic(() => import("@/components/sections/ContactCTA"));
 
@@ -83,7 +83,7 @@ export default function Home() {
       <KELIBanner />
       <IAToolsSection />
       <PortfolioPreview />
-      <ProfileGuides />
+      <BooksDownload />
       <SondageTeaser />
       <ContactCTA />
     </>
