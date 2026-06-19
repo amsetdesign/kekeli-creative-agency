@@ -41,24 +41,18 @@ export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const prefersReduced = useReducedMotion();
 
-  const rawX = useMotionValue(0.5);
   const rawY = useMotionValue(0.5);
-  const springX = useSpring(rawX, { stiffness: 35, damping: 22 });
   const springY = useSpring(rawY, { stiffness: 35, damping: 22 });
-
-  const blobLeft = useTransform(springX, [0, 1], ["20%", "60%"]);
-  const blobTop  = useTransform(springY, [0, 1], ["15%", "65%"]);
-  const cardY    = useTransform(springY, [0, 1], ["-8px", "8px"]);
+  const cardY   = useTransform(springY, [0, 1], ["-8px", "8px"]);
 
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLElement>) => {
       if (prefersReduced) return;
       const rect = sectionRef.current?.getBoundingClientRect();
       if (!rect) return;
-      rawX.set((e.clientX - rect.left) / rect.width);
-      rawY.set((e.clientY - rect.top)  / rect.height);
+      rawY.set((e.clientY - rect.top) / rect.height);
     },
-    [rawX, rawY, prefersReduced]
+    [rawY, prefersReduced]
   );
 
   return (
@@ -94,32 +88,77 @@ export default function Hero() {
         />
       </div>
 
-      {/* ── Decorative blobs ────────────────────────────── */}
-      <div aria-hidden className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div
-          className="absolute top-[-5%] left-[-5%] w-96 h-96 rounded-full blur-[140px] opacity-20"
-          style={{ background: "#8B5CF6" }}
-        />
-        <div
-          className="absolute bottom-[-5%] left-[30%] w-72 h-72 rounded-full blur-[120px] opacity-12"
-          style={{ background: "#C8A84B" }}
-        />
-      </div>
-
-      {/* Mouse-tracking blob */}
-      <motion.div
+      {/* ── Lignes diagonales ──────────────────────────── */}
+      <div
         aria-hidden
-        className="absolute pointer-events-none rounded-full blur-[130px] opacity-[0.14]"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          width: 420,
-          height: 420,
-          background: "radial-gradient(circle, #8B5CF6 0%, #C8A84B 55%, transparent 75%)",
-          left: blobLeft,
-          top: blobTop,
-          translateX: "-50%",
-          translateY: "-50%",
+          backgroundImage:
+            "repeating-linear-gradient(45deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 50px)",
         }}
       />
+
+      {/* ── Étoiles filantes ────────────────────────────── */}
+      <div aria-hidden className="absolute inset-0 pointer-events-none overflow-hidden">
+        {[
+          { top: "8%",  left: "65%", delay: 3,  dur: 1.1, pause: 20 },
+          { top: "12%", left: "82%", delay: 11, dur: 0.9, pause: 25 },
+          { top: "4%",  left: "50%", delay: 19, dur: 1.2, pause: 22 },
+          { top: "6%",  left: "92%", delay: 27, dur: 1.0, pause: 28 },
+        ].map((s, i) => (
+          <motion.div
+            key={i}
+            className="absolute"
+            style={{
+              top: s.top,
+              left: s.left,
+              width: 110,
+              height: 1.5,
+              background: "linear-gradient(to right, transparent, rgba(255,255,255,0.85), rgba(200,168,75,0.4))",
+              borderRadius: 2,
+              rotate: 215,
+            }}
+            animate={{ x: [0, -360], y: [0, 230], opacity: [0, 1, 1, 0] }}
+            transition={{
+              duration: s.dur,
+              delay: s.delay,
+              repeat: Infinity,
+              repeatDelay: s.pause,
+              ease: "easeIn",
+            }}
+          />
+        ))}
+      </div>
+
+      {/* ── Particules flottantes ───────────────────────── */}
+      <div aria-hidden className="absolute inset-0 pointer-events-none overflow-hidden">
+        {[
+          { w: 4, h: 4, top: "15%", left: "12%", dur: 8,  delay: 0,   col: "#C8A84B" },
+          { w: 3, h: 3, top: "30%", left: "25%", dur: 11, delay: 1,   col: "#8B5CF6" },
+          { w: 5, h: 5, top: "60%", left: "8%",  dur: 9,  delay: 2,   col: "#ffffff" },
+          { w: 3, h: 3, top: "75%", left: "35%", dur: 13, delay: 0.5, col: "#C8A84B" },
+          { w: 4, h: 4, top: "20%", left: "55%", dur: 10, delay: 3,   col: "#8B5CF6" },
+          { w: 3, h: 3, top: "50%", left: "70%", dur: 14, delay: 1.5, col: "#ffffff" },
+          { w: 5, h: 5, top: "85%", left: "60%", dur: 7,  delay: 4,   col: "#C8A84B" },
+          { w: 3, h: 3, top: "10%", left: "80%", dur: 12, delay: 2.5, col: "#8B5CF6" },
+          { w: 4, h: 4, top: "45%", left: "90%", dur: 9,  delay: 5,   col: "#ffffff" },
+          { w: 3, h: 3, top: "68%", left: "48%", dur: 15, delay: 0,   col: "#C8A84B" },
+          { w: 4, h: 4, top: "40%", left: "18%", dur: 10, delay: 6,   col: "#ffffff" },
+          { w: 3, h: 3, top: "88%", left: "82%", dur: 11, delay: 3.5, col: "#8B5CF6" },
+        ].map((p, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full"
+            style={{ width: p.w, height: p.h, top: p.top, left: p.left, background: p.col }}
+            animate={{
+              y: [0, -24, -8, 0],
+              x: [0, 6, -4, 0],
+              opacity: [0.9, 0.5, 0.8, 0.9],
+            }}
+            transition={{ duration: p.dur, repeat: Infinity, ease: "easeInOut", delay: p.delay }}
+          />
+        ))}
+      </div>
 
       {/* ── Portrait card — desktop right side ──────────── */}
       <motion.div
@@ -294,6 +333,22 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
+
+      {/* ── Scroll indicator ────────────────────────────── */}
+      <motion.div
+        aria-hidden
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2.2, duration: 0.8 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none"
+      >
+        <span className="font-body text-[9px] uppercase tracking-[0.25em] text-white/30">Scroll</span>
+        <motion.div
+          animate={{ y: [0, 10, 0], opacity: [0.35, 0.85, 0.35] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          className="w-px h-10 bg-gradient-to-b from-white/50 to-transparent"
+        />
+      </motion.div>
 
     </section>
   );
