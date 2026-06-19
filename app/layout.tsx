@@ -52,6 +52,15 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr" className={`${cormorant.variable} ${lato.variable}`}>
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZR10E0WGB" />
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SZR10E0WGB');
+        `}} />
+      </head>
       <body className="min-h-full flex flex-col bg-bg-primary text-text-primary">
         <LanguageProvider>
           <SplashScreen />
