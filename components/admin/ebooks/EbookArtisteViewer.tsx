@@ -1152,6 +1152,19 @@ export default function EbookArtisteViewer() {
         ]} />
       </ContentPage>
 
+      <ContentPage chapter="PRO 01 — Action Pratique Mindset" accent={ACC} pageNum={13} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 01 · Pense comme un Artiste Pro</SH2>
+        <Body>Le mindset ne change pas en lisant — il change en agissant. Voici tes premières actions concrètes pour installer le mode «artiste pro» dès aujourd'hui.</Body>
+        <Checklist color={ACC} title="Plan d'action Mindset — à faire maintenant" items={[
+          "AUJOURD'HUI — Écris sur une feuille : «Je suis un artiste pro» et liste 3 décisions concrètes que tu prends aujourd'hui pour l'être vraiment (ex : publier chaque jour, ne plus accepter de prestation sans contrat, t'inscrire au BSDA cette semaine).",
+          "CETTE SEMAINE — Identifie 1 habitude d'amateur que tu conserves encore (ne pas publier régulièrement, ignorer tes analytics, improviser sans plan). Décide maintenant de l'éliminer et remplace-la par une habitude pro précise.",
+          "CE MOIS — Installe les 3 habitudes pro du tableau : contenu quotidien, analyse des stats chaque semaine, 1 contact professionnel par semaine. Tiens ce rythme 30 jours d'affilée. Mesure ta progression.",
+          "CE MOIS — Consacre 15 minutes par jour à apprendre le business musical : podcast (Music Business Worldwide, African Music Business), YouTube (MusicGateway), articles. Le pro est toujours en formation.",
+          "EN CONTINU — Avant chaque décision (sortie, collaboration, concert, réseaux), pose-toi : «Est-ce qu'un artiste pro prendrait cette décision ?» Si la réponse est non, change d'approche.",
+        ]} />
+        <Banner text="Le talent t'a amené jusqu'ici. Le mindset pro t'amènera au sommet." sub="La seule différence entre l'artiste que tu es et l'artiste que tu veux être, c'est une série de décisions quotidiennes." color={ACC} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════ */}
       {/* MODULE 2 — BRANDING (P14–P24)                     */}
       {/* ══════════════════════════════════════════════════ */}
@@ -1278,6 +1291,20 @@ export default function EbookArtisteViewer() {
           text="Intègre des éléments culturels locaux réinterprétés de façon contemporaine : tissu wax en fond, architecture de Dakar (Plateau, Médina), couchers de soleil sur la Corniche. Ton identité sénégalaise est ta force différenciante à l'international — ne la cache pas, amplifie-la." />
       </ContentPage>
 
+      <ContentPage chapter="PRO 02 — Action Pratique Branding" accent={SEC} pageNum={21} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 02 · Construis ta Marque</SH2>
+        <Body>Une marque ne se construit pas en une nuit — mais elle se <em>commence</em> aujourd'hui. Ces actions te donnent une marque cohérente en moins d'un mois.</Body>
+        <Checklist color={SEC} title="Plan d'action Branding — 30 jours pour ta marque pro" items={[
+          "AUJOURD'HUI — Rédige ta Phrase d'ADN Artistique : «Je suis [qui tu es] qui crée [quoi] pour [pour qui] afin que [impact].» Ex : «Je suis un artiste gospel sénégalais qui crée de la musique urbaine contemporaine pour les jeunes africains afin qu'ils trouvent foi et identité.» Affine jusqu'à ce que ça soit parfaitement vrai.",
+          "CETTE SEMAINE — Crée ton avatar fan : donne-lui un prénom, un âge, une ville sénégalaise ou diaspora, 3 plateformes qu'il utilise, et «son problème que ta musique résout». Imprime cette fiche et colle-la dans ton studio.",
+          "CETTE SEMAINE — Définis ta palette : 2-3 couleurs maximum. Ta typographie : 1 police titre + 1 police texte. Note-les quelque part et applique-les immédiatement sur tous tes profils (Instagram, YouTube, Facebook, WhatsApp Business).",
+          "CE MOIS — Commande ou crée ton logo si tu n'en as pas. Budget avec un graphiste local à Dakar : 15 000-50 000 FCFA. Plateforme en ligne : Looka.com ou Canva (logo gratuit limité). Ce logo devient ta signature partout.",
+          "CE MOIS — Fais un audit de cohérence visuelle : ouvre tes 3 profils principaux. Est-ce que les couleurs, les polices et le style photo racontent la même histoire ? Corrige tout ce qui est incohérent.",
+          "EN CONTINU — Avant chaque publication : «Est-ce cohérent avec ma marque ?» C'est la seule question qui compte.",
+        ]} />
+        <Banner text="Ta marque, c'est ce qu'on dit de toi quand tu n'es pas dans la pièce." sub="Construis-la consciemment — ou d'autres la construiront à ta place." color={SEC} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════ */}
       {/* MODULE 3 — DIRECTION ARTISTIQUE (P21–P27)         */}
       {/* ══════════════════════════════════════════════════ */}
@@ -1348,6 +1375,20 @@ export default function EbookArtisteViewer() {
         />
         <Callout color={GRN} title="💡 Conseil budget serré"
           text="Si ton budget est limité, priorise dans cet ordre : (1) photo presse professionnelle, (2) logo/signature visuelle, (3) palette de couleurs et charte graphique. Ces 3 éléments te donnent 80% de l'impact visuel." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 03 — Action Pratique Direction Artistique" accent={GOLD} pageNum={25} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 03 · Direction Artistique</SH2>
+        <Body>La direction artistique n'est pas un luxe — c'est le fondement qui rend chaque contenu reconnaissable. Sans elle, tu publies. Avec elle, tu construis une marque.</Body>
+        <Checklist color={GOLD} title="Plan d'action Direction Artistique — crée ton univers cohérent" items={[
+          "AUJOURD'HUI — Crée un tableau Pinterest secret intitulé «Mon Univers Artistique». Ajoute 20 images qui représentent l'esthétique de ton prochain projet : couleurs, lumières, textures, artistes de référence, décors, émotions. Ce tableau EST ton moodboard.",
+          "CETTE SEMAINE — Définis tes 4 piliers de direction artistique (esthétique visuelle, identité sonore, narrativité, présence scénique) par écrit. 2-3 phrases pour chacun. Ce document guide toutes tes décisions créatives pour les 12 prochains mois.",
+          "CETTE SEMAINE — Fais l'audit de tes profils actuels : ouvre Instagram, YouTube, TikTok et Facebook côte à côte. Est-ce que quelqu'un qui visite ces 4 profils comprend immédiatement qui tu es ? Sinon, identifie 3 incohérences à corriger en priorité.",
+          "CE MOIS — Choisis ta saison artistique actuelle : donne-lui un nom, une palette de 2-3 couleurs, un état d'esprit en 1 mot. Partage ce document avec ton photographe, ton graphiste et ton vidéaste AVANT tout prochain tournage ou shooting.",
+          "CE MOIS — Si ton budget le permet : commande 5 photos de presse professionnelles (50 000-200 000 FCFA à Dakar). Ces photos seront utilisées pendant 1-2 ans dans tous tes supports. C'est l'investissement visuel le plus rentable.",
+          "EN CONTINU — Avant chaque publication, pose cette question : «Est-ce que ce contenu appartient à mon univers artistique actuel ?» Si la réponse est non, soit tu le modifies, soit tu ne le publies pas.",
+        ]} />
+        <Banner text="Un artiste reconnaissable au premier coup d'œil vaut 10x plus qu'un artiste talentueux mais visuellement incohérent." sub="pinterest.com · canva.com · looka.com (logo) · KEKELI Creative Agency (direction artistique)" color={GOLD} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════ */}
@@ -1460,6 +1501,20 @@ export default function EbookArtisteViewer() {
         />
       </ContentPage>
 
+      <ContentPage chapter="PRO 04 — Action Pratique Production" accent={AMB} pageNum={30} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 04 · Produis comme un Pro</SH2>
+        <Body>La qualité de ta production détermine si un curateur Spotify, un programmateur radio ou un directeur artistique prend ton appel ou l'ignore. Chaque action ci-dessous améliore concrètement ton niveau de production.</Body>
+        <Checklist color={AMB} title="Plan d'action Production — élève ton niveau de qualité" items={[
+          "AVANT TOUTE SESSION STUDIO — Calcule ton budget avec le tableau du module (beat + studio + mix + master + clip). Ne commence pas une session sans avoir le budget complet pour aller jusqu'au bout. Un son non-masterisé sur Spotify fait plus de mal que bien.",
+          "POUR TON PROCHAIN SON — Décide clairement quel niveau tu vises : Entrée (50 000-100 000 FCFA), Pro (200 000-500 000 FCFA) ou Premium (500 000 FCFA+). Le niveau doit correspondre à l'objectif du morceau : test ou lead single ?",
+          "CETTE SEMAINE — Si tu achètes des beats en ligne, teste BeatStars (beatstars.com) et Airbit (airbit.com). Cherche des beats dans ton genre avec les mots «Afrobeats», «Gospel Africa», «Senegal». Un beat non-exclusif à 20-50$ peut être professionnel si bien enregistré.",
+          "AVANT TON PROCHAIN CLIP — Crée ton moodboard vidéo avec 5 clips de référence. Partage-le avec ton réalisateur. Définis : décors (1-3 maximum), tenues, ambiance lumière, style de montage. Un brief clair divise le nombre de retouches par 3.",
+          "POUR TA COVER ARTWORK — Utilise Canva Pro ou embauche un graphiste local. Standard minimum : 3 000x3 000 pixels, lisible en petit, cohérente avec ton branding. Teste ta cover en l'affichant en 50x50 pixels — c'est la taille Spotify.",
+          "EN CONTINU — Écoute tes masters sur 3 surfaces différentes avant de les valider : écouteurs bas de gamme, enceinte Bluetooth, voiture ou télé. Si ça sonne bien sur les 3, c'est prêt. Si non, retourne au mix.",
+        ]} />
+        <Banner text="Un morceau mal produit restera dans ta bibliothèque. Un morceau bien produit restera dans les playlists de tes fans pendant des années." sub="beatstars.com · distrokid.com · canva.com · landr.com (mastering automatique 20$/son)" color={AMB} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════ */}
       {/* MODULE 5 — DISTRIBUTION (P30–P38)                 */}
       {/* ══════════════════════════════════════════════════ */}
@@ -1536,6 +1591,20 @@ export default function EbookArtisteViewer() {
           text="Cible YouTube en priorité absolue (algorithme accessible, pas besoin d'abonnement payant). Ensuite Boomplay pour le marché local. Spotify pour la diaspora en Europe. Cette triade couvre 90% de ta base de fans potentiels." />
       </ContentPage>
 
+      <ContentPage chapter="PRO 05 — Action Pratique Distribution" accent={BLU} pageNum={35} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 05 · Distribue ta Musique</SH2>
+        <Body>La distribution, c'est l'acte fondateur de la carrière pro. Tant que ta musique n'est pas sur les plateformes, tu n'existes pas professionnellement. Voici comment le faire cette semaine.</Body>
+        <Checklist color={BLU} title="Plan d'action Distribution — ta musique sur 150+ plateformes" items={[
+          "AUJOURD'HUI — Va sur distrokid.com. Crée ton compte avec le plan «Musician» (~12 000 FCFA/an). C'est le meilleur investissement que tu peux faire pour ta carrière — un abonnement qui te permet de distribuer en illimité toute l'année.",
+          "CETTE SEMAINE — Crée ton compte Payoneer sur payoneer.com. Ton CNI sénégalais suffit pour la vérification. Lie-le ensuite à ton compte DistroKid dans Settings > Banking. C'est ton compte pour recevoir tes royalties du monde entier.",
+          "CETTE SEMAINE — Prépare tous les éléments de ta prochaine sortie : titre définitif (aucun changement possible après envoi), cover 3 000x3 000 pixels, genre musical exact, date de sortie (au minimum 7 jours à l'avance pour Spotify, 14 jours recommandé).",
+          "CE MOIS — Distribue ton premier titre via DistroKid. Coche toutes les plateformes disponibles — Spotify, Apple Music, Boomplay, YouTube Music, Deezer, Tidal. Le coût est le même qu'un ou dix titres.",
+          "CE MOIS — Une fois distribué : revendique ton profil Spotify for Artists (artists.spotify.com), Boomplay for Artists, et YouTube for Artists. Ces portails te donnent accès à tes analytics et te permettent de pitcher aux playlists.",
+          "EN CONTINU — Vérifie chaque mois tes royalties sur DistroKid. Objectif : augmenter tes streams mois après mois via la promotion. La distribution seule ne fait rien — c'est la promotion qui amène les écoutes.",
+        ]} />
+        <Banner text="Une musique non distribuée n'existe que dans ton téléphone. Distribue — et le monde entier peut t'entendre." sub="distrokid.com · payoneer.com · artists.spotify.com · boomplaymusic.com/artist" color={BLU} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════ */}
       {/* MODULE 6 — SPOTIFY (P35–P41)                      */}
       {/* ══════════════════════════════════════════════════ */}
@@ -1594,6 +1663,20 @@ export default function EbookArtisteViewer() {
         />
         <Callout color={GRN} title="📊 Revenus Spotify par pays"
           text="100 000 streams depuis le Sénégal ≈ 30-50$. 100 000 streams depuis la France ≈ 300-400$. 100 000 streams depuis le Canada/USA ≈ 400-600$. La diaspora est ta mine d'or — elle écoute avec des abonnements premium dans des pays à CPM élevé." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 06 — Action Pratique Spotify" accent={GRN} pageNum={38} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 06 · Maîtrise Spotify</SH2>
+        <Body>Spotify est ta carte de visite internationale. Un profil complet et optimisé fait toute la différence quand un label, un booker ou un journaliste cherche à te vérifier.</Body>
+        <Checklist color={GRN} title="Plan d'action Spotify Pro — profil et stratégie complète" items={[
+          "AUJOURD'HUI — Va sur artists.spotify.com et revendique ton profil artiste. Si tu n'as pas encore de titre sur Spotify, distribue-en un via DistroKid (Module 05) d'abord. La revendication est gratuite et te donne accès à tous les outils Spotify for Artists.",
+          "CETTE SEMAINE — Complète 100% de ton profil : photo artiste de haute qualité (au moins 1 000x1 000 px), biographie en français et en anglais (max 1 500 caractères chacune), liens vers tes réseaux sociaux, photos de galerie (au minimum 3).",
+          "CETTE SEMAINE — Crée ta première Playlist Artiste. Ajoute tes propres titres + 5-10 titres d'artistes similaires à toi. Nomme-la avec ton univers artistique. Partage-la sur tes réseaux.",
+          "AVANT CHAQUE SORTIE — Soumets ton titre à Spotify via «Pitch a Song» (disponible dans Spotify for Artists) AU MOINS 7 jours avant la date de sortie. C'est ta seule chance d'être considéré pour les playlists éditorialisées.",
+          "CHAQUE SEMAINE — Consulte tes Spotify for Artists Analytics : ville principale de tes auditeurs, âge moyen, sources d'écoute (playlists, recherche, profil). Ces données guident toutes tes décisions marketing.",
+          "STRATÉGIE DIASPORA — Si tes auditeurs principaux sont en France, en Italie ou aux USA, cible ta publicité Meta Ads spécifiquement vers ces pays. Chaque stream là-bas vaut 8-15x un stream au Sénégal.",
+        ]} />
+        <Banner text="Spotify n'est pas qu'une plateforme d'écoute — c'est ton dossier de presse digital permanent." sub="artists.spotify.com — revendique ton profil aujourd'hui si ce n'est pas encore fait." color={GRN} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════ */}
@@ -1719,6 +1802,20 @@ export default function EbookArtisteViewer() {
         </div>
       </ContentPage>
 
+      <ContentPage chapter="PRO 07 — Action Pratique YouTube" accent={SEC} pageNum={44} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 07 · YouTube Pro</SH2>
+        <Body>YouTube est le deuxième moteur de recherche mondial — et ton portfolio permanent. Une chaîne bien configurée attire des fans, des partenariats et des revenus publicitaires longtemps après la sortie d'un son.</Body>
+        <Checklist color={SEC} title="Plan d'action YouTube — construis ta présence permanente" items={[
+          "AUJOURD'HUI — Va sur youtube.com/account_advanced et active la monétisation si tu remplis les critères (1 000 abonnés + 4 000h de lecture). Sinon, note ta date cible et planifie le contenu nécessaire pour y arriver en 90 jours.",
+          "CETTE SEMAINE — Optimise ton profil : photo de profil (même que partout), art de bannière (2 560x1 440px), description de chaîne avec tes mots-clés (genre musical, ville, langue). Lien vers tous tes réseaux dans la section «À propos».",
+          "CETTE SEMAINE — Revois les 3 dernières miniatures de tes vidéos. Applique la règle : visage expressif en gros plan + 3-4 mots lisibles + couleurs cohérentes avec ton branding. Refais-les si nécessaire — une meilleure miniature = plus de clics.",
+          "CE MOIS — Crée et publie 4 vidéos en utilisant le format HOOK de 3 secondes. Pour chaque vidéo : titre avec mot-clé, description 200 mots+, 5-10 tags pertinents. Planifie avec YouTube Studio pour optimiser les horaires de publication.",
+          "CE MOIS — Lance au moins 3 YouTube Shorts (60 secondes) extraits de tes contenus existants. Les Shorts attirent de nouveaux abonnés qui découvrent ensuite tes vidéos longues.",
+          "EN CONTINU — Analyse chaque mois : taux de clics (CTR cible : 4%+), durée de visionnage (60%+), abonnements depuis les vidéos. Duplique ce qui fonctionne, abandonne ce qui ne performe pas.",
+        ]} />
+        <Banner text="Ta chaîne YouTube est la seule plateforme où ton contenu te paie encore 5 ans après la publication." sub="youtube.com/studio · tubebuddy.com (analyse gratuite) · Formation YouTube KEKELI Academy" color={SEC} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════ */}
       {/* MODULE 8 — PUBLICITÉ (P44–P50)                    */}
       {/* ══════════════════════════════════════════════════ */}
@@ -1829,6 +1926,20 @@ export default function EbookArtisteViewer() {
             </a>
           </div>
         </div>
+      </ContentPage>
+
+      <ContentPage chapter="PRO 08 — Action Pratique Publicité" accent={BLU} pageNum={49} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 08 · Publicité Pro</SH2>
+        <Body>Investir en publicité sans stratégie, c'est brûler de l'argent. Investir avec méthode, c'est multiplier ta visibilité par 10 avec le même budget. Applique ces étapes avant de lancer ta première campagne.</Body>
+        <Checklist color={BLU} title="Plan d'action Publicité — lance ta première campagne efficace" items={[
+          "AVANT TOUT — Crée ton Meta Business Manager sur business.facebook.com si ce n'est pas déjà fait. Connecte-y ta Page Facebook ET ton compte Instagram. Installe le Pixel Meta sur ton site si tu en as un.",
+          "CETTE SEMAINE — Définis ton objectif de campagne AVANT de créer quoi que ce soit : vues du clip ? abonnés Spotify ? inscriptions à un concert ? L'objectif détermine le type de campagne — ne commence jamais sans le définir.",
+          "CETTE SEMAINE — Crée 3 audiences distinctes dans Meta Ads : (1) diaspora sénégalaise en France/Italie/Canada, (2) amateurs de musique africaine 18-35 ans au Sénégal, (3) audience similaire (lookalike) à tes abonnés Instagram actuels.",
+          "CE MOIS — Lance ta première campagne avec un budget minimum de 50 000 FCFA sur 7 jours. Teste 2 vidéos différentes (visuels) pour le même morceau. Analyse le CPV (coût par vue) et le taux de complétion — la vidéo avec les meilleurs résultats reçoit le reste du budget.",
+          "CE MOIS — Pour YouTube Ads, ouvre Google Ads (ads.google.com) et crée une campagne In-Stream Skippable ciblant le Sénégal + diaspora avec tes mots-clés musicaux. Budget minimum : 30 000 FCFA pour tester.",
+          "EN CONTINU — Jamais de campagne sans un contenu fort. La règle d'or : si une vidéo ne génère pas d'engagement organique, la publicité ne sauvera pas une mauvaise vidéo — elle accélérera son échec. Commence toujours par optimiser le contenu avant d'investir.",
+        ]} />
+        <Banner text="50 000 FCFA investis intelligemment en pub > 5 000 FCFA gaspillés en boost Instagram sans stratégie." sub="business.facebook.com · ads.google.com · Formation Meta Ads + YouTube Ads KEKELI Academy" color={BLU} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════ */}
@@ -1974,6 +2085,20 @@ export default function EbookArtisteViewer() {
         </div>
       </ContentPage>
 
+      <ContentPage chapter="PRO 09 — Action Pratique TikTok" accent={SEC} pageNum={55} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 09 · TikTok Pro</SH2>
+        <Body>TikTok est la seule plateforme qui peut propulser un artiste inconnu à 100 000 vues du jour au lendemain. Mais l'algorithme récompense la régularité et la méthode — pas la chance.</Body>
+        <Checklist color={SEC} title="Plan d'action TikTok — maîtrise la machine virale" items={[
+          "AUJOURD'HUI — Passe ton compte en «Compte Pro» → «Artiste» dans les paramètres TikTok. Cela t'ouvre accès aux analytics, au Creator Marketplace et aux outils de monétisation. C'est gratuit et prend 2 minutes.",
+          "CETTE SEMAINE — Télécharge TikTok Creator Search Insights (ou utilise la barre de recherche TikTok) pour trouver les 5 sons tendance dans ton genre musical. Planifie 1 vidéo autour de chaque son tendance pour les 5 prochains jours.",
+          "CETTE SEMAINE — Applique la règle des 3 secondes sur tes prochaines vidéos : les 3 premières secondes doivent créer une question ou tension dans l'esprit du spectateur. Reformule tes prochains hooks avec cette règle.",
+          "CE MOIS — Engage-toi à publier 3 vidéos par jour pendant 30 jours consécutifs. Varie les angles : performance musicale, coulisses studio, humour/authenticité, storytelling, réaction. Note quelle catégorie performe le mieux.",
+          "CE MOIS — Fais 3 duos ou coutures (Stitch) avec des créateurs de ta niche ayant 10 000 à 100 000 abonnés. C'est la méthode la plus rapide pour accéder à leur audience sans payer.",
+          "EN CONTINU — Chaque lundi matin : 15 minutes d'analyse TikTok Analytics. Taux de complétion cible : 80%+. Si une vidéo atteint 50% de complétion minimum dans les 2 premières heures, double la mise en la boostant par Spark Ads (5 000 FCFA min).",
+        ]} />
+        <Banner text="3 vidéos par jour × 30 jours = 90 expériences. L'algorithme TikTok récompense la constance, pas le talent." sub="tiktok.com/creators · Formation TikTok Pro KEKELI Academy" color={SEC} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════ */}
       {/* MODULE 10 — INSTAGRAM (P55–P62)                   */}
       {/* ══════════════════════════════════════════════════ */}
@@ -2103,6 +2228,20 @@ export default function EbookArtisteViewer() {
         </div>
       </ContentPage>
 
+      <ContentPage chapter="PRO 10 — Action Pratique Instagram" accent={ACC} pageNum={61} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 10 · Instagram Pro</SH2>
+        <Body>Instagram est ta vitrine 24h/24. Un profil non optimisé fait perdre des contrats et des collaborations avant même que tu aies eu une conversation. Chaque détail compte.</Body>
+        <Checklist color={ACC} title="Plan d'action Instagram — transforme ton profil en machine à contrats" items={[
+          "AUJOURD'HUI — Passe en compte «Créateur» (pas Business) dans Paramètres → Type de compte. Puis optimise ta bio : ligne 1 = identité, ligne 2 = genre musical + ville, ligne 3 = valeur que tu apportes, ligne 4 = call-to-action clair (booking, streaming, nouvelle sortie).",
+          "CETTE SEMAINE — Crée ton Linktree gratuit (linktr.ee) avec : ton dernier single en streaming, ta chaîne YouTube, ton WhatsApp booking, ta Page Facebook. Mets ce lien dans ta bio Instagram. Un lien unique = tu ne perds aucun fan.",
+          "CETTE SEMAINE — Configure tes Story Highlights avec des couvertures cohérentes : Musique (tes sons), Lives (concerts passés), Studio (coulisses), Presse (articles, interviews), Booking (comment te contacter).",
+          "CE MOIS — Applique le calendrier éditorial du module : Reel le lundi et jeudi, Carrousel le mercredi, Photo le vendredi, 5 Stories par jour. Prépare 2 semaines de contenu à l'avance avec des outils comme Later ou Meta Business Suite.",
+          "CE MOIS — Engage-toi avec 20 comptes de ta niche chaque jour : laisse des commentaires sincères de 3 mots minimum (pas juste des emojis). Cette méthode génère des abonnements organiques sans publicité.",
+          "EN CONTINU — Chaque semaine, consulte Instagram Insights : taux d'engagement cible 3-5%+, Reels avec meilleur reach à dupliquer. Si un Reel dépasse 10 000 vues organiquement, fais-en une version 2 dans les 48h.",
+        ]} />
+        <Banner text="Un profil Instagram bien configuré travaille pour toi même quand tu dors — it's your 24/7 booking agent." sub="linktr.ee · later.com (planification) · Formation Meta Ads KEKELI Academy" color={ACC} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════ */}
       {/* MODULE 11 — WHATSAPP (P61–P66)                    */}
       {/* ══════════════════════════════════════════════════ */}
@@ -2161,6 +2300,20 @@ export default function EbookArtisteViewer() {
         </div>
         <Callout color={GRN} title="Vente directe via WhatsApp"
           text="Les billets de concert, les photos dédicacées, les produits dérivés se vendent très bien directement via WhatsApp au Sénégal. Annonce dans ta communauté, fais payer par Wave/Orange Money, envoie la confirmation. Simple, efficace, 0% de commission." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 11 — Action Pratique WhatsApp" accent={GRN} pageNum={65} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 11 · WhatsApp Pro</SH2>
+        <Body>WhatsApp est ton canal le plus direct, le moins filtré et le plus puissant au Sénégal. Si tu n'as pas encore de stratégie WhatsApp, tu laisses de l'argent et des fans sur la table chaque jour.</Body>
+        <Checklist color={GRN} title="Plan d'action WhatsApp — active ton canal direct numéro 1" items={[
+          "AUJOURD'HUI — Télécharge WhatsApp Business (application séparée) et configure ton profil pro : photo, nom d'artiste, description (genre, ville, email booking), catégorie «Musicien/Groupe», lien wa.me/221XXXXXXXX dans toutes tes bios.",
+          "CETTE SEMAINE — Crée 3 listes de diffusion distinctes : (1) Fans proches (200-256 contacts max), (2) Organisateurs/DJs/Médias, (3) Partenaires & prestataires. Envoie un premier message de présentation à chaque liste.",
+          "CETTE SEMAINE — Configure 3 réponses rapides dans WhatsApp Business : /tarifs (tes tarifs de prestation), /booking (comment réserver), /musique (liens vers tes plateformes de streaming). Ces réponses s'envoient en 1 tap.",
+          "CE MOIS — Publie au minimum 5 statuts WhatsApp par jour pendant 30 jours : matin (citation/foi), midi (extrait musical), après-midi (annonce/news), soir (remerciement/interaction), nuit (moment personnel). Teste et observe les vues.",
+          "CE MOIS — Crée ta Communauté WhatsApp avec 3 sous-groupes : Annonces officielles (toi seul publie), Musique & coulisses, Discussion fans. Invite tes contacts les plus engagés en premier.",
+          "EN CONTINU — Wave et Orange Money sont tes outils de vente directe. Le jour d'un concert, envoie une diffusion avec le lien de paiement Wave. C'est la méthode la plus rapide pour vendre des billets au Sénégal — zéro intermédiaire, zéro commission.",
+        ]} />
+        <Banner text="97% des Sénégalais avec smartphone ont WhatsApp. C'est ton canal de communication le plus direct et le plus efficace." sub="wa.me (lien cliquable) · Wave & Orange Money (paiement direct) · WhatsApp Business" color={GRN} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════ */}
@@ -2257,6 +2410,20 @@ export default function EbookArtisteViewer() {
           text="Ces chiffres sont atteignables avec de la constance. Mais rien n'est garanti. Certains mois seront meilleurs que d'autres. Ce qui compte : ne jamais arrêter de créer et de publier. Les artistes qui abandonnent à 800 followers ne savent pas qu'ils étaient à 2 semaines de décoller." />
       </ContentPage>
 
+      <ContentPage chapter="PRO 12 — Action Pratique Communauté" accent={AMB} pageNum={71} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 12 · Communauté 0→10K</SH2>
+        <Body>Les followers se comptent. La communauté se bâtit. 1 000 vrais fans qui achètent des billets valent plus que 50 000 followers passifs. Chaque action ci-dessous construit une relation réelle.</Body>
+        <Checklist color={AMB} title="Plan d'action Communauté — de 0 à 10 000 fans engagés" items={[
+          "CETTE SEMAINE — Identifie tes 100 premiers vrais fans : ceux qui commentent, partagent, viennent à tes concerts. Mets-les dans une liste WhatsApp prioritaire. Ce sont tes ambassadeurs — traitez-les comme de la famille.",
+          "CETTE SEMAINE — Crée un «rituel» hebdomadaire public et récurrent : chaque vendredi à 20h tu fais un Live Instagram de 15 min, ou chaque lundi tu partages l'extrait d'un nouveau son en avant-première WhatsApp. Un rituel prévisible crée de l'habitude chez tes fans.",
+          "CE MOIS — Organise ton premier événement communautaire physique ou virtuel (même petit) : afterwork musical gratuit, enregistrement live avec fans, listening party dans un café. Ces moments créent des souvenirs — et les gens parlent de ce qu'ils vivent.",
+          "CE MOIS — Lance ta première collaboration avec un artiste de ta niche (pas plus grand que toi). Objectif : partage d'audience croisé. Chaque collaboration bien faite peut t'apporter 10 à 30% de nouveaux followers engagés.",
+          "EN CONTINU — Réponds à TOUS les commentaires et DMs dans les 24 premières heures. Pas d'emojis seuls : une vraie réponse personnalisée de 5 mots minimum. Les fans qui reçoivent une réponse deviennent des fans à vie.",
+          "EN CONTINU — Suis le tableau de croissance du module : semaines 1-2 (100 fans + setup), semaines 5-6 (premier single + budget pub 50K FCFA), semaines 9-10 (premier concert payant). Reviens sur ce tableau chaque mois.",
+        ]} />
+        <Banner text="Les artistes qui abandonnent à 800 followers ne savent pas qu'ils étaient à 2 semaines de décoller." sub="Constance + engagement authentique = la seule formule qui fonctionne vraiment." color={AMB} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════ */}
       {/* MODULE 13 — DROITS BSDA (P71–P78)                 */}
       {/* ══════════════════════════════════════════════════ */}
@@ -2335,6 +2502,20 @@ export default function EbookArtisteViewer() {
         />
         <Callout color={GRN} title="💡 Conseil"
           text="Pour les contrats de prestation concert, insiste toujours sur : (1) un acompte de 30-50% à la signature, (2) le solde avant la montée sur scène, (3) une clause d'annulation avec dédommagement. Ne compte jamais sur un accord verbal." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 13 — Action Pratique Droits & Contrats" accent={GOLD} pageNum={76} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 13 · Droits & Contrats</SH2>
+        <Body>Protéger sa musique n'est pas une option — c'est une responsabilité professionnelle. Chaque titre non déclaré est de l'argent que tu ne récupéreras jamais. Ces actions concrètes te protègent dès maintenant.</Body>
+        <Checklist color={GOLD} title="Plan d'action Droits & Contrats — protège ton travail" items={[
+          "CETTE SEMAINE — Contacte le BSDA (Bureau Sénégalais du Droit d'Auteur) : Avenue Roume, Dakar. Site : bsda.sn. Téléphone : +221 33 821 40 37. Renseigne-toi sur la procédure d'inscription et le coût. L'adhésion est obligatoire et permet de percevoir tes royalties de performance.",
+          "CETTE SEMAINE — Fais la liste de tous tes titres originaux. Pour chacun : as-tu un ISRC (généré par DistroKid) ? Est-il déclaré au BSDA ? Si non, commence les démarches pour les titres les plus streamés en priorité.",
+          "AVANT TOUTE COLLABORATION — Télécharge un modèle de Split Sheet sur musicgateway.com ou beatstars.com (gratuit). Utilise-le pour TOUS tes featurings, co-compositions et beats achetés en exclusivité. Un Split Sheet signé par les deux parties avant l'enregistrement évite 90% des conflits.",
+          "AVANT TOUT CONCERT — Exige un contrat écrit avec : ton cachet exact, un acompte de 30-50% à la signature, le solde versé AVANT la montée sur scène, et une clause d'annulation avec dédommagement minimum 50% du cachet si annulation à moins de 72h.",
+          "CETTE SEMAINE — Relis le dernier contrat que tu as signé. Identifie les clauses sur la durée, les territoires et le partage des revenus. Pour les futurs contrats : toujours 48h de réflexion minimum avant signature.",
+          "EN CONTINU — Règle d'or sans exception : tout accord professionnel = contrat écrit. Même avec un ami. Même pour un petit concert. L'accord verbal n'a aucune valeur juridique.",
+        ]} />
+        <Banner text="Chaque titre non déclaré au BSDA est de l'argent que tu offres à quelqu'un d'autre." sub="bsda.sn · musicgateway.com (modèles de contrats gratuits) · distrokid.com (ISRC automatique)" color={GOLD} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════ */}
@@ -2434,6 +2615,20 @@ export default function EbookArtisteViewer() {
         <Body>Instagram permet désormais aux créateurs de proposer un abonnement mensuel payant à leurs fans pour accéder à du contenu exclusif (Reels, Stories, Lives). Disponible depuis 2023 pour les créateurs africains éligibles.</Body>
         <Callout color={GRN} title="L'artiste entrepreneur"
           text="Tu n'es plus seulement un musicien. Tu es le PDG de ta marque musicale. Traite chaque source de revenus comme une ligne de business à développer. Diversifie. N'attends jamais qu'une seule source paie tout." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 14 — Action Pratique Monétisation" accent={GRN} pageNum={82} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 14 · Monétisation Pro</SH2>
+        <Body>1 million FCFA/mois ne vient pas d'une seule source — ça vient de 5 à 10 sources qui se cumulent. Chaque action ci-dessous active une source de revenus concrète.</Body>
+        <Checklist color={GRN} title="Plan d'action Monétisation — construis tes 10 sources de revenus" items={[
+          "AUJOURD'HUI — Fais l'inventaire honnête de tes sources de revenus actuelles. Compare avec les 10 sources du module. Lesquelles sont déjà actives ? Lesquelles peux-tu activer ce mois sans investissement supplémentaire ?",
+          "CETTE SEMAINE — Fixe ton cachet minimum par type de prestation : mariage, corporate, festival, showcase. Calcule : déplacement + temps de préparation + valeur artistique. Ne travaille jamais en dessous de ce tarif — chaque concert sous-payé dévalue ta marque.",
+          "CE MOIS — Prépare ton media kit (1 page PDF) : photo pro, biographie courte, stats réseaux, types de partenariats proposés, tarifs. Envoie-le à 5 entreprises locales (télécoms, boissons, mode, banques) pour explorer des partenariats de 50 000 à 200 000 FCFA.",
+          "CE MOIS — Active le YouTube Partner Program si tu as 1 000 abonnés + 4 000h de lecture (12 mois glissants). Si pas encore : fixe une date limite dans 3 mois pour atteindre ces seuils avec un plan de contenu précis.",
+          "CE MOIS — Crée ta première source de vente directe : merch simple (t-shirt avec ton logo, 5 000-15 000 FCFA), ou beat packs à vendre sur BeatStars, ou sessions de coaching musical en ligne (30 000-80 000 FCFA/session).",
+          "EN CONTINU — Objectif minimum : 4 sources de revenus actives simultanément. Jamais moins. La règle d'or : diversifie avant d'en avoir besoin, pas après avoir perdu une source.",
+        ]} />
+        <Banner text="Tu n'es pas un musicien qui essaie de gagner de l'argent. Tu es une entreprise musicale qui génère des revenus." sub="Traite chaque source comme une ligne de business à développer, mesurer et optimiser." color={GRN} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════ */}
@@ -2559,6 +2754,20 @@ export default function EbookArtisteViewer() {
           text="Notre mission depuis notre création : mettre la lumière sur les projets qui méritent d'être vus. Nous accompagnons artistes et entreprises de Dakar à la diaspora. Guide gratuit, outils IA, accompagnement personnalisé — tout est disponible sur kekelicreativeagency.com" />
       </ContentPage>
 
+      <ContentPage chapter="PRO 15 — Action Pratique Plan 5 Ans" accent={BLU} pageNum={89} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 15 · Plan de Carrière 5 Ans</SH2>
+        <Body>Un plan sans exécution est un rêve. Une exécution sans plan est du chaos. Voici comment transformer la vision à 5 ans en actions concrètes dès aujourd'hui.</Body>
+        <Checklist color={BLU} title="Plan d'action Carrière — structure les 5 prochaines années" items={[
+          "AUJOURD'HUI — Écris ta vision à 5 ans en 3 phrases précises : où tu en es, où tu veux être dans 5 ans, pourquoi ce chemin. Imprime-la et colle-la là où tu travailles. Relis-la chaque matin.",
+          "CETTE SEMAINE — Définis tes 3 objectifs des 90 prochains jours avec des chiffres précis. Exemple : 500 nouveaux abonnés TikTok, 1 concert payant signé, 1 single sorti. Pas de vague — des chiffres. Dates limites obligatoires.",
+          "CETTE SEMAINE — Identifie quelle étape du plan 5 ans tu es (Année 1, 2, 3?) et quels sont les 2 objectifs prioritaires de ton étape. Fais une seule chose : concentre-toi sur ces 2 objectifs avant tout autre projet.",
+          "CE MOIS — Crée ton tableau de bord mensuel dans Google Sheets ou une feuille papier : followers TikTok/YT/IG, revenus du mois, concerts joués, collaborations signées. Mise à jour obligatoire le 1er de chaque mois.",
+          "CE MOIS — Identifie le premier profil à recruter dans ton équipe (même à temps partiel, même bénévolement au début) : graphiste, community manager ou vidéaste. Dès que tu délègues une tâche chronophage, tu récupères du temps de création.",
+          "EN CONTINU — Chaque trimestre, fais un bilan honnête : objectifs atteints, manqués, ajustements nécessaires. Un plan qui ne s'ajuste jamais est rigide. Un plan qui s'ajuste sans arrêt n'est plus un plan. Réévalue tous les 90 jours, pas tous les jours.",
+        ]} />
+        <Banner text="Ta carrière dans 5 ans est la somme de tes décisions d'aujourd'hui — pas de tes intentions, de tes décisions." sub="Google Sheets (tableau de bord gratuit) · KEKELI Vision de Carrière (IA) · kekelicreativeagency.com" color={BLU} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════ */}
       {/* PAGES BONUS : FACEBOOK & OUTILS IA (P89–P95)      */}
       {/* ══════════════════════════════════════════════════ */}
@@ -2621,6 +2830,20 @@ export default function EbookArtisteViewer() {
         ]} />
         <Callout color={GRN} title="Le résultat"
           text="30 contenus à partir d'UNE seule chanson. Avec 1 sortie par mois = 30 contenus/mois = 1 contenu par jour. Plus jamais «je n'ai rien à publier»." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 16 — Action Pratique Facebook & IA" accent={ACC} pageNum={93} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 16 · Facebook & IA</SH2>
+        <Body>Facebook touche tes fans de 25-50 ans et ta diaspora. L'IA te donne 3x plus de temps créatif. Les deux ensemble = un artiste qui produit plus, distribue mieux et touche plus de monde avec le même effort.</Body>
+        <Checklist color={ACC} title="Plan d'action Facebook & IA — multiplie ta productivité" items={[
+          "AUJOURD'HUI — Crée ou optimise ta Page Facebook Artiste : catégorie «Musicien/Groupe», photo de couverture 820x312px (annonce ta prochaine sortie), active les messages, lien vers tes autres réseaux. Si ta Page existe déjà, vérifie ces éléments maintenant.",
+          "CETTE SEMAINE — Teste ChatGPT ou Claude (claude.ai) pour générer 10 idées de contenu pour ta prochaine sortie : demande «Génère 10 idées de posts TikTok pour un artiste gospel sénégalais qui sort un single». Affine, adapte, publie — l'IA t'inspire, toi tu crées.",
+          "CETTE SEMAINE — Applique la formule 1 chanson = 30 contenus à ton dernier single. Liste les 30 formats (5 TikToks, 5 Reels, etc.), planifie leur publication sur 30 jours. Crée un tableau simple dans Google Docs.",
+          "CE MOIS — Fais ton premier Live Facebook de 15 à 30 minutes : questions-réponses avec tes fans, présentation coulisses d'une chanson, performance acoustique. Les Lives Facebook atteignent la diaspora que tes autres contenus ne touchent pas.",
+          "CE MOIS — Utilise Canva IA (canva.com) pour créer 30 visuels de contenu en une seule session : covers de sons, flyers de concerts, carrousels Instagram. Ce qui prenait 3 heures en prend maintenant 30 minutes.",
+          "EN CONTINU — Chaque semaine, utilise l'IA pour analyser tes performances : copie tes stats TikTok/Instagram dans ChatGPT et demande «Que doit-on améliorer dans ma stratégie ?». L'IA donne des insights que tu n'aurais pas vus seul.",
+        ]} />
+        <Banner text="L'IA ne remplace pas l'artiste. Elle libère l'artiste des tâches répétitives pour qu'il puisse créer davantage." sub="claude.ai · canva.com · capcut.com · KEKELI Stratégie Lancement (IA) · kekelicreativeagency.com" color={ACC} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════ */}
@@ -2858,6 +3081,20 @@ export default function EbookArtisteViewer() {
           text="Ne signe jamais un contrat le jour même où on te le présente. Demande 72 heures minimum. Si l'autre partie insiste pour que tu signes immédiatement, c'est un signal d'alarme." />
       </ContentPage>
 
+      <ContentPage chapter="PRO 17 — Action Pratique Artiste Indépendant" accent={ACC} pageNum={102} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 17 · L'Artiste Indépendant Pro</SH2>
+        <Body>L'indépendance n'est pas un manque de structure — c'est une structure choisie. Ces actions transforment ton statut d'indépendant en avantage compétitif concret.</Body>
+        <Checklist color={ACC} title="Plan d'action Indépendant — construis ton infrastructure pro" items={[
+          "CETTE SEMAINE — Fais l'inventaire complet de ton infrastructure actuelle : est-ce que tu as un compte DistroKid ? Un profil Spotify for Artists ? Un compte DistroKid/Payoneer pour recevoir tes royalties ? Identifie les maillons manquants et comble-les un par un.",
+          "CETTE SEMAINE — Identifie 3 personnes dans ton réseau avec des compétences complémentaires (graphiste, vidéaste, photographe) et propose une collaboration gagnant-gagnant : toi tu partages leur travail = exposition pour eux, qualité pro pour toi.",
+          "CE MOIS — Configure ta structure légale minimum : ouvre un compte bancaire séparé pour tes revenus musicaux (même si c'est un compte Wave ou Orange Money dédié). Sépare dès maintenant finances personnelles et revenus artistiques.",
+          "CE MOIS — Lis les 5 clauses à vérifier dans tout contrat (du module). Applique-les au prochain contrat ou accord qu'on te propose. Si tu n'as pas de contrats récents, rédige ta grille tarifaire de prestation et ton modèle de contrat de base.",
+          "CE MOIS — Décide de ta structure de gestion de temps : combien d'heures/semaine consacrées à la création, aux réseaux, à la promotion, aux réunions/contacts ? Planifie dans ton agenda et respecte ces blocs comme des rendez-vous professionnels.",
+          "EN CONTINU — Règle d'or de l'indépendant : ne signe jamais rien sans 72h de réflexion. Pas de contrat verbal pour les prestations. Pas de collaboration sans accord écrit sur la répartition des droits.",
+        ]} />
+        <Banner text="L'indépendance n'est pas une excuse pour l'amateurisme — c'est une obligation d'être encore plus structuré." sub="distrokid.com · payoneer.com · bsda.sn · musicgateway.com (modèles de contrats)" color={ACC} dark />
+      </ContentPage>
+
       {/* ── MODULE 18 : ÉTUDES DE CAS RÉELS (P102–P110) ── */}
       <ChapterPage num={18} title="PRO 18 — Cas Réels : Comment Ils Sont Devenus Pros" accent={GRN} pageNum={102} total={TOTAL} guideLabel={LABEL}
         hook="La meilleure façon d'apprendre à devenir pro, c'est d'étudier des pros qui l'ont fait avant toi. Voici des cas réels d'artistes africains — leurs stratégies exactes, leurs erreurs évitées, et les leçons applicables dès aujourd'hui." />
@@ -2923,6 +3160,20 @@ export default function EbookArtisteViewer() {
           "PRÉSENCE LIVE IRREMPLAÇABLE — Concert = expérience unique que le streaming ne peut pas reproduire. Prix du billet élevé = valeur perçue.",
           "EXPANSION SOUS-RÉGIONALE — A investi dans des marchés hors Sénégal (Côte d'Ivoire, Mali, Guinée) avant de viser l'Europe.",
         ]} />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 18 — Action Pratique Études de Cas" accent={GRN} pageNum={107} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 18 · Leçons des Cas Réels</SH2>
+        <Body>Étudier les succès et les échecs ne suffit pas — il faut identifier les principes applicables et les mettre en pratique dans ta propre situation. Ces actions transforment les cas étudiés en avantages concrets pour toi.</Body>
+        <Checklist color={GRN} title="Plan d'action Études de Cas — applique les vraies leçons" items={[
+          "CETTE SEMAINE — Relis le cas de l'Artiste X (échec). Fais la liste de ses 6 erreurs et coche honnêtement : est-ce que tu fais actuellement l'une de ces erreurs ? Pour chaque erreur identifiée, écris une action corrective concrète avec une date limite.",
+          "CETTE SEMAINE — Analyse le cas TikTok → Concert en 6 mois. Recopie le tableau mois par mois et adapte-le à ta situation actuelle. À quel mois en es-tu sur ce tableau ? Quelles sont tes prochaines étapes concrètes ?",
+          "CE MOIS — Choisit 1 artiste de référence dans ton genre (comme Wally Seck pour le mbalax ou Moses Bliss pour le gospel). Identifie ses 3 pratiques principales (constance, identité, expansion). Adapte-les à ton contexte et à ton budget actuel.",
+          "CE MOIS — Applique le principe de la «stratégie active vs passive» : fais la liste de toutes tes actions actuelles sur les réseaux. Quelles sont actives (tu vas vers le fan) et passives (tu attends)? Convertis au moins 3 actions passives en actives ce mois.",
+          "EN CONTINU — Après chaque sortie musicale ou campagne : fais ton propre «cas réel». Documente : budget investi, actions réalisées, résultats obtenus. Ces données personnelles sont ta meilleure boussole stratégique.",
+          "EN CONTINU — Le principe fondamental : le talent sans stratégie reste invisible. Chaque semaine, pose-toi cette question : «Ai-je pris au moins 3 actions stratégiques actives cette semaine, pas juste créé du contenu ?»",
+        ]} />
+        <Banner text="La différence entre l'artiste qui réussit et celui qui échoue n'est pas le talent — c'est la stratégie appliquée avec constance." sub="Documente ton propre parcours · Analyse chaque sortie · Améliore à chaque cycle" color={GRN} dark />
       </ContentPage>
 
       {/* ── MODULE 19 : COMPARATIF OUTILS (P107–P115) ── */}
@@ -3009,6 +3260,20 @@ export default function EbookArtisteViewer() {
           "Spotify : tes streams augmentent ou baissent ? Qui te sauvegarde dans ses playlists ?",
           "DistroKid : tes royalties de quel pays sont les plus élevées ?",
         ]} />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 19 — Action Pratique Guide des Outils Pro" accent={BLU} pageNum={113} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 19 · Guide des Outils Pro</SH2>
+        <Body>Avoir les outils ne suffit pas — il faut les consulter régulièrement et savoir interpréter ce qu'ils te disent. Une revue hebdomadaire de 30 minutes de tes analytics est plus puissante que n'importe quelle intuition sur ce qui marche.</Body>
+        <Checklist color={BLU} title="Plan d'action Outils Pro — installe ta routine d'analytics hebdomadaire" items={[
+          "AUJOURD'HUI — Installe ou vérifie l'accès à tes 4 dashboards essentiels : YouTube Studio, Spotify for Artists, TikTok Analytics (compte Pro), DistroKid Reports. Si l'un d'eux n'est pas encore activé, active-le maintenant — chaque semaine sans données est une semaine de décision aveugle.",
+          "CETTE SEMAINE — Configure Boomplay for Artists si tu es distribué sur Boomplay. Le marché africain (Côte d'Ivoire, Ghana, Nigeria, Tanzanie) génère des royalties via Boomplay qui ne passent pas par les analytics Spotify. C'est une source de données souvent ignorée mais cruciale pour le marché africain.",
+          "CE MOIS — Crée un document de suivi mensuel simple (Google Sheets) avec 4 colonnes : Plateforme / Métrique clé / Ce mois / Mois précédent. Remplis-le le 1er de chaque mois en 15 minutes. Ce tableau te montrera des tendances invisibles semaine par semaine.",
+          "CE MOIS — Identifie tes 3 pays avec le plus de streams/vues. Ce sont tes marchés prioritaires. Adapte tes posts et tes publicités pour cibler ces pays en priorité. La data dit où est ton public réel — suis la data, pas tes intuitions.",
+          "EN CONTINU — Applique la règle du «double down» : chaque contenu qui surperforme (2× tes stats habituelles) mérite une suite immédiate. Duplique le format, le sujet ou le style dans les 7 jours suivants. Les algorithmes amplifient ce qui fonctionne — ne laisse pas passer la vague.",
+          "EN CONTINU — Revue hebdomadaire chaque lundi matin (30 min) : YouTube Studio + TikTok Analytics + Spotify for Artists. Note 1 insight par plateforme et 1 action à tester la semaine suivante. Cette habitude, maintenue sur 3 mois, transforme ta façon de créer et de publier.",
+        ]} />
+        <Banner text="Tu ne peux pas améliorer ce que tu ne mesures pas — mesure chaque semaine, sans exception." sub="YouTube Studio : youtube.com/studio · Spotify for Artists : artists.spotify.com · Boomplay for Artists : artists.boomplay.com · DistroKid Reports : distrokid.com/bank" color={BLU} dark />
       </ContentPage>
 
       {/* ── MODULE 20 : ARTISTE GOSPEL AU SÉNÉGAL (P113–P122) ── */}
@@ -3136,6 +3401,20 @@ export default function EbookArtisteViewer() {
         <Banner text="La stratégie gospel pro : Worship + Témoignage + Vision + Cohérence" sub="Copie ce que Kirk Franklin, Moses Bliss et Nathaniel Bassey ont en commun — pas leur son, mais leur discipline." color={GOLD} />
       </ContentPage>
 
+      <ContentPage chapter="PRO 20 — Action Pratique Artiste Gospel" accent={GOLD} pageNum={119} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 20 · L'Artiste Gospel Pro</SH2>
+        <Body>L'artiste gospel sénégalais qui maîtrise la stratégie digitale dispose d'un avantage compétitif unique : un contenu authentique, émotionnel et partageable que les algoritmes adorent. Ces actions activent ce potentiel.</Body>
+        <Checklist color={GOLD} title="Plan d'action Gospel — construis ta présence gospel pro" items={[
+          "AUJOURD'HUI — Clarifie ta position : Es-tu chantre (service dans le temple) ou artiste gospel (proclamer l'Évangile par l'art + carrière) ? Les deux sont honorables mais nécessitent des stratégies différentes. Note ta réponse et explique-la en 2 phrases. Ce positionnement guide toutes tes décisions.",
+          "CETTE SEMAINE — Lance ton premier «rituel de contenu gospel» : chaque matin à 7h, partage un verset + une phrase personnelle sur WhatsApp Status et Instagram Stories. Simple, authentique, quotidien. Ce ritual seul peut doubler ton engagement en 30 jours.",
+          "CETTE SEMAINE — Identifie 3 artistes gospel de référence mondiale (ex : Moses Bliss, Nathaniel Bassey, Dena Mwana) et 3 artistes gospel locaux qui font bien. Analyse : quelle est leur fréquence de publication ? Quel type de contenu performe ? Adapte leurs bonnes pratiques à ton contexte.",
+          "CE MOIS — Organise ta première «Worship Session» filmée : 15-30 minutes de culte authentique avec ton instrument ou a cappella. Publie sur YouTube et TikTok. Ce format génère les taux d'engagement les plus élevés pour les artistes gospel — les gens partagent ce qui les touche spirituellement.",
+          "CE MOIS — Contacte 3 autres artistes gospel sénégalais pour une collaboration. L'audience gospel est très ouverte aux collaborations entre artistes de même foi — les audiences croisées fonctionnent exceptionnellement bien dans ce genre.",
+          "EN CONTINU — Rappel constant : le gospel n'est pas un obstacle commercial — c'est ton avantage différentiel. Le marché gospel africain digital est sous-exploité. Qui représente le gospel sénégalais au niveau mondial ? Ce vide est ton opportunité.",
+        ]} />
+        <Banner text="Le gospel africain est le segment le moins compétitif et le plus sous-exploité du digital en Afrique francophone." sub="Moses Bliss · Nathaniel Bassey · Dena Mwana · KS Bloom — étudie leurs méthodes, pas seulement leur son." color={GOLD} dark />
+      </ContentPage>
+
       {/* ── MODULE 21 : BUDGET COMPLET (P119–P126) ── */}
       <ChapterPage num={21} title="PRO 21 — Le Budget Pro de l'Artiste Sénégalais" accent={AMB} pageNum={119} total={TOTAL} guideLabel={LABEL}
         hook="L'argent n'est jamais le vrai problème — c'est toujours son allocation. Un artiste amateur dépense 100 000 FCFA en studio et sort invisible. Un artiste pro budgète chaque centime avec précision et maximise chaque investissement. Voici les budgets pros à 3 niveaux." />
@@ -3178,6 +3457,20 @@ export default function EbookArtisteViewer() {
         ]} />
         <Callout color={AMB} title="La règle d'allocation budgétaire"
           text="Peu importe ton budget : alloue toujours 40-50% en promotion. Un son de qualité moyenne bien promu > un son excellent sans promotion. Si tu as 200 000 FCFA : 100 000 en production, 100 000 en pub." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 21 — Action Pratique Budget Pro" accent={AMB} pageNum={123} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 21 · Budget Pro de l'Artiste</SH2>
+        <Body>L'argent mal utilisé est une perte double : tu ne crées pas la valeur attendue ET tu ne peux pas te permettre de recommencer. Ces actions t'enseignent à allouer chaque FCFA avec précision.</Body>
+        <Checklist color={AMB} title="Plan d'action Budget — alloue chaque FCFA intelligemment" items={[
+          "AUJOURD'HUI — Calcule ton budget disponible pour ta prochaine sortie musicale. Identifie à quel niveau tu te situes : Mini (100 000 FCFA), Standard (300 000 FCFA) ou Premium (1 000 000 FCFA). Si tu es entre les niveaux, priorise les postes «haute priorité» du niveau juste en dessous.",
+          "CETTE SEMAINE — Applique la règle des 40-50% : sur ton budget total, alloue minimum 40% à la promotion (pub YouTube/Meta Ads, WhatsApp diffusion, relations presse). Calcule exactement combien ça fait dans ton budget actuel et planifie comment tu vas le dépenser.",
+          "CE MOIS — Pour ton prochain single : définis le budget AVANT d'aller en studio. Répartis-le poste par poste (beat, studio, mix, master, cover, pub). Ne commence pas à dépenser sans ce plan. Le manque de budget est presque toujours un manque de planification.",
+          "CE MOIS — Compare 3 studios de Dakar pour les prix : appelle, demande les tarifs, écoute leurs références. La différence de prix pour une même qualité peut aller de 1 à 3. Ne paie jamais le premier tarif sans comparer.",
+          "EN CONTINU — Tiens un tableau de bord financier simple : pour chaque son sorti, note l'investissement total et les retours directs (concerts générés, streaming, partenariats). Calcule ton ROI après 3 mois. C'est la seule façon de savoir où investir davantage.",
+          "EN CONTINU — Règle absolue : ne dépense jamais en promotion ce que tu n'as pas encore gagné. Construis d'abord un budget de promotion réel avec tes revenus existants, puis investis. L'endettement artistique est le début de la fin pour beaucoup d'artistes.",
+        ]} />
+        <Banner text="40% de ton budget en promotion. Toujours. Peu importe la taille du budget — c'est la règle qui change tout." sub="Google Ads · Meta Business Manager · DistroKid · Metricool — investis dans les outils qui génèrent des fans" color={AMB} dark />
       </ContentPage>
 
       {/* ── MODULE 22 : CAPTURES D'ÉCRAN SIMULÉES (P123–P130) ── */}
@@ -3233,6 +3526,20 @@ export default function EbookArtisteViewer() {
         </ScreenMock>
         <Callout color={GRN} title="Croissance rapide"
           text="Offre quelque chose d'exclusif aux membres fondateurs : un son inédit, un extrait avant tout le monde, une vidéo privée. Les 100 premiers membres deviennent tes ambassadeurs les plus loyaux." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 22 — Action Pratique Tutoriels Visuels" accent={GRN} pageNum={127} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 22 · Tutoriels & Outils Pro</SH2>
+        <Body>Connaître les outils ne suffit pas — il faut les maîtriser. Ces actions te forcent à mettre en pratique chaque tutoriel du module cette semaine même.</Body>
+        <Checklist color={GRN} title="Plan d'action Tutoriels — configure chaque outil cette semaine" items={[
+          "AUJOURD'HUI — Va sur artists.spotify.com et connecte-toi. Vérifie que ta bio est complète (200 mots+), que ta photo de profil est à jour, et que tu as sélectionné 5 artistes similaires dans la section «Influences». Si tu n'as pas de profil, soumets une demande via DistroKid.",
+          "AUJOURD'HUI — Ouvre Google Ads (ads.google.com). Si tu n'as pas de compte, crée-en un avec ton email Gmail. N'ouvre aucune campagne encore — juste explore l'interface et repère : la section «Nouvelles campagnes», le «Planificateur de mots-clés», les paramètres de ciblage géographique.",
+          "CETTE SEMAINE — Configure ou optimise ton compte WhatsApp Business en suivant le tutoriel du module : profil pro complet, réponses rapides (/musique, /booking, /tarifs), message de bienvenue automatique, catalogue de services.",
+          "CETTE SEMAINE — Lance ta Communauté WhatsApp en suivant les 6 étapes exactes du module : créer la communauté avec nom officiel, 4-5 sous-groupes, invitation dans tes Stories Instagram et TikTok, premier message de bienvenue.",
+          "CE MOIS — Lance ta première vraie campagne YouTube Ads avec le budget minimum (30 000 FCFA) en suivant les paramètres du tutoriel : In-Stream Skippable, ciblage Sénégal + diaspora, URL de ton meilleur clip. Analyse les résultats après 7 jours.",
+          "EN CONTINU — Chaque outil a une courbe d'apprentissage. Fixe-toi 1 outil à maîtriser par mois : mois 1 → Spotify for Artists, mois 2 → Google Ads, mois 3 → Meta Business Manager, mois 4 → DistroKid avancé.",
+        ]} />
+        <Banner text="Un outil non utilisé = argent gaspillé. Un outil maîtrisé = levier de croissance permanent." sub="artists.spotify.com · ads.google.com · business.facebook.com · WhatsApp Business" color={GRN} dark />
       </ContentPage>
 
       {/* ── MODULE 23 : RÉSEAUX SOCIAUX AVANCÉ (P127–P134) ── */}
@@ -3295,6 +3602,20 @@ export default function EbookArtisteViewer() {
           text="Crée UNE seule vidéo verticale de qualité. Publie-la sur TikTok d'abord (sans le filigrane). Ensuite republie sur Instagram Reels et YouTube Shorts avec des légendes adaptées à chaque plateforme. 1 vidéo = 3-4 publications = maximum de portée." />
         <SH3 color={DARK}>Outil recommandé : Metricool ou Buffer</SH3>
         <Body>Ces outils permettent de programmer tes publications sur toutes les plateformes depuis un seul endroit. Metricool est gratuit jusqu'à 50 posts/mois — parfait pour commencer.</Body>
+      </ContentPage>
+
+      <ContentPage chapter="PRO 23 — Action Pratique Réseaux Avancés" accent={SEC} pageNum={131} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 23 · Réseaux Sociaux Avancés</SH2>
+        <Body>La maîtrise avancée des réseaux ne s'apprend pas en théorie — elle se développe à travers l'expérimentation systématique et l'analyse de données. Ces actions t'amènent au niveau expert.</Body>
+        <Checklist color={SEC} title="Plan d'action Réseaux Avancés — passe au niveau expert" items={[
+          "CETTE SEMAINE — Installe Metricool (metricool.com, gratuit jusqu'à 50 posts) ou Buffer. Configure la connexion à tous tes profils sociaux. Programme une semaine de contenu à l'avance : TikTok, Instagram, YouTube Shorts, Facebook. Économise 2h/semaine immédiatement.",
+          "CETTE SEMAINE — Applique la stratégie 1 vidéo = 3-4 publications : filme 1 vidéo verticale de qualité, publie sur TikTok d'abord (sans le filigrane TikTok), puis republie sur Instagram Reels, puis YouTube Shorts avec des légendes adaptées.",
+          "CE MOIS — Analyse tes 10 meilleures vidéos TikTok : à quel moment le taux de complétion chute ? Les premières 3 secondes ou après 10 secondes ? Reformule tes prochains hooks selon ce que les données te disent, pas ce que tu assumes.",
+          "CE MOIS — Lance ta première campagne de collaboration avancée : fais 3 Duos TikTok + 1 Collab Post Instagram avec des créateurs de 10 000 à 50 000 abonnés dans ton genre musical ou ta région. Cette méthode est la plus efficace pour la croissance croisée.",
+          "CE MOIS — Configure tes notifications d'analytics : chaque lundi matin, reçois un rapport de tes 3 meilleures et 3 moins bonnes vidéos de la semaine. Identifie les patterns et ajuste ta stratégie de contenu toutes les 2 semaines.",
+          "EN CONTINU — Priorisation recommandée : TikTok (reach), YouTube Shorts (conversion en fans + monétisation), Instagram Reels (partenariats + crédibilité). Facebook (diaspora 25-50 ans). Ne sois pas partout avec 20% d'effort — sois à 2-3 endroits avec 100%.",
+        ]} />
+        <Banner text="Un artiste qui publie 3 vidéos/jour sur TikTok pendant 90 jours avec analyse = artiste qui maîtrise l'algorithme." sub="metricool.com · buffer.com · tiktok.com/creators/analytics · YouTube Studio" color={SEC} dark />
       </ContentPage>
 
       {/* ── MODULE 24 : PLAN D'ACTION 90 JOURS DÉTAILLÉ (P131–P140) ── */}
@@ -3371,6 +3692,20 @@ export default function EbookArtisteViewer() {
         ]} />
         <Callout color={BLU} title="Bilan à 90 jours : ce que tu dois avoir accompli"
           text="Si tu as suivi ce plan rigoureusement : 2 000-10 000 followers TikTok, 500-3 000 abonnés YouTube, 1 single distribué avec 10 000-100 000 vues, 300+ contacts WhatsApp actifs, et les bases d'une audience engagée. Ce n'est pas la célébrité — c'est le début d'une vraie carrière." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 24 — Action Pratique Plan 90 Jours" accent={BLU} pageNum={136} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 24 · Plan 90 Jours Pro</SH2>
+        <Body>90 jours de travail ciblé peuvent transformer ta situation musicale. Mais seulement si tu commences aujourd'hui, pas demain. Voici comment démarrer maintenant.</Body>
+        <Checklist color={BLU} title="Plan d'action 90 Jours — démarre le programme intensif" items={[
+          "AUJOURD'HUI — Détermine le JOUR 1 de ton programme 90 jours. C'est aujourd'hui ou maximum demain. Pas la semaine prochaine. Écris dans ton téléphone : «J-1 de mes 90 jours pro — [DATE].» Mets une alarme chaque lundi matin pour «bilan hebdomadaire 90j».",
+          "AUJOURD'HUI — Identifie ton objectif principal des 90 jours : sortir un single ? Atteindre X abonnés TikTok ? Décrocher ton premier concert payant ? Un seul objectif principal. Secondaires max 2. La focalisation sur 1 objectif augmente les chances de succès par 4.",
+          "CETTE SEMAINE — Exécute la «mise en place totale» : tous tes profils optimisés, Linktree créé, WhatsApp Business configuré, DistroKid + Payoneer prêts. Ne passe pas à la semaine 2 avant que cette étape soit 100% complète.",
+          "CE MOIS — Lance le rythme de publication : 3 TikToks/jour pendant 30 jours consécutifs. Pas 2. Pas parfois 3. Tous les jours, 3 vidéos. Prépare du contenu en avance les weekends pour avoir 3-5 jours de tampon permanent.",
+          "À J-30 — Fais ton premier bilan : followers TikTok, abonnés YouTube, contacts WhatsApp, opportunités de concerts reçues. Compare aux objectifs fixés. Ajuste la stratégie de contenu pour les 60 jours restants.",
+          "À J-90 — Fais ton bilan final honnête : qu'est-ce qui a fonctionné, qu'est-ce qui n'a pas fonctionné, qu'est-ce que tu aurais fait différemment ? Ce document est ton point de départ pour les 90 jours suivants. Recommence immédiatement.",
+        ]} />
+        <Banner text="90 jours de vraie exécution valent plus que 3 ans d'intentions et de plans jamais mis en oeuvre." sub="Commence aujourd'hui. Pas lundi. Pas après Ramadan. Aujourd'hui." color={BLU} dark />
       </ContentPage>
 
       {/* ── MODULE 25 : MODÈLES DE DOCUMENTS (P136–P145) ── */}
@@ -3465,6 +3800,20 @@ export default function EbookArtisteViewer() {
           text="Presskit.to crée une page web EPK professionnelle gratuite. Adobe Express permet de créer un EPK PDF visuel. Les deux sont accessibles sans compétences techniques et donnent un rendu professionnel immédiat." />
       </ContentPage>
 
+      <ContentPage chapter="PRO 25 — Action Pratique Documents Pro" accent={GOLD} pageNum={141} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 25 · Documents Pro</SH2>
+        <Body>Un artiste sans documents pro perd des opportunités à chaque fois qu'un organisateur, journaliste ou partenaire lui demande de se présenter. Ces documents se créent une fois et ouvrent des portes pendant des années.</Body>
+        <Checklist color={GOLD} title="Plan d'action Documents — crée ton kit professionnel complet" items={[
+          "CETTE SEMAINE — Rédige ta biographie en 2 versions : courte (150 mots) et longue (400 mots). Utilise le modèle du module. Structure : qui tu es → genre musical → ville → pourquoi tu crées → tes morceaux/projets clés → tes distinctions. Fais-la relire par quelqu'un d'honnête.",
+          "CETTE SEMAINE — Crée ton Presskit.to gratuit (presskit.to) : ajoute ta bio, 3 photos presse, tes liens de streaming, tes chiffres clés. Cette page web remplace un dossier de presse PDF et est toujours à jour. Mets le lien dans ta bio Instagram.",
+          "CE MOIS — Prends tes 3 photos presse indispensables. Si tu n'as pas de budget pour un photographe, organise un shooting avec un étudiant en photographie (gratuit ou très peu cher). Ces photos durent 1-2 ans. Formats requis : portrait (vertical), live/scène, artistique/concept.",
+          "CE MOIS — Crée ton Split Sheet modèle (via musicgateway.com ou beatstars.com, gratuit). Remplis-le pour tous tes morceaux déjà sortis. Conserve un fichier PDF signé par toutes les parties pour chaque collaboration passée et future.",
+          "CE MOIS — Prépare ton contrat de prestation standard (modèle du module). Adapte-le à ton contexte. Pour tes prochains concerts, envoie-le systématiquement avant de confirmer. Le professionnel qui reçoit un contrat bien rédigé respecte davantage l'artiste.",
+          "EN CONTINU — Mets à jour tes documents tous les 3 mois : stats, nouveaux morceaux, nouvelles photos, nouvelles distinctions. Un EPK avec des données de 2023 en 2026 envoie le mauvais message sur ton niveau d'activité.",
+        ]} />
+        <Banner text="Ton EPK est ton premier rendez-vous avec chaque nouveau contact professionnel — il doit être parfait." sub="presskit.to · musicgateway.com (Split Sheet) · adobe.com/express (EPK PDF)" color={GOLD} dark />
+      </ContentPage>
+
       {/* ── MODULE 26 : LA SCÈNE ET LES CONCERTS (P141–P148) ── */}
       <ChapterPage num={26} title="PRO 26 — Concerts & Live Pro : Scène et Booking" accent={ACC} pageNum={141} total={TOTAL} guideLabel={LABEL}
         hook="Un amateur attend d'être invité sur scène. Un pro crée ses propres opportunités, remplit ses propres salles, et transforme chaque concert en expérience mémorable qui fidélise à vie. La scène est l'endroit où les amateurs deviennent des pros — et où les pros deviennent des légendes." />
@@ -3513,6 +3862,20 @@ export default function EbookArtisteViewer() {
           "INTERAGIR AVEC LE PUBLIC — Faire chanter, faire lever les mains, demander des réponses.",
           "RÉPÉTER DEBOUT — Toujours répéter en position de performance, jamais assis.",
         ]} />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 26 — Action Pratique Concerts & Live" accent={ACC} pageNum={144} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 26 · Concerts & Live Pro</SH2>
+        <Body>La scène est où les amateurs deviennent pros et où les pros deviennent legends. Mais elle se prépare en coulisses — avant, pendant et après chaque concert.</Body>
+        <Checklist color={ACC} title="Plan d'action Concerts — du premier cachet à la salle sold out" items={[
+          "CETTE SEMAINE — Filme-toi en performance. Si tu n'as pas de vidéo live récente, organise une session chez toi ou dans un studio avec un téléphone bien positionné. Publie l'extrait le plus convaincant sur Instagram et TikTok. C'est ta démo live — sans elle, aucun organisateur ne peut te juger.",
+          "CETTE SEMAINE — Identifie 10 organisateurs d'événements à Dakar : DJs de mariages, coordinateurs d'anniversaires, gérants de restaurants avec musique live, responsables culturels d'entreprises. Collecte leur WhatsApp ou email. Ce réseau se construit progressivement.",
+          "CE MOIS — Propose ta première ou prochaine prestation à tarif réduit (pas gratuit) à un de ces organisateurs, contre : 3 vidéos professionnelles filmées pendant le concert + photos HD + citation pour ton EPK. Ces preuves valent plus que le cachet à ce stade.",
+          "CE MOIS — Crée ta setlist professionnelle : commence fort avec ton morceau le plus dynamique, crescendo émotionnel, climax avec ton meilleur single, clôture mémorable. 5-6 morceaux si 20-30 minutes, 8-10 si 45-60 minutes. Répète cette setlist debout, 5 fois minimum avant chaque concert.",
+          "AVANT CHAQUE CONCERT — Envoie un contrat écrit avec : cachet exact, acompte 30-50% à la signature, solde avant montée sur scène, heure de soundcheck (1h avant minimum), fiche technique son. Sans contrat, sans cachet.",
+          "APRÈS CHAQUE CONCERT — Collecte les contacts des personnes qui t'ont approché avec intérêt (organisateurs, journalistes, fans enthousiastes). Envoie un message WhatsApp de remerciement dans les 24h. Ces contacts deviennent ta base de développement.",
+        ]} />
+        <Banner text="Le concert parfait se prépare 4 semaines avant — pas la veille. Le pro prépare, l'amateur improvise." sub="Contrat → Soundcheck → Répétitions → Communication digitale → Prestation → Contacts post-event" color={ACC} dark />
       </ContentPage>
 
       {/* ── PAGES FINALES ENRICHIES (P144–P155) ── */}
@@ -3613,6 +3976,20 @@ export default function EbookArtisteViewer() {
         />
         <Callout color={GOLD} title="La dernière question"
           text="Dans 5 ans, est-ce que tu veux regarder en arrière et dire «J'ai commencé aujourd'hui» ou «J'aurais dû commencer il y a 5 ans» ? La réponse détermine ce que tu fais dans les prochaines 24 heures." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 27 — Action Pratique Marchés AOF & Diaspora" accent={BLU} pageNum={151} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 27 · Marchés AOF & Diaspora</SH2>
+        <Body>Le Sénégal compte 17 millions de personnes. La Côte d'Ivoire 27 millions. La diaspora en France, Italie et Canada : des millions de Sénégalais avec un pouvoir d'achat 5-10x supérieur. Ces marchés sont ta prochaine étape obligatoire.</Body>
+        <Checklist color={BLU} title="Plan d'action AOF & Diaspora — étends ta portée géographique" items={[
+          "CETTE SEMAINE — Analyse ton audience actuelle dans YouTube Studio et TikTok Analytics : quels pays te regardent déjà ? Si tu vois de l'audience en Côte d'Ivoire, France ou Canada sans effort, c'est ton prochain marché prioritaire — les données te guident.",
+          "CETTE SEMAINE — Crée 1 contenu spécifiquement ciblé diaspora : soit un texte mêlant français et wolof, soit une vidéo qui parle de nostalgie de Dakar, soit un extrait de concert avec des éléments culturels sénégalais reconnaissables. Ce contenu est massivement partagé par la diaspora.",
+          "CE MOIS — Lance une campagne Meta Ads (Facebook/Instagram) ciblant uniquement les Sénégalais en France (Paris, Île-de-France, Lyon, Marseille). Budget minimum : 30 000-50 000 FCFA (50-80$). Cible : 18-45 ans, intérêts musique africaine/sénégalaise, expatriés.",
+          "CE MOIS — Identifie 3 artistes dans des marchés AOF voisins (Côte d'Ivoire, Mali, Guinée) avec 5 000 à 50 000 abonnés et propose une collaboration. L'alliance entre artistes de pays différents ouvre naturellement des marchés croisés.",
+          "CE MOIS — Contacte 2 organisations sénégalaises de diaspora (associations, maisons de Dakar) en France, en Italie ou au Canada pour te présenter. Beaucoup cherchent des artistes pour leurs événements culturels — ce marché est moins saturé et bien payé.",
+          "EN CONTINU — Adapte systématiquement 20-30% de ton contenu à la diaspora : utilise les mots nostalgie, identité, fierté africaine. Ces émotions performent 2-3x mieux chez les expatriés que chez les résidents locaux.",
+        ]} />
+        <Banner text="La diaspora sénégalaise en Europe a 5x plus de pouvoir d'achat que la même personne à Dakar. C'est ton marché premium." sub="Meta Ads ciblage diaspora · YouTube Analytics par pays · Associations sénégalaises diaspora" color={BLU} dark />
       </ContentPage>
 
       {/* ── P149 — INDEX & CONTACTS UTILES ── */}
@@ -3778,6 +4155,20 @@ export default function EbookArtisteViewer() {
           text="«Je comprends votre budget. Malheureusement, mon tarif pour ce type de prestation est de [X] FCFA. Si votre budget est de [Y], voici ce que je peux proposer dans cette enveloppe : [service réduit]. Si vous souhaitez la prestation complète, le tarif reste [X]. Qu'est-ce qui vous conviendrait ?»" />
       </ContentPage>
 
+      <ContentPage chapter="PRO 28 — Action Pratique L'Équipe Pro" accent={AMB} pageNum={159} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 28 · L'Équipe Pro</SH2>
+        <Body>Construire son équipe est l'investissement le plus rentable à long terme. Mais recruter trop tôt ou mal coûte plus cher que travailler seul. Ces actions te guident pour recruter intelligemment.</Body>
+        <Checklist color={AMB} title="Plan d'action Équipe — construis ton équipe pro intelligemment" items={[
+          "CETTE SEMAINE — Fais l'inventaire de ton temps actuel : sur 40h de travail artistique hebdomadaire, combien d'heures passas-tu en création musicale vs. tâches administratives (réseaux, comptabilité, communication) ? Si plus de 50% va à l'admin, tu as besoin d'aide.",
+          "CETTE SEMAINE — Identifie le premier rôle à déléguer (celui qui prend le plus de temps sans valoriser ta créativité). Cherche activement sur Instagram Sénégal : graphiste, vidéaste ou community manager étudiant. Propose une collaboration gagnant-gagnant.",
+          "CE MOIS — Fixe ton tarif plancher de prestation par type d'événement (mariage, corporate, festival) et ne négocie jamais en dessous. Mémorise le script du module pour répondre aux offres trop basses. Pratique-le à voix haute 3 fois avant ta prochaine négociation.",
+          "CE MOIS — Si tu travailles déjà avec des prestataires (graphiste, vidéaste), formalise ces relations avec un accord simple par WhatsApp : tarifs, délais, droits d'utilisation des créations. Évite les malentendus qui brisent les collaborations.",
+          "EN CONTINU — Garde l'équipe minimale en phase 1 : toi (création + stratégie) + 1 graphiste freelance + 1 vidéaste occasionnel. Ne recrute un Community Manager que quand les réseaux prennent plus de 3h/jour.",
+          "EN CONTINU — Traite chaque personne qui travaille avec toi comme un partenaire, pas un prestataire. Un graphiste qui croit en ton projet fait 2x plus d'efforts. La générosité est un investissement — créditez toujours vos collaborateurs publiquement.",
+        ]} />
+        <Banner text="Délègue tout ce qui te prend du temps sans valoriser ta créativité. Garde pour toi : la création, la stratégie, les fans." sub="Trouver des collaborateurs : Instagram Sénégal + UCAD + groupes Facebook artistes dakarois" color={AMB} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════ */}
       {/* MODULE 29 — BOOKING & FESTIVALS (P159–P164)       */}
       {/* ══════════════════════════════════════════════════ */}
@@ -3907,6 +4298,20 @@ export default function EbookArtisteViewer() {
         />
       </ContentPage>
 
+      <ContentPage chapter="PRO 29 — Action Pratique Booking & Festivals" accent={SEC} pageNum={165} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 29 · Booking Pro & Festivals</SH2>
+        <Body>Le booking professionnel n'est pas ce que tu demandes — c'est ce que tu construis. Un dossier de candidature irréprochable, une vidéo live convaincante et un suivi rigoureux ouvrent les grandes scènes.</Body>
+        <Checklist color={SEC} title="Plan d'action Booking — accède aux grandes scènes" items={[
+          "CETTE SEMAINE — Crée ton dossier de candidature festival : EPK à jour, 3 vidéos live de 2-3 minutes, bio courte, chiffres clés actuels (streams/mois, abonnés), playlist de tes 5 meilleurs morceaux. Ce dossier est envoyé sous forme de Google Drive partageable.",
+          "CETTE SEMAINE — Fais la liste de 10 festivals en Sénégal, en Côte d'Ivoire et en France qui correspondent à ton genre. Pour chacun : date habituelle, deadline de candidature, type de scène (scène principale, scène découverte, showcase). Mets une alerte Google pour leurs appels à candidatures.",
+          "CE MOIS — Soumets ta candidature à 3 festivals ou événements de ta liste, même si tu doutes d'être retenu. La pratique de la candidature améliore ton dossier à chaque itération. Le premier refus est plus utile que le premier «je vais y penser».",
+          "CE MOIS — Propose ton premier showcase ou «concert-découverte» dans un lieu de 50-150 personnes. Salle de 200 places pour 300 followers = salle vide = mauvaise réputation. Salle de 100 places pour 300 followers = pleine = bonne réputation. Joue toujours dans une salle un peu trop petite plutôt que trop grande.",
+          "AVANT CHAQUE FESTIVAL — Envoie ta fiche technique son 3 semaines avant. Confirme le soundcheck (minimum 1h avant le show). Arrive 2h avant l'horaire prévu. Le pro arrive tôt — l'amateur arrive à l'heure.",
+          "EN CONTINU — Construis ta réputation live : chaque concert est une audition pour le suivant. Soigne chaque détail même pour 20 personnes — le responsable du prochain festival pourrait être dans la salle.",
+        ]} />
+        <Banner text="Soumets 10 candidatures pour obtenir 1 réponse positive. C'est la loi du booking — et c'est normal." sub="submithub.com (playlists + festivals) · bandsintown.com · songkick.com · réseaux festival direct" color={SEC} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════ */}
       {/* MODULE 30 — CERTIFICATIONS (P165–P169)            */}
       {/* ══════════════════════════════════════════════════ */}
@@ -4003,6 +4408,20 @@ export default function EbookArtisteViewer() {
         ]} />
       </ContentPage>
 
+      <ContentPage chapter="PRO 30 — Action Pratique Certifications" accent={GRN} pageNum={170} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 30 · Certifications Pro</SH2>
+        <Body>Le badge de vérification et le profil Artist ne sont pas des accessoires — ce sont des signaux de professionnalisme qui ouvrent des portes. Voici l'ordre exact dans lequel les obtenir.</Body>
+        <Checklist color={GRN} title="Plan d'action Certifications — décroche tes badges pros" items={[
+          "AUJOURD'HUI — Priorité absolue : va sur artists.spotify.com et revendique ton profil Spotify for Artists si ce n'est pas fait. C'est gratuit et immédiat via DistroKid. Ce profil te donne accès aux analytics, au pitch de playlists, et à la bio artistique officielle.",
+          "CETTE SEMAINE — Configure ton profil Artist Channel YouTube via DistroKid. Si tu as déjà distribué sur YouTube : vérifie dans YouTube Studio → Monétisation si tu es éligible au YPP (1 000 abonnés + 4 000h). Si oui, active maintenant.",
+          "CETTE SEMAINE — Revendique ton profil Boomplay for Artists (boomplaymusic.com/artists) si tu as de la musique distribuée en Afrique. Boomplay est la plateforme africaine de référence — ce profil te distingue immédiatement sur ce marché.",
+          "CE MOIS — Pour le badge Instagram/Facebook : collecte 3 articles de presse ou mentions dans des médias connus (blog musical, radio, magazine). Ces mentions sont requises pour la vérification Instagram. Sans elles, la demande est refusée.",
+          "CE MOIS — Vérifie la cohérence de ton nom d'artiste sur TOUTES les plateformes : Spotify, Boomplay, TikTok, Instagram, YouTube, Facebook. Une seule incohérence peut bloquer la vérification ou créer de la confusion pour les fans.",
+          "EN CONTINU — Règle d'or : construis d'abord la présence médiatique (articles, interviews, mentions), ensuite demande la vérification. Les plateformes vérifient les artistes qui existent dans la presse — pas ceux qui se déclarent pro.",
+        ]} />
+        <Banner text="Un profil Artist vérifié = crédibilité immédiate auprès des organisateurs, marques et médias qui te recherchent." sub="artists.spotify.com · boomplaymusic.com/artists · YouTube Studio · Instagram (paramètres → vérification)" color={GRN} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════ */}
       {/* MODULE 31 — CONTRATS AVANCÉS (P170–P174)          */}
       {/* ══════════════════════════════════════════════════ */}
@@ -4078,6 +4497,20 @@ export default function EbookArtisteViewer() {
           text="On te demande de signer sur le champ. Le contrat est uniquement verbal. On te dit «c'est standard, pas besoin de lire». Les parties en blanc ne sont pas remplies. Il n'y a pas de clause de résiliation. Le contrat dure plus de 3 ans sans option de renouvellement. Tu cèdes tes masters définitivement." />
       </ContentPage>
 
+      <ContentPage chapter="PRO 31 — Action Pratique Contrats Pro" accent={GOLD} pageNum={180} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 31 · Contrats Pro</SH2>
+        <Body>Un mauvais contrat peut te coûter des années de liberté et des milliers de FCFA. Ces actions te protègent maintenant et pour toutes tes futures collaborations.</Body>
+        <Checklist color={GOLD} title="Plan d'action Contrats — protège chaque accord avec un document" items={[
+          "CETTE SEMAINE — Télécharge 3 modèles de contrats sur musicgateway.com ou beatstars.com (gratuit) : contrat de prestation concert, Split Sheet, contrat d'utilisation de beat. Personnalise-les à ton nom et garde-les prêts à envoyer immédiatement.",
+          "CETTE SEMAINE — Relis le contrat ou accord le plus récent que tu as signé. Identifie : qui détient les masters ? Quelle est la durée ? Comment sortir ? Si tu ne connais pas les réponses, contacte l'autre partie pour clarification par écrit.",
+          "CE MOIS — Pour ton prochain concert : envoie un contrat de prestation simple (cachet, date, acompte 50%, clause d'annulation) AVANT de confirmer. Si l'organisateur refuse, c'est un signal d'alarme. Les pros acceptent les contrats.",
+          "CE MOIS — Crée un dossier Google Drive «Contrats & Accords» avec tous tes documents signés. Chaque contrat = un fichier nommé : DATE_TYPE_PARTENAIRE. Ex : 2026-06-15_Concert_EventDakar. Archive immédiatement après signature.",
+          "EN CONTINU — Règle des 72h : ne signe jamais un contrat le jour même de sa présentation. Demande 72h minimum. Si l'autre partie insiste pour une signature immédiate, c'est la première clause d'alarme du module — n'oublie jamais.",
+          "EN CONTINU — Après chaque prestation : envoie une facture ou reçu pro (tu peux en générer gratuitement sur facture.net ou Debitoor). Même si non obligatoire légalement, la facture professionnalise ta relation et crée un historique financier précieux.",
+        ]} />
+        <Banner text="Le contrat n'est pas une marque de méfiance — c'est une marque de professionnalisme que les vrais pros respectent." sub="musicgateway.com · beatstars.com (Split Sheets) · facture.net (factures gratuites) · BSDA (contrats licensing)" color={GOLD} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════════════════════ */}
       {/* PRO 32 — STORYTELLING (P180–P183)                                */}
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -4149,6 +4582,20 @@ export default function EbookArtisteViewer() {
           "Préparer ta réponse à la question «C'est quoi l'histoire de ce son ?» pour les interviews",
           "Planifier 1 vidéo TikTok «behind the story» pour le jour de la sortie",
         ]} />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 32 — Action Pratique Storytelling" accent={SEC} pageNum={184} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 32 · Le Storytelling</SH2>
+        <Body>Le talent crée la musique — le storytelling crée les fans à vie. Ces actions transforment ta prochaine sortie en une expérience narrative que les gens voudront partager.</Body>
+        <Checklist color={SEC} title="Plan d'action Storytelling — raconte ton histoire avant ta musique" items={[
+          "AVANT TA PROCHAINE SORTIE — Écris l'histoire complète de ce morceau en 10 phrases : Pourquoi l'as-tu écrit ? Que se passait-il dans ta vie ? Quelle émotion principale ? Qui t'a inspiré ? Quel moment précis a déclenché l'idée ? Cette histoire devient le contenu de toute ta campagne.",
+          "CETTE SEMAINE — Prépare tes 5 piliers de storytelling pour la prochaine sortie : (1) l'origine du morceau, (2) une anecdote d'enregistrement, (3) l'émotion que tu veux transmettre, (4) une connexion personnelle (ton vécu), (5) un appel aux fans (comment ils peuvent vivre cela).",
+          "CETTE SEMAINE — Enregistre une vidéo de 60 secondes où tu racontes l'histoire de ton dernier single d'une façon intime et authentique. Pas de script — juste parler naturellement. C'est souvent le contenu le plus partagé. Publie-le sur TikTok et Instagram Stories.",
+          "CE MOIS — Crée un document «Bibliothèque de stories» : chaque morceau a sa propre section avec 3 anecdotes différentes (pour les interviews, pour les posts, pour les Lives). Ce document t'évite de chercher quoi dire chaque fois qu'on te pose une question.",
+          "CE MOIS — Identifie le «personnage» de ta marque artistique : es-tu l'artiste de la foi, de l'amour, de la résistance, de la joie ? Ce personnage-fil conducteur est présent dans toutes tes stories. Il crée la cohérence narrative entre tous tes morceaux.",
+          "EN CONTINU — Avant chaque sortie : checklist storytelling de 3 semaines. J-21 (teasing story), J-14 (révélation partielle), J-7 (countdown émotionnel), J0 (story complète partagée), J+7 (résultats + remerciements). Ce cycle transforme une sortie en événement.",
+        ]} />
+        <Banner text="Les gens oublient les chansons. Ils n'oublient jamais les histoires qui les ont touchés." sub="Ton histoire unique est ta valeur ajoutée impossible à copier — raconte-la à chaque sortie." color={SEC} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -4239,6 +4686,20 @@ export default function EbookArtisteViewer() {
         ]} />
       </ContentPage>
 
+      <ContentPage chapter="PRO 33 — Action Pratique Communication Sorties" accent={BLU} pageNum={188} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 33 · Communiquer autour de ses Sorties</SH2>
+        <Body>Une sortie sans plan de communication, c'est un restaurant sans enseigne. Ces actions créent le plan complet pour ton prochain single — de J-21 au J+30.</Body>
+        <Checklist color={BLU} title="Plan d'action Communication — ton protocole de sortie complet" items={[
+          "MAINTENANT — Crée un document «Protocole de sortie» : J-21, J-14, J-7, J0, J+7, J+14, J+30. Pour chaque date, note au moins 3 actions concrètes (post Instagram, diffusion WhatsApp, campagne pub, etc.). Ce document devient ton guide pour chaque future sortie.",
+          "3 SEMAINES AVANT — Lance le teasing : une Story par jour avec un extrait de 5 secondes, une image mystérieuse, un compte à rebours. Diffusion WhatsApp à ta liste de fans. NE dévoile pas encore le titre ni la cover.",
+          "2 SEMAINES AVANT — Révèle le titre et la cover. Ouvre les pre-saves Spotify (via DistroKid). Lance 1 TikTok par jour avec des extraits différents. Contact presse : envoie le communiqué + EPK + lien streaming privé à 5 journalistes / blogueurs.",
+          "JOUR J — Coordination totale : post officiel sur tous les réseaux à la même heure, diffusion WhatsApp à toutes tes listes, Live Instagram de 20 minutes pour célébrer avec les fans. Budget pub : lance tes campagnes YouTube Ads et Meta Ads ce jour précis.",
+          "7 JOURS APRÈS — Relance : partage les premiers chiffres (streams, vues), remercie les fans nominativement, publie le behind-the-scenes du clip, soumets sur Spotify for Artists pour le pitch playlists (le pitch doit être fait AVANT la sortie idéalement).",
+          "EN CONTINU — Chaque sortie est meilleure que la précédente car tu analyses les résultats : qu'est-ce qui a généré le plus de streams ? De partages ? Quelle campagne pub a eu le meilleur CPV ? Ces données améliorent ta prochaine sortie.",
+        ]} />
+        <Banner text="La meilleure musique non promue est perdue. La musique moyenne bien promue touche des milliers de personnes." sub="Crée ton protocole de sortie — et applique-le à chaque single, sans exception." color={BLU} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════════════════════ */}
       {/* PRO 34 — PRISE DE PAROLE PUBLIQUE (P188–P190)                    */}
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -4297,6 +4758,20 @@ export default function EbookArtisteViewer() {
         />
         <Callout color={GOLD} title="⏱ Temps requis — revue mensuelle des devoirs (1h/mois)"
           text="Chaque 1er du mois, 1 heure de bilan : Ai-je tenu mes engagements ce mois-ci ? Mes œuvres sont-elles déclarées ? Mes collaborateurs sont-ils payés ? Ai-je répondu à mes fans ? Cette heure mensuelle te protège contre les erreurs professionnelles les plus fréquentes." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 34 — Action Pratique Prendre la Parole" accent={ACC} pageNum={191} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 34 · Prendre la Parole en Public</SH2>
+        <Body>Les artistes qui savent se présenter et parler de leur travail ouvrent 3x plus de portes. Ces actions développent cette compétence concrètement et rapidement.</Body>
+        <Checklist color={ACC} title="Plan d'action Prise de Parole — parle de toi avec assurance" items={[
+          "AUJOURD'HUI — Prépare ton pitch de 30 secondes : Qui es-tu ? Quel est ton genre musical ? Quelle est la valeur unique de ta musique ? Quel est ton dernier projet ? Enregistre-le sur téléphone et écoute-le. Reformule jusqu'à ce que ça sonne naturel et convaincant.",
+          "CETTE SEMAINE — Prépare les réponses aux 5 questions les plus posées en interview : (1) Parle-nous de toi, (2) Qu'est-ce qui t'a amené à la musique ? (3) C'est quoi l'histoire de ce son ? (4) Quels sont tes projets ? (5) Quel message tu veux transmettre ? Écris une réponse de 3-4 phrases pour chacune.",
+          "CE MOIS — Lance ton premier Live Instagram ou TikTok de 15 minutes. Ce format force la prise de parole spontanée et authentique. Annonce-le 24h avant. Prépare 5 points à aborder mais reste naturel. La première fois est toujours difficile — c'est normal.",
+          "CE MOIS — Contacte une radio locale (DFM, RFM, ZIK FM) ou un podcast musical sénégalais pour une interview. Même courte, même en télé, même sans grande notoriété — ces médias cherchent des artistes locaux à mettre en avant. Prépare ton EPK avant de contacter.",
+          "EN CONTINU — Chaque semaine, en Story Instagram : 1 vidéo de 30-60 secondes où tu parles directement à tes fans — pas chanté, juste parlé. Naturel, authentique, direct. C'est la prise de parole la plus accessible et la plus humanisante.",
+          "EN CONTINU — Revue mensuelle des devoirs pro : chaque 1er du mois, 1 heure pour vérifier que tu as tenu tes engagements, payé tes collaborateurs, déclaré tes œuvres. La ponctualité et la fiabilité sont tes meilleures cartes de visite.",
+        ]} />
+        <Banner text="Ta voix — parlée ET chantée — est ton outil le plus puissant. Entraîne les deux." sub="5 min de pratique quotidienne de prise de parole = confiance en public en 30 jours" color={ACC} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -4390,6 +4865,20 @@ export default function EbookArtisteViewer() {
         <Banner text="Une équipe bien traitée est la meilleure promotion qu'un artiste puisse avoir." sub="Tes collaborateurs parlent de toi dans leur réseau. Fais en sorte qu'ils disent du bien." color={AMB} dark />
       </ContentPage>
 
+      <ContentPage chapter="PRO 35 — Action Pratique Gestion d'Équipe" accent={AMB} pageNum={193} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 35 · Gérer son Équipe</SH2>
+        <Body>Mal entouré, tu iras moins loin que seul. Bien entouré, tu iras 10 fois plus loin. Ces actions t'aident à construire et maintenir une équipe soudée autour de ta vision.</Body>
+        <Checklist color={AMB} title="Plan d'action Équipe — leadership artistique efficace" items={[
+          "CETTE SEMAINE — Fais le bilan de ton équipe actuelle : qui travaille avec toi, formellement ou informellement ? Graphiste, photographe, vidéaste, community manager, chanteur de choeur ? Pour chacun : est-ce que leurs rôles, tarifs et responsabilités sont clairs et écrits quelque part ?",
+          "CETTE SEMAINE — Récupère tous les accès de comptes essentiels : mot de passe Instagram, YouTube, DistroKid, email pro. Ces accès doivent toujours être en ta possession. Un collaborateur ne doit JAMAIS être le seul à détenir l'accès à un compte critique.",
+          "CE MOIS — Pour chaque personne qui travaille régulièrement avec toi : formalise la collaboration avec un accord simple WhatsApp ou PDF : rôle, tarif, délais, droits sur les créations. Une phrase suffit pour chaque point. Ce document évite 90% des conflits futurs.",
+          "CE MOIS — Applique le protocole de conflit en 4 étapes du module : écouter sans interrompre, reformuler, proposer une solution concrète avec date, assurer le suivi. Prochaine fois qu'un désaccord surgit dans ton équipe, utilise ce processus.",
+          "EN CONTINU — Célèbre les victoires en équipe. Quand un son dépasse 10 000 vues ou qu'un concert se remplit, remercie nominativement chaque personne qui a contribué — en privé ET en public. Cette générosité crée une loyauté irremplaçable.",
+          "EN CONTINU — Si une personne clé quitte ton équipe : prévoir un délai de transition d'au moins 1 mois, récupérer tous les accès et fichiers, finir toutes les transactions en attente. Finir proprement — l'industrie est petite et les ponts brûlés reviennent vous hanter.",
+        ]} />
+        <Banner text="Délègue les tâches. Garde la vision. Partage les victoires." sub="L'artiste qui traite bien son équipe construit une armée d'ambassadeurs permanents." color={AMB} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════════════════════ */}
       {/* PRO 36 — NETWORKING & CONTACTS (P193–P195)                       */}
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -4451,6 +4940,20 @@ export default function EbookArtisteViewer() {
         />
         <Callout color={GRN} title="L'outil le plus sous-estimé du networking : le CRM artiste"
           text="Crée un fichier Google Sheets avec 5 colonnes : Nom | Rôle | Contact | Dernier contact | Notes. Mets à jour après chaque interaction. Ce fichier de 50 contacts bien entretenus vaut plus que 1 000 abonnés Instagram que tu ne connais pas. C'est ton vrai capital relationnel." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 36 — Action Pratique Networking" accent={GRN} pageNum={195} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 36 · Les Contacts de l'Industrie</SH2>
+        <Body>Le réseau ne se construit pas en un jour — mais il se commence aujourd'hui. Ces actions transforment ta liste de contacts en vrai capital relationnel qui ouvre des portes.</Body>
+        <Checklist color={GRN} title="Plan d'action Networking — construis ton réseau industrie" items={[
+          "AUJOURD'HUI — Crée ton CRM artiste sur Google Sheets : 5 colonnes (Nom | Rôle | Contact WhatsApp/Email | Dernier contact | Notes). Commence par y inscrire les 10 personnes que tu connais déjà dans l'industrie (DJs, organisateurs, journalistes, autres artistes). Ce fichier est ton capital relationnel.",
+          "CETTE SEMAINE — Envoie un message personnalisé à 3 contacts de ton industrie que tu n'as pas contactés depuis plus de 30 jours. Pas pour demander quelque chose — juste pour donner de tes nouvelles, partager un projet, féliciter pour quelque chose qu'ils ont fait. Le networking se nourrit avant d'avoir faim.",
+          "CE MOIS — Identifie les 10 contacts à construire selon la liste du module (journaliste radio, organisateur événements, ingénieur son, blogueur musical...). Pour chacun : trouve leur contact via Instagram ou LinkedIn. Envoie un premier message d'introduction sincère et sans demande immédiate.",
+          "CE MOIS — Assiste à 2 événements musicaux à Dakar ce mois (concerts, showcases, événements culturels, soirées networking). Ces lieux sont les endroits où les relations professionnelles se créent le plus naturellement. Viens avec tes coordonnées prêtes à partager.",
+          "EN CONTINU — Règle d'or du networking : donne avant de demander. Partage un article utile, félicite une réussite, offre ton aide sur un projet. Le réseau se consolide par la réciprocité et la générosité — pas par l'extraction permanente.",
+          "EN CONTINU — Mets à jour ton CRM après chaque interaction importante. Objectif : contacter chaque contact-clé au moins 1 fois par mois. 50 contacts bien entretenus = un réseau plus puissant que 500 cartes de visite oubliées.",
+        ]} />
+        <Banner text="50 vrais contacts bien entretenus valent plus que 50 000 followers que tu ne connais pas." sub="Construis des relations réelles — elles ouvrent les portes que les followers ne peuvent pas ouvrir." color={GRN} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -4521,6 +5024,20 @@ export default function EbookArtisteViewer() {
           text="Un influenceur à 5 000 abonnés très engagés dans ta ville fait souvent plus de conversions qu'un compte à 500 000 abonnés génériques. Le taux d'engagement et la proximité géographique/culturelle comptent plus que le nombre. 10 micro-influenceurs ciblés > 1 macro-influenceur généraliste." />
       </ContentPage>
 
+      <ContentPage chapter="PRO 37 — Action Pratique Relations Presse" accent={SEC} pageNum={197} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 37 · Comment Faire Parler de Toi</SH2>
+        <Body>La visibilité médiatique ne se demande pas — elle se construit. Ces actions créent ta présence dans les médias et chez les influenceurs sénégalais, étape par étape.</Body>
+        <Checklist color={SEC} title="Plan d'action Presse & Visibilité — génère de la couverture" items={[
+          "CETTE SEMAINE — Rédige ton premier communiqué de presse pour ta prochaine sortie ou ton dernier projet. Structure : titre accrocheur, 1er paragraphe (qui ? quoi ? quand ?), 2e paragraphe (contexte et histoire), 3e paragraphe (biographie courte), contacts. Maximum 1 page. Envoie-le à 5 médias locaux.",
+          "CETTE SEMAINE — Identifie 10 micro-influenceurs sénégalais dans ton genre (5 000 à 50 000 abonnés). Envoie-leur un DM personnalisé : qui tu es, un lien vers ton meilleur titre, et pourquoi tu penses que ça correspondrait à leur audience. Pas de demande directe — juste une introduction.",
+          "CE MOIS — Contacte 3 podcasts ou émissions musicales sénégalaises pour une interview. Propose un angle spécifique (ex : «l'artiste gospel sénégalais qui cible la diaspora africaine en Europe»). Un angle précis augmente tes chances d'être accepté par 3x.",
+          "CE MOIS — Propose à un blogueur ou vlogger musical sénégalais de couvrir ta prochaine sortie. Offre-lui un accès exclusif avant tout le monde : écoute en avant-première, session photo avec le vidéaste, anecdote exclusive. L'exclusivité motive les médias.",
+          "EN CONTINU — Construis ta liste presse progressivement : après chaque couverture, demande au journaliste de te recommander à un collègue. Ce bouche-à-oreille journalistique est plus efficace que n'importe quel communiqué froid.",
+          "EN CONTINU — Partage toutes tes couvertures médiatiques sur tes réseaux avec mention du média. Cela solidifie ta crédibilité, encourage d'autres médias à te couvrir (effet de preuve sociale), et fidélise les journalistes qui voient leur travail valorisé.",
+        ]} />
+        <Banner text="Les médias couvrent les artistes qui ont une histoire à raconter ET qui la leur apportent sur un plateau." sub="Presse kit prêt → communiqué ciblé → relation entretenue → couverture médiatique → crédibilité accumulée" color={SEC} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════════════════════ */}
       {/* PRO 38 — DROITS MÉCONNUS (P197–P200)                             */}
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -4570,6 +5087,20 @@ export default function EbookArtisteViewer() {
           { bold: "Vérifier qu'aucun autre artiste ne porte le même nom :", text: "Recherche sur Spotify, Boomplay, Google. Si ton nom est déjà pris, mieux vaut le découvrir maintenant — avant d'avoir investi 5 ans de carrière dessus." },
         ]} />
         <Banner text="Tes droits ne viendront pas te chercher — c'est à toi d'aller les chercher." sub="Chaque semaine sans inscription au BSDA est une semaine de royalties perdues à jamais. Commence aujourd'hui." color={GOLD} dark />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 38 — Action Pratique Droits Méconnus" accent={GOLD} pageNum={200} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 38 · Les Droits Méconnus</SH2>
+        <Body>Des droits qui t'appartiennent dorment aujourd'hui dans des comptes que tu n'as pas encore réclamés. Chaque action ci-dessous active un droit spécifique et te rapproche de l'argent qui te revient légitimement.</Body>
+        <Checklist color={GOLD} title="Plan d'action Droits Méconnus — réclame chaque centime qui t'appartient" items={[
+          "AUJOURD'HUI — Vérification immédiate : es-tu inscrit au BSDA ? Si non, fixe un rendez-vous cette semaine (Avenue Roume, Dakar). Si oui : tous tes titres sont-ils déclarés ? Identifie les manquants et soumets-les. Chaque titre non déclaré = argent perdu définitivement.",
+          "CETTE SEMAINE — Active le Content ID YouTube via DistroKid (option «Protect» ou «Maximize» dans les paramètres de chaque sortie). Le Content ID détecte toute utilisation de ton son sur YouTube et te génère des revenus automatiques — même sur des vidéos d'autres personnes.",
+          "CETTE SEMAINE — Vérifie ton droit à l'image : ouvre Google et recherche ton nom d'artiste + Images. Si des photos de toi apparaissent dans des contextes commerciaux (publicités, affiches d'événements) sans ton accord, contacte immédiatement les responsables par écrit.",
+          "CE MOIS — Recherche ton nom d'artiste sur Spotify, Boomplay, Deezer et YouTube. Si tu trouves d'autres artistes avec exactement le même nom, documente tout maintenant. Si ton nom commence à avoir une vraie valeur commerciale, explore le dépôt à l'OAPI (oapi.int, ~100 000 FCFA).",
+          "CE MOIS — Si tu as de la musique qui passe en radio sénégalaise : contacte le BSDA pour vérifier si des redevances ont été collectées pour tes titres. Des droits peuvent avoir été collectés en ton nom et attendent d'être réclamés.",
+          "EN CONTINU — Règle d'or : chaque nouveau titre = (1) ISRC via DistroKid, (2) Déclaration au BSDA, (3) Content ID activé, (4) Split Sheet signé si collaboration. Ces 4 étapes prennent 30 minutes et protègent tes droits à vie.",
+        ]} />
+        <Banner text="L'argent que tu n'as pas réclamé ne disparaît pas — il va à quelqu'un d'autre. Va le chercher maintenant." sub="bsda.sn · oapi.int · distrokid.com (Content ID) · ISRC automatique dès distribution" color={GOLD} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -4658,6 +5189,20 @@ export default function EbookArtisteViewer() {
           ]}
         />
         <Banner text="Chaque droit non réclamé est de l'argent que tu laisses sur la table." sub="Ce tableau est ta feuille de route pour ne jamais laisser un centime qui t'appartient à quelqu'un d'autre." color={GOLD} dark />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 39 — Action Pratique Récupérer ses Droits" accent={GOLD} pageNum={204} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 39 · Récupérer ses Droits & Royalties</SH2>
+        <Body>Récupérer ses droits n'est pas un long processus mystérieux — c'est une série d'étapes précises qui s'exécutent une par une. Voici comment activer chaque source de royalties existante.</Body>
+        <Checklist color={GOLD} title="Plan d'action Royalties — active toutes tes sources de revenus de droits" items={[
+          "CETTE SEMAINE — Vérifie tes revenus DistroKid : connecte-toi et consulte le rapport «Earnings» par plateforme et par pays. Note les 3 plateformes qui te rapportent le plus. Vérifie que ton compte Payoneer est bien connecté et que les seuils de versement sont correctement configurés.",
+          "CETTE SEMAINE — Active ton profil YouTube Studio et vérifie tes revenus Adsense. Si pas encore dans le YPP, note exactement combien d'abonnés et d'heures de lecture il te manque. Fixe une date limite pour les atteindre avec un plan de contenu précis.",
+          "CE MOIS — Inscris-toi au BSDA si ce n'est pas fait (Avenue Roume, Dakar), ou mets à jour ton catalogue si tu es déjà inscrit. Déclare tous tes titres qui passent en radio ou événements au Sénégal. Les royalties de diffusion publique sont récurrentes — elles s'accumulent chaque mois.",
+          "CE MOIS — Vérifie tes revenus Boomplay : si tu es distribué sur Boomplay (via DistroKid ou Boomplay Direct), consulte ton tableau de bord artiste. Boomplay paye des royalties sur le marché africain — souvent plus que Spotify pour un artiste sénégalais.",
+          "EN CONTINU — Consulte tes analytics de droits le 1er de chaque mois : DistroKid, Boomplay, YouTube Studio, BSDA. Cette revue mensuelle de 30 minutes te donne une vision claire de l'évolution de tes revenus de droits et t'aide à identifier où concentrer ta promotion.",
+          "EN CONTINU — Pour chaque nouveau son : le tableau de récapitulatif du module est ta liste de contrôle. Coche chaque case (BSDA, ISRC, Content ID, Split Sheet) avant la sortie officielle. Une case non cochée = un droit potentiellement perdu.",
+        ]} />
+        <Banner text="Tes royalties ne viendront pas toutes seules — chaque droit s'active par une action précise." sub="DistroKid (earnings) · YouTube Studio (YPP) · BSDA (diffusion publique) · Boomplay for Artists" color={GOLD} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -4761,6 +5306,20 @@ export default function EbookArtisteViewer() {
           "Lire de la poésie wolof et française — les meilleurs paroliers sont souvent de grands lecteurs",
           "Enregistrer des maquettes vocales de toutes tes idées, même brutes — ne jamais laisser une idée disparaître",
         ]} />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 40 — Action Pratique Songwriting" accent={ACC} pageNum={209} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 40 · Songwriting</SH2>
+        <Body>L'écriture de chanson est un muscle — elle se développe uniquement à travers la pratique régulière et intentionnelle. Voici comment installer une habitude de songwriting qui produit des résultats mesurables en 30 jours.</Body>
+        <Checklist color={ACC} title="Plan d'action Songwriting — deviens un meilleur auteur en 30 jours" items={[
+          "AUJOURD'HUI — Crée un «carnet d'idées» sur ton téléphone (Notes iPhone ou Google Keep). Dès ce soir, note 3 émotions ou situations de ta vie que tu n'as jamais écrites en chanson. Ces graines sont le matériau de tes prochains textes — ne pas attendre l'inspiration, la capturer quand elle passe.",
+          "CETTE SEMAINE — Écris un refrain complet par jour pendant 7 jours. Pas une chanson entière — juste le refrain. 4 à 8 lignes, une idée centrale, une mélodie fredonnée. À la fin de la semaine tu auras 7 refrains. Le meilleur deviendra ta prochaine chanson.",
+          "CE MOIS — Analyse 3 chansons que tu admires ligne par ligne : structure (intro/couplet/pré-refrain/refrain/pont), techniques littéraires (métaphores, images concrètes, contraste, question rhétorique), placement des mots qui «claquent» dans la mélodie. Prends des notes — imiter les grands est la meilleure école.",
+          "CE MOIS — Écris un couplet entier à partir d'un souvenir précis de ta vie (une heure, un lieu, une émotion spécifique). Interdiction d'utiliser les mots «amour», «cœur», «rêve», «succès» — force-toi à trouver des images concrètes. Cette contrainte développe ton style en 1 exercice.",
+          "EN CONTINU — Enregistre chaque idée de mélodie sur ton téléphone, même en chantonnant à voix basse dans la rue. Les meilleures mélodies arrivent sans prévenir — sans enregistrement, elles disparaissent en 30 minutes. GarageBand ou l'application Voice Memos suffit.",
+          "EN CONTINU — Lis à voix haute tout ce que tu écris. Les paroliers professionnels ne lisent jamais leurs textes — ils les chantent ou les récitent. Ce que l'oreille rejette immédiatement (sonorités dures, syllabes qui s'accumulent) doit être réécrit, peu importe le sens.",
+        ]} />
+        <Banner text="Le songwriting est un muscle — il se développe uniquement par l'exercice quotidien." sub="GarageBand (iOS, gratuit) · Voice Memos (iOS) · Google Keep (Android) · Rhymezone pour les rimes : rhymezone.com" color={ACC} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -5345,6 +5904,20 @@ export default function EbookArtisteViewer() {
         ]} />
       </ContentPage>
 
+      <ContentPage chapter="PRO 41 — Action Pratique Home Studio" accent={AMB} pageNum={213} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 41 · Home Studio</SH2>
+        <Body>Un home studio ne se construit pas en un jour, mais en une semaine tu peux avoir un setup fonctionnel. L'objectif est de commencer à enregistrer — même imparfaitement — plutôt que d'attendre l'équipement parfait.</Body>
+        <Checklist color={AMB} title="Plan d'action Home Studio — setup opérationnel en 30 jours" items={[
+          "AUJOURD'HUI — Télécharge GarageBand (Mac/iPhone, gratuit) ou la démo FL Studio (Windows, gratuit) et ouvre-le. Enregistre 30 secondes de voix dans ta penderie fermée avec ton smartphone. Écoute le résultat — c'est ta baseline de départ.",
+          "CETTE SEMAINE — Identifie le coin de ta chambre avec le moins d'écho (généralement un angle avec des meubles ou des vêtements). C'est là que tu vas enregistrer en attendant l'équipement pro. Commence à enregistrer tes maquettes ici — ne pas attendre.",
+          "CE MOIS — Commande ton kit de départ sur Jumia ou AliExpress : bonnette anti-pop (3 000–5 000 FCFA) + pied de micro (8 000–12 000 FCFA). Si budget disponible, ajoute le micro USB Rode NT-USB Mini (~100 000 FCFA sur Thomann.de) — c'est l'upgrade qui change tout.",
+          "CE MOIS — Configure ton DAW complet : installe les mises à jour, crée un modèle de projet standard (piste vocale + beat + reverb léger). Sauvegarde ce template — tu l'utiliseras pour chaque nouveau son.",
+          "EN CONTINU — Règle ton niveau d'enregistrement vocal entre -12 et -6 dB (visible sur le VU-mètre du DAW). Un signal trop fort sature et distorsionne. Un signal trop faible perd en qualité. Ce réglage prend 2 minutes et sauve la qualité de toutes tes prises.",
+          "EN CONTINU — Sauvegarde tous tes projets avec la convention de nommage : Titre_Date_Version (ex: Hossana_2026-07_V3.flp). Garde une copie sur disque dur externe ET sur Google Drive. Perdre un projet 3 semaines avant la sortie est l'une des pires catastrophes d'un artiste.",
+        ]} />
+        <Banner text="La maquette imparfaite enregistrée vaut plus que la chanson parfaite dans ta tête." sub="Commence avec ce que tu as. Améliore avec ce que tu gagnes. · AliExpress : aliexpress.com · Thomann : thomann.de · FL Studio : image-line.com/fl-studio" color={AMB} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════════════════════ */}
       {/* PRO 42 — FISCALITÉ & FINANCES DE L'ARTISTE (P213–P217)           */}
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -5488,6 +6061,20 @@ export default function EbookArtisteViewer() {
         <Banner text="Ta carrière est une entreprise. Gère-la comme telle." sub="Les artistes qui durent 10 ans ne sont pas forcément les plus talentueux — ce sont ceux qui ont appris à gérer l'argent intelligemment." color={GRN} dark />
       </ContentPage>
 
+      <ContentPage chapter="PRO 42 — Action Pratique Fiscalité & Finances" accent={GRN} pageNum={218} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 42 · Fiscalité & Finances</SH2>
+        <Body>La structure financière d'un artiste ne se met pas en place en un jour — mais elle se construit semaine après semaine avec des habitudes simples qui, une fois installées, protègent ta carrière et tes revenus durablement.</Body>
+        <Checklist color={GRN} title="Plan d'action Finances — structure tes revenus dès maintenant" items={[
+          "AUJOURD'HUI — Crée un compte bancaire dédié à ton activité artistique (UBA, Ecobank ou CBAO acceptent des comptes professionnels même sans NINEA). Ce compte reçoit uniquement les revenus artistiques (cachets, royalties, DistroKid). Ne jamais mélanger avec les dépenses personnelles.",
+          "CETTE SEMAINE — Installe Wave Business ou Orange Money Business sur ton téléphone. Configure-le pour recevoir les paiements d'organisateurs et clients. À chaque paiement reçu, envoie une facture PDF (via Facture.net ou un modèle Word) — même informelle. C'est ta trace.",
+          "CE MOIS — Ouvre un compte DistroKid et connecte-le à un compte Payoneer (gratuit). Vérifie que tous tes titres existants ont des ISRC valides. C'est le système qui transforme chaque écoute en royaltie récupérable.",
+          "CE MOIS — Inscris-toi au BSDA si ce n'est pas fait (Avenue Roume, Dakar, gratuit). Déclare tous tes titres qui passent en radio, à la télé ou dans des événements. Les droits de diffusion publique s'accumulent — sans inscription au BSDA, ils restent chez les diffuseurs.",
+          "EN CONTINU — Règle 20% de chaque revenu encaissé sur un compte d'épargne dédié. C'est ton coussin pour les périodes creuses (vacances scolaires, Ramadan, saison sèche) où les événements baissent. Discipline absolue — ne jamais toucher à ce fonds sauf urgence réelle.",
+          "EN CONTINU — Fais un bilan mensuel le 1er de chaque mois : revenus encaissés, dépenses artistiques, impôts dus. 30 minutes par mois suffisent. À 500 000 FCFA/mois de revenus réguliers, consulte un comptable — l'investissement est rentable dès le premier mois.",
+        ]} />
+        <Banner text="Ta carrière est une entreprise — structure-la avant que les revenus arrivent, pas après." sub="BSDA : bsda.sn · DistroKid : distrokid.com · Facture gratuite : facture.net · Payoneer : payoneer.com" color={GRN} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════════════════════ */}
       {/* PRO 43 — GESTION DE CRISE & BAD BUZZ (P218–P221)                 */}
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -5595,6 +6182,20 @@ export default function EbookArtisteViewer() {
         ]} />
       </ContentPage>
 
+      <ContentPage chapter="PRO 43 — Action Pratique Gestion de Crise" accent={"#DC2626"} pageNum={222} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 43 · Gestion de Crise & Bad Buzz</SH2>
+        <Body>La meilleure défense contre une crise, c'est de s'y préparer avant qu'elle arrive. Les artistes qui survivent aux bad buzz ne sont pas ceux qui réagissent le mieux sur le moment — ce sont ceux qui avaient déjà un protocole en place.</Body>
+        <Checklist color={"#DC2626"} title="Plan d'action Gestion de Crise — prépare-toi avant l'urgence" items={[
+          "AUJOURD'HUI — Identifie tes 3 contacts de crise : (1) ton manager ou un proche avec du recul, (2) un avocat spécialisé en droit de la presse (ou sache comment en contacter un rapidement), (3) KEKELI pour l'accompagnement communication. Enregistre ces numéros dans un contact «CRISE» sur ton téléphone.",
+          "CETTE SEMAINE — Configure Google Alerts (alerts.google.com) avec ton nom d'artiste et des variantes. Tu recevras un email automatique dès que quelqu'un parle de toi en ligne. C'est ton système de veille de réputation à coût zéro.",
+          "CE MOIS — Rédige ta «déclaration d'urgence» générique (3-4 lignes) : «Je prends connaissance de la situation et je reviendrai rapidement avec une réponse détaillée. Merci de votre patience.» Ce texte te donne du temps sans paraître silencieux.",
+          "CE MOIS — Audite tes archives publiques : anciens posts, photos, vidéos. Supprime ou archive ce qui pourrait être sorti de contexte et utilisé contre toi. Ce travail préventif prend 2-3h et peut éviter des crises futures.",
+          "EN CONTINU — Applique la règle des 24h : ne jamais répondre à une attaque en ligne dans les premières heures. Attends, consulte, analyse. Une réponse précipitée aggrave presque toujours la situation. La patience n'est pas de la faiblesse — c'est de la stratégie.",
+          "EN CONTINU — Documente chaque crise (même mineure) dans un fichier privé : date, nature, réponse choisie, résultat. Ce journal est ton guide personnel pour les crises futures. Les artistes qui gèrent bien les crises en 2026 ont tous appris de leurs erreurs passées.",
+        ]} />
+        <Banner text="Ta réputation se construit chaque jour — protège-la avant d'avoir à la défendre." sub="Google Alerts : alerts.google.com · Veille réseaux : mention.com (version gratuite) · KEKELI communication de crise : kekelicreativeagency.com" color={"#DC2626"} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════════════════════ */}
       {/* PRO 44 — LE MERCHANDISING PROFESSIONNEL (P222–P225)              */}
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -5697,6 +6298,20 @@ export default function EbookArtisteViewer() {
         ]} />
         <Divider color={SEC} />
         <Banner text="Chaque fan qui porte ton logo est un ambassadeur gratuit. Donne-leur quelque chose à porter." sub="Le merch n'est pas une option pour les artistes sérieux — c'est un pilier de la monétisation durable." color={SEC} dark />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 44 — Action Pratique Merchandising" accent={SEC} pageNum={226} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 44 · Merchandising Professionnel</SH2>
+        <Body>Le merchandising se lance plus vite qu'on ne le pense — un t-shirt avec ton logo, une capsule limitée pour une sortie : voici comment aller du concept à la première vente en moins d'un mois.</Body>
+        <Checklist color={SEC} title="Plan d'action Merch — première collection en 30 jours" items={[
+          "AUJOURD'HUI — Définis ton premier article merch : t-shirt ou casquette avec ton logo/nom d'artiste. C'est le minimum viable. Pas de collection complète pour commencer — une seule pièce, bien exécutée, suffit pour tester le marché.",
+          "CETTE SEMAINE — Obtiens 3 devis auprès d'imprimeurs locaux à Dakar (Plateau, Grand-Yoff, Parcelles) pour 20, 50 et 100 exemplaires. Demande des échantillons avant de valider. Budget indicatif : 3 500–6 000 FCFA par t-shirt pour 50 pièces en qualité correcte.",
+          "CE MOIS — Crée ta page de vente en ligne : Selar.co (simple, paiement Wave/Orange Money, zéro technique) ou une boutique Shopify basique. Photos professionnelles de l'article portées par un modèle ou toi-même — les photos de produit seul se vendent mal.",
+          "CE MOIS — Lance ta première édition limitée : 50 ou 100 pièces maximum, numérotées. Annonce la rareté dans ta bio et tes stories. Crée un compte à rebours sur Instagram. La limitation crée l'urgence — ne jamais vendre en quantité illimitée pour la première collection.",
+          "EN CONTINU — Synchronise tes drops merch avec tes sorties musicales. Chaque single ou EP mérite une pièce de merch assortie (même couleur, même esthétique que la cover). Le fan qui achète le merch s'engage 10× plus que celui qui like un post.",
+          "EN CONTINU — Propose le merch à chaque concert : table de vente à l'entrée ou à la sortie, jamais pendant le show. Prix légèrement plus élevé qu'en ligne (valeur de l'exclusivité «concert»). Le contact direct = plus de conversion qu'en ligne.",
+        ]} />
+        <Banner text="Chaque fan qui porte ton logo est un ambassadeur gratuit." sub="Selar.co (vente en ligne Wave/OM) · Canva (visuels t-shirts) · Printful.com (print-on-demand international sans stock)" color={SEC} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -5820,6 +6435,20 @@ export default function EbookArtisteViewer() {
         <Banner text="La tournée AOF n'est pas un rêve lointain — c'est un projet qui se planifie." sub="Avec 3 à 6 mois de préparation, un réseau de 2-3 promoteurs locaux, et un contrat signé, tout artiste sénégalais sérieux peut jouer hors de ses frontières." color={BLU} dark />
       </ContentPage>
 
+      <ContentPage chapter="PRO 45 — Action Pratique Tournée AOF" accent={BLU} pageNum={231} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 45 · Tournée Professionnelle AOF</SH2>
+        <Body>Une tournée AOF se prépare 3 à 6 mois à l'avance. Voici le plan d'action concret pour organiser ton premier départ hors du Sénégal — avec ou sans manager, en partant de zéro.</Body>
+        <Checklist color={BLU} title="Plan d'action Tournée AOF — du concept au premier vol" items={[
+          "AUJOURD'HUI — Identifie les 2-3 pays AOF où ta musique a déjà de l'audience. Vérifie tes analytics Spotify et YouTube : Côte d'Ivoire, Mali, Guinée, Burkina, Togo ? Va là où les données te disent que tu existes déjà — ne pas choisir un pays au hasard.",
+          "CETTE SEMAINE — Recherche sur Instagram et LinkedIn des promoteurs de concerts dans tes pays cibles. Filtre par : pays, mots-clés «promoteur concert», «booking artiste». Envoie 10 messages directs bien rédigés à des promoteurs identifiés — pas de copier-coller, personnalise chaque message avec un artiste qu'ils ont promu.",
+          "CE MOIS — Prépare ton EPK (dossier de presse) de tournée : bio courte, 3 meilleurs titres avec stats, photos professionnelles, vidéo de scène, liste des concerts précédents. Ce document est ta carte de visite pour convaincre des promoteurs étrangers.",
+          "CE MOIS — Renseigne-toi sur les visas pays par pays. Sénégal → Côte d'Ivoire : accord CEDEAO (libre circulation 90 jours). Sénégal → Mali : accord CEDEAO. Sénégal → Cameroun : visa requis. Anticipe les délais au moins 6 semaines avant la date.",
+          "EN CONTINU — Construis ton réseau AOF dès maintenant, avant d'avoir besoin d'une tournée. Suis et engage les artistes, promoteurs et médias de tes pays cibles. Une relation de 6 mois vaut 10× plus qu'un message froid le jour où tu veux booker.",
+          "EN CONTINU — Documente chaque concert filmé de qualité pour construire un showreel de scène. Les promoteurs étrangers demandent systématiquement une vidéo live avant de confirmer un booking. Sans vidéo de scène, le booking est quasi impossible.",
+        ]} />
+        <Banner text="La tournée AOF se planifie longtemps à l'avance — commence aujourd'hui pour jouer dans 6 mois." sub="Spotify for Artists (analytics pays) · Shotgun (billetterie AOF) · CEDEAO libre circulation : ecowas.int" color={BLU} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════════════════════ */}
       {/* PRO 46 — FEATURINGS & COLLABORATIONS (P231–P234)                 */}
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -5927,6 +6556,20 @@ export default function EbookArtisteViewer() {
         <Banner text="Un bon featuring n'est pas un raccourci — c'est une vraie relation professionnelle." sub="Les collaborations qui durent sont celles où les deux artistes ont le sentiment d'avoir gagné quelque chose de réel." color={AMB} dark />
       </ContentPage>
 
+      <ContentPage chapter="PRO 46 — Action Pratique Featurings" accent={AMB} pageNum={235} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 46 · Featurings & Collaborations</SH2>
+        <Body>Un featuring réussi commence bien avant le studio. C'est une relation qui se construit, un accord qui se rédige, et une promotion qui se coordonne. Voici comment passer de l'idée au featuring publié dans les règles de l'art.</Body>
+        <Checklist color={AMB} title="Plan d'action Featurings — du premier contact à la sortie" items={[
+          "AUJOURD'HUI — Dresse une liste de 5 artistes avec qui un featuring serait stratégiquement pertinent pour toi : même public cible, genre complémentaire, audience géographique différente. Pas forcément des stars — un artiste avec 50K fans engagés vaut plus qu'une star avec 500K fans passifs.",
+          "CETTE SEMAINE — Engage sincèrement avec ces 5 artistes sur les réseaux avant de les contacter : commente leur contenu, partage leurs sons, apprécie leur travail publiquement. Une relation de 2-3 semaines d'engagement sincère transforme ton DM de «message froid» en «suite naturelle».",
+          "CE MOIS — Propose le featuring de façon concrète : «J'ai un son dans le style X, ton énergie Y serait parfaite dessus. Je peux t'envoyer la maquette ?» Montre que tu as écouté leur musique. Jamais «Je veux faire un featuring avec toi» sans contexte — ça ressemble à une demande de faveur, pas à une proposition professionnelle.",
+          "CE MOIS — Rédige un accord de featuring simple (1 page) avant tout travail en studio : partage des droits d'auteur (50/50 par défaut ou personnalisé), partage des revenus de streaming, who releases first (les deux simultanément recommandé), qui paie le studio et les frais de production.",
+          "EN CONTINU — Planifie la promotion conjointe AVANT la sortie : quand chaque artiste poste, quel format (Reels, Story, YouTube Short), si possible une vidéo reaction commune ou un making-of. Un featuring sans promo coordonnée perd 70% de son impact potentiel.",
+          "EN CONTINU — Entretiens la relation après la sortie. Congratule l'autre artiste sur ses succès, continue d'interagir. Les meilleures collaborations donnent naissance à des séries de featurings, pas à une seule sortie. Les plus grands artistes du monde construisent des réseaux de confiance à long terme.",
+        ]} />
+        <Banner text="Le featuring commence par la relation — construis l'alliance avant de demander la collaboration." sub="Accord de featuring simple : KEKELI peut t'en fournir un modèle. SoundBetter pour trouver des beatmakers et producteurs : soundbetter.com" color={AMB} dark />
+      </ContentPage>
+
       {/* ══════════════════════════════════════════════════════════════════ */}
       {/* PRO 47 — LE PLANNING ANNUEL ARTISTIQUE (P235–P238)               */}
       {/* ══════════════════════════════════════════════════════════════════ */}
@@ -6011,6 +6654,20 @@ export default function EbookArtisteViewer() {
           text="Ils planifient. Youssou N'Dour ne laisse pas le hasard décider de ses sorties. Burna Boy sort ses albums avec 18 mois de préparation. Les artistes qui disparaissent après un tube sont souvent ceux qui n'avaient pas de plan au-delà du hit. Un planning annuel n'étouffe pas la créativité — il lui donne une direction. Et une direction sans contrainte reste libre." />
         <Divider color={GOLD} />
         <Banner text="La carrière artistique parfaite n'existe pas. La carrière planifiée, elle, existe." sub="Commence par planifier les 90 prochains jours. Ensuite les 6 prochains mois. Ensuite l'année entière. Étape par étape." color={GOLD} dark />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 47 — Action Pratique Planning Annuel" accent={GOLD} pageNum={239} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>ACTION PRATIQUE — PRO 47 · Planning Annuel Artistique</SH2>
+        <Body>Un planning annuel ne se remplit pas d'un coup. Il se construit couche par couche, en commençant par ce qui est certain et en laissant de l'espace pour ce qui ne l'est pas encore. Voici comment transformer ta vision en agenda actionnable dès aujourd'hui.</Body>
+        <Checklist color={GOLD} title="Plan d'action Planning Annuel — structure ta carrière sur 12 mois" items={[
+          "AUJOURD'HUI — Ouvre Google Calendar ou Notion et crée un calendrier dédié «Carrière Artistique 2026–2027». Bloque d'abord les dates qui existent déjà : concerts confirmés, événements religieux (Ramadan, Tabaski), vacances scolaires sénégalaises. Ces dates sont les contraintes fixes de ton planning.",
+          "CETTE SEMAINE — Planifie tes 3 à 4 sorties musicales de l'année. Règle d'or : jamais deux sorties importantes dans le même mois. Répartis-les sur l'année en tenant compte des saisons (évite le Ramadan pour les sorties club, cible août-septembre pour les festivals). Date de sortie = date de dépôt sur DistroKid 2 semaines avant.",
+          "CE MOIS — Pour chaque sortie planifiée, trace à rebours le calendrier de production : date de sortie → date de master → date de mixage → date d'enregistrement final → date de début des sessions. Ce raisonnement à rebours révèle si tu as assez de temps — ou si tu dois ajuster les dates.",
+          "CE MOIS — Planifie tes campagnes de promotion : chaque sortie musicale mérite 4 semaines de teasing avant et 4 semaines de promotion après. Note ces périodes dans ton calendrier. Si les périodes se chevauchent entre deux sorties, tu as trop de sorties pour le créneau — réorganise.",
+          "EN CONTINU — Fais un bilan mensuel de 30 minutes le 1er de chaque mois : qu'est-ce qui a été fait, qu'est-ce qui a dérapé, qu'est-ce qu'on ajuste le mois suivant. Un planning qui ne s'adapte pas devient une contrainte. L'objectif est la direction, pas la rigidité.",
+          "EN CONTINU — Partage ton planning (version simplifiée) avec ton manager ou un proche de confiance. Avoir quelqu'un qui te demande «tu en es où pour la sortie d'octobre ?» crée une responsabilité externe qui t'aide à tenir tes engagements. La solitude artistique est l'ennemie de la discipline.",
+        ]} />
+        <Banner text="Planifie ton année — ou ton année planifie à ta place." sub="Google Calendar (gratuit) · Notion (templates planning artiste gratuits) · Trello (gestion de projets musicaux) · KEKELI peut t'aider à construire ton planning stratégique annuel." color={GOLD} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════════════════════ */}
