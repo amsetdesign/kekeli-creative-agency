@@ -315,9 +315,12 @@ export default function EbookArtisteViewer() {
             <Body><strong>À la communauté Galsen Gospel Urbain</strong> — vous êtes la preuve vivante que l'excellence gospel est possible depuis Dakar. Chaque artiste de cette communauté m'inspire à donner plus et à exiger davantage de moi-même.</Body>
             <Body><strong>À toute l'équipe du Sunu Impact Festival</strong> — pour votre engagement à créer des espaces où l'art africain est célébré avec dignité et ambition. Vous avez changé la conversation sur ce qu'un festival peut être en Afrique de l'Ouest.</Body>
             <Body><strong>À CMM</strong> et à tous les partenaires qui ont soutenu le travail au fil des années — votre confiance a ouvert des portes que je n'aurais pas pu ouvrir seul.</Body>
+            <Body><strong>À toute l'équipe d'organisation du Galsen Gospel Urbain et du Sunu Impact Festival</strong> — derrière chaque événement réussi, il y a des bras qui travaillent dans l'ombre. Vous savez qui vous êtes. Merci.</Body>
+            <Body>Une mention spéciale et sincère à des personnes qui ont marqué ce parcours de leur présence, leur soutien et leur foi : <strong>Emmanuel Lhebreux, Jean Michel Zié, ID Music, Dany Governor, Covenant Mic, Tahicia, Odeline, Jeriel, Benie Merveilles, Pierre Damien</strong> et <strong>Murphy Fall</strong>. Chacun d'entre vous a apporté quelque chose d'unique — une parole au bon moment, une porte ouverte, une main tendue, une prière. Je n'oublie pas.</Body>
+            <Body><strong>À la communauté "Amset — Today na today"</strong> — vous qui suivez, encouragez, partagez et priez depuis le début. Votre fidélité est le carburant qui m'a permis de continuer les jours difficiles. Ce livre est autant le vôtre que le mien.</Body>
+            <Body><strong>À tous ceux qui croient en cette vision que Dieu a mise dans mon cœur</strong> — même quand les résultats ne se voyaient pas encore, vous avez cru. Cette foi collective a été plus forte que tous les doutes.</Body>
             <Body><strong>À tous les artistes</strong> qui m'ont fait confiance, qui ont partagé leurs histoires, leurs doutes et leurs victoires — ce livre est aussi le vôtre.</Body>
             <Body>Et à toi, lecteur, qui as choisi d'investir ton temps dans ces pages — merci de croire que le sommet est possible. Ce livre a été écrit pour toi.</Body>
-            <Body>À tous les artistes gospel sénégalais qui m'ont précédé et qui ont tracé un chemin...</Body>
           </div>
           <div style={{ padding: "10px 36px 14px", display: "flex", justifyContent: "space-between", borderTop: "1px solid #E5E1DC" }}>
             <p style={{ fontFamily: F, fontSize: "8px", color: "#B0A89E", margin: 0 }}>KEKELI Creative Agency — {LABEL}</p>
