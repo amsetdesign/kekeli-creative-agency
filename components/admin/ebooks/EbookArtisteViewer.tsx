@@ -4803,6 +4803,14 @@ export default function EbookArtisteViewer() {
             ["Pied de micro + bonnette", "Tenue du micro + filtre pop", "15 000 — 25 000 FCFA", "Indispensable pour la qualité vocale"],
           ]}
         />
+        <SH3 color={AMB}>À quoi sert exactement chaque équipement ?</SH3>
+        <BulletList color={AMB} items={[
+          { bold: "Le Microphone :", text: "Capte les vibrations sonores de ta voix et les convertit en signal électrique. Un micro USB se branche directement à l'ordinateur (simple). Un micro XLR (plus pro) nécessite une interface audio entre lui et l'ordinateur. La qualité du micro détermine 50% du rendu final de ta voix." },
+          { bold: "L'Interface Audio (ex: Focusrite Scarlett Solo) :", text: "C'est le \"traducteur\" entre ton micro et ton ordinateur. Elle convertit le signal analogique (voix) en signal numérique que le logiciel peut traiter. Elle améliore fortement la qualité sonore par rapport à la carte son intégrée de l'ordinateur. Sans elle avec un micro XLR : rien ne fonctionne." },
+          { bold: "Le Casque Studio (ex: Audio-Technica ATH-M20x) :", text: "Différent des écouteurs ordinaires — il reproduit le son sans l'améliorer artificiellement. Tu entends ta voix telle qu'elle a vraiment été enregistrée. Indispensable pour détecter les défauts de son et mixer correctement. Ne jamais mixer avec des écouteurs Bluetooth ou des AirPods." },
+          { bold: "La Bonnette / Filtre Anti-Pop :", text: "S'installe entre toi et le micro. Arrête les sons explosifs (P, B, T) qui créent des \"pops\" disgracieux dans l'enregistrement. Sans bonnette, ces sons cassent la qualité même avec le meilleur micro du monde. Obligatoire dès le premier jour." },
+          { bold: "Le DAW (GarageBand, FL Studio, Logic Pro…) :", text: "C'est ton studio numérique complet. C'est là que tu enregistres les pistes vocales, places les beats, arranges les éléments, corriges la voix (hauteur, timing), ajoutes des effets (réverbération, compression, EQ), et exportes le fichier audio final (MP3 ou WAV)." },
+        ]} />
         <Divider color={AMB} />
         <SH3 color={AMB}>Traitement acoustique — le secret le moins cher</SH3>
         <Body>Le plus grand problème d'un home studio n'est pas le micro — c'est l'acoustique de la pièce. Les murs nus créent de la réverbération qui salit les enregistrements. Voici comment traiter acoustiquement à petit budget :</Body>
@@ -4828,6 +4836,26 @@ export default function EbookArtisteViewer() {
             ["Pro Tools", "Windows + Mac", "Abonnement mensuel", "Standard studios professionnels", "Professionnel"],
           ]}
         />
+        <SH3 color={AMB}>Quel logiciel pour quel usage ?</SH3>
+        <MiniTable color={AMB}
+          headers={["Objectif", "Logiciel recommandé", "Prix", "Disponible sur"]}
+          rows={[
+            ["Faire des beats / produire de la musique", "FL Studio", "150 000 FCFA (licence à vie)", "Windows + Mac"],
+            ["Débuter la production (Mac/iPhone)", "GarageBand", "Gratuit", "Mac + iPhone uniquement"],
+            ["Production complète + mixage (Mac)", "Logic Pro", "20 000 FCFA/an", "Mac uniquement"],
+            ["Mixer sa voix sur des beats", "FL Studio ou Logic Pro", "Inclus dans ton DAW", "Windows + Mac"],
+            ["Mastering automatique (débutant)", "LANDR (en ligne)", "~8 000 FCFA/mois", "Navigateur web — tout système"],
+            ["Mastering avancé (niveau pro)", "iZotope Ozone", "~45 000 FCFA", "Windows + Mac"],
+            ["Correction vocale (autotune)", "Antares Auto-Tune", "~50 000 FCFA/an", "Windows + Mac (plugin)"],
+          ]}
+        />
+        <SH3 color={AMB}>Plugins vocaux essentiels à connaître</SH3>
+        <BulletList color={AMB} items={[
+          { bold: "Antares Auto-Tune (antarestech.com) :", text: "Corrige la justesse de ta voix. Mode transparent = correction naturelle que personne ne détecte. Mode effect = le son robotique popularisé par T-Pain. Standard mondial utilisé dans tous les studios pro. ~50 000 FCFA/an." },
+          { bold: "iZotope Nectar (izotope.com) :", text: "Suite complète de traitement vocal en un seul plugin — EQ (équalization des fréquences), compression (homogénéisation du volume), réverbération, pitch correction. Tout ce dont ta voix a besoin. ~30 000 FCFA." },
+          { bold: "Waves Vocal Rider (waves.com) :", text: "Ajuste automatiquement le volume de ta voix en temps réel selon l'intensité. Évite les sautes de volume entre les passages chantés fort et doucement. Souvent en promo flash à ~8 000 FCFA." },
+          { bold: "Gratuits pour commencer :", text: "MAutoPitch (meldaproduction.com) pour la correction vocale, Voxengo Span pour analyser le son — téléchargeables gratuitement sans abonnement." },
+        ]} />
         <SH3 color={AMB}>Règles d'or pour enregistrer des voix propres</SH3>
         <NumberedList color={AMB} items={[
           "CHAUFFER SA VOIX avant d'enregistrer — 15 minutes d'exercices vocaux minimum.",
@@ -4844,6 +4872,43 @@ export default function EbookArtisteViewer() {
         />
         <Callout color={GOLD} title="Quand aller en studio professionnel malgré le home studio ?"
           text="Le home studio pour : maquettes, démos, enregistrements rapides, expérimentation. Le studio pro pour : single ou EP destiné à être vendu ou fortement promu, quand le son final a besoin d'un traitement acoustique parfait. La règle : maquetter chez toi, finaliser en studio pour les sorties majeures." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 41 — Home Studio" accent={AMB} pageNum={213} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>Où Acheter son Équipement depuis le Sénégal ?</SH2>
+        <Body>L'équipement home studio est rarement disponible en boutique à Dakar — mais il est accessible. Voici toutes tes options avec délais, prix et conseils concrets.</Body>
+        <MiniTable color={AMB}
+          headers={["Plateforme", "Avantages", "Délais", "Conseil pratique"]}
+          rows={[
+            ["Jumia Sénégal (jumia.sn)", "Livraison locale, paiement Wave/Orange Money, retour possible", "2–5 jours ouvrés", "Idéal pour câbles, pieds de micro, mousses acoustiques. Sélection limitée pour le matériel pro."],
+            ["AliExpress (aliexpress.com)", "Prix jusqu'à 60% moins chers qu'en boutique", "15–30 jours", "Bon pour les accessoires. Méfiance sur les micros — qualité très variable selon le vendeur."],
+            ["Thomann (thomann.de)", "Spécialiste musique européen, catalogue immense, qualité garantie", "10–15 jours livraison internationale", "Meilleure option pour micro, interface audio, casque pro. Expédition vers le Sénégal disponible."],
+            ["Amazon.fr + transitaire", "Large choix, prix compétitifs", "7–14 jours avec DHL/Chronopost", "Utiliser un transitaire local ou un contact en France. Budget livraison : 15 000–40 000 FCFA."],
+            ["Facebook Marketplace Dakar", "Matériel d'occasion, prix négociable, disponible immédiatement", "Immédiat", "Toujours demander une démonstration avant d'acheter. Vérifier l'état des câbles et connecteurs."],
+            ["Boutiques Dakar (Plateau, Médina)", "Voir le produit avant d'acheter, pas de frais d'expédition", "Immédiat", "Stock très limité. Chercher dans les boutiques d'électronique au Plateau ou vers Colobane."],
+          ]}
+        />
+        <SH3 color={AMB}>Budget total selon le niveau de départ</SH3>
+        <MiniTable color={AMB}
+          headers={["Niveau", "Équipement minimum", "Budget total", "Ce que tu peux produire"]}
+          rows={[
+            ["Starter (smartphone)", "iPhone/Android + GarageBand + écouteurs intra", "0 FCFA", "Maquettes vocales, idées, démos envoyables à un beatmaker"],
+            ["Débutant (micro USB)", "Micro USB Rode NT-USB Mini + pied + bonnette + GarageBand", "100 000–150 000 FCFA", "Enregistrements propres publiables sur les réseaux"],
+            ["Intermédiaire", "Micro XLR + Interface Focusrite + Casque ATH-M20x + FL Studio", "300 000–450 000 FCFA", "Titres professionnels, featurings, soumissions à des labels"],
+            ["Semi-pro", "Micro condensateur AKG/Rode + Préampli + Traitement acoustique + Logic Pro", "700 000–1 500 000 FCFA", "Qualité studio professionnel — EP et albums complets"],
+          ]}
+        />
+        <Divider color={AMB} />
+        <SH2 color={DARK}>ACTION PRATIQUE — Home Studio en 4 Semaines</SH2>
+        <Checklist color={AMB} title="Plan d'action — ton home studio opérationnel en 30 jours" items={[
+          "AUJOURD'HUI — Logiciel : Télécharge GarageBand (Mac/iPhone, gratuit) ou la démo FL Studio (Windows, gratuit). Crée un premier projet vide. Familiarise-toi avec l'interface pendant 30 minutes.",
+          "SEMAINE 1 — Premier test : Enregistre 30 secondes de voix avec ton smartphone dans ta penderie fermée. Écoute le résultat. Compare avec une version enregistrée au centre de ta chambre. Tu entendras immédiatement la différence acoustique.",
+          "SEMAINE 2 — Commande ton kit de départ : Bonnette anti-pop + pied de micro sur Jumia (15 000–25 000 FCFA). Si ton budget le permet, commande aussi ton micro USB (Rode NT-USB Mini recommandé, ~100 000 FCFA sur Thomann.de).",
+          "SEMAINE 3 — Installation et configuration : Connecte ton micro à ton ordinateur. Configure le DAW pour qu'il reconnaisse le micro comme source d'entrée. Fais tes premiers tests d'enregistrement. Règle le gain (volume d'entrée) pour que la voix soit entre -12 et -6 dB.",
+          "SEMAINE 4 — Première vraie maquette : Enregistre un couplet complet + refrain avec un beat (téléchargeable gratuitement sur YouTube Audio Library). Partage avec 3 personnes pour feedback honnête. C'est ta référence de départ.",
+          "MOIS 2 — Mixage : Regarde 10 tutoriels YouTube sur le mixage vocal dans ton DAW (cherche «vocal mixing FL Studio tutorial» ou «Logic Pro vocal mixing»). Applique sur ta prise de semaine 4. Tu vas entendre la transformation.",
+        ]} />
+        <Banner text="La maquette imparfaite enregistrée vaut plus que la chanson parfaite dans ta tête." sub="Commence avec ce que tu as. Améliore avec ce que tu gagnes." color={AMB} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════════════════════ */}
