@@ -231,31 +231,21 @@ export default function EbookArtisteViewer() {
             <p style={{ fontFamily: FD, fontSize: "24px", fontWeight: 700, color: DARK, margin: "0 0 6px" }}>Préface</p>
             <div style={{ width: "36px", height: "2px", background: `linear-gradient(90deg, ${ACC}, transparent)`, margin: "0 0 20px" }} />
 
-            {/* Bloc placeholder préface */}
-            <div style={{ padding: "20px 22px", borderRadius: "10px", background: "#FFF8E7", border: "2px dashed #C8A84B", marginBottom: "20px" }}>
-              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: GOLD, textTransform: "uppercase", letterSpacing: "0.15em", margin: "0 0 10px" }}>
-                [DESIGNER / AMSET — Préface à faire écrire par une personnalité]
-              </p>
-              <p style={{ fontFamily: F, fontSize: "9.5px", color: "#92400E", lineHeight: 1.7, margin: "0 0 10px" }}>
-                Cette préface doit être rédigée par une personnalité reconnue de l'industrie musicale africaine ou du monde gospel. Idéalement quelqu'un que le lecteur respecte et connaît.
-              </p>
-              <p style={{ fontFamily: F, fontSize: "9px", color: "#B45309", margin: "0 0 8px" }}>Profils suggérés :</p>
-              <BulletList color="#B45309" items={[
-                { bold: "Un directeur artistique :", text: "quelqu'un qui a accompagné des artistes sénégalais reconnus" },
-                { bold: "Un pasteur influent :", text: "leader d'une grande église avec crédibilité auprès du public gospel" },
-                { bold: "Un journaliste musical :", text: "qui couvre la scène musicale africaine francophone" },
-                { bold: "Un organisateur de festivals :", text: "Dakar Music Expo, festivals AOF" },
-                { bold: "Un artiste gospel reconnu :", text: "francophone de préférence (Dena Mwana, Tito Prince si possible)" },
-              ]} />
-              <p style={{ fontFamily: F, fontSize: "9px", color: "#92400E", margin: "10px 0 0", fontStyle: "italic" }}>
-                La préface doit faire 1 à 2 pages et parler : de l'importance de ce livre pour les artistes africains, du parcours d'Amset, et de pourquoi ce guide arrive au bon moment.
-              </p>
-            </div>
+            <Body>Il y a des livres qui arrivent au bon moment. Pas par hasard — par nécessité.</Body>
+            <Body>Depuis que nous avons fondé KEKELI Creative Agency à Dakar, nous avons accompagné des dizaines d'artistes sénégalais et africains dans leur parcours. Des artistes au talent indéniable, à la voix puissante, au message profond. Et pourtant, beaucoup d'entre eux butaient sur le même mur invisible : ils ne savaient pas comment transformer ce talent en carrière durable. Ils ne manquaient pas de don. Ils manquaient de méthode.</Body>
+            <Body>C'est dans ce contexte que nous avons rencontré Amset. Artiste gospel, fondateur du Galsen Gospel Urbain, promoteur du Sunu Impact Festival — Amset n'est pas seulement quelqu'un qui chante. C'est quelqu'un qui a compris, souvent à la dure, ce que signifie construire une carrière artistique en Afrique de l'Ouest avec foi, stratégie et persévérance.</Body>
+            <Body>Ce livre, il ne l'a pas écrit depuis une position confortable. Il l'a écrit depuis l'intérieur du voyage — avec les cicatrices des doutes, les victoires des premières scènes, et la clarté que seule l'expérience vraie peut donner. Chaque module de ce guide est une leçon que lui-même a vécue, testée ou observée sur le terrain dakarois et africain.</Body>
+            <Callout color={ACC} title="Pourquoi ce guide est différent" text="Il ne parle pas de la musique depuis un bureau parisien ou new-yorkais. Il parle de la réalité de l'artiste africain — les plateformes de streaming depuis Dakar, les droits BSDA, la distribution sur Boomplay, les cachets en FCFA, les concerts à Thiès ou à Abidjan. C'est un guide fait ici, pour ici, par quelqu'un d'ici." />
+            <Body>L'industrie musicale africaine est en train de vivre sa révolution. TikTok a créé des stars du jour au lendemain. Boomplay compte plus de 100 millions d'utilisateurs actifs. Les artistes africains dominent les charts mondiaux. Mais derrière chaque success story visible, il y a des centaines d'artistes qui cherchent encore leur chemin — sans carte, sans boussole, sans mentor.</Body>
+            <Body><strong>Du Talent au Sommet</strong> est cette carte. Cette boussole. Ce mentor mis en livre.</Body>
+            <Body>Chez KEKELI Creative Agency, nous croyons que l'Afrique a suffisamment de talent pour dominer la scène musicale mondiale. Ce qui manque, ce n'est pas le don — c'est l'accès à la connaissance stratégique. Ce guide comble ce manque avec générosité, précision et authenticité.</Body>
+            <Body>À toi qui lis ces lignes : tu tiens entre les mains plus qu'un livre. Tu tiens une feuille de route vers la carrière que tu mérites. Applique chaque module. Reviens-y. Partage-le. Et rappelle-toi que le sommet n'est pas réservé à ceux qui ont le plus de chance — il appartient à ceux qui ont la vision, la stratégie, et la foi pour y monter.</Body>
 
-            {/* Signature placeholder */}
-            <div style={{ padding: "12px 16px", borderRadius: "8px", background: "#F5F0E8", border: "1px solid #E5DFD0" }}>
-              <p style={{ fontFamily: F, fontSize: "9px", color: "#9CA3AF", fontStyle: "italic", margin: "0 0 6px" }}>[Signature de l'auteur de la préface]</p>
-              <p style={{ fontFamily: F, fontSize: "8px", color: "#B0A89E", margin: 0 }}>[Nom · Titre · Ville · Date]</p>
+            {/* Signature */}
+            <div style={{ marginTop: "20px", paddingTop: "16px", borderTop: "1px solid #E5DFD0" }}>
+              <p style={{ fontFamily: FD, fontSize: "14px", fontStyle: "italic", color: DARK, margin: "0 0 3px" }}>Avec fierté et conviction,</p>
+              <p style={{ fontFamily: F, fontSize: "11px", fontWeight: 700, color: ACC, margin: "0 0 2px" }}>KEKELI Creative Agency</p>
+              <p style={{ fontFamily: F, fontSize: "9px", color: "#78716C", margin: 0 }}>Agence de communication créative · Dakar, Sénégal · 2026</p>
             </div>
           </div>
           <div style={{ padding: "10px 36px 14px", display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #E5E1DC" }}>
@@ -282,17 +272,14 @@ export default function EbookArtisteViewer() {
             <p style={{ fontFamily: F, fontSize: "11px", color: "#78716C", margin: "0 0 16px" }}>Par Amset — Artiste Gospel Pro, Dakar</p>
             <div style={{ width: "36px", height: "2px", background: `linear-gradient(90deg, ${GOLD}, transparent)`, margin: "0 0 18px" }} />
 
-            <div style={{ padding: "14px 16px", borderRadius: "8px", background: "#FFF8E7", border: "2px dashed #C8A84B", marginBottom: "16px" }}>
-              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: GOLD, textTransform: "uppercase", letterSpacing: "0.15em", margin: "0 0 8px" }}>
-                [AMSET — Écris ton avant-propos ici]
-              </p>
-              <p style={{ fontFamily: F, fontSize: "9px", color: "#92400E", lineHeight: 1.7, margin: 0 }}>
-                L'avant-propos est ta voix directe au lecteur avant qu'il commence le livre. Il doit être personnel, sincère, et donner envie de lire jusqu'à la fin. Éléments à couvrir : pourquoi tu as écrit ce livre, à qui il s'adresse, ce que tu espères qu'il va changer dans la vie du lecteur, et une invitation sincère à appliquer chaque leçon.
-              </p>
-            </div>
-            <Body>Voici ce qui m'a poussé à écrire ce livre...</Body>
-            <Body>Je m'adresse à chaque artiste qui a déjà ressenti cette frustration de ne pas savoir comment transformer son talent en carrière...</Body>
-            <Body>Ce guide est le livre que j'aurais voulu avoir quand j'ai commencé...</Body>
+            <Body>J'ai écrit ce livre parce que j'aurais voulu l'avoir.</Body>
+            <Body>Quand j'ai commencé ma carrière artistique à Dakar, je débordais de passion mais je manquais de repères. Personne ne m'avait expliqué comment protéger mes droits d'auteur. Personne ne m'avait dit qu'un logo professionnel pouvait changer la perception que les gens ont de ta musique. Personne ne m'avait appris à pitcher mon projet à un organisateur de concert, à négocier un cachet, à utiliser TikTok comme outil de carrière et non comme simple divertissement.</Body>
+            <Body>J'ai appris tout ça à la dure — par les erreurs, par les portes fermées, par les contrats mal lus, par les opportunités manquées faute de savoir. Et c'est exactement pour ça que j'ai décidé d'écrire <strong>Du Talent au Sommet</strong>.</Body>
+            <Body>Ce livre s'adresse à toi, artiste africain — qu'tu sois chanteur gospel, rappeur, artiste afrobeats, musicien traditionnel ou créateur de contenu musical. Si tu as du talent, si tu as un message, si tu as cette conviction profonde que ta musique peut toucher des vies et changer des destins — alors ce guide est fait pour toi.</Body>
+            <Callout color={GOLD} title="Ce que ce livre n'est pas" text="Ce n'est pas un livre de théorie écrit depuis un bureau éloigné de ta réalité. C'est un guide pratique, terrain, ancré dans la réalité du marché sénégalais et africain. Chaque conseil ici peut être appliqué dès aujourd'hui, avec les ressources que tu as maintenant." />
+            <Body>J'ai fondé le Galsen Gospel Urbain parce que je croyais qu'on pouvait créer une communauté d'artistes qui se soutiennent, qui partagent, qui grandissent ensemble. Ce livre est le prolongement de cette vision — mettre à disposition de chaque artiste les outils qui, jusque-là, n'étaient accessibles qu'à ceux qui avaient les bons contacts ou les bons moyens.</Body>
+            <Body>Lis ce guide avec un crayon à la main. Souligne. Note. Applique. Reviens-y dans six mois et mesure ton évolution. Le talent t'a amené jusqu'ici. La stratégie t'amènera au sommet.</Body>
+            <Body>Je crois en toi. Maintenant, crois en toi aussi.</Body>
             <div style={{ marginTop: "24px", paddingTop: "16px", borderTop: "1px solid #E5DFD0" }}>
               <p style={{ fontFamily: FD, fontSize: "16px", fontStyle: "italic", color: DARK, margin: "0 0 4px" }}>Avec foi et gratitude,</p>
               <p style={{ fontFamily: F, fontSize: "11px", fontWeight: 700, color: GOLD, margin: "0 0 2px" }}>Amset</p>
@@ -320,17 +307,16 @@ export default function EbookArtisteViewer() {
           </div>
           <div style={{ flex: 1, padding: "24px 36px 16px" }}>
             <p style={{ fontFamily: FD, fontSize: "24px", fontWeight: 700, color: DARK, margin: "0 0 16px" }}>Remerciements</p>
-            <div style={{ padding: "16px 18px", borderRadius: "10px", background: "#FFF8E7", border: "2px dashed #C8A84B", marginBottom: "16px" }}>
-              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: GOLD, textTransform: "uppercase", letterSpacing: "0.15em", margin: "0 0 8px" }}>
-                [AMSET — Écris tes remerciements ici]
-              </p>
-              <p style={{ fontFamily: F, fontSize: "9px", color: "#92400E", lineHeight: 1.7, margin: 0 }}>
-                Remercie : ta famille, les équipes de Galsen Gospel Urbain et Sunu Impact Festival, KEKELI Creative Agency, CMM, les artistes qui t'ont inspiré, les membres de ton église, les artistes qui ont cru en toi, et Dieu en premier.
-              </p>
-            </div>
-            <Body>Ce livre n'aurait pas vu le jour sans le soutien de...</Body>
-            <Body>Je remercie en premier lieu Dieu, source de tout...</Body>
-            <Body>À toute l'équipe de KEKELI Creative Agency, à CMM, aux équipes du Galsen Gospel Urbain et du Sunu Impact Festival...</Body>
+            <Body>Ce livre n'est pas le fruit d'un travail solitaire. Il est le résultat de rencontres, de soutiens, de grâces reçues et d'une communauté qui a toujours cru avant même que les résultats soient visibles.</Body>
+            <Body><strong>À Dieu en premier</strong> — source de tout talent, de toute vision, de toute persévérance. Ce livre n'existe que parce que Tu l'as voulu. À Toi toute la gloire.</Body>
+            <Body><strong>À ma femme Anna DeSion</strong> — pour ta patience, ton amour sans condition, et pour avoir cru en ce projet même dans les moments où moi-même je doutais. Tu es mon ancre et ma force. Et à mon fils <strong>Jotham</strong>, qui me rappelle chaque jour pour quelle génération je construis.</Body>
+            <Body><strong>À toute ma famille</strong>, de près et de loin — vos prières, vos encouragements et votre amour m'ont porté bien au-delà de ce que je méritais.</Body>
+            <Body><strong>À l'équipe de KEKELI Creative Agency</strong> — pour avoir cru en la vision, pour le travail acharné dans l'ombre, et pour faire de chaque projet une œuvre qui porte la lumière. Ce livre porte votre empreinte.</Body>
+            <Body><strong>À la communauté Galsen Gospel Urbain</strong> — vous êtes la preuve vivante que l'excellence gospel est possible depuis Dakar. Chaque artiste de cette communauté m'inspire à donner plus et à exiger davantage de moi-même.</Body>
+            <Body><strong>À toute l'équipe du Sunu Impact Festival</strong> — pour votre engagement à créer des espaces où l'art africain est célébré avec dignité et ambition. Vous avez changé la conversation sur ce qu'un festival peut être en Afrique de l'Ouest.</Body>
+            <Body><strong>À CMM</strong> et à tous les partenaires qui ont soutenu le travail au fil des années — votre confiance a ouvert des portes que je n'aurais pas pu ouvrir seul.</Body>
+            <Body><strong>À tous les artistes</strong> qui m'ont fait confiance, qui ont partagé leurs histoires, leurs doutes et leurs victoires — ce livre est aussi le vôtre.</Body>
+            <Body>Et à toi, lecteur, qui as choisi d'investir ton temps dans ces pages — merci de croire que le sommet est possible. Ce livre a été écrit pour toi.</Body>
             <Body>À tous les artistes gospel sénégalais qui m'ont précédé et qui ont tracé un chemin...</Body>
           </div>
           <div style={{ padding: "10px 36px 14px", display: "flex", justifyContent: "space-between", borderTop: "1px solid #E5E1DC" }}>
