@@ -1,156 +1,41 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { X, Mail, User, Download, CheckCircle, Loader2, BookOpen } from "lucide-react";
 import FadeIn, { FadeInStagger, FadeInItem } from "@/components/animations/FadeIn";
 
 const GOLD = "#C8A84B";
 const DARK = "#0C0B09";
 
-/* ── 3D Book cover ───────────────────────────────────────────── */
-function Book3D({
-  title,
-  subtitle,
-  tag,
-  details,
-  coverGrad,
-  spineColor,
-  accentColor,
+/* ── Book image with hover effect ───────────────────────────── */
+function BookCover({
+  src,
+  alt,
   hovered,
 }: {
-  title: string;
-  subtitle: string;
-  tag: string;
-  details: string;
-  coverGrad: string;
-  spineColor: string;
-  accentColor: string;
+  src: string;
+  alt: string;
   hovered: boolean;
 }) {
-  const W = 160;
-  const H = 230;
-  const D = 26;
-
   return (
-    <div style={{ perspective: "1400px", display: "inline-block" }}>
-      <div
-        style={{
-          width: W,
-          height: H,
-          position: "relative",
-          transformStyle: "preserve-3d",
-          transform: hovered ? "rotateY(-8deg) translateY(-6px)" : "rotateY(-28deg)",
-          transition: "transform 0.45s cubic-bezier(0.22,1,0.36,1)",
-        }}
-      >
-        {/* Front cover */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: coverGrad,
-            borderRadius: "0 3px 3px 0",
-            padding: "16px 14px 14px",
-            display: "flex",
-            flexDirection: "column",
-            boxShadow: hovered
-              ? `6px 12px 48px rgba(0,0,0,0.7), 0 0 40px ${accentColor}30`
-              : "4px 8px 32px rgba(0,0,0,0.6)",
-            overflow: "hidden",
-          }}
-        >
-          {/* Top lines */}
-          <div style={{ borderTop: `2px solid ${accentColor}`, marginBottom: 4 }} />
-          <div style={{ borderTop: `1px solid ${accentColor}`, marginBottom: 10, opacity: 0.4 }} />
-
-          {/* Publisher */}
-          <p style={{ color: accentColor, fontSize: 7, letterSpacing: "0.22em", textTransform: "uppercase", margin: "0 0 6px", opacity: 0.8 }}>
-            KEKELI Creative Agency
-          </p>
-
-          {/* Tag pill */}
-          <span style={{
-            display: "inline-block", alignSelf: "flex-start",
-            background: `${accentColor}22`, color: accentColor,
-            fontSize: 7, padding: "2px 7px", borderRadius: 20,
-            letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 10,
-            border: `1px solid ${accentColor}40`,
-          }}>
-            {tag}
-          </span>
-
-          {/* Title */}
-          <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <h3 style={{
-              color: "#fff", fontSize: 16, fontWeight: 800,
-              lineHeight: 1.2, margin: "0 0 8px",
-              fontFamily: "var(--font-body)",
-              textShadow: "0 2px 8px rgba(0,0,0,0.4)",
-            }}>
-              {title}
-            </h3>
-            <p style={{ color: `${accentColor}CC`, fontSize: 8.5, lineHeight: 1.5, margin: 0, fontFamily: "var(--font-body)" }}>
-              {subtitle}
-            </p>
-          </div>
-
-          {/* Bottom details */}
-          <div style={{ borderTop: `1px solid ${accentColor}30`, paddingTop: 8, marginTop: 10 }}>
-            <p style={{ color: `${accentColor}80`, fontSize: 7, letterSpacing: "0.08em", margin: 0 }}>{details}</p>
-          </div>
-
-          {/* Watermark circle */}
-          <div style={{
-            position: "absolute", bottom: -16, right: -16,
-            width: 70, height: 70, borderRadius: "50%",
-            border: `1px solid ${accentColor}`, opacity: 0.1,
-          }} />
-          <div style={{
-            position: "absolute", bottom: -6, right: -6,
-            width: 40, height: 40, borderRadius: "50%",
-            border: `1px solid ${accentColor}`, opacity: 0.08,
-          }} />
-
-          {/* K watermark */}
-          <p style={{
-            position: "absolute", bottom: 8, right: 10,
-            fontSize: 32, fontWeight: 900, color: `${accentColor}12`,
-            margin: 0, fontFamily: "var(--font-display)", lineHeight: 1,
-          }}>K</p>
-        </div>
-
-        {/* Spine */}
-        <div
-          style={{
-            position: "absolute", left: 0, top: 0,
-            width: D, height: "100%",
-            background: spineColor,
-            transformOrigin: "right center",
-            transform: "rotateY(-90deg)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            overflow: "hidden",
-          }}
-        >
-          <p style={{
-            color: `${accentColor}60`, fontSize: 6,
-            writingMode: "vertical-rl", transform: "rotate(180deg)",
-            letterSpacing: "0.18em", textTransform: "uppercase",
-            whiteSpace: "nowrap", margin: 0,
-          }}>
-            KEKELI · {title.slice(0, 18)}
-          </p>
-        </div>
-
-        {/* Pages — right edge */}
-        <div
-          style={{
-            position: "absolute", right: 0, top: 1, bottom: 1, width: D,
-            background: "repeating-linear-gradient(90deg,#f5f0eb 0,#f5f0eb 1px,#ece6dc 2px,#f0ebe3 4px,#f5f0eb 5px)",
-            transformOrigin: "left center",
-            transform: "rotateY(90deg)",
-          }}
-        />
-      </div>
+    <div
+      style={{
+        width: 180,
+        position: "relative",
+        transform: hovered ? "translateY(-8px) scale(1.03)" : "translateY(0) scale(1)",
+        transition: "transform 0.45s cubic-bezier(0.22,1,0.36,1)",
+        filter: hovered ? "drop-shadow(0 24px 40px rgba(0,0,0,0.7))" : "drop-shadow(0 12px 24px rgba(0,0,0,0.5))",
+      }}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        width={180}
+        height={254}
+        className="rounded-lg object-cover w-full"
+        style={{ aspectRatio: "9/13" }}
+      />
     </div>
   );
 }
@@ -311,8 +196,7 @@ const BOOKS = [
     details: "47 modules · 239 pages · Édition 2026",
     description: "De l'identité artistique à la monétisation — tout ce qu'un artiste sénégalais doit maîtriser pour percer : branding, réseaux sociaux, distribution, droits BSDA, booking et bien plus.",
     chips: ["Branding", "TikTok & Instagram", "Distribution", "Droits d'auteur", "Monétisation"],
-    coverGrad: "linear-gradient(145deg, #5B21B6 0%, #3B0764 55%, #1E0438 100%)",
-    spineColor: "#2D0B52",
+    image: "/images/book-artiste.jpg",
     accentColor: GOLD,
   },
   {
@@ -323,8 +207,7 @@ const BOOKS = [
     details: "38 modules · 195 pages · Édition 2026",
     description: "Communication digitale, identité visuelle, site web, réseaux sociaux et publicité — le guide complet pour les entrepreneurs sénégalais qui veulent se développer avec impact.",
     chips: ["Identité visuelle", "Site web", "Community management", "Publicité Meta/Google", "Stratégie"],
-    coverGrad: "linear-gradient(145deg, #1C1409 0%, #2D1E04 45%, #3D2A06 75%, #1C1409 100%)",
-    spineColor: "#1C1409",
+    image: "/images/book-entrepreneur.png",
     accentColor: GOLD,
   },
 ] as const;
@@ -376,16 +259,11 @@ export default function BooksDownload() {
                 >
                   {/* Book visual + info side by side */}
                   <div className="flex items-start gap-7 mb-6">
-                    {/* 3D Book */}
+                    {/* Book cover image */}
                     <div className="shrink-0">
-                      <Book3D
-                        title={book.title}
-                        subtitle={book.subtitle}
-                        tag={book.tag}
-                        details={book.details}
-                        coverGrad={book.coverGrad}
-                        spineColor={book.spineColor}
-                        accentColor={book.accentColor}
+                      <BookCover
+                        src={book.image}
+                        alt={book.title}
                         hovered={hovered === book.type}
                       />
                     </div>
