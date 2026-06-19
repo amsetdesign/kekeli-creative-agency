@@ -6,21 +6,23 @@ import { X, Mail, Phone, ChevronRight, Archive, Eye, Download, CheckSquare, Squa
 import type { Lead } from "@/lib/supabase";
 
 const TYPE_LABELS = {
-  contact:    "Contact",
-  brief:      "Brief",
-  sondage:    "Sondage",
-  artiste:    "🎤 Artiste",
-  entreprise: "🏢 Entreprise",
-  projet:     "📋 Projet",
+  contact:        "Contact",
+  brief:          "Brief",
+  sondage:        "Sondage",
+  artiste:        "🎤 Artiste",
+  entreprise:     "🏢 Entreprise",
+  projet:         "📋 Projet",
+  guide_download: "📥 Téléchargement",
 } as const;
 
 const TYPE_COLORS = {
-  contact:    "bg-blue-50 text-blue-700 border-blue-200",
-  brief:      "bg-amber-50 text-amber-700 border-amber-200",
-  sondage:    "bg-violet-50 text-violet-700 border-violet-200",
-  artiste:    "bg-pink-50 text-pink-700 border-pink-200",
-  entreprise: "bg-sky-50 text-sky-700 border-sky-200",
-  projet:     "bg-teal-50 text-teal-700 border-teal-200",
+  contact:        "bg-blue-50 text-blue-700 border-blue-200",
+  brief:          "bg-amber-50 text-amber-700 border-amber-200",
+  sondage:        "bg-violet-50 text-violet-700 border-violet-200",
+  artiste:        "bg-pink-50 text-pink-700 border-pink-200",
+  entreprise:     "bg-sky-50 text-sky-700 border-sky-200",
+  projet:         "bg-teal-50 text-teal-700 border-teal-200",
+  guide_download: "bg-purple-50 text-purple-700 border-purple-200",
 } as const;
 
 const STATUS_COLORS = {
@@ -37,9 +39,10 @@ const STATUS_LABELS = {
 
 function getLeadName(lead: Lead): string {
   const d = lead.data;
-  if (lead.type === "artiste")    return d.nom_artiste as string ?? "—";
-  if (lead.type === "entreprise") return d.nom_entreprise as string ?? "—";
-  if (lead.type === "projet")     return d.client_name as string ?? "—";
+  if (lead.type === "artiste")        return d.nom_artiste as string ?? "—";
+  if (lead.type === "entreprise")     return d.nom_entreprise as string ?? "—";
+  if (lead.type === "projet")         return d.client_name as string ?? "—";
+  if (lead.type === "guide_download") return d.name as string ?? "—";
   if (lead.type === "sondage") {
     const ui = d.userInfo as Record<string, string> | undefined;
     return ui?.prenom ?? "—";
@@ -49,7 +52,8 @@ function getLeadName(lead: Lead): string {
 
 function getLeadEmail(lead: Lead): string {
   const d = lead.data;
-  if (lead.type === "projet") return d.client_email as string ?? "—";
+  if (lead.type === "projet")         return d.client_email as string ?? "—";
+  if (lead.type === "guide_download") return d.email as string ?? "—";
   if (lead.type === "sondage") {
     const ui = d.userInfo as Record<string, string> | undefined;
     return ui?.email as string ?? "—";

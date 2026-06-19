@@ -12,7 +12,7 @@ import NewsletterPanel, { type NewsletterSubscriber } from "@/components/admin/N
 import BlogPanel, { type BlogPost as AdminBlogPost } from "@/components/admin/BlogPanel";
 import {
   Users, MessageSquare, Zap, BarChart2, Sparkles,
-  FolderOpen, Mic2, Building2, Mail, FileText,
+  FolderOpen, Mic2, Building2, Mail, FileText, BookDown,
 } from "lucide-react";
 
 export const metadata: Metadata = { title: "Dashboard — KEKELI Admin" };
@@ -96,6 +96,10 @@ export default async function AdminDashboard({
   const briefCount      = leads.filter((l) => l.type === "brief").length;
   const contactCount    = leads.filter((l) => l.type === "contact").length;
   const sondageCount    = leads.filter((l) => l.type === "sondage").length;
+  const guideDownloads  = leads.filter((l) => l.type === "guide_download");
+  const guideTotal      = guideDownloads.length;
+  const guideArtiste    = guideDownloads.filter((l) => (l.data as Record<string,unknown>).guide === "artiste").length;
+  const guideEntreprise = guideDownloads.filter((l) => (l.data as Record<string,unknown>).guide === "entreprise").length;
   const activeClients   = clients.filter((c) => c.status === "active").length;
   const pendingClients  = clients.filter((c) => c.status === "pending").length;
   const activeProjects  = projects.filter((p) => p.status === "en_cours").length;
@@ -112,11 +116,13 @@ export default async function AdminDashboard({
     conversations: conversations.length,
     newsletter: activeSubscribers,
     blog: blogPosts.filter((p) => p.published).length,
+    guides: guideTotal,
   };
 
   /* ── Filtered leads for sub-tabs ── */
   const artisteLeadsList    = leads.filter((l) => l.type === "artiste");
   const entrepriseLeadsList = leads.filter((l) => l.type === "entreprise");
+  const guideLeadsList      = leads.filter((l) => l.type === "guide_download");
 
   return (
     <>
@@ -149,6 +155,14 @@ export default async function AdminDashboard({
                 <StatCard icon={<Mic2 size={16} />}          label="Leads artistes"   value={artisteLeads}    sub={newArtiste > 0 ? `${newArtiste} nouveau${newArtiste > 1 ? "x" : ""}` : undefined} color="#EC4899" accent={newArtiste > 0} />
                 <StatCard icon={<Building2 size={16} />}     label="Leads entreprises" value={entrepriseLeads} sub={newEntreprise > 0 ? `${newEntreprise} nouveau${newEntreprise > 1 ? "x" : ""}` : undefined} color="#3B82F6" accent={newEntreprise > 0} />
                 <StatCard icon={<Zap size={16} />}           label="Briefs / Contacts" value={briefCount + contactCount} color="#F97316" />
+              </div>
+
+              {/* Stats row — Téléchargements livres */}
+              <SectionTitle>Téléchargements des livres</SectionTitle>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+                <StatCard icon={<BookDown size={16} />} label="Total téléchargements" value={guideTotal} color="#8B5CF6" accent={guideTotal > 0} />
+                <StatCard icon={<Mic2 size={16} />}     label="Du Talent au Sommet"    value={guideArtiste}    sub="Guide artiste" color="#EC4899" />
+                <StatCard icon={<Building2 size={16} />} label="Guide Entrepreneur"    value={guideEntreprise} sub="Guide entrepreneur" color="#3B82F6" />
               </div>
 
               {/* Stats row 2 — Gestion */}
@@ -263,6 +277,31 @@ export default async function AdminDashboard({
                 </div>
               </div>
               <NewsletterPanel subscribers={newsletter} />
+            </>
+          )}
+
+          {/* ── GUIDES / TÉLÉCHARGEMENTS ── */}
+          {tab === "guides" && (
+            <>
+              <div className="mb-6 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#8B5CF620" }}>
+                  <BookDown size={18} style={{ color: "#8B5CF6" }} />
+                </div>
+                <div>
+                  <h1 className="font-display text-2xl text-[#0C0B09]">Téléchargements des livres</h1>
+                  <p className="font-body text-sm text-[#78716C]">
+                    {guideTotal} téléchargement{guideTotal !== 1 ? "s" : ""} total
+                    {guideArtiste > 0 && ` · ${guideArtiste} Du Talent au Sommet`}
+                    {guideEntreprise > 0 && ` · ${guideEntreprise} Guide Entrepreneur`}
+                  </p>
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-4 mb-6">
+                <StatCard icon={<BookDown size={16} />}   label="Total"               value={guideTotal}      color="#8B5CF6" accent />
+                <StatCard icon={<Mic2 size={16} />}       label="Du Talent au Sommet"  value={guideArtiste}    color="#EC4899" />
+                <StatCard icon={<Building2 size={16} />}  label="Guide Entrepreneur"   value={guideEntreprise} color="#3B82F6" />
+              </div>
+              <LeadsTable leads={guideLeadsList} />
             </>
           )}
 

@@ -6,7 +6,7 @@ import { useTransition } from "react";
 import { useRouter } from "next/navigation";
 import {
   LayoutDashboard, MessageSquare, Mic2, Building2,
-  Users, FolderOpen, Sparkles, ExternalLink, LogOut, Map, BookOpen, Music, Briefcase, Mail, FileText,
+  Users, FolderOpen, Sparkles, ExternalLink, LogOut, Map, BookOpen, Music, Briefcase, Mail, FileText, BookDown,
 } from "lucide-react";
 import { logout } from "@/app/admin/actions";
 
@@ -33,6 +33,7 @@ const NAV = [
       { id: "conversations", icon: Sparkles,    label: "Conversations IA",  tab: "conversations", color: "#06B6D4" },
       { id: "newsletter",    icon: Mail,        label: "Newsletter",        tab: "newsletter",    color: "#10B981" },
       { id: "blog",          icon: FileText,    label: "Blog",              tab: "blog",          color: "#C8A84B" },
+      { id: "guides",        icon: BookDown,    label: "Livres téléchargés", tab: "guides",        color: "#8B5CF6" },
     ],
   },
   {
@@ -61,6 +62,7 @@ interface Props {
     conversations: number;
     newsletter: number;
     blog: number;
+    guides: number;
   };
 }
 
@@ -77,6 +79,7 @@ export default function AdminSidebar({ counts }: Props) {
     clients:       counts.pending > 0      ? { count: counts.pending,      color: "#8B5CF6" } : undefined,
     projects:      counts.active > 0       ? { count: counts.active,       color: "#F97316" } : undefined,
     conversations: counts.conversations > 0 ? { count: counts.conversations, color: "#06B6D4" } : undefined,
+    guides:        counts.guides > 0       ? { count: counts.guides,       color: "#8B5CF6" } : undefined,
   };
 
   const totals: Record<string, number> = {
