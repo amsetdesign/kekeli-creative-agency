@@ -3029,7 +3029,7 @@ export default function EbookArtisteViewer() {
 
       <ContentPage chapter="Module 20 — Artiste Gospel" accent={GOLD} pageNum={114} total={TOTAL} guideLabel={LABEL}>
         <SH2 color={DARK}>La distinction fondamentale : Chantre vs Artiste Gospel</SH2>
-        <Body>Cette distinction est fondamentale et souvent incomprise en Afrique de l'Ouest. Elle est notamment développée dans l'ouvrage de référence <em>«Guide Pratique de l'Artiste Gospel»</em> de Carlyle Ovono (AAIM Music Business, 2023) — une ressource complémentaire recommandée à la fin de ce guide.</Body>
+        <Body>Cette distinction est fondamentale et souvent incomprise en Afrique de l'Ouest. Beaucoup d'artistes gospel démarrent leur parcours sans jamais l'avoir clairement définie — et c'est précisément ce flou qui freine leur développement professionnel. Ce module y répond de façon directe.</Body>
         <MiniTable color={GOLD}
           headers={["Critère", "Le Chantre", "L'Artiste Gospel"]}
           rows={[
@@ -5157,8 +5157,7 @@ export default function EbookArtisteViewer() {
 
         <SH3 color={GOLD}>Ouvrages de référence</SH3>
         <BulletList color={GOLD} items={[
-          { bold: "Carlyle Ovono (2023) —", text: "Guide Pratique de l'Artiste Gospel : Cas pratique Gospel Gabonais. AAIM Music Business. Dakar/Libreville." },
-          { bold: "James Clear (2018) —", text: "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones. Penguin Random House." },
+{ bold: "James Clear (2018) —", text: "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones. Penguin Random House." },
           { bold: "Donald Miller (2017) —", text: "Building a StoryBrand. HarperCollins Leadership." },
           { bold: "Russell Brunson (2015) —", text: "DotCom Secrets. Morgan James Publishing." },
           { bold: "Allan Dib (2016) —", text: "The 1-Page Marketing Plan. Successwise." },
