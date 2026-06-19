@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
+import { readFileSync } from "fs";
+import { join } from "path";
 import { resend, SITE_URL } from "@/lib/resend";
-import { generateGuide, type GuideType } from "@/lib/pdf/generateGuide";
 import { getSupabase } from "@/lib/supabase";
+
+type GuideType = "artiste" | "entreprise";
 
 const VALID: GuideType[] = ["artiste", "entreprise"];
 
@@ -19,8 +22,8 @@ export async function POST(req: NextRequest) {
     }
 
     const book = BOOKS[type as GuideType];
-    const arrayBuffer = generateGuide(type as GuideType);
-    const content = Buffer.from(arrayBuffer);
+    const pdfPath = join(process.cwd(), "public", "guides", book.filename);
+    const content = readFileSync(pdfPath);
 
     // Send email with PDF attachment
     await resend.emails.send({
