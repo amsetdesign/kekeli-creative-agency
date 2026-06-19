@@ -9,7 +9,6 @@ const IAToolsSection = dynamic(() => import("@/components/sections/IAToolsSectio
 const PortfolioPreview = dynamic(() => import("@/components/sections/PortfolioPreview"));
 const ProfileGuides  = dynamic(() => import("@/components/sections/ProfileGuides"));
 const SondageTeaser  = dynamic(() => import("@/components/sections/SondageTeaser"));
-const AboutQuick     = dynamic(() => import("@/components/sections/AboutQuick"));
 const ContactCTA     = dynamic(() => import("@/components/sections/ContactCTA"));
 
 export const metadata: Metadata = {
@@ -86,7 +85,6 @@ export default function Home() {
       <PortfolioPreview />
       <ProfileGuides />
       <SondageTeaser />
-      <AboutQuick />
       <ContactCTA />
     </>
   );
