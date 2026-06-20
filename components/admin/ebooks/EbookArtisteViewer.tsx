@@ -203,45 +203,6 @@ export default function EbookArtisteViewer() {
         </div>
       </div>
 
-      {/* ══════════════════════════════════════════════════ */}
-      {/* P4 — PRÉFACE [PLACEHOLDER PERSONNALITÉ EXTERNE]  */}
-      {/* ══════════════════════════════════════════════════ */}
-      <div className="ebook-page" style={{
-        width: "210mm", minHeight: "297mm", background: CREAM,
-        display: "flex", pageBreakAfter: "always",
-      }}>
-        <div style={{ width: "5px", flexShrink: 0, background: `linear-gradient(180deg, ${ACC} 0%, ${ACC}88 100%)` }} />
-        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-          <div style={{ padding: "10px 36px", flexShrink: 0, background: DARK, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 700, color: ACC, letterSpacing: "0.2em", textTransform: "uppercase", margin: 0 }}>Préface</p>
-          </div>
-          <div style={{ flex: 1, padding: "24px 36px 16px" }}>
-            <p style={{ fontFamily: FD, fontSize: "24px", fontWeight: 700, color: DARK, margin: "0 0 6px" }}>Préface</p>
-            <div style={{ width: "36px", height: "2px", background: `linear-gradient(90deg, ${ACC}, transparent)`, margin: "0 0 20px" }} />
-
-            <Body>Il y a des livres qui arrivent au bon moment. Pas par hasard — par nécessité.</Body>
-            <Body>Depuis que nous avons fondé KEKELI Creative Agency à Dakar, nous avons accompagné des dizaines d'artistes sénégalais et africains dans leur parcours. Des artistes au talent indéniable, à la voix puissante, au message profond. Et pourtant, beaucoup d'entre eux butaient sur le même mur invisible : ils ne savaient pas comment transformer ce talent en carrière durable. Ils ne manquaient pas de don. Ils manquaient de méthode.</Body>
-            <Body>C'est dans ce contexte que nous avons rencontré Amset. Artiste gospel, fondateur du Galsen Gospel Urbain, promoteur du Sunu Impact Festival — Amset n'est pas seulement quelqu'un qui chante. C'est quelqu'un qui a compris, souvent à la dure, ce que signifie construire une carrière artistique en Afrique de l'Ouest avec foi, stratégie et persévérance.</Body>
-            <Body>Ce livre, il ne l'a pas écrit depuis une position confortable. Il l'a écrit depuis l'intérieur du voyage — avec les cicatrices des doutes, les victoires des premières scènes, et la clarté que seule l'expérience vraie peut donner. Chaque module de ce guide est une leçon que lui-même a vécue, testée ou observée sur le terrain dakarois et africain.</Body>
-            <Callout color={ACC} title="Pourquoi ce guide est différent" text="Il ne parle pas de la musique depuis un bureau parisien ou new-yorkais. Il parle de la réalité de l'artiste africain — les plateformes de streaming depuis Dakar, les droits BSDA, la distribution sur Boomplay, les cachets en FCFA, les concerts à Thiès ou à Abidjan. C'est un guide fait ici, pour ici, par quelqu'un d'ici." />
-            <Body>L'industrie musicale africaine est en train de vivre sa révolution. TikTok a créé des stars du jour au lendemain. Boomplay compte plus de 100 millions d'utilisateurs actifs. Les artistes africains dominent les charts mondiaux. Mais derrière chaque success story visible, il y a des centaines d'artistes qui cherchent encore leur chemin — sans carte, sans boussole, sans mentor.</Body>
-            <Body><strong>Du Talent au Sommet</strong> est cette carte. Cette boussole. Ce mentor mis en livre.</Body>
-            <Body>Chez KEKELI Creative Agency, nous croyons que l'Afrique a suffisamment de talent pour dominer la scène musicale mondiale. Ce qui manque, ce n'est pas le don — c'est l'accès à la connaissance stratégique. Ce guide comble ce manque avec générosité, précision et authenticité.</Body>
-            <Body>À toi qui lis ces lignes : tu tiens entre les mains plus qu'un livre. Tu tiens une feuille de route vers la carrière que tu mérites. Applique chaque module. Reviens-y. Partage-le. Et rappelle-toi que le sommet n'est pas réservé à ceux qui ont le plus de chance — il appartient à ceux qui ont la vision, la stratégie, et la foi pour y monter.</Body>
-
-            {/* Signature */}
-            <div style={{ marginTop: "20px", paddingTop: "16px", borderTop: "1px solid #E5DFD0" }}>
-              <p style={{ fontFamily: FD, fontSize: "14px", fontStyle: "italic", color: DARK, margin: "0 0 3px" }}>Avec fierté et conviction,</p>
-              <p style={{ fontFamily: F, fontSize: "11px", fontWeight: 700, color: ACC, margin: "0 0 2px" }}>KEKELI Creative Agency</p>
-              <p style={{ fontFamily: F, fontSize: "9px", color: "#78716C", margin: 0 }}>Agence de communication créative · Dakar, Sénégal · 2026</p>
-            </div>
-          </div>
-          <div style={{ padding: "10px 36px 14px", display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #E5E1DC" }}>
-            <p style={{ fontFamily: F, fontSize: "8px", color: "#B0A89E", margin: 0 }}>KEKELI Creative Agency — {LABEL}</p>
-            <p style={{ fontFamily: F, fontSize: "8px", color: "#B0A89E", margin: 0 }}>4 / {TOTAL}</p>
-          </div>
-        </div>
-      </div>
 
       {/* ══════════════════════════════════════════════════ */}
       {/* P5 — MOT DE L'AUTEUR (Amset — Avant-Propos)      */}
@@ -281,41 +242,6 @@ export default function EbookArtisteViewer() {
         </div>
       </div>
 
-      {/* ══════════════════════════════════════════════════ */}
-      {/* P6 — REMERCIEMENTS [PLACEHOLDER]                 */}
-      {/* ══════════════════════════════════════════════════ */}
-      <div className="ebook-page" style={{
-        width: "210mm", minHeight: "297mm", background: CREAM,
-        display: "flex", pageBreakAfter: "always",
-      }}>
-        <div style={{ width: "5px", flexShrink: 0, background: `linear-gradient(180deg, ${ACC} 0%, ${ACC}88 100%)` }} />
-        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-          <div style={{ padding: "10px 36px", flexShrink: 0, background: DARK }}>
-            <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 700, color: ACC, letterSpacing: "0.2em", textTransform: "uppercase", margin: 0 }}>Remerciements</p>
-          </div>
-          <div style={{ flex: 1, padding: "24px 36px 16px" }}>
-            <p style={{ fontFamily: FD, fontSize: "24px", fontWeight: 700, color: DARK, margin: "0 0 16px" }}>Remerciements</p>
-            <Body>Ce livre n'est pas le fruit d'un travail solitaire. Il est le résultat de rencontres, de soutiens, de grâces reçues et d'une communauté qui a toujours cru avant même que les résultats soient visibles.</Body>
-            <Body><strong>À Dieu en premier</strong> — source de tout talent, de toute vision, de toute persévérance. Ce livre n'existe que parce que Tu l'as voulu. À Toi toute la gloire.</Body>
-            <Body><strong>À ma femme Anna DeSion</strong> — pour ta patience, ton amour sans condition, et pour avoir cru en ce projet même dans les moments où moi-même je doutais. Tu es mon ancre et ma force. Et à mon fils <strong>Jotham</strong>, qui me rappelle chaque jour pour quelle génération je construis.</Body>
-            <Body><strong>À toute ma famille</strong>, de près et de loin — vos prières, vos encouragements et votre amour m'ont porté bien au-delà de ce que je méritais.</Body>
-            <Body><strong>À l'équipe de KEKELI Creative Agency</strong> — pour avoir cru en la vision, pour le travail acharné dans l'ombre, et pour faire de chaque projet une œuvre qui porte la lumière. Ce livre porte votre empreinte.</Body>
-            <Body><strong>À la communauté Galsen Gospel Urbain</strong> — vous êtes la preuve vivante que l'excellence gospel est possible depuis Dakar. Chaque artiste de cette communauté m'inspire à donner plus et à exiger davantage de moi-même.</Body>
-            <Body><strong>À toute l'équipe du Sunu Impact Festival</strong> — pour votre engagement à créer des espaces où l'art africain est célébré avec dignité et ambition. Vous avez changé la conversation sur ce qu'un festival peut être en Afrique de l'Ouest.</Body>
-            <Body><strong>À CMM</strong> et à tous les partenaires qui ont soutenu le travail au fil des années — votre confiance a ouvert des portes que je n'aurais pas pu ouvrir seul.</Body>
-            <Body><strong>À toute l'équipe d'organisation du Galsen Gospel Urbain et du Sunu Impact Festival</strong> — derrière chaque événement réussi, il y a des bras qui travaillent dans l'ombre. Vous savez qui vous êtes. Merci.</Body>
-            <Body>Une mention spéciale et sincère à des personnes qui ont marqué ce parcours de leur présence, leur soutien et leur foi : <strong>Emmanuel Lhebreux, Jean Michel Zié, ID Music, Dany Governor, Covenant Mic, Tahicia, Odeline, Jeriel, Benie Merveilles, Pierre Damien</strong> et <strong>Murphy Fall</strong>. Chacun d'entre vous a apporté quelque chose d'unique — une parole au bon moment, une porte ouverte, une main tendue, une prière. Je n'oublie pas.</Body>
-            <Body><strong>À la communauté "Amset — Today na today"</strong> — vous qui suivez, encouragez, partagez et priez depuis le début. Votre fidélité est le carburant qui m'a permis de continuer les jours difficiles. Ce livre est autant le vôtre que le mien.</Body>
-            <Body><strong>À tous ceux qui croient en cette vision que Dieu a mise dans mon cœur</strong> — même quand les résultats ne se voyaient pas encore, vous avez cru. Cette foi collective a été plus forte que tous les doutes.</Body>
-            <Body><strong>À tous les artistes</strong> qui m'ont fait confiance, qui ont partagé leurs histoires, leurs doutes et leurs victoires — ce livre est aussi le vôtre.</Body>
-            <Body>Et à toi, lecteur, qui as choisi d'investir ton temps dans ces pages — merci de croire que le sommet est possible. Ce livre a été écrit pour toi.</Body>
-          </div>
-          <div style={{ padding: "10px 36px 14px", display: "flex", justifyContent: "space-between", borderTop: "1px solid #E5E1DC" }}>
-            <p style={{ fontFamily: F, fontSize: "8px", color: "#B0A89E", margin: 0 }}>KEKELI Creative Agency — {LABEL}</p>
-            <p style={{ fontFamily: F, fontSize: "8px", color: "#B0A89E", margin: 0 }}>6 / {TOTAL}</p>
-          </div>
-        </div>
-      </div>
 
       {/* ══════════════════════════════════════════════════ */}
       {/* P2 — QUOTE (décalée à 7)                         */}
