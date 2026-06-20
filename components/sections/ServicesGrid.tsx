@@ -12,48 +12,49 @@ import { useT } from "@/hooks/useT";
 
 const ease: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
-const GOLD   = "#C8A84B";
-const VIOLET = "#4B0082";
-const NAVY   = "#000080";
+const GOLD   = "gold";
+const VIOLET = "violet";
+const NAVY   = "navy";
 
 type CardTheme = {
   bg: string;
+  accentBar: string;
   text: string;
   textMuted: string;
   iconBg: string;
   iconColor: string;
   linkColor: string;
-  borderTop: string;
 };
 
 function getTheme(accent: string): CardTheme {
+  // Gauche — fond sombre chaud (ambré), pour les services Artiste
   if (accent === GOLD) return {
-    bg:        "linear-gradient(145deg, #C8A84B 0%, #A8882B 100%)",
+    bg:        "linear-gradient(145deg, #1C1306 0%, #251A00 100%)",
+    accentBar: "#C8A84B",
     text:      "#FFFFFF",
-    textMuted: "rgba(255,255,255,0.72)",
-    iconBg:    "rgba(255,255,255,0.20)",
-    iconColor: "#FFFFFF",
-    linkColor: "#FFFFFF",
-    borderTop: "rgba(255,255,255,0.25)",
+    textMuted: "rgba(255,240,200,0.45)",
+    iconBg:    "rgba(200,168,75,0.15)",
+    iconColor: "#C8A84B",
+    linkColor: "#C8A84B",
   };
+  // Droite — fond sombre froid (bleu nuit), pour les services Entreprise
   if (accent === VIOLET) return {
-    bg:        "linear-gradient(145deg, #5B1092 0%, #3A006A 100%)",
+    bg:        "linear-gradient(145deg, #07091C 0%, #0C1132 100%)",
+    accentBar: "#A78BFA",
     text:      "#FFFFFF",
-    textMuted: "rgba(255,255,255,0.62)",
-    iconBg:    "rgba(255,255,255,0.14)",
-    iconColor: "#E9D5FF",
-    linkColor: "#E9D5FF",
-    borderTop: "rgba(255,255,255,0.18)",
+    textMuted: "rgba(200,210,255,0.45)",
+    iconBg:    "rgba(167,139,250,0.13)",
+    iconColor: "#A78BFA",
+    linkColor: "#A78BFA",
   };
-  // NAVY
   return {
-    bg:        "linear-gradient(145deg, #1E3A8A 0%, #000070 100%)",
+    bg:        "linear-gradient(145deg, #07091C 0%, #0C1132 100%)",
+    accentBar: "#818CF8",
     text:      "#FFFFFF",
-    textMuted: "rgba(255,255,255,0.62)",
-    iconBg:    "rgba(255,255,255,0.14)",
-    iconColor: "#BFDBFE",
-    linkColor: "#BFDBFE",
-    borderTop: "rgba(255,255,255,0.18)",
+    textMuted: "rgba(200,210,255,0.45)",
+    iconBg:    "rgba(129,140,248,0.13)",
+    iconColor: "#818CF8",
+    linkColor: "#818CF8",
   };
 }
 
@@ -65,7 +66,7 @@ export default function ServicesGrid() {
     { icon: Camera,        label: tr.services.photo,           desc: tr.services.photoDesc,           href: "/artistes/photo",           accent: VIOLET, span: "" },
     { icon: Smartphone,    label: tr.services.apps,            desc: tr.services.appsDesc,            href: "/entreprises/applications", accent: NAVY,   span: "" },
     { icon: Video,         label: tr.services.clips,           desc: tr.services.clipsDesc,           href: "/artistes/clips",           accent: GOLD,   span: "" },
-    { icon: MessageSquare, label: tr.services.community,       desc: tr.services.communityDesc,       href: "/entreprises/community",    accent: VIOLET, span: "" },
+    { icon: MessageSquare, label: tr.services.community,       desc: tr.services.communityDesc,       href: "/entreprises/community",    accent: GOLD,   span: "" },
     { icon: Monitor,       label: tr.services.website,         desc: tr.services.websiteDesc,         href: "/entreprises/site-web",     accent: NAVY,   span: "lg:col-span-2" },
     { icon: Megaphone,     label: tr.services.ads,             desc: tr.services.adsDesc,             href: "/entreprises/publicite",    accent: GOLD,   span: "lg:col-span-2" },
     { icon: Headphones,    label: tr.services.distribution,    desc: tr.services.distributionDesc,    href: "/artistes/distribution",    accent: VIOLET, span: "" },
@@ -73,12 +74,12 @@ export default function ServicesGrid() {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden" style={{ background: "#F7F4EE" }}>
+    <section className="py-20 relative overflow-hidden" style={{ background: "#F0EDE6" }}>
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 15% 50%, rgba(75,0,130,0.05) 0%, transparent 55%), radial-gradient(circle at 85% 50%, rgba(0,0,128,0.05) 0%, transparent 55%)",
+            "radial-gradient(ellipse at 25% 50%, rgba(200,168,75,0.06) 0%, transparent 55%), radial-gradient(ellipse at 75% 50%, rgba(100,80,200,0.06) 0%, transparent 55%)",
         }}
       />
 
@@ -110,18 +111,13 @@ export default function ServicesGrid() {
                     className="group relative rounded-2xl overflow-hidden cursor-pointer flex flex-col h-full min-h-[170px]"
                     style={{
                       background: theme.bg,
-                      boxShadow: "0 4px 20px rgba(0,0,0,0.14), 0 1px 4px rgba(0,0,0,0.08)",
+                      boxShadow: "0 8px 32px rgba(0,0,0,0.22), 0 2px 6px rgba(0,0,0,0.14)",
                     }}
                   >
-                    {/* Subtle top shine */}
+                    {/* Colored accent bar */}
                     <div
-                      className="absolute top-0 left-0 right-0 h-px"
-                      style={{ background: theme.borderTop }}
-                    />
-                    {/* Decorative glow spot */}
-                    <div
-                      className="absolute -top-8 -right-8 w-32 h-32 rounded-full blur-[40px] opacity-30 pointer-events-none"
-                      style={{ background: "rgba(255,255,255,0.4)" }}
+                      className="absolute top-0 left-0 right-0 h-[3px]"
+                      style={{ background: theme.accentBar }}
                     />
 
                     <div className="relative z-10 p-6 flex flex-col flex-1">
