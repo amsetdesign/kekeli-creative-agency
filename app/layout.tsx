@@ -47,12 +47,36 @@ export const metadata: Metadata = {
   },
 };
 
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://kekelicreativeagency.com/#organization",
+  name: "KEKELI Creative Agency",
+  url: "https://kekelicreativeagency.com",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://kekelicreativeagency.com/images/logo-kekeli.png",
+    width: 512,
+    height: 512,
+  },
+  sameAs: [
+    "https://www.instagram.com/kekeli_agency",
+    "https://www.facebook.com/kekelicreativeagency",
+    "https://www.linkedin.com/company/kekeli-creative-agency",
+    "https://www.youtube.com/@kekelicreativeagency",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr" className={`${cormorant.variable} ${lato.variable}`}>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZR10E0WGB" />
         <script dangerouslySetInnerHTML={{ __html: `
           window.dataLayer = window.dataLayer || [];
