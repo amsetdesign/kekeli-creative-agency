@@ -124,9 +124,9 @@ export default function EbookArtisteViewer() {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "16px" }}>
               {[
                 { label: "Auteur", value: "Amset" },
-                { label: "Agence créative", value: "KEKELI Creative Agency" },
-                { label: "Email", value: "kekelicreativeagency@gmail.com" },
-                { label: "WhatsApp", value: "+221 78 167 28 19" },
+                { label: "Éditeur", value: "KEKELI Creative Agency" },
+                { label: "Site web", value: "kekelicreativeagency.com" },
+                { label: "Contact", value: "contact@kekelicreativeagency.com" },
                 { label: "Ville", value: "Dakar, Sénégal" },
                 { label: "Édition", value: "Première édition — 2026" },
               ].map((c) => (
@@ -5812,8 +5812,7 @@ export default function EbookArtisteViewer() {
             ["SubmitHub", "Pitching playlists & blogs", "submithub.com"],
             ["Metricool", "Gestion multi-réseaux sociaux", "metricool.com"],
             ["Linktree", "Page de liens centrale", "linktr.ee"],
-            ["KEKELI Creative Agency", "Branding, clips, stratégie digitale, outils IA", "kekelicreativeagency@gmail.com"],
-            ["KEKELI WhatsApp", "Contact direct — réponse sous 24h", "+221 78 167 28 19"],
+            ["KEKELI Creative Agency", "Branding, clips, stratégie digitale, outils IA", "kekelicreativeagency.com"],
             ["KEKELI Instagram", "Contenus, inspirations, actualités", "@kekeli_agency"],
             ["KEKELI YouTube", "Tutoriels, cases études, guides", "@kekelicreativeagency"],
           ]}

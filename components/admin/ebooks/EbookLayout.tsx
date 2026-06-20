@@ -220,7 +220,7 @@ export function CoverPage({
 
         {/* Footer */}
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "14px", display: "flex", justifyContent: "space-between" }}>
-          <p style={{ fontFamily: F, fontSize: "9px", color: "rgba(255,255,255,0.2)", margin: 0 }}>kekelicreativeagency@gmail.com</p>
+          <p style={{ fontFamily: F, fontSize: "9px", color: "rgba(255,255,255,0.2)", margin: 0 }}>kekelicreativeagency.com</p>
           <p style={{ fontFamily: F, fontSize: "9px", color: "rgba(255,255,255,0.2)", margin: 0 }}>Édition 2026 — Dakar, Sénégal</p>
         </div>
       </div>
@@ -419,11 +419,10 @@ export function ClosingPage({
           <p style={{ fontFamily: F, fontSize: "12px", color: "rgba(255,255,255,0.4)", lineHeight: 1.75, maxWidth: "360px", margin: "0 0 36px" }}>
             L'équipe KEKELI accompagne artistes et entreprises à chaque étape de leur développement.
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "12px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
             {[
               { label: "Site web", value: "kekelicreativeagency.com" },
-              { label: "Email", value: "kekelicreativeagency@gmail.com" },
-              { label: "WhatsApp", value: "+221 78 167 28 19" },
+              { label: "Contact", value: "contact@kekelicreativeagency.com" },
             ].map((c) => (
               <div key={c.label} style={{ padding: "12px 14px", borderRadius: "8px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.07)" }}>
                 <p style={{ fontFamily: F, fontSize: "8px", color: "rgba(255,255,255,0.25)", textTransform: "uppercase", letterSpacing: "0.1em", margin: "0 0 4px" }}>{c.label}</p>
