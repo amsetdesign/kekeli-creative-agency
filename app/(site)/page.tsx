@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Hero from "@/components/sections/Hero";
 import ServicesGrid from "@/components/sections/ServicesGrid";
+import AudienceSection from "@/components/sections/AudienceSection";
 
 // Lazy-load below-fold sections — only Hero + ServicesGrid load immediately
 const KELIBanner     = dynamic(() => import("@/components/sections/KELIBanner"));
@@ -115,6 +116,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Hero />
+      <AudienceSection />
       <ServicesGrid />
       <KELIBanner />
       <IAToolsSection />
