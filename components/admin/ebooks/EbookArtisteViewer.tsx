@@ -1575,6 +1575,40 @@ export default function EbookArtisteViewer() {
         ]} />
       </ContentPage>
 
+      <ContentPage chapter="Module 06 — Spotify" accent={GRN} pageNum={37} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>Les Curateurs Indépendants Spotify : Comment y entrer vraiment</SH2>
+        <Body>Les playlists des curateurs indépendants sont souvent plus accessibles que les playlists éditoriaux de Spotify, et peuvent générer des milliers de streams qualifiés. Voici la méthode complète.</Body>
+        <SH3 color={GRN}>Plateformes pour soumettre à des curateurs</SH3>
+        <MiniTable color={GRN}
+          headers={["Plateforme", "Coût", "Comment ça marche", "Pour qui"]}
+          rows={[
+            ["SubmitHub (submithub.com)", "Gratuit (crédits basiques) ou premium", "Envoie ton son à des centaines de curateurs avec feedback garanti sous 48h", "Tous artistes — start ici en priorité"],
+            ["Groover (groover.co)", "Payant (autour de 2€/soumission)", "Curateurs et médias garantissent une écoute et une réponse. Très professionnel.", "Artistes avec budget promo"],
+            ["Playlist Push (playlistpush.com)", "Payant (dès 10$)", "Matching automatique avec des curateurs selon ton genre", "Artistes anglophone + international"],
+            ["Indie Music Academy", "Payant", "Focus sur YouTube + Spotify, très adapté artistes indépendants", "Artistes indie et gospel"],
+          ]}
+        />
+        <SH3 color={GRN}>Méthode : contacter un curateur directement</SH3>
+        <NumberedList color={GRN} items={[
+          "TROUVE LE CURATEUR — Sur Spotify, cherche des playlists avec des mots-clés : «gospel africain», «afro gospel», «gospel urban», «worship francophone». Clique sur la playlist et cherche le nom du curateur.",
+          "IDENTIFIE-LE EN DEHORS DE SPOTIFY — Cherche ce nom sur Instagram, Twitter/X, LinkedIn ou SubmitHub. Beaucoup de curateurs ont des profils publics.",
+          "PRÉPARE TON PITCH — Message court (moins de 100 mots) : qui tu es, ton genre, un lien Spotify direct vers ton titre, pourquoi tu penses qu'il correspond à sa playlist.",
+          "CONTACTE-LE — Via SubmitHub si présent, ou directement en DM Instagram/Twitter. Ne jamais envoyer le fichier audio brut — toujours un lien Spotify.",
+          "SUIS ET ENGAGE — Avant d'envoyer ton pitch, suis le curateur sur ses réseaux, commente ses posts. Un curateur qui te connaît a plus de chances de placer ton titre.",
+        ]} />
+        <SH3 color={GRN}>Playlists gospel africain à cibler en priorité</SH3>
+        <Body>Pour trouver des playlists gospel africaines et francophones sur Spotify, voici des mots-clés de recherche à utiliser directement dans la barre de recherche Spotify :</Body>
+        <BulletList color={GRN} items={[
+          { bold: "«Gospel Africain 2026» :", text: "Playlists générales gospel africain — souvent gérées par des fans ou communautés chrétiennes" },
+          { bold: "«Louange et Adoration Francophone» :", text: "Playlists worship en français — diaspora africaine et francophone" },
+          { bold: "«Africa Gospel Hits» :", text: "Playlists anglophone/francophone mixées — très partagées dans les communautés" },
+          { bold: "«Christian Music Africa» :", text: "Playlists internationales avec gospel africain — accès à la diaspora mondiale" },
+          { bold: "«Gospel Senegal» ou «Gospel Dakar» :", text: "Si ces playlists n'existent pas encore — crée-les toi-même et deviens le curateur de référence" },
+        ]} />
+        <Callout color={AMB} title="Astuce : Deviens toi-même un curateur"
+          text="Crée une playlist «Gospel Urbain Sénégal» sur Spotify avec tes titres + les meilleurs artistes gospel sénégalais (Fulgence Gackou, Nushca, Covenant Mic, etc.). Partage-la. Si d'autres artistes veulent y figurer, tu deviens un curateur influent — et tu augmentes ta visibilité par effet de levier." />
+      </ContentPage>
+
       <ContentPage chapter="Module 06 — Spotify" accent={GRN} pageNum={38} total={TOTAL} guideLabel={LABEL}>
         <SH2 color={DARK}>Stratégie pour atteindre 1 000 000 de streams</SH2>
         <Body>1 million de streams Spotify = environ 3 000 à 5 000 $ de royalties (selon les pays d'écoute). Voici le chemin réaliste.</Body>
@@ -1631,6 +1665,28 @@ export default function EbookArtisteViewer() {
             ["Shorts Fund", "Intégré au YPP depuis 2024", "Revenus publicitaires sur Shorts"],
           ]}
         />
+        <Divider color={SEC} />
+        <SH3 color={SEC}>YouTube monetisation : pays africains éligibles en 2026</SH3>
+        <Body>Le Programme Partenaire YouTube (YPP) est disponible dans de nombreux pays africains. Bonne nouvelle : le Sénégal en fait partie. Voici les pays africains francophones et anglophones les plus importants où la monétisation est active :</Body>
+        <MiniTable color={SEC}
+          headers={["Pays", "YPP Disponible", "Remarque"]}
+          rows={[
+            ["Sénégal 🇸🇳", "✅ OUI", "Monétisable — active ton YPP dès maintenant"],
+            ["Côte d'Ivoire 🇨🇮", "✅ OUI", "Marché en croissance rapide"],
+            ["Mali 🇲🇱", "✅ OUI", "Eligible YPP"],
+            ["Cameroun 🇨🇲", "✅ OUI", "Eligible YPP"],
+            ["Niger 🇳🇪", "✅ OUI", "Eligible"],
+            ["Burkina Faso 🇧🇫", "✅ OUI", "Eligible"],
+            ["Bénin 🇧🇯", "✅ OUI", "Eligible"],
+            ["Togo 🇹🇬", "✅ OUI", "Eligible"],
+            ["Nigeria 🇳🇬", "✅ OUI", "Très grand marché, revenus plus élevés"],
+            ["Ghana 🇬🇭", "✅ OUI", "CPM plus élevé qu'en Afrique francophone"],
+            ["Kenya 🇰🇪", "✅ OUI", "Marché tech avancé"],
+            ["Afrique du Sud 🇿🇦", "✅ OUI", "Meilleurs CPM d'Afrique"],
+          ]}
+        />
+        <Callout color={AMB} title="Comment activer la monétisation depuis le Sénégal"
+          text="Va dans YouTube Studio → Monétisation → Rejoindre le YPP. Tu auras besoin d'un compte Google AdSense avec un mode de paiement valide (virement bancaire, ou via un compte Wave Business si disponible). Le seuil minimum de paiement AdSense est de 70 $ avant le premier virement." />
       </ContentPage>
 
       <ContentPage chapter="Module 07 — YouTube" accent={SEC} pageNum={41} total={TOTAL} guideLabel={LABEL}>
@@ -1714,7 +1770,7 @@ export default function EbookArtisteViewer() {
               <span style={{ fontSize: "18px" }}>▶</span>
             </div>
             <div>
-              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: "#CC0000", textTransform: "uppercase", letterSpacing: "0.1em", margin: 0 }}>KEKELI Academy · Ressource Pratique</p>
+              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: "#CC0000", textTransform: "uppercase", letterSpacing: "0.1em", margin: 0 }}>Aliyah Youth Academy · Ressource Pratique</p>
               <p style={{ fontFamily: F, fontSize: "10px", fontWeight: 700, color: DARK, margin: "2px 0 0" }}>Formation YouTube Pro — Tutoriels complets</p>
             </div>
           </div>
@@ -1724,7 +1780,7 @@ export default function EbookArtisteViewer() {
           <a href="https://drive.google.com/drive/folders/1sOzBKGTPzVKG-rbi3ezmg6QOwt0dYFoQ?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", padding: "7px 14px", borderRadius: "6px", background: "#FF0000", textDecoration: "none", marginRight: "8px" }}>
             <span style={{ fontFamily: F, fontSize: "9px", fontWeight: 700, color: "#fff" }}>📂 Accéder à la formation YouTube →</span>
           </a>
-          <p style={{ fontFamily: F, fontSize: "7.5px", color: "#9CA3AF", margin: "6px 0 0" }}>Lien : drive.google.com → Formation YouTube KEKELI Academy</p>
+          <p style={{ fontFamily: F, fontSize: "7.5px", color: "#9CA3AF", margin: "6px 0 0" }}>Lien : drive.google.com → Formation YouTube Aliyah Youth Academy</p>
         </div>
       </ContentPage>
 
@@ -1739,7 +1795,7 @@ export default function EbookArtisteViewer() {
           "CE MOIS — Lance au moins 3 YouTube Shorts (60 secondes) extraits de tes contenus existants. Les Shorts attirent de nouveaux abonnés qui découvrent ensuite tes vidéos longues.",
           "EN CONTINU — Analyse chaque mois : taux de clics (CTR cible : 4%+), durée de visionnage (60%+), abonnements depuis les vidéos. Duplique ce qui fonctionne, abandonne ce qui ne performe pas.",
         ]} />
-        <Banner text="Ta chaîne YouTube est la seule plateforme où ton contenu te paie encore 5 ans après la publication." sub="youtube.com/studio · tubebuddy.com (analyse gratuite) · Formation YouTube KEKELI Academy" color={SEC} dark />
+        <Banner text="Ta chaîne YouTube est la seule plateforme où ton contenu te paie encore 5 ans après la publication." sub="youtube.com/studio · tubebuddy.com (analyse gratuite) · Formation YouTube Aliyah Youth Academy" color={SEC} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════ */}
@@ -1836,7 +1892,7 @@ export default function EbookArtisteViewer() {
               <span style={{ fontFamily: F, fontSize: "12px", fontWeight: 900, color: "#fff" }}>ADS</span>
             </div>
             <div>
-              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: "#1877F2", textTransform: "uppercase", letterSpacing: "0.1em", margin: 0 }}>KEKELI Academy · Publicité Digitale</p>
+              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: "#1877F2", textTransform: "uppercase", letterSpacing: "0.1em", margin: 0 }}>Aliyah Youth Academy · Publicité Digitale</p>
               <p style={{ fontFamily: F, fontSize: "10px", fontWeight: 700, color: DARK, margin: "2px 0 0" }}>Formations Meta Ads + YouTube Ads — Accès complet</p>
             </div>
           </div>
@@ -1865,7 +1921,7 @@ export default function EbookArtisteViewer() {
           "CE MOIS — Pour YouTube Ads, ouvre Google Ads (ads.google.com) et crée une campagne In-Stream Skippable ciblant le Sénégal + diaspora avec tes mots-clés musicaux. Budget minimum : 30 000 FCFA pour tester.",
           "EN CONTINU — Jamais de campagne sans un contenu fort. La règle d'or : si une vidéo ne génère pas d'engagement organique, la publicité ne sauvera pas une mauvaise vidéo — elle accélérera son échec. Commence toujours par optimiser le contenu avant d'investir.",
         ]} />
-        <Banner text="50 000 FCFA investis intelligemment en pub > 5 000 FCFA gaspillés en boost Instagram sans stratégie." sub="business.facebook.com · ads.google.com · Formation Meta Ads + YouTube Ads KEKELI Academy" color={BLU} dark />
+        <Banner text="50 000 FCFA investis intelligemment en pub > 5 000 FCFA gaspillés en boost Instagram sans stratégie." sub="business.facebook.com · ads.google.com · Formation Meta Ads + YouTube Ads Aliyah Youth Academy" color={BLU} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════ */}
@@ -1975,7 +2031,7 @@ export default function EbookArtisteViewer() {
       </ContentPage>
 
       <ContentPage chapter="Module 09 — TikTok" accent={SEC} pageNum={54} total={TOTAL} guideLabel={LABEL}>
-        <SH2 color={DARK}>Monétiser TikTok</SH2>
+        <SH2 color={DARK}>Monétiser TikTok — et ce que tu peux vraiment gagner depuis l'Afrique</SH2>
         <MiniTable color={SEC}
           headers={["Source de revenus", "Condition", "Revenus estimés"]}
           rows={[
@@ -1986,8 +2042,23 @@ export default function EbookArtisteViewer() {
             ["Promotion de tes propres concerts", "Toute taille d'audience", "Ventes directes de billets"],
           ]}
         />
-        <Callout color={GRN} title="La vraie monétisation TikTok"
-          text="Ne compte pas sur les revenus directs TikTok — ils sont minuscules. La vraie valeur de TikTok est de construire une audience qui achète tes concerts, tes produits dérivés, et attire des marques locales (opérateurs télécom, boissons, mode) pour des partenariats." />
+        <Divider color={SEC} />
+        <SH3 color={SEC}>TikTok monetisation par pays africain — La vérité en 2026</SH3>
+        <Body>Contrairement à YouTube, la monétisation directe TikTok (Creator Fund, Creativity Program) est encore très limitée en Afrique. Voici l'état actuel :</Body>
+        <MiniTable color={SEC}
+          headers={["Programme TikTok", "Pays africains éligibles", "Disponible au Sénégal ?"]}
+          rows={[
+            ["TikTok Creativity Program Beta", "USA, UK, France, Allemagne, Brésil, Japon, Corée — PAS encore l'Afrique", "❌ NON"],
+            ["TikTok LIVE Gifts (cadeaux en live)", "Plus de pays — Sénégal potentiellement inclus si compte créé correctement", "⚠️ À vérifier dans les paramètres"],
+            ["TikTok Series (contenu payant)", "En expansion, certains pays africains inclus", "⚠️ À vérifier selon ton compte"],
+            ["TikTok Creator Marketplace (marques)", "Disponible si ton compte est populaire — marques locales sénégalaises possibles", "✅ OUI via marques locales"],
+            ["Sons TikTok via DistroKid", "Mondial — quand quelqu'un utilise ton son dans sa vidéo", "✅ OUI — royalties partout"],
+          ]}
+        />
+        <Callout color={AMB} title="⚠️ La réalité TikTok pour les artistes africains en 2026"
+          text="Le Creator Fund TikTok n'est PAS disponible au Sénégal ni dans la plupart des pays africains francophones. NE compte pas sur les revenus directs TikTok. Utilise TikTok pour construire une audience massive, puis monétise via tes concerts, tes streams Spotify/YouTube, et tes partenariats avec des marques locales (opérateurs télécom, banques mobiles, boissons). C'est là que l'argent africain se trouve vraiment." />
+        <Callout color={GRN} title="La vraie monétisation TikTok au Sénégal"
+          text="La vraie valeur de TikTok est de construire une audience qui achète tes concerts, tes produits dérivés, et attire des marques locales. 10 000 vrais fans TikTok sénégalais valent plus que 100 000 followers sans engagement." />
         <div style={{ margin: "12px 0", padding: "14px 16px", borderRadius: "10px", background: "linear-gradient(135deg, #0D0D0D08, #EC489908)", border: "2px solid #EC489925", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", top: "10px", right: "12px", background: "#EC4899", borderRadius: "4px", padding: "2px 8px" }}>
             <span style={{ fontFamily: F, fontSize: "7px", fontWeight: 800, color: "#fff", textTransform: "uppercase", letterSpacing: "0.08em" }}>FORMATION INCLUSE</span>
@@ -1997,7 +2068,7 @@ export default function EbookArtisteViewer() {
               <span style={{ fontFamily: F, fontSize: "14px", fontWeight: 900, color: "#fff" }}>♪</span>
             </div>
             <div>
-              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: "#EC4899", textTransform: "uppercase", letterSpacing: "0.1em", margin: 0 }}>KEKELI Academy · Réseau Social</p>
+              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: "#EC4899", textTransform: "uppercase", letterSpacing: "0.1em", margin: 0 }}>Aliyah Youth Academy · Réseau Social</p>
               <p style={{ fontFamily: F, fontSize: "10px", fontWeight: 700, color: DARK, margin: "2px 0 0" }}>Formation TikTok Pro — Tutoriels complets</p>
             </div>
           </div>
@@ -2007,7 +2078,7 @@ export default function EbookArtisteViewer() {
           <a href="https://drive.google.com/drive/folders/1688rB68G39Edmql2wRxvmz5QTVdbatfx?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", padding: "7px 14px", borderRadius: "6px", background: "linear-gradient(135deg, #010101, #EC4899)", textDecoration: "none" }}>
             <span style={{ fontFamily: F, fontSize: "9px", fontWeight: 700, color: "#fff" }}>📂 Accéder à la formation TikTok →</span>
           </a>
-          <p style={{ fontFamily: F, fontSize: "7.5px", color: "#9CA3AF", margin: "6px 0 0" }}>Lien : drive.google.com → Formation TikTok KEKELI Academy</p>
+          <p style={{ fontFamily: F, fontSize: "7.5px", color: "#9CA3AF", margin: "6px 0 0" }}>Lien : drive.google.com → Formation TikTok Aliyah Youth Academy</p>
         </div>
       </ContentPage>
 
@@ -2022,7 +2093,7 @@ export default function EbookArtisteViewer() {
           "CE MOIS — Fais 3 duos ou coutures (Stitch) avec des créateurs de ta niche ayant 10 000 à 100 000 abonnés. C'est la méthode la plus rapide pour accéder à leur audience sans payer.",
           "EN CONTINU — Chaque lundi matin : 15 minutes d'analyse TikTok Analytics. Taux de complétion cible : 80%+. Si une vidéo atteint 50% de complétion minimum dans les 2 premières heures, double la mise en la boostant par Spark Ads (5 000 FCFA min).",
         ]} />
-        <Banner text="3 vidéos par jour × 30 jours = 90 expériences. L'algorithme TikTok récompense la constance, pas le talent." sub="tiktok.com/creators · Formation TikTok Pro KEKELI Academy" color={SEC} dark />
+        <Banner text="3 vidéos par jour × 30 jours = 90 expériences. L'algorithme TikTok récompense la constance, pas le talent." sub="tiktok.com/creators · Formation TikTok Pro Aliyah Youth Academy" color={SEC} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════ */}
@@ -2141,7 +2212,7 @@ export default function EbookArtisteViewer() {
               <span style={{ fontFamily: F, fontSize: "18px" }}>📸</span>
             </div>
             <div>
-              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: "#C13584", textTransform: "uppercase", letterSpacing: "0.1em", margin: 0 }}>KEKELI Academy · Instagram & Meta</p>
+              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: "#C13584", textTransform: "uppercase", letterSpacing: "0.1em", margin: 0 }}>Aliyah Youth Academy · Instagram & Meta</p>
               <p style={{ fontFamily: F, fontSize: "10px", fontWeight: 700, color: DARK, margin: "2px 0 0" }}>Formation Meta Ads — Valable Instagram ET Facebook</p>
             </div>
           </div>
@@ -2165,7 +2236,7 @@ export default function EbookArtisteViewer() {
           "CE MOIS — Engage-toi avec 20 comptes de ta niche chaque jour : laisse des commentaires sincères de 3 mots minimum (pas juste des emojis). Cette méthode génère des abonnements organiques sans publicité.",
           "EN CONTINU — Chaque semaine, consulte Instagram Insights : taux d'engagement cible 3-5%+, Reels avec meilleur reach à dupliquer. Si un Reel dépasse 10 000 vues organiquement, fais-en une version 2 dans les 48h.",
         ]} />
-        <Banner text="Un profil Instagram bien configuré travaille pour toi même quand tu dors — it's your 24/7 booking agent." sub="linktr.ee · later.com (planification) · Formation Meta Ads KEKELI Academy" color={ACC} dark />
+        <Banner text="Un profil Instagram bien configuré travaille pour toi même quand tu dors — it's your 24/7 booking agent." sub="linktr.ee · later.com (planification) · Formation Meta Ads Aliyah Youth Academy" color={ACC} dark />
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════ */}
@@ -2187,7 +2258,7 @@ export default function EbookArtisteViewer() {
         <SH3 color={GRN}>Statuts WhatsApp : minimum 5 par jour</SH3>
         <Body>Tes statuts doivent raconter ton quotidien artistique. Les gens regardent les statuts de manière passive — c'est une exposition gratuite et constante.</Body>
         <BulletList color={GRN} items={[
-          { bold: "Matin :", text: "Citation motivante ou verset (si artiste chrétien/musliman)" },
+          { bold: "Matin :", text: "Citation motivante ou verset (si artiste chrétien/musulman)" },
           { bold: "Midi :", text: "Extrait de ton morceau ou BTS studio" },
           { bold: "Après-midi :", text: "Annonce ou nouvelle (sortie, concert, collab)" },
           { bold: "Soir :", text: "Remerciement, interaction avec fans, question" },
@@ -2373,8 +2444,15 @@ export default function EbookArtisteViewer() {
       </ContentPage>
 
       <ContentPage chapter="Module 13 — Droits & BSDA" accent={GOLD} pageNum={73} total={TOTAL} guideLabel={LABEL}>
-        <SH2 color={DARK}>Le BSDA : Bureau Sénégalais du Droit d'Auteur</SH2>
-        <Body>Le BSDA est l'organisme officiel de gestion collective des droits d'auteur au Sénégal. Il collecte les redevances auprès des diffuseurs (radios, TV, organisateurs d'événements) et les redistribue aux artistes inscrits.</Body>
+        <SH2 color={DARK}>Le BSDA et la SODAV : les deux structures de droits au Sénégal</SH2>
+        <Body>Le Sénégal dispose de deux structures institutionnelles pour la gestion des droits d'auteur et des droits voisins. Comprendre leur rôle respectif est indispensable pour toucher toutes tes redevances légitimes.</Body>
+        <MiniTable color={GOLD}
+          headers={["Structure", "Rôle", "Ce qu'elle collecte"]}
+          rows={[
+            ["BSDA (Bureau Sénégalais du Droit d'Auteur)", "Organisme officiel, droits d'auteur et droits voisins", "Redevances radio, TV, événements publics, copie privée"],
+            ["SODAV (Société Sénégalaise du Droit d'Auteur et des droits Voisins)", "Société de gestion collective, gestion des droits en partenariat avec le BSDA", "Droits voisins des artistes-interprètes et des producteurs"],
+          ]}
+        />
         <SH3 color={GOLD}>Comment s'inscrire au BSDA</SH3>
         <NumberedList color={GOLD} items={[
           "Se présenter au BSDA (Avenue Roume, Dakar) avec CNI + 2 photos d'identité",
@@ -2385,10 +2463,75 @@ export default function EbookArtisteViewer() {
           "Mettre à jour régulièrement son catalogue à chaque nouvelle sortie",
         ]} />
         <Callout color={GOLD} title="⚠️ Important"
-          text="Les droits BSDA ne sont perçus que si tu es inscrit ET si tes œuvres sont déclarées. Des artistes sénégalais populaires ont perdu des années de redevances faute d'inscription. L'argent est collecté mais non distribué — il finit dans les caisses générales." />
+          text="Les droits BSDA/SODAV ne sont perçus que si tu es inscrit ET si tes œuvres sont déclarées. Des artistes sénégalais populaires ont perdu des années de redevances faute d'inscription. L'argent est collecté mais non distribué — il finit dans les caisses générales." />
+        <Divider color={GOLD} />
+        <SH3 color={GOLD}>La SACEM Internationale : pour les droits hors Sénégal</SH3>
+        <Body>La SACEM (Société des Auteurs, Compositeurs et Éditeurs de Musique) est l'organisme français de gestion collective. Elle est pertinente pour toi dans deux cas :</Body>
+        <BulletList color={GOLD} items={[
+          { bold: "Diaspora et diffusion internationale :", text: "Quand ta musique est diffusée en France ou dans d'autres pays francophones, c'est la SACEM qui collecte les droits de performance. Elle reverse ensuite une partie à la BSDA via des accords de réciprocité entre sociétés CISAC." },
+          { bold: "Affiliation directe :", text: "Si tu résides en France ou si tu y travailles régulièrement, tu peux t'affilier directement à la SACEM. Depuis l'étranger, tu peux aussi y déposer tes œuvres via le formulaire en ligne (sacem.fr) pour bénéficier de la réciprocité internationale." },
+          { bold: "Réseau CISAC :", text: "Le BSDA est membre du CISAC (Confédération Internationale des Sociétés d'Auteurs et Compositeurs). Cela signifie que si tu es inscrit au BSDA, tes droits sont théoriquement collectés dans 120+ pays via les accords entre sociétés membres." },
+        ]} />
       </ContentPage>
 
       <ContentPage chapter="Module 13 — Droits & BSDA" accent={GOLD} pageNum={74} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>Comment se partagent les Royalties ? — Comprendre les pourcentages</SH2>
+        <Body>C'est une des questions les plus importantes et les moins comprises dans l'industrie musicale africaine. Il existe deux types de droits distincts, et ils ne se partagent pas de la même façon.</Body>
+        <SH3 color={GOLD}>Type 1 — Les droits d'auteur (composition)</SH3>
+        <Body>Ces droits appartiennent aux créateurs de l'œuvre musicale : les auteurs des paroles et les compositeurs de la mélodie. Ils sont divisés en deux parts :</Body>
+        <MiniTable color={GOLD}
+          headers={["Part", "À qui ?", "Pourcentage standard"]}
+          rows={[
+            ["Part auteur", "Celui qui a écrit les paroles", "50% des droits d'auteur"],
+            ["Part compositeur", "Celui qui a composé la musique/mélodie", "50% des droits d'auteur"],
+          ]}
+        />
+        <Callout color={GRN} title="Si tu as tout créé toi-même"
+          text="Si tu as écrit les paroles ET composé la mélodie, tu perçois 100% des droits d'auteur (auteur + compositeur). C'est l'avantage de l'artiste auteur-compositeur-interprète." />
+        <SH3 color={GOLD}>Type 2 — Les droits voisins (interprétation)</SH3>
+        <Body>Ces droits appartiennent aux artistes qui ont enregistré le son et aux producteurs du phonogramme (l'enregistrement). Ils sont distincts des droits d'auteur.</Body>
+        <MiniTable color={GOLD}
+          headers={["Bénéficiaire", "Pourcentage standard", "Rôle"]}
+          rows={[
+            ["Artiste principal (interprète)", "45%", "A enregistré et interprété le morceau"],
+            ["Artiste(s) de featuring", "15-20%", "A participé à l'enregistrement"],
+            ["Producteur phonographique", "30-35%", "A financé et produit l'enregistrement"],
+          ]}
+        />
+        <Divider color={GOLD} />
+        <SH3 color={GOLD}>Cas pratiques : Si tu paies un beatmaker ou des musiciens</SH3>
+        <TwoCol
+          left={<GreenBox>
+            <BoxLabel color={GRN} text="✅ Si tu as acheté le beat (exclusif payé)" />
+            <Body>Tu as acheté le droit exclusif d'utiliser ce beat. Le beatmaker n'a plus de droits sur ton enregistrement final. Il n'a pas droit à des royalties supplémentaires sur les streams ou les concerts — SAUF si le contrat de beat précise explicitement un partage de droits d'auteur. Lis toujours le contrat de beat avant de signer.</Body>
+          </GreenBox>}
+          right={<RedBox>
+            <BoxLabel color="#DC2626" text="⚠️ Si le beat était gratuit ou non-exclusif" />
+            <Body>Si tu as téléchargé un beat gratuit ou acheté une licence non-exclusive, le beatmaker conserve ses droits de compositeur. Il pourrait légitimement réclamer une part des droits d'auteur (jusqu'à 50% de la part compositeur). Toujours clarifier par écrit avant la sortie.</Body>
+          </RedBox>}
+        />
+        <TwoCol
+          left={<GreenBox>
+            <BoxLabel color={GRN} text="✅ Musiciens payés à la session (work-for-hire)" />
+            <Body>Si tu as payé des musiciens pour jouer sur ton morceau avec un accord écrit de «work-for-hire» (prestation de service), ils n'ont pas de droit sur les royalties futures. Leur paiement est leur seule rémunération. Fais signer un simple reçu mentionnant «cession de droits sur les enregistrements».</Body>
+          </GreenBox>}
+          right={<RedBox>
+            <BoxLabel color="#DC2626" text="⚠️ Musiciens sans contrat écrit" />
+            <Body>Sans contrat écrit, un musicien pourrait théoriquement revendiquer des droits d'artiste-interprète sur les enregistrements. C'est rare en pratique mais légalement possible. Protège-toi : un simple papier signé suffit pour éviter tout litige futur.</Body>
+          </RedBox>}
+        />
+        <SH3 color={GOLD}>Featuring : qui reçoit quoi ?</SH3>
+        <Body>En cas de featuring, les droits se négocient entre les artistes AVANT l'enregistrement. Voici les pratiques courantes :</Body>
+        <MiniTable color={GOLD}
+          headers={["Scénario", "Partage recommandé", "À formaliser"]}
+          rows={[
+            ["Artiste 1 = projet, Artiste 2 = refrain", "60-40% ou 70-30% en faveur de l'Artiste 1", "Split Sheet signé par les deux artistes avant sortie"],
+            ["Co-écriture équitable", "50-50% des droits d'auteur", "Split Sheet avec signature notariée recommandée"],
+            ["Featuring vocal uniquement (pas d'écriture)", "L'artiste feat. n'a pas de droits d'auteur — juste une part des droits voisins (artiste interprète)", "Contrat de feat. précisant l'absence de droits sur la composition"],
+          ]}
+        />
+        <Callout color={AMB} title="Le conseil le plus important sur les featurings"
+          text="Si le projet t'appartient (tu as tout écrit, financé, produit) et qu'un artiste fait simplement un refrain vocal, il a droit aux droits voisins d'interprète (sur les streams), mais PAS aux droits d'auteur sur la composition — à condition que ce soit clairement stipulé dans un contrat signé. Sans contrat = flou juridique. Protège-toi toujours par l'écrit, même entre amis." />
         <SH2 color={DARK}>L'ISRC : le code d'identité de ta musique</SH2>
         <Body>L'ISRC (International Standard Recording Code) est un code unique de 12 caractères qui identifie chaque enregistrement spécifique. C'est le numéro de série de ta chanson.</Body>
         <BulletList color={GOLD} items={[
@@ -2401,14 +2544,15 @@ export default function EbookArtisteViewer() {
         <SH3 color={GOLD}>Le Split Sheet : protège tes collaborations</SH3>
         <Body>Le Split Sheet est un document simple qui répartit les droits d'auteur d'une chanson entre tous les créateurs impliqués. Il doit être signé AVANT la sortie du morceau.</Body>
         <MiniTable color={GOLD}
-          headers={["Contributeur", "Rôle", "% Part"]}
+          headers={["Contributeur", "Rôle", "% Part (exemple)"]}
           rows={[
-            ["Artiste principal", "Interprète + co-auteur paroles", "40%"],
-            ["Auteur des paroles", "Auteur", "25%"],
-            ["Compositeur (beat)", "Compositeur musique", "25%"],
-            ["Producteur exécutif", "Production", "10%"],
+            ["Artiste principal (auteur + compositeur)", "Auteur des paroles + compositeur de la mélodie", "70%"],
+            ["Co-auteur des paroles", "A contribué à l'écriture des paroles", "15%"],
+            ["Beatmaker (si non-exclusif/accord de partage)", "A composé la base musicale", "15%"],
           ]}
         />
+        <Callout color={GRN} title="Règle d'or : le Split Sheet avant tout"
+          text="Avant chaque collaboration, chaque featuring, chaque utilisation d'un beat non-exclusif : imprime un Split Sheet, remplis-le, fais-le signer. Ce document de 2 pages t'évite des années de litige. Télécharge le modèle gratuit sur Split Sheet Generator (splitsheetgenerator.com)." />
       </ContentPage>
 
       <ContentPage chapter="Module 13 — Droits & BSDA" accent={GOLD} pageNum={75} total={TOTAL} guideLabel={LABEL}>
@@ -2842,7 +2986,7 @@ export default function EbookArtisteViewer() {
               <span style={{ fontFamily: F, fontSize: "18px" }}>f</span>
             </div>
             <div>
-              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: "#1877F2", textTransform: "uppercase", letterSpacing: "0.1em", margin: 0 }}>KEKELI Academy · Publicité Digitale</p>
+              <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 800, color: "#1877F2", textTransform: "uppercase", letterSpacing: "0.1em", margin: 0 }}>Aliyah Youth Academy · Publicité Digitale</p>
               <p style={{ fontFamily: F, fontSize: "10px", fontWeight: 700, color: DARK, margin: "2px 0 0" }}>Formation Facebook Ads Pro — Meta Business Manager</p>
             </div>
           </div>
@@ -2852,7 +2996,7 @@ export default function EbookArtisteViewer() {
           <a href="https://drive.google.com/drive/folders/1nxm2fVRsQWKVNtA_sPoz_rcxRLVf_oAX?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", padding: "7px 14px", borderRadius: "6px", background: "#1877F2", textDecoration: "none" }}>
             <span style={{ fontFamily: F, fontSize: "9px", fontWeight: 700, color: "#fff" }}>📂 Accéder à la formation Facebook Ads →</span>
           </a>
-          <p style={{ fontFamily: F, fontSize: "7.5px", color: "#9CA3AF", margin: "6px 0 0" }}>Lien : drive.google.com → Formation Facebook KEKELI Academy</p>
+          <p style={{ fontFamily: F, fontSize: "7.5px", color: "#9CA3AF", margin: "6px 0 0" }}>Lien : drive.google.com → Formation Facebook Aliyah Youth Academy</p>
         </div>
         <div style={{ marginTop: "16px", padding: "14px", borderRadius: "10px", background: `${GOLD}10`, border: `1px solid ${GOLD}30`, textAlign: "center" }}>
           <p style={{ fontFamily: FD, fontSize: "18px", color: DARK, margin: "0 0 4px" }}>Construis ta carrière avec intention.</p>
@@ -3282,19 +3426,40 @@ export default function EbookArtisteViewer() {
 
       <ContentPage chapter="Module 20 — Artiste Gospel" accent={GOLD} pageNum={118} total={TOTAL} guideLabel={LABEL}>
         <SH2 color={DARK}>Études de cas : Profiles Détaillés</SH2>
-        <div style={{ padding: "8px 12px", borderRadius: "8px", background: "#FFF8E7", border: "1px dashed #C8A84B", marginBottom: "8px" }}>
-          <p style={{ fontFamily: F, fontSize: "7.5px", fontWeight: 800, color: GOLD, textTransform: "uppercase", letterSpacing: "0.15em", margin: "0 0 4px" }}>
-            [DESIGNER — Insérer ici les photos officielles de chaque artiste (portrait HD, même style)]
-          </p>
-          <p style={{ fontFamily: F, fontSize: "8px", color: "#92400E", margin: 0 }}>
-            Photos recommandées : Amset (photo presse officielle), Deborah Lukalu, KS Bloom, Tito Prince — toutes en couleur, fond cohérent. Demander autorisation si nécessaire.
-          </p>
-        </div>
+        <Body>Ces artistes sont tes références directes. Chacun a construit une carrière avec une approche stratégique distincte. Analyse-les, adapte leurs méthodes à ta réalité sénégalaise.</Body>
         <ArtistCard name="Amset (Sénégal)" genre="Gospel Urbain · Wolof/Français" country="Dakar, Sénégal" followers="Fondateur Galsen Gospel Urbain" revenue="Stratégie gospel urbain africaine moderne" status="success" color={GOLD} />
         <ArtistCard name="Deborah Lukalu (Congo/UK)" genre="Gospel Contemporain" country="Congo / Royaume-Uni" followers="Millions de vues YouTube" revenue="Scènes internationales + streaming fort" status="success" color={GOLD} />
-        <ArtistCard name="KS Bloom (Nigeria)" genre="Gospel Contemporain Digital" country="Lagos, Nigeria" followers="Forte présence digitale" revenue="Carrière gospel entièrement digitale" status="success" color={GOLD} />
+        <ArtistCard name="KS Bloom (Côte d'Ivoire)" genre="Gospel Contemporain Digital" country="Abidjan, Côte d'Ivoire" followers="Forte présence digitale" revenue="Carrière gospel entièrement digitale" status="success" color={GOLD} />
         <ArtistCard name="Tito Prince" genre="Gospel / Worship Francophone" country="Afrique Francophone" followers="Communauté fidèle et engagée" revenue="Artiste worship francophone de référence" status="success" color={GOLD} />
         <Divider color={GOLD} />
+        <SH2 color={DARK}>Les Pionniers du Gospel Sénégalais — Ceux qui ont ouvert la voie</SH2>
+        <Callout color={GOLD} title="Hommage à feu Bernard Cissa — Légende du Gospel Sénégalais"
+          text="Bernard Cissa est une figure incontournable du gospel chrétien au Sénégal. Fondateur de Jokko Studio, l'un des premiers studios professionnels dédiés à la musique chrétienne à Dakar, et fondateur de Yakaar TV, une chaîne de télévision chrétienne qui a donné une plateforme à des dizaines d'artistes gospel sénégalais à une époque où ils n'avaient aucune visibilité. Son décès a laissé un vide immense dans la communauté gospel sénégalaise. Il est une preuve vivante que l'artiste gospel africain peut bâtir des infrastructures durables et professionnelles pour toute une génération. Ce livre lui rend hommage." />
+        <Body>Le Sénégal dispose d'une scène gospel riche, construite sur des décennies de travail par des artistes et bâtisseurs visionnaires. Voici les artistes gospel sénégalais qui ont marqué et continuent de marquer la scène :</Body>
+        <MiniTable color={GOLD}
+          headers={["Artiste", "Contribution", "Ce que tu peux apprendre"]}
+          rows={[
+            ["feu Bernard Cissa", "Fondateur de Jokko Studio + Yakaar TV — infrastructure gospel pro au Sénégal", "Penser au-delà de la musique : bâtir des structures qui servent toute une génération"],
+            ["Fulgence Gackou", "Artiste gospel sénégalais de référence, présence scénique marquante", "La performance live et la fidélité au message sont des piliers de longévité"],
+            ["Nushca", "Voix féminine puissante du gospel sénégalais contemporain", "La femme artiste gospel peut occuper le devant de la scène avec foi et professionnalisme"],
+            ["Covenant Mic", "Artiste gospel urbain sénégalais, son modern et message ancré", "Marier identité urbaine et foi chrétienne — l'authenticité comme marque de fabrique"],
+            ["Christophe Dasylva", "Artiste gospel sénégalais avec un univers musical distinctif", "Construire un univers sonore reconnaissable dès les premières secondes d'écoute"],
+            ["Philippe Coly", "Figure du gospel sénégalais, engagement communautaire fort", "Le rôle de l'artiste gospel dans la transformation sociale de sa communauté locale"],
+            ["Roubia Edoh", "Artiste gospel sénégalaise, voix et présence scénique remarquables", "La constance et la fidélité à sa vocation artistique comme stratégie de longévité"],
+          ]}
+        />
+        <Divider color={GOLD} />
+        <SH3 color={GOLD}>Le Gospel Urbain Francophone — Artistes de Référence hors Sénégal</SH3>
+        <Body>Ces artistes ont construit des carrières gospel en langue française et en langues africaines, dans la diaspora ou sur le continent. Ils représentent l'avenir du gospel africain francophone que tu dois connaître et étudier :</Body>
+        <BulletList color={GOLD} items={[
+          { bold: "David Okit :", text: "Artiste gospel francophone à la voix puissante, connu pour ses chants de louange profonds et son engagement communautaire. Une référence du gospel urbain francophone." },
+          { bold: "David Republic :", text: "Gospel urbain francophone moderne — son mélange de rap chrétien et de soul en fait un ambassadeur du gospel auprès des jeunes générations." },
+          { bold: "El Georges :", text: "Artiste gospel francophone qui allie authenticité vocale et sensibilité artistique. Présence marquante dans la sphère gospel africaine francophone." },
+          { bold: "Iron le Rappeur :", text: "Rap chrétien francophone — prouve que l'engagement et le message évangélique peuvent habiter le flow rap le plus moderne. Une inspiration pour les artistes gospel urbains." },
+          { bold: "Conozco :", text: "Gospel urban francophone avec une approche artistique contemporaine. Représente la nouvelle génération d'artistes gospel qui refusent de séparer excellence artistique et foi." },
+        ]} />
+        <Callout color={AMB} title="Le marché gospel francophone africain est ton terrain"
+          text="Ces artistes — sénégalais et francophones — te montrent qu'il existe un marché, un public et une communauté pour le gospel africain francophone. Étudie-les, entre en contact avec eux, envisage des collaborations. Le gospel sénégalais a tout pour devenir LA référence du gospel africain francophone — et c'est ton rôle d'y contribuer." />
         <SH3 color={GOLD}>Ce que font les artistes gospel qui réussissent en 2026</SH3>
         <BulletList color={GOLD} items={[
           { bold: "Identité musicale africaine forte :", text: "Pas une copie du gospel américain — une identité propre, avec les instruments et les langues locales" },
@@ -3305,7 +3470,7 @@ export default function EbookArtisteViewer() {
           { bold: "Performances live mémorables :", text: "CeCe Winans et Deborah Lukalu — la scène est l'endroit où les fans deviennent des convertis" },
         ]} />
         <Callout color={GOLD} title="Le vide à combler au Sénégal"
-          text="Moses Bliss représente le Nigeria. Dena Mwana représente les Congolais de France. KS Bloom représente le gospel digital nigérian. Deborah Lukalu représente le gospel africain anglophone. Qui représente le gospel sénégalais au niveau mondial ? Ce vide est ton opportunité." />
+          text="Moses Bliss représente le Nigeria. Dena Mwana représente les Congolais de France. KS Bloom représente le gospel digital ivoirien. Deborah Lukalu représente le gospel africain anglophone. Qui représente le gospel sénégalais au niveau mondial ? Ce vide est ton opportunité." />
       </ContentPage>
 
       <ContentPage chapter="Module 20 — Artiste Gospel" accent={GOLD} pageNum={119} total={TOTAL} guideLabel={LABEL}>
@@ -3338,7 +3503,7 @@ export default function EbookArtisteViewer() {
           "CE MOIS — Contacte 3 autres artistes gospel sénégalais pour une collaboration. L'audience gospel est très ouverte aux collaborations entre artistes de même foi — les audiences croisées fonctionnent exceptionnellement bien dans ce genre.",
           "EN CONTINU — Rappel constant : le gospel n'est pas un obstacle commercial — c'est ton avantage différentiel. Le marché gospel africain digital est sous-exploité. Qui représente le gospel sénégalais au niveau mondial ? Ce vide est ton opportunité.",
         ]} />
-        <Banner text="Le gospel africain est le segment le moins compétitif et le plus sous-exploité du digital en Afrique francophone." sub="Moses Bliss · Nathaniel Bassey · Dena Mwana · KS Bloom — étudie leurs méthodes, pas seulement leur son." color={GOLD} dark />
+        <Banner text="Le gospel africain est le segment le moins compétitif et le plus sous-exploité du digital en Afrique francophone." sub="Moses Bliss · Nathaniel Bassey · Dena Mwana · KS Bloom (CI) — étudie leurs méthodes, pas seulement leur son." color={GOLD} dark />
       </ContentPage>
 
       {/* ── MODULE 21 : BUDGET COMPLET (P119–P126) ── */}
@@ -4176,16 +4341,23 @@ export default function EbookArtisteViewer() {
         <MiniTable color={SEC}
           headers={["Étape", "Action", "Délai avant le concert"]}
           rows={[
-            ["Concept & lieu", "Définir le format, réserver la salle, estimer la capacité", "3 — 4 mois avant"],
-            ["Budget", "Chiffrer les coûts (salle, son, lumière, communication)", "3 mois avant"],
-            ["Équipe", "Son, lumière, sécurité, accueil, photographe officiel", "2 — 3 mois avant"],
-            ["Billetterie", "Wave, Orange Money, vente sur place — fixer le prix", "2 mois avant"],
-            ["Communication", "Flyers, réseaux, WhatsApp broadcast, radios", "6 semaines avant"],
-            ["Répétitions", "Au minimum 3 répétitions complètes", "2 — 3 semaines avant"],
-            ["Jour J", "Arrivée 3h avant, soundcheck, accueil public", "Jour du concert"],
-            ["Après-concert", "Remercier les fans, photos, bilan financier", "24h après"],
+            ["Vision & décision", "Décider du format, de la capacité cible, du concept artistique global", "6 mois avant — commencer ICI"],
+            ["Lieu & réservation", "Visiter les salles, négocier les tarifs, signer le contrat de location", "5 — 6 mois avant"],
+            ["Budget complet", "Chiffrer tous les coûts : salle, son, lumière, communication, équipe", "5 mois avant"],
+            ["Equipe technique", "Recruter son, lumière, DM (Directeur Musical), sécurité, accueil, photographe", "4 — 5 mois avant"],
+            ["Billetterie", "Wave, Orange Money, vente sur place — fixer le prix selon les coûts", "4 mois avant"],
+            ["Répétitions — Phase 1", "Premières répétitions avec le DM et les musiciens — arrangements, setlist", "3 mois avant — minimum"],
+            ["Communication — Lancement", "Teaser, annonce officielle, flyers, réseaux, WhatsApp broadcast", "2 mois avant"],
+            ["Répétitions — Phase 2", "Répétitions complètes avec costumes et mise en scène — au moins 5 à 7 séances", "1 — 2 mois avant"],
+            ["Pre-vente", "Ouvrir la billetterie en ligne, pré-vente WhatsApp, partenaires de distribution", "6 semaines avant"],
+            ["Relations presse", "Communiqué de presse, contacts médias, influenceurs partenaires", "4 semaines avant"],
+            ["Répétitions finales", "Run-through complet comme si c'était le soir J — avec tout le staff", "1 — 2 semaines avant"],
+            ["Jour J", "Arrivée 3h avant, soundcheck complet, briefing équipe, accueil public", "Jour du concert"],
+            ["Après-concert", "Remercier les fans, photos avec le public, bilan financier sous 48h", "24h après"],
           ]}
         />
+        <Callout color={AMB} title="La règle des 6 mois et du Directeur Musical"
+          text="Un concert professionnel se prépare minimum 6 mois à l'avance — pas 4 semaines comme beaucoup le font. Et le Directeur Musical (DM) est la personne la plus importante de ton équipe après toi : il coordonne tous les musiciens, arrange les morceaux pour la scène, gère les répétitions. Choisis quelqu'un qui connaît son métier. Les répétitions avec le DM doivent commencer 2 à 3 mois avant, avec une cadence de 1 à 2 sessions par semaine. C'est ce qui fait la différence entre un concert mémorable et un concert bâclé." />
         <Callout color={SEC} title="Taille de salle recommandée selon la notoriété"
           text="Artiste débutant : 50-100 places (restaurant, espace culturel). Artiste émergent (2 000-10 000 followers) : 200-500 places (salle polyvalente, rooftop). Artiste établi : 500-2 000 places. Ne vise jamais trop grand trop tôt — une salle à moitié vide est pire qu'une petite salle sold out." />
       </ContentPage>
@@ -4820,7 +4992,7 @@ export default function EbookArtisteViewer() {
           { emoji: "🎙️", title: "Studios d'enregistrement", desc: "Les studios sont des carrefours naturels. Les artistes, ingénieurs, managers et beatmakers s'y croisent constamment.", badge: "Priorité 2" },
           { emoji: "📱", title: "Instagram & LinkedIn", desc: "Un DM bien rédigé à un professionnel peut ouvrir une vraie porte. La qualité du message compte plus que la quantité.", badge: "Digital" },
           { emoji: "⛪", title: "Communautés religieuses", desc: "Pour l'artiste gospel, les grandes conventions, les concerts d'église et les rassemblements chrétiens sont des réseaux puissants et souvent négligés.", badge: "Gospel" },
-          { emoji: "🎓", title: "Ateliers & Formations", desc: "AAIM Music Business, ateliers KEKELI — ces espaces réunissent artistes et professionnels dans un contexte d'apprentissage ouvert.", badge: "Formation" },
+          { emoji: "🎓", title: "Ateliers & Formations", desc: "Aliyah Youth Academy, ateliers KEKELI — ces espaces réunissent artistes et professionnels dans un contexte d'apprentissage ouvert.", badge: "Formation" },
           { emoji: "🏢", title: "Radios & Médias locaux", desc: "Visiter les rédactions, inviter les journalistes à tes événements, envoyer ta musique régulièrement — construire la relation avant d'en avoir besoin.", badge: "Presse" },
         ]} />
         <SH3 color={GRN}>Comment approcher un professionnel sans être intrusif</SH3>
@@ -4858,7 +5030,7 @@ export default function EbookArtisteViewer() {
             ["Un graphiste / DA de confiance", "Visuels pro sans avoir à embaucher en fixe", "Behance, Instagram portfolios"],
             ["Un ingénieur son (studio à Dakar)", "Qualité de production, tarifs négociés", "Réseaux d'artistes, recommandations"],
             ["Un blogueur / YouTubeur musical sénégalais", "Couverture presse digital, chroniques", "Recherche sur YouTube, Instagram"],
-            ["Un manager ou agent expérimenté", "Conseil, orientations, contacts avancés", "Associations (AAIM, etc.), salons"],
+            ["Un manager ou agent expérimenté", "Conseil, orientations, contacts avancés", "Associations (Aliyah Youth Academy, etc.), salons"],
             ["Un professionnel de la diaspora (France, IT, ES)", "Accès au marché européen et aux dates diaspora", "Groupes Facebook diaspora, Instagram"],
             ["Un représentant BSDA ou Ministère Culture", "Droits, subventions, informations légales", "En personne ou via associations"],
             ["Un entrepreneur / chef d'entreprise", "Sponsoring, brand deals, collaborations commerciales", "LinkedIn, événements business Dakar"],
@@ -4948,6 +5120,22 @@ export default function EbookArtisteViewer() {
         />
         <Callout color={SEC} title="Le micro-influenceur : souvent plus efficace que le macro"
           text="Un influenceur à 5 000 abonnés très engagés dans ta ville fait souvent plus de conversions qu'un compte à 500 000 abonnés génériques. Le taux d'engagement et la proximité géographique/culturelle comptent plus que le nombre. 10 micro-influenceurs ciblés > 1 macro-influenceur généraliste." />
+        <Divider color={SEC} />
+        <SH3 color={SEC}>Influenceurs sénégalais à cibler selon ton profil</SH3>
+        <Body>Pour un artiste gospel sénégalais, les profils d'influenceurs les plus efficaces ne sont pas nécessairement les plus connus sur TikTok ou Instagram. La pertinence de leur audience par rapport à ton message est plus importante que le nombre de followers.</Body>
+        <MiniTable color={SEC}
+          headers={["Profil", "Où les trouver", "Comment collaborer"]}
+          rows={[
+            ["Créateurs TikTok/Reels sénégalais lifestyle & culture (10K–500K)", "Recherche «Dakar», «Sénégal», «Galsen» sur TikTok + Instagram", "Duet ou stitch avec ton son, cover de ton titre, mention dans une vidéo"],
+            ["Blogueurs et YouTubers musique africaine francophone", "YouTube → chercher «musique africaine», «découverte artiste», «gospel africain»", "Proposition d'interview, chronique de ton dernier single, session acoustique filmée"],
+            ["Pasteurs et leaders d'église avec forte audience digitale", "Instagram des grandes églises de Dakar (Assemblée de Dieu, UEESO, etc.)", "Partage de ton contenu dans leurs canaux, invitation à animer un temps de louange"],
+            ["Animateurs radio digitale jeune (TFM digital, DFM, Zik FM, etc.)", "Sites des radios + leurs pages Instagram personnelles", "Email pro + lien streaming + angle clair sur ton actualité"],
+            ["Humoristes et créateurs de contenu dakarois (Pulaar, Wolof)", "TikTok sénégalais — très forte audience locale et diaspora", "Placer ton son dans une de leurs vidéos — ça génère des millions d'écoutes si le son colle à leur univers"],
+            ["Entrepreneurs et personnalités influentes de la diaspora sénégalaise", "Facebook Groupes diaspora + Instagram communautés sénégalaises France/Italie", "Ils partagent ta musique dans leurs communautés = accès direct à la diaspora premium"],
+          ]}
+        />
+        <Callout color={GRN} title="Comment trouver les bons influenceurs en pratique"
+          text="Va sur TikTok et Instagram, recherche les hashtags : #Dakar #Sénégal #GalsenTikTok #GospelSenegal #GalsenGospel #SunuCulture. Les créateurs qui utilisent ces hashtags ont une audience sénégalaise engagée. Regarde leurs stories et Reels — si leur audience commente en wolof ou en français sénégalais, c'est ton public cible." />
       </ContentPage>
 
       <ContentPage chapter="PRO 37 — Action Pratique Relations Presse" accent={SEC} pageNum={197} total={TOTAL} guideLabel={LABEL}>
@@ -5370,7 +5558,7 @@ export default function EbookArtisteViewer() {
             ["Thomann (thomann.de)", "Spécialiste musique européen, catalogue immense, qualité garantie", "10–15 jours livraison internationale", "Meilleure option pour micro, interface audio, casque pro. Expédition vers le Sénégal disponible."],
             ["Amazon.fr + transitaire", "Large choix, prix compétitifs", "7–14 jours avec DHL/Chronopost", "Utiliser un transitaire local ou un contact en France. Budget livraison : 15 000–40 000 FCFA."],
             ["Facebook Marketplace Dakar", "Matériel d'occasion, prix négociable, disponible immédiatement", "Immédiat", "Toujours demander une démonstration avant d'acheter. Vérifier l'état des câbles et connecteurs."],
-            ["Boutiques Dakar (Plateau, Médina)", "Voir le produit avant d'acheter, pas de frais d'expédition", "Immédiat", "Stock très limité. Chercher dans les boutiques d'électronique au Plateau ou vers Colobane."],
+            ["Boutiques spécialisées Dakar", "Voir le produit avant d'acheter, conseils d'un spécialiste, pas de frais d'expédition", "Immédiat", "REKFI (matériel son et sono), Sono Vente (équipements scène et studio), Jikin Sono (instruments et matériel audio) — demande toujours à tester avant d'acheter."],
           ]}
         />
         <SH3 color={AMB}>Budget total selon le niveau de départ</SH3>
