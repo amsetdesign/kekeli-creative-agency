@@ -17,7 +17,7 @@ const GRN = "#10B981";
 const BLU = "#3B82F6";
 const AMB = "#F59E0B";
 const LABEL = "Du Talent au Sommet — Le Guide de l'Artiste Africain Pro · 2026";
-const TOTAL = 270;
+const TOTAL = 272;
 
 /* ── Helpers réutilisables ── */
 function TwoCol({ left, right }: { left: React.ReactNode; right: React.ReactNode }) {
@@ -3631,7 +3631,252 @@ export default function EbookArtisteViewer() {
           text="Offre quelque chose d'exclusif aux membres fondateurs : un son inédit, un extrait avant tout le monde, une vidéo privée. Les 100 premiers membres deviennent tes ambassadeurs les plus loyaux." />
       </ContentPage>
 
-      <ContentPage chapter="PRO 22 — Action Pratique Tutoriels Visuels" accent={GRN} pageNum={127} total={TOTAL} guideLabel={LABEL}>
+      {/* ── Tutoriel YouTube Studio ── */}
+      <ContentPage chapter="Module 22 — Tutoriels visuels" accent={GRN} pageNum={127} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>Tutoriel : Personnaliser sa chaîne YouTube comme un Pro</SH2>
+        <Body>Voici exactement comment personnaliser ta chaîne YouTube depuis YouTube Studio. Chaque zone a un impact direct sur ta crédibilité professionnelle auprès des organisateurs, médias et labels.</Body>
+
+        {/* Barre de navigation YouTube Studio */}
+        <ScreenMock platform="studio.youtube.com / Personnalisation" title="YouTube Studio — Onglet Personnalisation de la chaîne" color={"#FF0000"}>
+          {/* Onglets */}
+          <div style={{ display: "flex", gap: "2px", marginBottom: "10px", borderBottom: "1px solid #E5E7EB", paddingBottom: "8px" }}>
+            {["Mise en page", "Image de marque", "Informations de base"].map((t, i) => (
+              <div key={t} style={{ padding: "4px 10px", borderRadius: "4px 4px 0 0", background: i === 1 ? "#FF0000" : "transparent", cursor: "pointer" }}>
+                <p style={{ fontFamily: F, fontSize: "8px", fontWeight: i === 1 ? 700 : 400, color: i === 1 ? "#fff" : "#374151", margin: 0 }}>{t}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* ONGLET IMAGE DE MARQUE */}
+          <SH3 color={"#FF0000"}>Onglet «Image de marque» — les 3 éléments visuels</SH3>
+
+          {/* Photo de profil */}
+          <div style={{ display: "flex", gap: "10px", alignItems: "flex-start", padding: "8px 10px", borderRadius: "8px", background: "#fff", border: "1px solid #E5E7EB", marginBottom: "6px" }}>
+            <div style={{ width: "48px", height: "48px", borderRadius: "50%", background: "linear-gradient(135deg, #C8A84B, #F59E0B)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+              <span style={{ fontFamily: F, fontSize: "18px", fontWeight: 800, color: "#fff" }}>A</span>
+            </div>
+            <div style={{ flex: 1 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "4px" }}>
+                <p style={{ fontFamily: F, fontSize: "9px", fontWeight: 700, color: DARK, margin: 0 }}>Photo de profil</p>
+                <div style={{ padding: "3px 8px", borderRadius: "4px", border: "1px solid #E5E7EB", cursor: "pointer" }}>
+                  <p style={{ fontFamily: F, fontSize: "7.5px", color: "#374151", margin: 0 }}>✏️ Modifier</p>
+                </div>
+              </div>
+              <p style={{ fontFamily: F, fontSize: "7.5px", color: "#6B7280", margin: 0, lineHeight: 1.5 }}>Taille recommandée : <strong>800 × 800 px</strong> minimum · Format JPG ou PNG · Fond neutre ou cohérent avec ton branding · <strong>Même photo sur tous tes réseaux</strong> (cohérence visuelle)</p>
+            </div>
+          </div>
+
+          {/* Image de bannière */}
+          <div style={{ padding: "8px 10px", borderRadius: "8px", background: "#fff", border: "1px solid #E5E7EB", marginBottom: "6px" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
+              <p style={{ fontFamily: F, fontSize: "9px", fontWeight: 700, color: DARK, margin: 0 }}>Image de bannière (art de chaîne)</p>
+              <div style={{ padding: "3px 8px", borderRadius: "4px", border: "1px solid #E5E7EB" }}>
+                <p style={{ fontFamily: F, fontSize: "7.5px", color: "#374151", margin: 0 }}>✏️ Modifier</p>
+              </div>
+            </div>
+            {/* Simulation bannière avec zones safe */}
+            <div style={{ borderRadius: "6px", overflow: "hidden", background: "linear-gradient(135deg, #1C1306, #2D1A0A)", height: "60px", position: "relative" }}>
+              <div style={{ position: "absolute", left: "50%", top: "50%", transform: "translate(-50%, -50%)", textAlign: "center" }}>
+                <p style={{ fontFamily: FD, fontSize: "13px", fontWeight: 700, color: "#C8A84B", margin: 0 }}>AMSET</p>
+                <p style={{ fontFamily: F, fontSize: "7px", color: "rgba(255,255,255,0.6)", margin: 0 }}>Gospel Urbain · Dakar, Sénégal</p>
+              </div>
+              {/* zones grises = zones coupées sur mobile/TV */}
+              <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "60px", background: "rgba(0,0,0,0.30)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <p style={{ fontFamily: F, fontSize: "5.5px", color: "rgba(255,255,255,0.4)", margin: 0, textAlign: "center", padding: "2px" }}>coupé mobile</p>
+              </div>
+              <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: "60px", background: "rgba(0,0,0,0.30)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <p style={{ fontFamily: F, fontSize: "5.5px", color: "rgba(255,255,255,0.4)", margin: 0, textAlign: "center", padding: "2px" }}>coupé mobile</p>
+              </div>
+            </div>
+            <p style={{ fontFamily: F, fontSize: "7.5px", color: "#6B7280", margin: "5px 0 0", lineHeight: 1.5 }}>Taille : <strong>2 560 × 1 440 px</strong> (zone sécurisée centrale visible partout : <strong>1 546 × 423 px</strong>) · Ton nom + genre + slogan dans la zone centrale · Outil recommandé : Canva.com (template «YouTube Banner»)</p>
+          </div>
+
+          {/* Image de filigrane */}
+          <div style={{ display: "flex", gap: "10px", alignItems: "center", padding: "8px 10px", borderRadius: "8px", background: "#fff", border: "1px solid #E5E7EB" }}>
+            <div style={{ width: "28px", height: "28px", borderRadius: "4px", background: "#C8A84B30", border: "1px solid #C8A84B40", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+              <span style={{ fontFamily: F, fontSize: "11px" }}>🔖</span>
+            </div>
+            <div>
+              <p style={{ fontFamily: F, fontSize: "9px", fontWeight: 700, color: DARK, margin: "0 0 2px" }}>Image de filigrane (watermark)</p>
+              <p style={{ fontFamily: F, fontSize: "7.5px", color: "#6B7280", margin: 0 }}>Taille : <strong>150 × 150 px</strong> · Apparaît en bas à droite de chaque vidéo · Ton logo ou ta photo de profil · Incite les spectateurs à s'abonner</p>
+            </div>
+          </div>
+        </ScreenMock>
+
+        {/* Onglet Informations de base */}
+        <ScreenMock platform="studio.youtube.com / Personnalisation / Informations de base" title="YouTube Studio — Onglet «Informations de base»" color={"#FF0000"}>
+          {/* Nom de la chaîne */}
+          <div style={{ marginBottom: "8px" }}>
+            <p style={{ fontFamily: F, fontSize: "7.5px", fontWeight: 700, color: "#374151", margin: "0 0 3px", textTransform: "uppercase", letterSpacing: "0.06em" }}>Nom de la chaîne</p>
+            <div style={{ padding: "6px 10px", borderRadius: "6px", background: "#fff", border: "1px solid #D1D5DB" }}>
+              <p style={{ fontFamily: F, fontSize: "9px", color: DARK, margin: 0 }}>Amset Officiel</p>
+            </div>
+            <p style={{ fontFamily: F, fontSize: "7px", color: "#9CA3AF", margin: "2px 0 0" }}>Utilise ton nom d'artiste exact — pas de chiffres ni de caractères spéciaux</p>
+          </div>
+
+          {/* Handle */}
+          <div style={{ marginBottom: "8px" }}>
+            <p style={{ fontFamily: F, fontSize: "7.5px", fontWeight: 700, color: "#374151", margin: "0 0 3px", textTransform: "uppercase", letterSpacing: "0.06em" }}>@Handle (identifiant unique)</p>
+            <div style={{ padding: "6px 10px", borderRadius: "6px", background: "#fff", border: "1px solid #D1D5DB", display: "flex", alignItems: "center", gap: "4px" }}>
+              <span style={{ fontFamily: F, fontSize: "9px", color: "#9CA3AF" }}>youtube.com/</span>
+              <span style={{ fontFamily: F, fontSize: "9px", fontWeight: 700, color: "#FF0000" }}>@amset_officiel</span>
+            </div>
+            <p style={{ fontFamily: F, fontSize: "7px", color: "#9CA3AF", margin: "2px 0 0" }}>Minuscules, sans espaces · Même handle sur tous tes réseaux si possible</p>
+          </div>
+
+          {/* Description */}
+          <div style={{ marginBottom: "8px" }}>
+            <p style={{ fontFamily: F, fontSize: "7.5px", fontWeight: 700, color: "#374151", margin: "0 0 3px", textTransform: "uppercase", letterSpacing: "0.06em" }}>Description de la chaîne</p>
+            <div style={{ padding: "8px 10px", borderRadius: "6px", background: "#fff", border: "1px solid #D1D5DB" }}>
+              <p style={{ fontFamily: F, fontSize: "8.5px", color: DARK, margin: 0, lineHeight: 1.6 }}>
+                🎵 <strong>Amset</strong> — Artiste Gospel Urbain · Dakar, Sénégal 🇸🇳<br />
+                Fondateur du Galsen Gospel Urbain · Promoteur du Sunu Impact Festival<br /><br />
+                Gospel urbain en français et en wolof. Musique de foi pour les jeunes d'Afrique et de la diaspora.<br /><br />
+                🎧 Écouter ma musique → [lien Spotify/Boomplay]<br />
+                📱 Instagram : @amset_officiel | TikTok : @amset_officiel<br />
+                📩 Booking : contact@kekelicreativeagency.com
+              </p>
+            </div>
+            <p style={{ fontFamily: F, fontSize: "7px", color: "#9CA3AF", margin: "2px 0 0" }}>Max 1 000 caractères · Inclure : genre, ville, liens streaming, booking, réseaux · <strong>Les 100 premiers caractères apparaissent dans les résultats de recherche Google</strong></p>
+          </div>
+
+          {/* Liens */}
+          <div>
+            <p style={{ fontFamily: F, fontSize: "7.5px", fontWeight: 700, color: "#374151", margin: "0 0 5px", textTransform: "uppercase", letterSpacing: "0.06em" }}>Liens (apparaissent sur la bannière) — max 5</p>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4px" }}>
+              {[
+                { icon: "🎵", label: "Spotify", url: "open.spotify.com/artist/..." },
+                { icon: "📱", label: "Instagram", url: "instagram.com/amset_officiel" },
+                { icon: "▶️", label: "YouTube Playlist", url: "youtube.com/playlist?list=..." },
+                { icon: "💬", label: "WhatsApp Booking", url: "wa.me/+221..." },
+              ].map((l) => (
+                <div key={l.label} style={{ padding: "5px 8px", borderRadius: "6px", background: "#fff", border: "1px solid #E5E7EB", display: "flex", gap: "6px", alignItems: "center" }}>
+                  <span style={{ fontSize: "10px" }}>{l.icon}</span>
+                  <div>
+                    <p style={{ fontFamily: F, fontSize: "7.5px", fontWeight: 700, color: DARK, margin: 0 }}>{l.label}</p>
+                    <p style={{ fontFamily: F, fontSize: "6.5px", color: "#9CA3AF", margin: 0, wordBreak: "break-all" }}>{l.url}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </ScreenMock>
+
+        <Callout color={"#FF0000"} title="Les 2 erreurs les plus fréquentes sur YouTube"
+          text="1. Laisser le handle par défaut (ex: @UC7xGx...) au lieu d'un handle personnalisé lisible. 2. Écrire une description générique sans mots-clés. Ces deux erreurs seules font perdre des dizaines d'abonnés par semaine — corrige-les aujourd'hui." />
+      </ContentPage>
+
+      {/* ── Tutoriel Instagram ── */}
+      <ContentPage chapter="Module 22 — Tutoriels visuels" accent={GRN} pageNum={128} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>Tutoriel : Configurer son profil Instagram Pro d'Artiste</SH2>
+        <Body>Un profil Instagram professionnel bien configuré travaille pour toi 24h/24 — il convainc les organisateurs de concert, les journalistes et tes futurs fans en moins de 3 secondes. Voici la configuration optimale.</Body>
+
+        <ScreenMock platform="instagram.com / Modifier le profil" title="Instagram — Écran «Modifier le profil»" color={"#E1306C"}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "12px" }}>
+            {/* Colonne gauche — photo + nom + bouton */}
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
+              <div style={{ width: "60px", height: "60px", borderRadius: "50%", background: "linear-gradient(135deg, #C8A84B, #E1306C)", display: "flex", alignItems: "center", justifyContent: "center", border: "2px solid #E1306C" }}>
+                <span style={{ fontFamily: F, fontSize: "22px", fontWeight: 800, color: "#fff" }}>A</span>
+              </div>
+              <p style={{ fontFamily: F, fontSize: "7.5px", fontWeight: 700, color: "#E1306C", margin: 0, cursor: "pointer" }}>Changer la photo</p>
+              <div style={{ padding: "4px 12px", borderRadius: "6px", background: "#E1306C", cursor: "pointer" }}>
+                <p style={{ fontFamily: F, fontSize: "7.5px", fontWeight: 700, color: "#fff", margin: 0 }}>Compte pro ✓</p>
+              </div>
+            </div>
+
+            {/* Colonne droite — champs */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+              {/* Nom */}
+              <div>
+                <p style={{ fontFamily: F, fontSize: "6.5px", fontWeight: 700, color: "#6B7280", margin: "0 0 2px", textTransform: "uppercase" }}>Nom (affiché en gras)</p>
+                <div style={{ padding: "5px 8px", borderRadius: "5px", background: "#F9FAFB", border: "1px solid #E5E7EB" }}>
+                  <p style={{ fontFamily: F, fontSize: "8.5px", fontWeight: 700, color: DARK, margin: 0 }}>Amset | Gospel Urbain</p>
+                </div>
+                <p style={{ fontFamily: F, fontSize: "6px", color: "#9CA3AF", margin: "1px 0 0" }}>Max 30 caractères · Inclure ton genre musical — c'est un champ de recherche</p>
+              </div>
+
+              {/* Nom d'utilisateur */}
+              <div>
+                <p style={{ fontFamily: F, fontSize: "6.5px", fontWeight: 700, color: "#6B7280", margin: "0 0 2px", textTransform: "uppercase" }}>Nom d'utilisateur (@)</p>
+                <div style={{ padding: "5px 8px", borderRadius: "5px", background: "#F9FAFB", border: "1px solid #E5E7EB", display: "flex", alignItems: "center", gap: "3px" }}>
+                  <span style={{ fontFamily: F, fontSize: "8.5px", color: "#9CA3AF" }}>@</span>
+                  <p style={{ fontFamily: F, fontSize: "8.5px", color: DARK, margin: 0 }}>amset_officiel</p>
+                </div>
+                <p style={{ fontFamily: F, fontSize: "6px", color: "#9CA3AF", margin: "1px 0 0" }}>Cohérent avec tous tes réseaux · Pas de chiffres inutiles (ex: @amset2938)</p>
+              </div>
+
+              {/* Catégorie */}
+              <div>
+                <p style={{ fontFamily: F, fontSize: "6.5px", fontWeight: 700, color: "#6B7280", margin: "0 0 2px", textTransform: "uppercase" }}>Catégorie (compte pro)</p>
+                <div style={{ padding: "5px 8px", borderRadius: "5px", background: "#F9FAFB", border: "1px solid #E5E7EB" }}>
+                  <p style={{ fontFamily: F, fontSize: "8.5px", color: DARK, margin: 0 }}>Musicien / Groupe</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Biographie */}
+          <div style={{ marginTop: "10px" }}>
+            <p style={{ fontFamily: F, fontSize: "6.5px", fontWeight: 700, color: "#6B7280", margin: "0 0 3px", textTransform: "uppercase" }}>Biographie (150 caractères max)</p>
+            <div style={{ padding: "8px 10px", borderRadius: "6px", background: "#F9FAFB", border: "1px solid #E5E7EB" }}>
+              <p style={{ fontFamily: F, fontSize: "8.5px", color: DARK, margin: 0, lineHeight: 1.65 }}>
+                🎵 Artiste Gospel Urbain · Dakar 🇸🇳<br />
+                Fondateur @galsen_gospel_urbain<br />
+                🎟️ Booking → lien en bio ↓
+              </p>
+            </div>
+            <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "2px" }}>
+              <p style={{ fontFamily: F, fontSize: "6.5px", color: "#9CA3AF", margin: 0 }}>87 / 150</p>
+            </div>
+            <p style={{ fontFamily: F, fontSize: "6.5px", color: "#6B7280", margin: "4px 0 0", lineHeight: 1.5 }}>
+              ✅ Structure recommandée : <strong>Ligne 1</strong> — Ce que tu fais (emoji + genre + ville) · <strong>Ligne 2</strong> — Ton projet/communauté · <strong>Ligne 3</strong> — CTA clair (Booking, Écouter, WhatsApp...)
+            </p>
+          </div>
+
+          {/* Lien */}
+          <div style={{ marginTop: "8px" }}>
+            <p style={{ fontFamily: F, fontSize: "6.5px", fontWeight: 700, color: "#6B7280", margin: "0 0 3px", textTransform: "uppercase" }}>Lien (1 seul lien affiché — utilise Linktree)</p>
+            <div style={{ padding: "5px 10px", borderRadius: "6px", background: "#F9FAFB", border: "1px solid #E5E7EB", display: "flex", alignItems: "center", gap: "6px" }}>
+              <span style={{ fontSize: "10px" }}>🔗</span>
+              <p style={{ fontFamily: F, fontSize: "8.5px", color: "#3B82F6", margin: 0, textDecoration: "underline" }}>linktr.ee/amset</p>
+            </div>
+            <p style={{ fontFamily: F, fontSize: "6px", color: "#9CA3AF", margin: "2px 0 0" }}>Crée ton Linktree gratuit sur linktr.ee — centralise : Spotify, YouTube, WhatsApp booking, Boomplay</p>
+          </div>
+
+          {/* Bouton d'action */}
+          <div style={{ marginTop: "8px" }}>
+            <p style={{ fontFamily: F, fontSize: "6.5px", fontWeight: 700, color: "#6B7280", margin: "0 0 3px", textTransform: "uppercase" }}>Bouton d'action (compte pro uniquement)</p>
+            <div style={{ display: "flex", gap: "6px" }}>
+              {["📧 Email", "💬 WhatsApp"].map((b) => (
+                <div key={b} style={{ flex: 1, padding: "5px 8px", borderRadius: "6px", border: "1px solid #E1306C", textAlign: "center" }}>
+                  <p style={{ fontFamily: F, fontSize: "8px", fontWeight: 600, color: "#E1306C", margin: 0 }}>{b}</p>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontFamily: F, fontSize: "6px", color: "#9CA3AF", margin: "2px 0 0" }}>Active «Email» avec contact@kekelicreativeagency.com ou «WhatsApp» pour le booking direct</p>
+          </div>
+        </ScreenMock>
+
+        {/* Résumé checklist */}
+        <SH3 color={"#E1306C"}>Checklist profil Instagram pro — à vérifier maintenant</SH3>
+        <MiniTable color={"#E1306C"}
+          headers={["Élément", "Règle pro", "Statut"]}
+          rows={[
+            ["Photo de profil", "Haute résolution · Visage visible · Même photo partout", "□ À vérifier"],
+            ["Nom affiché", "Prénom Nom | Genre musical — ex: Amset | Gospel Urbain", "□ À corriger si générique"],
+            ["@Username", "Cohérent avec YouTube + TikTok · Pas de chiffres aléatoires", "□ À vérifier"],
+            ["Catégorie", "«Musicien / Groupe» activée (compte pro)", "□ À activer"],
+            ["Biographie", "3 lignes max · Emoji · Ville · CTA clair", "□ À réécrire"],
+            ["Lien", "Linktree avec Spotify + YouTube + WhatsApp booking", "□ À créer"],
+            ["Bouton d'action", "Email pro ou WhatsApp booking activé", "□ À configurer"],
+            ["Compte Pro", "Passer en compte Créateur ou Entreprise (gratuit)", "□ À activer si non fait"],
+          ]}
+        />
+        <Callout color={"#E1306C"} title="TikTok — même logique, mêmes règles"
+          text="Pour TikTok, la configuration est identique : photo cohérente, nom d'artiste clair, bio courte avec genre + ville + lien, et passage en Compte Créateur. La seule différence : TikTok permet 80 caractères dans la bio (encore plus court) — chaque mot compte." />
+      </ContentPage>
+
+      <ContentPage chapter="PRO 22 — Action Pratique Tutoriels Visuels" accent={GRN} pageNum={129} total={TOTAL} guideLabel={LABEL}>
         <SH2 color={DARK}>ACTION PRATIQUE — PRO 22 · Tutoriels & Outils Pro</SH2>
         <Body>Connaître les outils ne suffit pas — il faut les maîtriser. Ces actions te forcent à mettre en pratique chaque tutoriel du module cette semaine même.</Body>
         <Checklist color={GRN} title="Plan d'action Tutoriels — configure chaque outil cette semaine" items={[
