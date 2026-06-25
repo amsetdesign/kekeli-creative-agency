@@ -853,8 +853,8 @@ export function VerticalTimeline({ events, color }: {
 }
 
 /* ─── Viewer shell ───────────────────────────────────────── */
-import { useRef } from "react";
-import { Download, Eye } from "lucide-react";
+import { useRef, useState } from "react";
+import { Download, Eye, Loader2 } from "lucide-react";
 
 export function EbookViewerShell({
   title, subtitle, pageCount, accentColor, children,
@@ -863,30 +863,68 @@ export function EbookViewerShell({
   children: React.ReactNode;
 }) {
   const printRef = useRef<HTMLDivElement>(null);
+  const [printing, setPrinting] = useState(false);
 
   const handlePrint = () => {
+    if (printing) return;
     const node = printRef.current;
     if (!node) return;
-    const html = node.innerHTML;
-    const win = window.open("", "_blank", "width=900,height=700");
-    if (!win) { alert("Autorisez les popups pour télécharger le PDF."); return; }
-    win.document.write(`<!DOCTYPE html><html lang="fr"><head>
+
+    setPrinting(true);
+
+    // Give React time to update the button before reading innerHTML
+    setTimeout(() => {
+      const html = node.innerHTML;
+      const win = window.open("", "_blank", "width=960,height=800");
+      if (!win) {
+        alert("Autorisez les popups de ce site pour télécharger le PDF.\n\nChrome : cliquez sur l'icône 🚫 dans la barre d'adresse → Autoriser les popups.");
+        setPrinting(false);
+        return;
+      }
+
+      win.document.write(`<!DOCTYPE html><html lang="fr"><head>
 <meta charset="UTF-8"/>
 <title>${title}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-body{background:#fff;}
-.ebook-page{page-break-after:always;break-after:page;}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact;color-adjust:exact;}
+html,body{background:#fff;width:210mm;}
+/* chaque page = une page A4 exacte */
+.ebook-page{
+  width:210mm;min-height:297mm;
+  page-break-after:always;break-after:page;
+  overflow:hidden;
+}
 .ebook-page:last-child{page-break-after:avoid;break-after:avoid;}
-@page{margin:0;size:A4 portrait;}
-@media print{html,body{width:210mm;}}
-</style></head><body>${html}
-<script>document.fonts.ready.then(function(){setTimeout(function(){window.print();},400);});<\/script>
+/* empêcher qu'un bloc soit coupé au milieu */
+p,li,tr,td,th{orphans:3;widows:3;}
+table{break-inside:avoid;page-break-inside:avoid;}
+/* @page : pas de marges — le PDF reprend exactement la zone A4 */
+@page{margin:0;size:210mm 297mm portrait;}
+@media print{
+  html,body{width:210mm;}
+  .ebook-page{box-shadow:none!important;}
+}
+</style>
+</head>
+<body>${html}
+<script>
+/* Attendre que toutes les polices soient prêtes avant d'imprimer */
+document.fonts.ready.then(function() {
+  /* 1 500 ms supplémentaires pour laisser les rendus CSS complexes se stabiliser */
+  setTimeout(function() { window.print(); }, 1500);
+});
+/* Réactiver le bouton dans la fenêtre parente après fermeture/impression */
+window.onafterprint = function() { window.close(); };
+<\/script>
 </body></html>`);
-    win.document.close();
+      win.document.close();
+
+      // Réactiver le bouton après 4s (sécurité si onafterprint ne se déclenche pas)
+      setTimeout(() => setPrinting(false), 4000);
+    }, 50);
   };
 
   return (
@@ -898,18 +936,36 @@ body{background:#fff;}
               <h1 className="font-display text-2xl text-[#0C0B09] mb-1">{title}</h1>
               <p className="font-body text-sm text-[#78716C]">{pageCount} pages · Format A4 · {subtitle}</p>
             </div>
-            <button onClick={handlePrint}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-body text-sm font-semibold text-white transition-all hover:brightness-110 active:scale-95"
-              style={{ background: `linear-gradient(135deg, ${accentColor}, ${accentColor}CC)`, boxShadow: `0 4px 16px ${accentColor}40` }}>
-              <Download size={15} />
-              Télécharger PDF
+            <button
+              onClick={handlePrint}
+              disabled={printing}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-body text-sm font-semibold text-white transition-all hover:brightness-110 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed"
+              style={{ background: `linear-gradient(135deg, ${accentColor}, ${accentColor}CC)`, boxShadow: `0 4px 16px ${accentColor}40` }}
+            >
+              {printing
+                ? <><Loader2 size={15} className="animate-spin" /> Préparation…</>
+                : <><Download size={15} /> Télécharger PDF</>
+              }
             </button>
           </div>
-          <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl mb-6 font-body text-xs"
+
+          <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl mb-2 font-body text-xs"
             style={{ background: "rgba(200,168,75,0.07)", border: "1px solid rgba(200,168,75,0.2)", color: "#78716C" }}>
             <Eye size={13} style={{ color: "#C8A84B", flexShrink: 0 }} />
-            <span>Aperçu ci-dessous. Cliquez sur <strong className="text-[#0C0B09]">Télécharger PDF</strong> puis choisissez "Enregistrer en PDF" dans la boîte d'impression.</span>
+            <span>
+              Cliquez sur <strong className="text-[#0C0B09]">Télécharger PDF</strong>, attendez l&apos;ouverture de la fenêtre d&apos;impression, puis choisissez{" "}
+              <strong className="text-[#0C0B09]">«&nbsp;Enregistrer en PDF&nbsp;»</strong> comme imprimante.
+            </span>
           </div>
+          <div className="flex items-center gap-2 px-4 py-2 rounded-xl mb-6 font-body text-xs"
+            style={{ background: "rgba(239,68,68,0.05)", border: "1px solid rgba(239,68,68,0.15)", color: "#9CA3AF" }}>
+            <span style={{ color: "#EF4444", flexShrink: 0, fontSize: "11px" }}>⚠️</span>
+            <span>
+              Si aucune fenêtre ne s&apos;ouvre, votre navigateur bloque les popups — cliquez sur l&apos;icône dans la barre d&apos;adresse et choisissez{" "}
+              <strong>«&nbsp;Autoriser les popups&nbsp;»</strong>.
+            </span>
+          </div>
+
           <div ref={printRef}>
             {children}
           </div>
