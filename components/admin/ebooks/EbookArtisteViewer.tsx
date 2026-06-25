@@ -232,7 +232,9 @@ export default function EbookArtisteViewer() {
             <div style={{ marginTop: "24px", paddingTop: "16px", borderTop: "1px solid #E5DFD0" }}>
               <p style={{ fontFamily: FD, fontSize: "16px", fontStyle: "italic", color: DARK, margin: "0 0 4px" }}>Avec foi et gratitude,</p>
               <p style={{ fontFamily: F, fontSize: "11px", fontWeight: 700, color: GOLD, margin: "0 0 2px" }}>Amset</p>
-              <p style={{ fontFamily: F, fontSize: "9px", color: "#78716C", margin: 0 }}>Artiste Gospel Pro · Fondateur du Galsen Gospel Urbain<br />Promoteur du Sunu Impact Festival · Dakar, Sénégal</p>
+              <p style={{ fontFamily: F, fontSize: "9px", color: "#78716C", margin: "0 0 8px" }}>Artiste Gospel Pro · Fondateur du Galsen Gospel Urbain<br />Promoteur du Sunu Impact Festival · Dakar, Sénégal</p>
+              <p style={{ fontFamily: F, fontSize: "8.5px", color: "#9CA3AF", margin: "0 0 2px" }}>🎵 Écouter le projet <strong style={{ color: GOLD }}>Génération 2 Transition</strong> :</p>
+              <a href="https://www.youtube.com/playlist?list=PLvGn5LvtspLoyf3zt4WJ1k0dddXyheBH2" target="_blank" rel="noopener noreferrer" style={{ fontFamily: F, fontSize: "8px", color: "#CC0000", fontWeight: 600, wordBreak: "break-all" }}>youtube.com/playlist?list=PLvGn5LvtspLoyf3zt4WJ1k0dddXyheBH2</a>
             </div>
           </div>
           <div style={{ padding: "10px 36px 14px", display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #E5E1DC" }}>
@@ -3427,7 +3429,17 @@ export default function EbookArtisteViewer() {
       <ContentPage chapter="Module 20 — Artiste Gospel" accent={GOLD} pageNum={118} total={TOTAL} guideLabel={LABEL}>
         <SH2 color={DARK}>Études de cas : Profiles Détaillés</SH2>
         <Body>Ces artistes sont tes références directes. Chacun a construit une carrière avec une approche stratégique distincte. Analyse-les, adapte leurs méthodes à ta réalité sénégalaise.</Body>
-        <ArtistCard name="Amset (Sénégal)" genre="Gospel Urbain · Wolof/Français" country="Dakar, Sénégal" followers="Fondateur Galsen Gospel Urbain" revenue="Stratégie gospel urbain africaine moderne" status="success" color={GOLD} />
+        <ArtistCard name="Amset (Sénégal)" genre="Gospel Urbain · Wolof/Français" country="Dakar, Sénégal" followers="Fondateur Galsen Gospel Urbain · Promoteur Sunu Impact Festival" revenue="Projet : Génération 2 Transition — Gospel Urbain Sénégal" status="success" color={GOLD} />
+        <div style={{ margin: "6px 0 14px", padding: "10px 14px", borderRadius: "8px", background: "#FFFBEB", border: "1px solid #C8A84B30", display: "flex", alignItems: "center", gap: "12px" }}>
+          <span style={{ fontSize: "18px", flexShrink: 0 }}>🎵</span>
+          <div>
+            <p style={{ fontFamily: F, fontSize: "9px", fontWeight: 700, color: GOLD, margin: "0 0 2px", letterSpacing: "0.08em", textTransform: "uppercase" }}>Écouter la musique d'Amset</p>
+            <p style={{ fontFamily: F, fontSize: "9px", color: "#44403C", margin: "0 0 4px" }}>Projet <strong>Génération 2 Transition</strong> — Playlist officielle YouTube</p>
+            <a href="https://www.youtube.com/playlist?list=PLvGn5LvtspLoyf3zt4WJ1k0dddXyheBH2" target="_blank" rel="noopener noreferrer" style={{ fontFamily: F, fontSize: "8.5px", color: "#CC0000", fontWeight: 600, wordBreak: "break-all" }}>
+              youtube.com/playlist?list=PLvGn5LvtspLoyf3zt4WJ1k0dddXyheBH2
+            </a>
+          </div>
+        </div>
         <ArtistCard name="Deborah Lukalu (Congo/UK)" genre="Gospel Contemporain" country="Congo / Royaume-Uni" followers="Millions de vues YouTube" revenue="Scènes internationales + streaming fort" status="success" color={GOLD} />
         <ArtistCard name="KS Bloom (Côte d'Ivoire)" genre="Gospel Contemporain Digital" country="Abidjan, Côte d'Ivoire" followers="Forte présence digitale" revenue="Carrière gospel entièrement digitale" status="success" color={GOLD} />
         <ArtistCard name="Tito Prince" genre="Gospel / Worship Francophone" country="Afrique Francophone" followers="Communauté fidèle et engagée" revenue="Artiste worship francophone de référence" status="success" color={GOLD} />
@@ -3879,7 +3891,7 @@ export default function EbookArtisteViewer() {
         <Checklist color={GOLD} title="Contenu obligatoire de ton EPK" items={[
           "Biographie courte (150 mots) et longue (400 mots)",
           "Photos presse HD (minimum 3 : portrait, live, artistique) — fichiers JPEG haute résolution",
-          "Discographie complète avec liens streaming (Spotify, Boomplay, YouTube)",
+          "Discographie complète avec liens streaming (Spotify, Boomplay, YouTube) — ex. : Projet Génération 2 Transition sur YouTube : youtube.com/playlist?list=PLvGn5LvtspLoyf3zt4WJ1k0dddXyheBH2",
           "Extraits audio/vidéo des meilleurs morceaux (2-3 maximum)",
           "Revue de presse (articles, interviews, mentions médias) — même petits médias",
           "Chiffres clés (nombre de streams, vues YouTube, followers réseaux, nombre de concerts)",
