@@ -6035,173 +6035,6 @@ export default function EbookArtisteViewer() {
         <Banner text="Bosser dur. Être patient. Rester vrai. Compter sur Dieu." sub="Cette formule ne garantit pas une date. Elle garantit un résultat." color={GOLD} dark />
       </ContentPage>
 
-      {/* ══════════════════════════════════════════════════════════════════ */}
-      {/* ÉPILOGUE — LA QUESTION PHARE (P195–P199)                         */}
-      {/* ══════════════════════════════════════════════════════════════════ */}
-
-      {/* Page sombre d'ouverture de l'épilogue */}
-      <div className="ebook-page" style={{
-        width: "210mm", minHeight: "297mm",
-        background: "linear-gradient(160deg, #08060F 0%, #1A0A2E 50%, #0D0C0A 100%)",
-        display: "flex", flexDirection: "column", pageBreakAfter: "always",
-        position: "relative", overflow: "hidden",
-      }}>
-        <div aria-hidden style={{ position: "absolute", top: "-80px", right: "-80px", width: "400px", height: "400px", borderRadius: "50%", border: "1px solid rgba(200,168,75,0.08)", pointerEvents: "none" }} />
-        <div aria-hidden style={{ position: "absolute", bottom: "-40px", left: "-40px", width: "280px", height: "280px", borderRadius: "50%", border: "1px solid rgba(200,168,75,0.05)", pointerEvents: "none" }} />
-        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 40% at 30% 50%, rgba(200,168,75,0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
-
-        <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", padding: "60px 48px", position: "relative", zIndex: 1 }}>
-          <p style={{ fontFamily: F, fontSize: "9px", fontWeight: 700, color: GOLD, letterSpacing: "0.3em", textTransform: "uppercase", margin: "0 0 20px" }}>ÉPILOGUE</p>
-          <h2 style={{ fontFamily: FD, fontSize: "52px", fontWeight: 700, color: "#fff", margin: "0 0 16px", lineHeight: 1.05 }}>
-            La Question<br />
-            <em style={{ color: GOLD, fontStyle: "italic" }}>que personne<br />ne te pose</em>
-          </h2>
-          <div style={{ width: "48px", height: "2px", background: `linear-gradient(90deg, ${GOLD}, transparent)`, margin: "20px 0" }} />
-          <p style={{ fontFamily: F, fontSize: "14px", color: "rgba(255,255,255,0.5)", lineHeight: 1.75, maxWidth: "380px", margin: 0 }}>
-            Tu as maintenant tous les outils. Mais avant de fermer ce livre — il reste une conversation que nous devons avoir.
-          </p>
-        </div>
-        <div style={{ padding: "14px 48px 20px", borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", justifyContent: "space-between" }}>
-          <p style={{ fontFamily: F, fontSize: "8px", color: "rgba(255,255,255,0.2)", margin: 0 }}>KEKELI Creative Agency — {LABEL}</p>
-          <p style={{ fontFamily: F, fontSize: "8px", color: "rgba(255,255,255,0.2)", margin: 0 }}>195 / {TOTAL}</p>
-        </div>
-      </div>
-
-      <ContentPage chapter="Épilogue — La Question Phare" accent={GOLD} pageNum={196} total={TOTAL} guideLabel={LABEL}>
-        <SH2 color={DARK}>À quel Prix veux-tu le Sommet ?</SH2>
-        <Body>Ce livre t'a tout appris sur comment monter. La stratégie, les outils, les plateformes, les contrats, les équipes. Mais il reste une question que très peu de guides osent poser — et pourtant, c'est la plus importante de toutes.</Body>
-        <BigQuote
-          text="Es-tu prêt à monter au sommet en restant qui tu es vraiment — ou es-tu prêt à devenir quelqu'un d'autre pour y arriver ?"
-          author="La question que chaque artiste doit se poser avant de commencer"
-          color={GOLD}
-        />
-        <Body>Il faut être honnête. Dans l'industrie musicale — africaine comme mondiale — il existe des chemins sombres. Des artistes qui ont sacrifié leur intégrité pour un contrat. Des deals qui ne se signent pas sur papier. Des compromis qui semblent anodins au départ et qui détruisent tout ensuite. Des succès qui arrivent vite, brillent fort, et disparaissent encore plus vite — laissant derrière eux une vie brisée.</Body>
-        <TwoCol
-          left={
-            <RedBox>
-              <BoxLabel color="#DC2626" text="❌ Le sommet sans fondation" />
-              <BulletList color="#DC2626" items={[
-                { text: "Arrivé vite, parti encore plus vite" },
-                { text: "Construit sur des compromis qui rongent" },
-                { text: "Une célébrité qui coûte la paix intérieure" },
-                { text: "Un succès que tu ne peux pas partager avec Dieu" },
-                { text: "Une carrière qui finit dans le vide ou la honte" },
-                { text: "Ce que les autres voient ne correspond pas à ce que tu vis" },
-              ]} />
-            </RedBox>
-          }
-          right={
-            <GreenBox>
-              <BoxLabel color="#16A34A" text="✅ Le sommet avec fondation" />
-              <BulletList color={GRN} items={[
-                { text: "Construit lentement, mais solidement" },
-                { text: "Chaque succès est un témoignage vivant" },
-                { text: "La paix intérieure est réelle, pas jouée" },
-                { text: "Tu peux remercier Dieu pour chaque étape" },
-                { text: "Durable — 10 ans, 20 ans, une vie entière" },
-                { text: "Ce que les autres voient correspond à qui tu es vraiment" },
-              ]} />
-            </GreenBox>
-          }
-        />
-        <Callout color={GOLD} title="Ce livre ne conseille ni ne tolère les chemins sombres"
-          text="Ce guide a été conçu pour t'équiper avec les vrais outils du professionnel — le travail, la discipline, la stratégie, la foi. Il n'existe aucun raccourci qui vaille le prix de ton intégrité. Aucun contrat ne vaut la perte de ta paix. Aucun hit ne vaut la destruction de qui tu es." />
-      </ContentPage>
-
-      <ContentPage chapter="Épilogue — Le Travail et la Grâce" accent={GOLD} pageNum={197} total={TOTAL} guideLabel={LABEL}>
-        <SH2 color={DARK}>Le Travail ET la Grâce : les deux pilliers du vrai succès</SH2>
-        <Body>Il y a une erreur que font beaucoup de croyants dans leur approche de la carrière musicale. Certains disent : <em>«Je vais travailler dur et Dieu fera le reste.»</em> D'autres disent : <em>«Je vais prier et Dieu ouvrira les portes.»</em> Les deux ont tort — parce que les deux ont raison, mais séparément.</Body>
-        <Banner text="Le vrai succès est à l'intersection du travail humain et de la grâce divine." sub="L'un sans l'autre ne suffit pas. Les deux ensemble sont imbattables." color={GOLD} dark />
-        <SH3 color={GOLD}>Ce que Dieu ne fera pas à ta place</SH3>
-        <BulletList color={GOLD} items={[
-          { bold: "Dieu ne publiera pas tes TikToks :", text: "La discipline de créer chaque jour est ta responsabilité. La persévérance t'appartient." },
-          { bold: "Dieu ne signera pas tes contrats à ta place :", text: "Comprendre tes droits, négocier intelligemment, refuser les mauvais accords — c'est ton travail." },
-          { bold: "Dieu ne construira pas ton audience à ta place :", text: "Répondre à tes fans, être constant, construire une communauté — c'est l'œuvre de tes mains." },
-          { bold: "Dieu ne protégera pas ta voix si tu ne la soignes pas :", text: "L'hydratation, le repos, l'échauffement — ta santé est ton instrument, ta responsabilité." },
-        ]} />
-        <SH3 color={GOLD}>Ce que toi tu ne peux pas faire sans Dieu</SH3>
-        <BulletList color={GRN} items={[
-          { bold: "La grâce d'être au bon endroit au bon moment :", text: "Certaines portes ne s'ouvrent pas par stratégie — elles s'ouvrent par grâce divine." },
-          { bold: "La créativité qui touche les cœurs :", text: "L'inspiration qui change une vie ne vient pas d'un algorithme — elle vient d'En Haut." },
-          { bold: "La force de continuer quand tout dit d'arrêter :", text: "La résilience qui dépasse l'humain a une source surnaturelle." },
-          { bold: "L'ouverture des portes fermées :", text: "Les connexions providentielles, les opportunités inexplicables — ce n'est pas la chance. C'est la grâce." },
-          { bold: "La durabilité et la protection :", text: "Ce que Dieu bâtit, personne ne peut le démolir. Ce que l'homme seul construit peut s'effondrer en une nuit." },
-        ]} />
-        <Callout color={GOLD} title="La formule du vrai artiste pro"
-          text="Travaille comme si tout dépendait de toi. Prie comme si tout dépendait de Dieu. Les deux en même temps, toujours. Cette formule a fait les Youssou N'Dour, les Kirk Franklin, les Nathaniel Bassey de ce monde. Elle peut te faire aussi." />
-      </ContentPage>
-
-      <ContentPage chapter="Épilogue — Monter et Rester" accent={GOLD} pageNum={198} total={TOTAL} guideLabel={LABEL}>
-        <SH2 color={DARK}>Monter au Sommet, c'est bien. Y Rester, c'est Dieu.</SH2>
-        <Body>C'est vrai — beaucoup arrivent au sommet. Moins nombreux sont ceux qui y restent. Et encore moins nombreux sont ceux qui y restent en étant toujours eux-mêmes, toujours en paix, toujours dans l'intégrité. La différence entre ceux qui durent et ceux qui disparaissent n'est presque jamais une question de talent ou de stratégie. C'est une question de fondation.</Body>
-        <VerticalTimeline color={GOLD} events={[
-          {
-            year: "Le démarrage",
-            title: "Tout le monde commence avec de l'énergie",
-            desc: "La motivation est haute, les rêves sont grands, la foi est fraîche. Tout artiste commence avec de l'enthousiasme. C'est facile au départ.",
-          },
-          {
-            year: "Les épreuves",
-            title: "C'est là que les chemins divergent",
-            desc: "Les refus, les sillences, les doutes, les comparaisons, les tentations. Certains cherchent des raccourcis à n'importe quel prix. D'autres s'accrochent à leur intégrité et à leur foi.",
-          },
-          {
-            year: "Le premier succès",
-            title: "La première vraie épreuve de caractère",
-            desc: "Le succès révèle qui tu es vraiment plus que l'échec. C'est là que certains changent d'arrogance, que d'autres oublient Dieu, que beaucoup gaspillent en une saison ce qui a pris des années.",
-          },
-          {
-            year: "Le sommet",
-            title: "Deux types d'artistes arrivent ici",
-            desc: "Ceux qui ont construit sur du sable — leur sommet est fragile, temporaire, épuisant. Et ceux qui ont construit sur la roche — leur sommet est stable, béni et transmissible.",
-          },
-          {
-            year: "L'héritage",
-            title: "Seul subsiste ce qui avait une vraie fondation",
-            desc: "Dans 20 ans, on ne parlera que des artistes qui avaient quelque chose de réel à dire et qui l'ont dit avec intégrité. Youssou N'Dour, CeCe Winans, Kirk Franklin — tous des bâtisseurs sur la roche.",
-          },
-        ]} />
-        <Callout color={GOLD} title="La vérité que ce livre veut graver en toi"
-          text="Un succès qui ne vient pas de Dieu n'est pas un succès — c'est un emprunt que tu devras rembourser. Mais une carrière bâtie dans le travail, la discipline, l'intégrité et la foi est une carrière que ni les hommes, ni le temps, ni les algorithmes ne peuvent effacer." />
-      </ContentPage>
-
-      <ContentPage chapter="Épilogue — La Question Finale" accent={GOLD} pageNum={199} total={TOTAL} guideLabel={LABEL}>
-        <SH2 color={DARK}>La Question que je te pose en fermant ce livre</SH2>
-        <Body>Tu as lu ces pages. Tu as appris les stratégies, les outils, les méthodes. Tu connais maintenant ce que font les artistes pros, ce qu'ils évitent, comment ils pensent, comment ils construisent.</Body>
-        <Body>Mais avant de refermer ce livre et de commencer à appliquer — je veux que tu t'arrêtes quelques minutes. Et que tu te poses, honnêtement, la question que peu d'artistes osent se poser :</Body>
-        <div style={{ margin: "12px 0", padding: "20px 22px", borderRadius: "14px", background: `linear-gradient(135deg, ${GOLD}12, ${GOLD}06)`, border: `2px solid ${GOLD}35`, textAlign: "center" }}>
-          <p style={{ fontFamily: FD, fontSize: "19px", fontStyle: "italic", color: DARK, lineHeight: 1.65, margin: 0 }}>
-            «Si Dieu ne bénissait pas ma carrière,<br />
-            est-ce que je continuerais à faire de la musique<br />
-            de la même façon, avec la même intégrité ?»
-          </p>
-        </div>
-        <Body>Si ta réponse est oui — tu es prêt pour le vrai sommet. Si ta réponse hésite — ce livre a encore quelque chose à te dire. Relis la section Fondations.</Body>
-        <Divider color={GOLD} />
-        <SH3 color={GOLD}>Ce que ce livre t'encourage à faire</SH3>
-        <NumberedList color={GOLD} items={[
-          "TRAVAILLER DUR — pas parce que le succès est garanti, mais parce que ton talent mérite d'être développé à sa pleine mesure.",
-          "ÊTRE DISCIPLINÉ — les habitudes quotidiennes que tu as apprises ne sont pas une option. Elles sont le chemin.",
-          "AGIR AVEC INTÉGRITÉ — chaque décision que tu prends, même quand personne ne regarde, construit ou détruit ta fondation.",
-          "COMPTER SUR DIEU — après avoir tout fait de ton côté, lever les mains et confier le résultat à Celui qui ouvre les portes que personne ne peut fermer.",
-          "RESTER TOI-MÊME AU SOMMET — la plus grande victoire n'est pas d'y arriver. C'est d'y arriver en étant encore toi.",
-        ]} />
-        <Testimony
-          text="Ce livre n'est pas un raccourci vers le succès. C'est une invitation à construire quelque chose de réel — quelque chose que Dieu peut bénir, que les hommes peuvent respecter, et que le temps ne peut pas effacer. Si tu travailles dur et tu comptes sur Dieu, tu n'as pas besoin de vendre ton âme pour arriver au sommet. Tu as besoin de ce livre, de ta discipline, et de Sa grâce."
-          author="Amset"
-          role="Artiste Gospel Pro · Fondateur du Galsen Gospel Urbain · Promoteur du Sunu Impact Festival · Dakar, Sénégal"
-          color={GOLD}
-        />
-        <div style={{ margin: "10px 0", padding: "14px 16px", borderRadius: "10px", background: `linear-gradient(135deg, ${GOLD}15, ${GOLD}08)`, border: `1px solid ${GOLD}30`, textAlign: "center" }}>
-          <p style={{ fontFamily: FD, fontSize: "16px", color: DARK, lineHeight: 1.6, margin: "0 0 6px" }}>
-            Du Talent au Sommet —<br />
-            <em style={{ color: GOLD }}>avec le travail de tes mains et la grâce de Dieu.</em>
-          </p>
-          <p style={{ fontFamily: F, fontSize: "9px", color: "#78716C", margin: 0 }}>
-            KEKELI Creative Agency · Dakar, Sénégal · 2026
-          </p>
-        </div>
-      </ContentPage>
 
       {/* ══════════════════════════════════════════════════ */}
       {/* BIBLIOGRAPHIE & SOURCES                           */}
@@ -7041,12 +6874,181 @@ export default function EbookArtisteViewer() {
       </ContentPage>
 
       {/* ══════════════════════════════════════════════════════════════════ */}
+
+      {/* ══════════════════════════════════════════════════════════════════ */}
+      {/* ÉPILOGUE — LA QUESTION PHARE (P260–P264)                         */}
+      {/* ══════════════════════════════════════════════════════════════════ */}
+
+      {/* Page sombre d'ouverture de l'épilogue */}
+      <div className="ebook-page" style={{
+        width: "210mm", minHeight: "297mm",
+        background: "linear-gradient(160deg, #08060F 0%, #1A0A2E 50%, #0D0C0A 100%)",
+        display: "flex", flexDirection: "column", pageBreakAfter: "always",
+        position: "relative", overflow: "hidden",
+      }}>
+        <div aria-hidden style={{ position: "absolute", top: "-80px", right: "-80px", width: "400px", height: "400px", borderRadius: "50%", border: "1px solid rgba(200,168,75,0.08)", pointerEvents: "none" }} />
+        <div aria-hidden style={{ position: "absolute", bottom: "-40px", left: "-40px", width: "280px", height: "280px", borderRadius: "50%", border: "1px solid rgba(200,168,75,0.05)", pointerEvents: "none" }} />
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 40% at 30% 50%, rgba(200,168,75,0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
+
+        <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", padding: "60px 48px", position: "relative", zIndex: 1 }}>
+          <p style={{ fontFamily: F, fontSize: "9px", fontWeight: 700, color: GOLD, letterSpacing: "0.3em", textTransform: "uppercase", margin: "0 0 20px" }}>ÉPILOGUE</p>
+          <h2 style={{ fontFamily: FD, fontSize: "52px", fontWeight: 700, color: "#fff", margin: "0 0 16px", lineHeight: 1.05 }}>
+            La Question<br />
+            <em style={{ color: GOLD, fontStyle: "italic" }}>que personne<br />ne te pose</em>
+          </h2>
+          <div style={{ width: "48px", height: "2px", background: `linear-gradient(90deg, ${GOLD}, transparent)`, margin: "20px 0" }} />
+          <p style={{ fontFamily: F, fontSize: "14px", color: "rgba(255,255,255,0.5)", lineHeight: 1.75, maxWidth: "380px", margin: 0 }}>
+            Tu as maintenant tous les outils. Mais avant de fermer ce livre — il reste une conversation que nous devons avoir.
+          </p>
+        </div>
+        <div style={{ padding: "14px 48px 20px", borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", justifyContent: "space-between" }}>
+          <p style={{ fontFamily: F, fontSize: "8px", color: "rgba(255,255,255,0.2)", margin: 0 }}>KEKELI Creative Agency — {LABEL}</p>
+          <p style={{ fontFamily: F, fontSize: "8px", color: "rgba(255,255,255,0.2)", margin: 0 }}>260 / {TOTAL}</p>
+        </div>
+      </div>
+
+      <ContentPage chapter="Épilogue — La Question Phare" accent={GOLD} pageNum={261} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>À quel Prix veux-tu le Sommet ?</SH2>
+        <Body>Ce livre t'a tout appris sur comment monter. La stratégie, les outils, les plateformes, les contrats, les équipes. Mais il reste une question que très peu de guides osent poser — et pourtant, c'est la plus importante de toutes.</Body>
+        <BigQuote
+          text="Es-tu prêt à monter au sommet en restant qui tu es vraiment — ou es-tu prêt à devenir quelqu'un d'autre pour y arriver ?"
+          author="La question que chaque artiste doit se poser avant de commencer"
+          color={GOLD}
+        />
+        <Body>Il faut être honnête. Dans l'industrie musicale — africaine comme mondiale — il existe des chemins sombres. Des artistes qui ont sacrifié leur intégrité pour un contrat. Des deals qui ne se signent pas sur papier. Des compromis qui semblent anodins au départ et qui détruisent tout ensuite. Des succès qui arrivent vite, brillent fort, et disparaissent encore plus vite — laissant derrière eux une vie brisée.</Body>
+        <TwoCol
+          left={
+            <RedBox>
+              <BoxLabel color="#DC2626" text="❌ Le sommet sans fondation" />
+              <BulletList color="#DC2626" items={[
+                { text: "Arrivé vite, parti encore plus vite" },
+                { text: "Construit sur des compromis qui rongent" },
+                { text: "Une célébrité qui coûte la paix intérieure" },
+                { text: "Un succès que tu ne peux pas partager avec Dieu" },
+                { text: "Une carrière qui finit dans le vide ou la honte" },
+                { text: "Ce que les autres voient ne correspond pas à ce que tu vis" },
+              ]} />
+            </RedBox>
+          }
+          right={
+            <GreenBox>
+              <BoxLabel color="#16A34A" text="✅ Le sommet avec fondation" />
+              <BulletList color={GRN} items={[
+                { text: "Construit lentement, mais solidement" },
+                { text: "Chaque succès est un témoignage vivant" },
+                { text: "La paix intérieure est réelle, pas jouée" },
+                { text: "Tu peux remercier Dieu pour chaque étape" },
+                { text: "Durable — 10 ans, 20 ans, une vie entière" },
+                { text: "Ce que les autres voient correspond à qui tu es vraiment" },
+              ]} />
+            </GreenBox>
+          }
+        />
+        <Callout color={GOLD} title="Ce livre ne conseille ni ne tolère les chemins sombres"
+          text="Ce guide a été conçu pour t'équiper avec les vrais outils du professionnel — le travail, la discipline, la stratégie, la foi. Il n'existe aucun raccourci qui vaille le prix de ton intégrité. Aucun contrat ne vaut la perte de ta paix. Aucun hit ne vaut la destruction de qui tu es." />
+      </ContentPage>
+
+      <ContentPage chapter="Épilogue — Le Travail et la Grâce" accent={GOLD} pageNum={262} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>Le Travail ET la Grâce : les deux pilliers du vrai succès</SH2>
+        <Body>Il y a une erreur que font beaucoup de croyants dans leur approche de la carrière musicale. Certains disent : <em>«Je vais travailler dur et Dieu fera le reste.»</em> D'autres disent : <em>«Je vais prier et Dieu ouvrira les portes.»</em> Les deux ont tort — parce que les deux ont raison, mais séparément.</Body>
+        <Banner text="Le vrai succès est à l'intersection du travail humain et de la grâce divine." sub="L'un sans l'autre ne suffit pas. Les deux ensemble sont imbattables." color={GOLD} dark />
+        <SH3 color={GOLD}>Ce que Dieu ne fera pas à ta place</SH3>
+        <BulletList color={GOLD} items={[
+          { bold: "Dieu ne publiera pas tes TikToks :", text: "La discipline de créer chaque jour est ta responsabilité. La persévérance t'appartient." },
+          { bold: "Dieu ne signera pas tes contrats à ta place :", text: "Comprendre tes droits, négocier intelligemment, refuser les mauvais accords — c'est ton travail." },
+          { bold: "Dieu ne construira pas ton audience à ta place :", text: "Répondre à tes fans, être constant, construire une communauté — c'est l'œuvre de tes mains." },
+          { bold: "Dieu ne protégera pas ta voix si tu ne la soignes pas :", text: "L'hydratation, le repos, l'échauffement — ta santé est ton instrument, ta responsabilité." },
+        ]} />
+        <SH3 color={GOLD}>Ce que toi tu ne peux pas faire sans Dieu</SH3>
+        <BulletList color={GRN} items={[
+          { bold: "La grâce d'être au bon endroit au bon moment :", text: "Certaines portes ne s'ouvrent pas par stratégie — elles s'ouvrent par grâce divine." },
+          { bold: "La créativité qui touche les cœurs :", text: "L'inspiration qui change une vie ne vient pas d'un algorithme — elle vient d'En Haut." },
+          { bold: "La force de continuer quand tout dit d'arrêter :", text: "La résilience qui dépasse l'humain a une source surnaturelle." },
+          { bold: "L'ouverture des portes fermées :", text: "Les connexions providentielles, les opportunités inexplicables — ce n'est pas la chance. C'est la grâce." },
+          { bold: "La durabilité et la protection :", text: "Ce que Dieu bâtit, personne ne peut le démolir. Ce que l'homme seul construit peut s'effondrer en une nuit." },
+        ]} />
+        <Callout color={GOLD} title="La formule du vrai artiste pro"
+          text="Travaille comme si tout dépendait de toi. Prie comme si tout dépendait de Dieu. Les deux en même temps, toujours. Cette formule a fait les Youssou N'Dour, les Kirk Franklin, les Nathaniel Bassey de ce monde. Elle peut te faire aussi." />
+      </ContentPage>
+
+      <ContentPage chapter="Épilogue — Monter et Rester" accent={GOLD} pageNum={263} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>Monter au Sommet, c'est bien. Y Rester, c'est Dieu.</SH2>
+        <Body>C'est vrai — beaucoup arrivent au sommet. Moins nombreux sont ceux qui y restent. Et encore moins nombreux sont ceux qui y restent en étant toujours eux-mêmes, toujours en paix, toujours dans l'intégrité. La différence entre ceux qui durent et ceux qui disparaissent n'est presque jamais une question de talent ou de stratégie. C'est une question de fondation.</Body>
+        <VerticalTimeline color={GOLD} events={[
+          {
+            year: "Le démarrage",
+            title: "Tout le monde commence avec de l'énergie",
+            desc: "La motivation est haute, les rêves sont grands, la foi est fraîche. Tout artiste commence avec de l'enthousiasme. C'est facile au départ.",
+          },
+          {
+            year: "Les épreuves",
+            title: "C'est là que les chemins divergent",
+            desc: "Les refus, les sillences, les doutes, les comparaisons, les tentations. Certains cherchent des raccourcis à n'importe quel prix. D'autres s'accrochent à leur intégrité et à leur foi.",
+          },
+          {
+            year: "Le premier succès",
+            title: "La première vraie épreuve de caractère",
+            desc: "Le succès révèle qui tu es vraiment plus que l'échec. C'est là que certains changent d'arrogance, que d'autres oublient Dieu, que beaucoup gaspillent en une saison ce qui a pris des années.",
+          },
+          {
+            year: "Le sommet",
+            title: "Deux types d'artistes arrivent ici",
+            desc: "Ceux qui ont construit sur du sable — leur sommet est fragile, temporaire, épuisant. Et ceux qui ont construit sur la roche — leur sommet est stable, béni et transmissible.",
+          },
+          {
+            year: "L'héritage",
+            title: "Seul subsiste ce qui avait une vraie fondation",
+            desc: "Dans 20 ans, on ne parlera que des artistes qui avaient quelque chose de réel à dire et qui l'ont dit avec intégrité. Youssou N'Dour, CeCe Winans, Kirk Franklin — tous des bâtisseurs sur la roche.",
+          },
+        ]} />
+        <Callout color={GOLD} title="La vérité que ce livre veut graver en toi"
+          text="Un succès qui ne vient pas de Dieu n'est pas un succès — c'est un emprunt que tu devras rembourser. Mais une carrière bâtie dans le travail, la discipline, l'intégrité et la foi est une carrière que ni les hommes, ni le temps, ni les algorithmes ne peuvent effacer." />
+      </ContentPage>
+
+      <ContentPage chapter="Épilogue — La Question Finale" accent={GOLD} pageNum={264} total={TOTAL} guideLabel={LABEL}>
+        <SH2 color={DARK}>La Question que je te pose en fermant ce livre</SH2>
+        <Body>Tu as lu ces pages. Tu as appris les stratégies, les outils, les méthodes. Tu connais maintenant ce que font les artistes pros, ce qu'ils évitent, comment ils pensent, comment ils construisent.</Body>
+        <Body>Mais avant de refermer ce livre et de commencer à appliquer — je veux que tu t'arrêtes quelques minutes. Et que tu te poses, honnêtement, la question que peu d'artistes osent se poser :</Body>
+        <div style={{ margin: "12px 0", padding: "20px 22px", borderRadius: "14px", background: `linear-gradient(135deg, ${GOLD}12, ${GOLD}06)`, border: `2px solid ${GOLD}35`, textAlign: "center" }}>
+          <p style={{ fontFamily: FD, fontSize: "19px", fontStyle: "italic", color: DARK, lineHeight: 1.65, margin: 0 }}>
+            «Si Dieu ne bénissait pas ma carrière,<br />
+            est-ce que je continuerais à faire de la musique<br />
+            de la même façon, avec la même intégrité ?»
+          </p>
+        </div>
+        <Body>Si ta réponse est oui — tu es prêt pour le vrai sommet. Si ta réponse hésite — ce livre a encore quelque chose à te dire. Relis la section Fondations.</Body>
+        <Divider color={GOLD} />
+        <SH3 color={GOLD}>Ce que ce livre t'encourage à faire</SH3>
+        <NumberedList color={GOLD} items={[
+          "TRAVAILLER DUR — pas parce que le succès est garanti, mais parce que ton talent mérite d'être développé à sa pleine mesure.",
+          "ÊTRE DISCIPLINÉ — les habitudes quotidiennes que tu as apprises ne sont pas une option. Elles sont le chemin.",
+          "AGIR AVEC INTÉGRITÉ — chaque décision que tu prends, même quand personne ne regarde, construit ou détruit ta fondation.",
+          "COMPTER SUR DIEU — après avoir tout fait de ton côté, lever les mains et confier le résultat à Celui qui ouvre les portes que personne ne peut fermer.",
+          "RESTER TOI-MÊME AU SOMMET — la plus grande victoire n'est pas d'y arriver. C'est d'y arriver en étant encore toi.",
+        ]} />
+        <Testimony
+          text="Ce livre n'est pas un raccourci vers le succès. C'est une invitation à construire quelque chose de réel — quelque chose que Dieu peut bénir, que les hommes peuvent respecter, et que le temps ne peut pas effacer. Si tu travailles dur et tu comptes sur Dieu, tu n'as pas besoin de vendre ton âme pour arriver au sommet. Tu as besoin de ce livre, de ta discipline, et de Sa grâce."
+          author="Amset"
+          role="Artiste Gospel Pro · Fondateur du Galsen Gospel Urbain · Promoteur du Sunu Impact Festival · Dakar, Sénégal"
+          color={GOLD}
+        />
+        <div style={{ margin: "10px 0", padding: "14px 16px", borderRadius: "10px", background: `linear-gradient(135deg, ${GOLD}15, ${GOLD}08)`, border: `1px solid ${GOLD}30`, textAlign: "center" }}>
+          <p style={{ fontFamily: FD, fontSize: "16px", color: DARK, lineHeight: 1.6, margin: "0 0 6px" }}>
+            Du Talent au Sommet —<br />
+            <em style={{ color: GOLD }}>avec le travail de tes mains et la grâce de Dieu.</em>
+          </p>
+          <p style={{ fontFamily: F, fontSize: "9px", color: "#78716C", margin: 0 }}>
+            KEKELI Creative Agency · Dakar, Sénégal · 2026
+          </p>
+        </div>
+      </ContentPage>
+
       {/* CLOSING PAGE                                                      */}
       {/* ══════════════════════════════════════════════════════════════════ */}
       <ClosingPage
         title="Tu es maintenant"
         titleHighlight="Un Artiste Pro !"
-        pageNum={239}
+        pageNum={265}
         total={TOTAL}
         guideLabel={LABEL}
         accent={ACC}
