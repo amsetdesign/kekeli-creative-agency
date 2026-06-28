@@ -9,7 +9,7 @@ import {
   useTransform,
   useReducedMotion,
 } from "framer-motion";
-import { MessageCircle, Sparkles } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { useT } from "@/hooks/useT";
 
@@ -273,24 +273,6 @@ export default function Hero() {
           >
             {tr.hero.subtitle}
           </motion.p>
-
-          {/* Nudge */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.78 }}
-            className="mb-8"
-          >
-            <button
-              onClick={() => typeof window !== "undefined" && window.dispatchEvent(new CustomEvent("keli:open-chat"))}
-              className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full font-body text-sm transition-all hover:brightness-110 active:scale-95"
-              style={{ background: "rgba(200,168,75,0.10)", border: "1px solid rgba(200,168,75,0.28)", color: "rgba(220,210,255,0.75)" }}
-            >
-              <Sparkles size={13} style={{ color: "#C8A84B", flexShrink: 0 }} />
-              <span className="whitespace-nowrap">{tr.hero.nudge}</span>
-              <span className="font-semibold whitespace-nowrap" style={{ color: "#C8A84B" }}>{tr.hero.nudgeCta}</span>
-            </button>
-          </motion.div>
 
           {/* CTAs */}
           <motion.div
