@@ -116,7 +116,9 @@ function PurchaseModal({
             style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}
           >
             <span className="font-body text-xs" style={{ color: "rgba(255,255,255,0.40)" }}>Paiement via :</span>
-            {["Wave", "Orange Money", "Carte bancaire", "PayPal"].map((m) => (
+            <Image src="/images/logo-wave.png" alt="Wave" width={48} height={20} className="object-contain" style={{ height: 20, width: "auto" }} />
+            <Image src="/images/logo-orange-money.png" alt="Orange Money" width={72} height={20} className="object-contain" style={{ height: 20, width: "auto" }} />
+            {["Carte bancaire", "PayPal"].map((m) => (
               <span
                 key={m}
                 className="font-body text-[10px] font-semibold px-2 py-0.5 rounded"
