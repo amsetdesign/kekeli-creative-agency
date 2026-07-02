@@ -334,7 +334,7 @@ const BOOKS = [
     description:
       "Communication digitale, identité visuelle, site web, réseaux sociaux et publicité — le guide complet pour les entrepreneurs sénégalais qui veulent se développer avec impact.",
     chips: ["Identité visuelle", "Site web", "Community management", "Publicité Meta/Google", "Stratégie"],
-    image: "/images/guide de l'entrpreneur au Senegal 2026.png",
+    image: "/images/le guide de l'entrpreneur au Senegal 2026.png",
     accentColor: GOLD,
     chapters: [
       "Créer une identité visuelle professionnelle",
