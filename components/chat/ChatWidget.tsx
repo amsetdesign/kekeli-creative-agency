@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Send, Sparkles, ArrowRight } from "lucide-react";
+import { X, Send, MessageCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 interface Message {
@@ -52,7 +52,7 @@ function MessageBubble({ message, isNew }: { message: Message; isNew?: boolean }
     >
       {!isUser && (
         <div className="w-6 h-6 rounded-full bg-[#C8A84B]/20 border border-[#C8A84B]/40 flex items-center justify-center shrink-0 mt-0.5 mr-2">
-          <Sparkles size={10} className="text-[#C8A84B]" />
+          <MessageCircle size={10} className="text-[#C8A84B]" />
         </div>
       )}
       <div
@@ -75,8 +75,6 @@ export default function ChatWidget() {
   const [loading, setLoading] = useState(false);
   const [streaming, setStreaming] = useState("");
   const [sessionId] = useState(() => getSessionId());
-  const [hasNew, setHasNew] = useState(false);
-  const [notifDismissed, setNotifDismissed] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -84,17 +82,9 @@ export default function ChatWidget() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, streaming]);
 
-  // Show a notification bubble after 8 seconds if chat not opened
+  // Open chat when triggered from another component
   useEffect(() => {
-    const t = setTimeout(() => {
-      if (!open && !notifDismissed) setHasNew(true);
-    }, 8000);
-    return () => clearTimeout(t);
-  }, [open, notifDismissed]);
-
-  // Open chat when triggered from another component (e.g. Hero nudge)
-  useEffect(() => {
-    const handler = () => { setOpen(true); setHasNew(false); };
+    const handler = () => { setOpen(true); };
     window.addEventListener("keli:open-chat", handler);
     return () => window.removeEventListener("keli:open-chat", handler);
   }, []);
@@ -178,8 +168,6 @@ export default function ChatWidget() {
 
   function openChat() {
     setOpen(true);
-    setHasNew(false);
-    setNotifDismissed(true);
     setTimeout(() => inputRef.current?.focus(), 300);
   }
 
@@ -193,33 +181,6 @@ export default function ChatWidget() {
     <>
       {/* ── Floating button ──────────────────────────────── */}
       <div className="fixed bottom-6 left-6 z-50 flex flex-col items-start gap-2">
-
-        {/* Notification bubble */}
-        <AnimatePresence>
-          {hasNew && !open && (
-            <motion.div
-              initial={{ opacity: 0, x: -10, scale: 0.9 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              exit={{ opacity: 0, x: -10, scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 300, damping: 24 }}
-              className="bg-white rounded-2xl rounded-bl-sm px-4 py-3 [box-shadow:0_8px_32px_rgba(12,11,9,0.18)] max-w-[220px] cursor-pointer"
-              onClick={openChat}
-            >
-              <p className="font-body text-xs font-semibold text-[#0C0B09] leading-snug">
-                💡 Un projet en tête ?
-              </p>
-              <p className="font-body text-[11px] text-[#78716C] mt-0.5">
-                Parlez-en à KELI maintenant →
-              </p>
-              <button
-                onClick={(e) => { e.stopPropagation(); setHasNew(false); setNotifDismissed(true); }}
-                className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-[#A8A29E] flex items-center justify-center"
-              >
-                <X size={8} className="text-white" />
-              </button>
-            </motion.div>
-          )}
-        </AnimatePresence>
 
         {/* Main button */}
         <motion.button
@@ -236,7 +197,7 @@ export default function ChatWidget() {
               </motion.div>
             ) : (
               <motion.div key="open" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                <Sparkles size={22} className="text-black" />
+                <MessageCircle size={22} className="text-black" />
               </motion.div>
             )}
           </AnimatePresence>
@@ -266,7 +227,7 @@ export default function ChatWidget() {
             {/* Header */}
             <div className="px-5 py-4 border-b border-white/6 flex items-center gap-3 shrink-0">
               <div className="relative w-9 h-9 rounded-xl bg-[#C8A84B]/15 border border-[#C8A84B]/30 flex items-center justify-center">
-                <Sparkles size={16} className="text-[#C8A84B]" />
+                <MessageCircle size={16} className="text-[#C8A84B]" />
                 <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-[#0F0E0C]" />
               </div>
               <div className="flex-1 min-w-0">
@@ -292,7 +253,7 @@ export default function ChatWidget() {
                   className="flex justify-start mb-3"
                 >
                   <div className="w-6 h-6 rounded-full bg-[#C8A84B]/20 border border-[#C8A84B]/40 flex items-center justify-center shrink-0 mt-0.5 mr-2">
-                    <Sparkles size={10} className="text-[#C8A84B]" />
+                    <MessageCircle size={10} className="text-[#C8A84B]" />
                   </div>
                   <div className="max-w-[82%] rounded-2xl rounded-tl-sm px-4 py-2.5 bg-white/8 border border-white/8 font-body text-sm text-white/90 whitespace-pre-line leading-relaxed">
                     {streaming}
@@ -309,7 +270,7 @@ export default function ChatWidget() {
               {loading && !streaming && (
                 <div className="flex justify-start mb-3">
                   <div className="w-6 h-6 rounded-full bg-[#C8A84B]/20 border border-[#C8A84B]/40 flex items-center justify-center shrink-0 mt-0.5 mr-2">
-                    <Sparkles size={10} className="text-[#C8A84B]" />
+                    <MessageCircle size={10} className="text-[#C8A84B]" />
                   </div>
                   <div className="rounded-2xl rounded-tl-sm bg-white/8 border border-white/8">
                     <TypingDots />

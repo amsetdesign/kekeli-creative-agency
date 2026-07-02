@@ -19,7 +19,7 @@ export default function KELIBanner() {
     <section
       className="relative py-16 overflow-hidden"
     >
-      {/* Violet gradient — mirrors ContactCTA */}
+      {/* Fond violet */}
       <div
         className="absolute inset-0"
         style={{ background: "linear-gradient(135deg, #0D0520 0%, #1E0040 35%, #2A0060 60%, #0A0B09 100%)" }}

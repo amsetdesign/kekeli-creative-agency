@@ -89,12 +89,11 @@ const PERSO_SERVICES_STATIC = [
 const AGENCE_STATIC = [
   { icon: Briefcase,  href: "/realisations", tk: "portfolio",   descTk: "portfolioNavDesc" },
   { icon: Layers,     href: "/experience",   tk: "aboutLabel",  descTk: "aboutDesc" },
-  { icon: Globe,      href: "/impact",       tk: "impactLabel", descTk: "impactDesc" },
   { icon: Users,      href: "/a-propos",     tk: "teamLabel",   descTk: "teamDesc" },
   { icon: MessageSquare, href: "/blog",      tk: "blogLabel",   descTk: "blogDesc" },
 ] as const;
 
-const AGENCE_PATHS = ["/experience", "/impact", "/a-propos", "/realisations", "/blog"];
+const AGENCE_PATHS = ["/experience", "/a-propos", "/realisations", "/blog"];
 
 function KekeliLogo({ isScrolled: _ }: { isScrolled: boolean }) {
   return (
@@ -161,9 +160,8 @@ function MegaMenu({ onClose, services, outiasIA, tr }: {
             </div>
             <div className="border-t border-white/08" />
             <div>
-              <p className="font-body text-[10px] uppercase tracking-[0.25em] text-white/30 mb-3 font-semibold flex items-center gap-2">
-                <Sparkles size={9} style={{ color: "#C8A84B" }} />
-                <span>{tr.nav.aiToolsFree}</span>
+              <p className="font-body text-[10px] uppercase tracking-[0.25em] text-white/30 mb-3 font-semibold">
+                {tr.nav.aiToolsFree}
               </p>
               <div className="grid grid-cols-3 gap-0.5">
                 {outiasIA.map(({ icon: Icon, label, href, color, desc }) => (
@@ -254,9 +252,8 @@ function EntreprisesMegaMenu({ onClose, services, outiasIA, tr }: {
             </div>
             <div className="border-t border-white/08" />
             <div>
-              <p className="font-body text-[10px] uppercase tracking-[0.25em] text-white/30 mb-3 font-semibold flex items-center gap-2">
-                <Sparkles size={9} style={{ color: "#C8A84B" }} />
-                <span>{tr.nav.aiToolsFree}</span>
+              <p className="font-body text-[10px] uppercase tracking-[0.25em] text-white/30 mb-3 font-semibold">
+                {tr.nav.aiToolsFree}
               </p>
               <div className="grid grid-cols-4 gap-0.5">
                 {outiasIA.map(({ icon: Icon, label, href, color, desc }) => (
