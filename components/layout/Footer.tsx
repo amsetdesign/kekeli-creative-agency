@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -186,7 +186,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/221781672819" target="_blank" rel="noopener noreferrer" className="hover:text-text-on-dark transition-colors">
+                <a href="https://wa.me/221765289111" target="_blank" rel="noopener noreferrer" className="hover:text-text-on-dark transition-colors">
                   {f.whatsapp}
                 </a>
               </li>

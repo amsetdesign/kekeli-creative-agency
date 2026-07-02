@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useReducer, useCallback, useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -1064,7 +1064,7 @@ function ResultView({
 
         <div className="flex flex-col sm:flex-row gap-3">
           <a
-            href={`https://wa.me/221781672819?text=${encodeURIComponent(
+            href={`https://wa.me/221765289111?text=${encodeURIComponent(
               tone === "tu"
                 ? `Bonjour KEKELI ! Je suis ${userInfo.prenom} et j'ai obtenu ${score}/100 à l'audit (niveau : ${getLevel(score).label}). Mon point faible principal : "${sortedRecos[0]?.title ?? "stratégie digitale"}". J'aimerais qu'on en discute.`
                 : `Bonjour KEKELI ! Je m'appelle ${userInfo.prenom} et j'ai obtenu ${score}/100 à l'audit de visibilité (niveau : ${getLevel(score).label}). Mon point prioritaire : "${sortedRecos[0]?.title ?? "stratégie digitale"}". J'aimerais en discuter avec vous.`

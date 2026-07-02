@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import {
   F, FD, DARK, CREAM, GOLD,
@@ -2277,7 +2277,7 @@ export default function EbookArtisteViewer() {
           "RÉPONSES AUTOMATIQUES — Message de bienvenue automatique quand quelqu'un écrit pour la première fois",
           "RÉPONSES RAPIDES — Prépare des réponses prêtes pour : tarifs concerts, booking, lien musique, merci",
           "CATALOGUE — Crée un catalogue avec tes services : Prestation concert, Cours de chant, Merchandise",
-          "LIEN CLIQUABLE — Génère ton lien wa.me/221781672819 et mets-le dans toutes tes bios",
+          "LIEN CLIQUABLE — Génère ton lien wa.me/221765289111 et mets-le dans toutes tes bios",
         ]} />
         <Callout color={GRN} title="La diffusion (Broadcast)"
           text="WhatsApp permet d'envoyer un même message à 256 contacts maximum dans une liste de diffusion (ils ne voient pas les autres destinataires). Crée plusieurs listes : Fans, DJs, Médias, Organisateurs. Le jour de ta sortie, une diffusion à ces listes = notification directe à des centaines de personnes." />

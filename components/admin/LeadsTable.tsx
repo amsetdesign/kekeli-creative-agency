@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
@@ -225,7 +225,7 @@ function LeadDrawer({ lead, onClose }: { lead: Lead; onClose: () => void }) {
               const name = getLeadName(lead);
               const waPhone = phone
                 ? phone.replace(/\D/g, "").replace(/^00/, "").replace(/^0/, "221")
-                : "221781672819";
+                : "221765289111";
               const msg = encodeURIComponent(
                 `Bonjour ${name} 👋, je suis KEKELI Creative Agency. Suite à votre ${lead.type === "sondage" ? "audit de visibilité" : "demande"}, je voulais vous contacter pour en discuter. Avez-vous un moment ?`
               );

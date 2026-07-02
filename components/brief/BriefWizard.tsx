@@ -121,7 +121,7 @@ export default function BriefWizard() {
       ``,
       `Mon prénom : ${prenom}`,
     ].join("\n");
-    const waUrl = `https://wa.me/221781672819?text=${encodeURIComponent(msg)}`;
+    const waUrl = `https://wa.me/221765289111?text=${encodeURIComponent(msg)}`;
 
     dispatch({ type: "SUBMITTING" });
 

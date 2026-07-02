@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { Home, MessageCircle } from "lucide-react";
 
 export default function NotFound() {
@@ -60,7 +60,7 @@ export default function NotFound() {
             Retour à l&apos;accueil
           </Link>
           <a
-            href="https://wa.me/221781672819"
+            href="https://wa.me/221765289111"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-body font-medium text-sm transition-all hover:border-gold/60"

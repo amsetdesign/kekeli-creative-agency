@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { ChevronRight, Mail, MapPin, MessageCircle, ArrowRight } from "lucide-react";
@@ -74,7 +74,7 @@ export default function ContactContent() {
                   </a>
 
                   <a
-                    href="https://wa.me/221781672819"
+                    href="https://wa.me/221765289111"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 rounded-xl border border-border bg-bg-primary hover:border-gold hover:[box-shadow:var(--shadow-gold)] transition-all group"

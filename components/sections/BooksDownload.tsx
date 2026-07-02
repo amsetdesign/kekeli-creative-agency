@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { X, Mail, User, ShoppingCart, Loader2, BookOpen, Lock } from "lucide-react";
+import { X, Mail, User, ShoppingCart, Loader2, BookOpen, Lock, Eye, CheckCircle2 } from "lucide-react";
 import FadeIn, { FadeInStagger, FadeInItem } from "@/components/animations/FadeIn";
 
 const GOLD = "#C8A84B";
@@ -184,6 +184,116 @@ function PurchaseModal({
   );
 }
 
+/* ── Preview modal ───────────────────────────────────────────── */
+function PreviewModal({
+  book,
+  onBuy,
+  onClose,
+}: {
+  book: (typeof BOOKS)[number];
+  onBuy: () => void;
+  onClose: () => void;
+}) {
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      style={{ background: "rgba(0,0,0,0.82)" }}
+      onClick={(e) => e.target === e.currentTarget && onClose()}
+    >
+      <div
+        className="relative w-full max-w-2xl rounded-3xl overflow-hidden flex flex-col"
+        style={{
+          background: "#111009",
+          border: "1px solid rgba(200,168,75,0.20)",
+          boxShadow: "0 32px 80px rgba(0,0,0,0.8)",
+          maxHeight: "90vh",
+        }}
+      >
+        {/* Top accent */}
+        <div style={{ height: 3, background: `linear-gradient(90deg, ${GOLD}, transparent)`, flexShrink: 0 }} />
+
+        {/* Header */}
+        <div className="flex items-start gap-5 p-6 pb-0" style={{ flexShrink: 0 }}>
+          <div className="shrink-0 hidden sm:block">
+            <Image
+              src={book.image}
+              alt={book.title}
+              width={90}
+              height={127}
+              className="rounded-lg object-cover"
+              style={{ filter: "drop-shadow(0 8px 20px rgba(0,0,0,0.6))" }}
+            />
+          </div>
+          <div className="flex-1 min-w-0">
+            <span
+              className="inline-block font-body text-[9px] font-bold uppercase tracking-[0.18em] px-2 py-0.5 rounded-full mb-2"
+              style={{ color: GOLD, background: "rgba(200,168,75,0.10)", border: "1px solid rgba(200,168,75,0.22)" }}
+            >
+              {book.tag}
+            </span>
+            <h2 className="font-display text-xl text-white font-bold leading-snug mb-1">{book.title}</h2>
+            <p className="font-body text-xs mb-2" style={{ color: "rgba(255,255,255,0.35)" }}>{book.details}</p>
+            <p className="font-body text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.58)" }}>
+              {book.description}
+            </p>
+          </div>
+          <button onClick={onClose} className="shrink-0 text-white/30 hover:text-white/70 transition-colors mt-0.5">
+            <X size={18} />
+          </button>
+        </div>
+
+        {/* Scrollable content */}
+        <div className="overflow-y-auto px-6 py-5 flex-1">
+          <p className="font-body text-xs font-bold uppercase tracking-[0.16em] mb-3" style={{ color: "rgba(255,255,255,0.30)" }}>
+            Ce que vous apprendrez
+          </p>
+          <div className="grid sm:grid-cols-2 gap-2">
+            {book.chapters.map((ch) => (
+              <div key={ch} className="flex items-start gap-2.5">
+                <CheckCircle2 size={13} className="shrink-0 mt-0.5" style={{ color: GOLD }} />
+                <span className="font-body text-sm leading-snug" style={{ color: "rgba(255,255,255,0.65)" }}>{ch}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Key stats */}
+          <div className="grid grid-cols-3 gap-3 mt-6">
+            {book.stats.map(({ label, value }) => (
+              <div
+                key={label}
+                className="rounded-xl px-3 py-3 text-center"
+                style={{ background: "rgba(200,168,75,0.07)", border: "1px solid rgba(200,168,75,0.15)" }}
+              >
+                <p className="font-body text-lg font-bold" style={{ color: GOLD }}>{value}</p>
+                <p className="font-body text-[10px]" style={{ color: "rgba(255,255,255,0.40)" }}>{label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Footer CTA */}
+        <div
+          className="px-6 py-4 flex items-center justify-between gap-4"
+          style={{ borderTop: "1px solid rgba(255,255,255,0.07)", flexShrink: 0 }}
+        >
+          <div>
+            <p className="font-body text-xl font-bold" style={{ color: GOLD }}>{book.price}</p>
+            <p className="font-body text-[10px]" style={{ color: "rgba(255,255,255,0.30)" }}>Wave · Orange Money · PayPal</p>
+          </div>
+          <button
+            onClick={onBuy}
+            className="flex items-center gap-2 px-6 py-3 rounded-xl font-body font-bold text-sm transition-all hover:opacity-90 active:scale-[.98]"
+            style={{ background: `linear-gradient(135deg, ${GOLD} 0%, #b8963d 100%)`, color: "#0C0B09", boxShadow: "0 4px 16px rgba(200,168,75,0.30)" }}
+          >
+            <ShoppingCart size={14} />
+            Acheter — {book.price}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ── Book data ───────────────────────────────────────────────── */
 const BOOKS = [
   {
@@ -198,6 +308,21 @@ const BOOKS = [
     chips: ["Branding", "TikTok & Instagram", "Distribution", "Droits d'auteur", "Monétisation"],
     image: "/images/Du talent au sommet.png",
     accentColor: GOLD,
+    chapters: [
+      "Construire une identité artistique forte",
+      "Maîtriser TikTok, Instagram & YouTube",
+      "Distribuer sa musique à l'international",
+      "Monétiser : streaming, live, licensing",
+      "Droits d'auteur & inscription à la BSDA",
+      "Booking, management & contrats",
+      "Stratégie de presse & médias",
+      "Plan de carrière sur 12 mois",
+    ],
+    stats: [
+      { label: "Modules", value: "47" },
+      { label: "Pages", value: "239" },
+      { label: "Édition", value: "2026" },
+    ],
   },
   {
     type: "entreprise" as const,
@@ -211,128 +336,156 @@ const BOOKS = [
     chips: ["Identité visuelle", "Site web", "Community management", "Publicité Meta/Google", "Stratégie"],
     image: "/images/guide de l'entrpreneur au Senegal 2026.png",
     accentColor: GOLD,
+    chapters: [
+      "Créer une identité visuelle professionnelle",
+      "Construire un site web qui convertit",
+      "Community management & stratégie de contenu",
+      "Publicité Facebook & Instagram (Meta Ads)",
+      "Google Ads & référencement local",
+      "Email marketing & fidélisation client",
+      "E-commerce & vente en ligne au Sénégal",
+      "Mesurer et optimiser ses performances",
+    ],
+    stats: [
+      { label: "Modules", value: "38" },
+      { label: "Pages", value: "195" },
+      { label: "Édition", value: "2026" },
+    ],
   },
 ] as const;
 
 /* ── Main section ────────────────────────────────────────────── */
 export default function BooksDownload() {
-  const [hovered, setHovered] = useState<string | null>(null);
-  const [modal, setModal]     = useState<(typeof BOOKS)[number] | null>(null);
+  const [hovered,  setHovered]  = useState<string | null>(null);
+  const [preview,  setPreview]  = useState<(typeof BOOKS)[number] | null>(null);
+  const [modal,    setModal]    = useState<(typeof BOOKS)[number] | null>(null);
 
   return (
     <>
-      <section className="relative py-24 overflow-hidden" style={{ background: DARK }}>
-        {/* Blobs */}
+      <section className="relative py-16 overflow-hidden" style={{ background: DARK }}>
         <div aria-hidden className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full blur-[160px] opacity-[0.12]" style={{ background: "#7C3AED" }} />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full blur-[140px] opacity-[0.10]" style={{ background: GOLD }} />
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full blur-[160px] opacity-[0.10]" style={{ background: "#7C3AED" }} />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full blur-[140px] opacity-[0.08]" style={{ background: GOLD }} />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <FadeIn direction="up" className="text-center mb-16">
-            <span
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full font-body text-xs font-semibold uppercase tracking-[0.18em] mb-5"
-              style={{ color: GOLD, border: "1px solid rgba(200,168,75,0.30)", background: "rgba(200,168,75,0.08)" }}
-            >
-              <BookOpen size={12} />
-              Ressources exclusives · 5 000 F CFA
-            </span>
-            <h2 className="font-display text-4xl md:text-5xl text-white leading-tight mb-4">
-              Deux guides pour <em className="not-italic" style={{ color: GOLD }}>accélérer</em>
-              <br className="hidden sm:block" /> votre succès
-            </h2>
-            <p className="font-body text-base max-w-lg mx-auto" style={{ color: "rgba(255,255,255,0.50)" }}>
-              Des ressources complètes conçues pour le marché africain. Paiement simple via Wave ou Orange Money.
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header compact */}
+          <FadeIn direction="up" className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-8">
+            <div>
+              <span
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full font-body text-xs font-semibold uppercase tracking-[0.16em] mb-3"
+                style={{ color: GOLD, border: "1px solid rgba(200,168,75,0.30)", background: "rgba(200,168,75,0.08)" }}
+              >
+                <BookOpen size={11} />
+                Guides exclusifs
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl text-white leading-tight">
+                Deux guides pour <em className="not-italic" style={{ color: GOLD }}>accélérer</em> votre succès
+              </h2>
+            </div>
+            <p className="font-body text-sm shrink-0" style={{ color: "rgba(255,255,255,0.40)" }}>
+              Wave · Orange Money · PayPal
             </p>
           </FadeIn>
 
-          {/* Books grid */}
-          <FadeInStagger className="grid md:grid-cols-2 gap-6">
+          {/* Books — horizontal cards */}
+          <FadeInStagger className="grid md:grid-cols-2 gap-5">
             {BOOKS.map((book) => (
               <FadeInItem key={book.type}>
                 <div
-                  className="relative rounded-2xl p-7 flex flex-col h-full"
+                  className="rounded-2xl p-5 flex gap-5 h-full"
                   style={{
                     background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(200,168,75,0.15)",
-                    boxShadow: hovered === book.type ? "0 0 60px rgba(200,168,75,0.08)" : "none",
-                    transition: "box-shadow 0.3s ease",
+                    border: `1px solid ${hovered === book.type ? "rgba(200,168,75,0.35)" : "rgba(200,168,75,0.12)"}`,
+                    transition: "border-color 0.3s ease",
                   }}
                   onMouseEnter={() => setHovered(book.type)}
                   onMouseLeave={() => setHovered(null)}
                 >
-                  {/* Price tag */}
-                  <div className="absolute top-5 right-5">
-                    <span
-                      className="font-body text-sm font-bold px-3 py-1 rounded-full"
-                      style={{ background: "rgba(200,168,75,0.15)", color: GOLD, border: "1px solid rgba(200,168,75,0.30)" }}
-                    >
-                      {book.price}
-                    </span>
+                  {/* Cover */}
+                  <div className="shrink-0">
+                    <BookCover src={book.image} alt={book.title} hovered={hovered === book.type} />
                   </div>
 
-                  {/* Book visual + info */}
-                  <div className="flex items-start gap-7 mb-6">
-                    <div className="shrink-0">
-                      <BookCover src={book.image} alt={book.title} hovered={hovered === book.type} />
-                    </div>
-                    <div className="flex-1 min-w-0 pt-1">
+                  {/* Info */}
+                  <div className="flex flex-col flex-1 min-w-0">
+                    {/* Tag + price */}
+                    <div className="flex items-start justify-between gap-2 mb-2">
                       <span
-                        className="inline-block font-body text-[10px] font-semibold uppercase tracking-[0.15em] px-2.5 py-1 rounded-full mb-3"
-                        style={{ color: GOLD, background: "rgba(200,168,75,0.10)", border: "1px solid rgba(200,168,75,0.25)" }}
+                        className="font-body text-[9px] font-bold uppercase tracking-[0.16em] px-2 py-0.5 rounded-full"
+                        style={{ color: GOLD, background: "rgba(200,168,75,0.10)", border: "1px solid rgba(200,168,75,0.22)" }}
                       >
                         {book.tag}
                       </span>
-                      <h3 className="font-body font-bold text-white text-lg leading-snug mb-2">{book.title}</h3>
-                      <p className="font-body text-xs mb-3" style={{ color: "rgba(255,255,255,0.35)" }}>{book.details}</p>
-                      <p className="font-body text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
-                        {book.description}
-                      </p>
+                      <span className="font-body text-base font-bold shrink-0" style={{ color: GOLD }}>
+                        {book.price}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="font-body font-bold text-white text-base leading-snug mb-1">{book.title}</h3>
+                    <p className="font-body text-[11px] mb-3" style={{ color: "rgba(255,255,255,0.30)" }}>{book.details}</p>
+
+                    {/* Chips */}
+                    <div className="flex flex-wrap gap-1.5 mb-4">
+                      {book.chips.slice(0, 3).map((chip) => (
+                        <span
+                          key={chip}
+                          className="font-body text-[9px] px-2 py-0.5 rounded-full"
+                          style={{ background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.40)", border: "1px solid rgba(255,255,255,0.07)" }}
+                        >
+                          {chip}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* CTAs */}
+                    <div className="mt-auto flex gap-2">
+                      <button
+                        onClick={() => setPreview(book)}
+                        className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-body font-semibold text-xs transition-all hover:bg-white/10"
+                        style={{ border: "1px solid rgba(200,168,75,0.30)", color: GOLD }}
+                      >
+                        <Eye size={13} />
+                        Aperçu
+                      </button>
+                      <button
+                        onClick={() => setModal(book)}
+                        className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-body font-bold text-xs transition-all hover:opacity-90 active:scale-[.98]"
+                        style={{
+                          background: `linear-gradient(135deg, ${GOLD} 0%, #b8963d 100%)`,
+                          color: "#0C0B09",
+                          boxShadow: "0 4px 14px rgba(200,168,75,0.22)",
+                        }}
+                      >
+                        <ShoppingCart size={13} />
+                        Acheter
+                      </button>
                     </div>
                   </div>
-
-                  {/* Topic chips */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {book.chips.map((chip) => (
-                      <span
-                        key={chip}
-                        className="font-body text-[10px] px-2.5 py-1 rounded-full"
-                        style={{ background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.45)", border: "1px solid rgba(255,255,255,0.08)" }}
-                      >
-                        {chip}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* CTA */}
-                  <button
-                    onClick={() => setModal(book)}
-                    className="mt-auto w-full flex items-center justify-center gap-2.5 py-4 rounded-xl font-body font-bold text-sm transition-all duration-200 hover:opacity-90 active:scale-[.98]"
-                    style={{
-                      background: `linear-gradient(135deg, ${GOLD} 0%, #b8963d 100%)`,
-                      color: "#0C0B09",
-                      boxShadow: "0 4px 20px rgba(200,168,75,0.25)",
-                    }}
-                  >
-                    <ShoppingCart size={15} />
-                    Acheter — {book.price}
-                  </button>
                 </div>
               </FadeInItem>
             ))}
           </FadeInStagger>
 
-          {/* Bottom note */}
-          <FadeIn direction="up" delay={0.3} className="text-center mt-10">
-            <p className="font-body text-xs" style={{ color: "rgba(255,255,255,0.25)" }}>
-              💳 Wave · Orange Money · PayPal · Virement · Livraison par email après paiement
+          <FadeIn direction="up" delay={0.2} className="text-center mt-6">
+            <p className="font-body text-[11px]" style={{ color: "rgba(255,255,255,0.22)" }}>
+              Paiement sécurisé · Guide PDF envoyé par email après confirmation
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* Modal */}
+      {/* Preview modal */}
+      {preview && (
+        <PreviewModal
+          book={preview}
+          onBuy={() => { setModal(preview); setPreview(null); }}
+          onClose={() => setPreview(null)}
+        />
+      )}
+
+      {/* Purchase modal */}
       {modal && (
         <PurchaseModal
           book={{ type: modal.type, title: modal.title, price: modal.price, accentColor: modal.accentColor }}

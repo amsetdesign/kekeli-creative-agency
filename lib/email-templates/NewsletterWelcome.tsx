@@ -1,4 +1,4 @@
-import {
+﻿import {
   Html, Head, Body, Container, Section,
   Heading, Text, Hr, Link, Preview,
 } from "@react-email/components";
@@ -112,7 +112,7 @@ export default function NewsletterWelcome({ name, siteUrl, unsubscribeUrl }: Pro
               📧 <Link href="mailto:kekelicreativeagency@gmail.com" style={{ color: gold }}>kekelicreativeagency@gmail.com</Link>
             </Text>
             <Text style={{ color: muted, fontSize: 13, margin: 0 }}>
-              📍 Dakar, Sénégal — <Link href={`https://wa.me/221781672819`} style={{ color: gold }}>WhatsApp</Link>
+              📍 Dakar, Sénégal — <Link href={`https://wa.me/221765289111`} style={{ color: gold }}>WhatsApp</Link>
             </Text>
           </Section>
 

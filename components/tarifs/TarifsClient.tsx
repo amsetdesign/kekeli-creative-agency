@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -15,7 +15,7 @@ const VIOLET2 = "#A78BFA";
 const BLUE    = "#1E40AF";
 const SKY     = "#0EA5E9";
 const DARK    = "#0C0B09";
-const PHONE   = "221781672819";
+const PHONE   = "221765289111";
 
 function waLink(msg: string) {
   return `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;

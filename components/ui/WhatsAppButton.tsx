@@ -1,9 +1,9 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-const PHONE = "221781672819";
+const PHONE = "221765289111";
 
 const MESSAGES: Record<string, string> = {
   // ── Artiste services ──────────────────────────────────────────────────────
