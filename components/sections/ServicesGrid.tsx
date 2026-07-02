@@ -97,9 +97,11 @@ export default function ServicesGrid() {
               <div
                 className="absolute inset-0"
                 style={{
-                  background: block.imageLeft
-                    ? `linear-gradient(to right, transparent 65%, ${block.id === "entreprises" ? "rgba(248,246,240,0.4)" : "rgba(13,5,32,0.55)"} 100%)`
-                    : `linear-gradient(to left, transparent 65%, rgba(248,246,240,0.4) 100%)`,
+                  background: (() => {
+                    const dir   = block.imageLeft ? "to right" : "to left";
+                    const edge  = block.textColor === "#FFFFFF" ? "rgba(13,5,32,0.55)" : "rgba(248,246,240,0.4)";
+                    return `linear-gradient(${dir}, transparent 65%, ${edge} 100%)`;
+                  })(),
                 }}
               />
               {/* Label eyebrow sur l'image */}
