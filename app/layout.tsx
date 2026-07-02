@@ -24,6 +24,13 @@ export const metadata: Metadata = {
     default: "KEKELI Creative Agency — Agence de communication à Dakar",
     template: "%s | KEKELI Creative Agency",
   },
+  icons: {
+    icon: [
+      { url: "/images/logo-kekeli.png", type: "image/png" },
+    ],
+    apple: "/images/logo-kekeli.png",
+    shortcut: "/images/logo-kekeli.png",
+  },
   description:
     "KEKELI Creative Agency accompagne les entreprises, artistes et événements à Dakar avec une communication percutante et une stratégie digitale d'impact.",
   keywords: ["agence communication Dakar", "agence digitale Sénégal", "stratégie digitale Afrique", "photo shooting Dakar", "développement web Sénégal", "communication artiste"],
