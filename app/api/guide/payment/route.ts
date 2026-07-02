@@ -9,7 +9,7 @@ const BOOKS: Record<GuideType, { title: string; price: number }> = {
   entreprise: { title: "Le Guide de l'Entrepreneur au Sénégal 2026",  price: 5000 },
 };
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://kekelicreativeagency.com";
+const SITE_URL = "https://kekelicreativeagency.com";
 
 export async function POST(req: NextRequest) {
   try {
