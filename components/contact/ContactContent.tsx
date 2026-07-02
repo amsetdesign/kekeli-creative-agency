@@ -130,44 +130,6 @@ export default function ContactContent() {
         </div>
       </section>
 
-      {/* MAP */}
-      <section className="pb-20 bg-bg-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn direction="up">
-            <div className="rounded-2xl overflow-hidden border border-border" style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.25)" }}>
-              {/* Map header */}
-              <div className="flex items-center justify-between px-5 py-3.5 bg-bg-dark border-b border-border">
-                <div className="flex items-center gap-2.5">
-                  <MapPin size={14} className="text-gold" />
-                  <span className="font-body text-sm font-medium text-text-primary">KEKELI Creative Agency — Dakar, Sénégal</span>
-                </div>
-                <a
-                  href="https://maps.app.goo.gl/6xccYZXYHN6CrkDQ7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-body text-xs font-semibold px-3 py-1.5 rounded-full transition-opacity hover:opacity-80"
-                  style={{ background: "rgba(200,168,75,0.12)", color: "#C8A84B", border: "1px solid rgba(200,168,75,0.25)" }}
-                >
-                  Ouvrir dans Maps →
-                </a>
-              </div>
-              {/* iframe */}
-              <div className="relative w-full" style={{ height: 380 }}>
-                <iframe
-                  src="https://maps.google.com/maps?q=KEKELI+Creative+Agency+Dakar+Sénégal&output=embed&hl=fr&z=15"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0, display: "block" }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="KEKELI Creative Agency — localisation Dakar"
-                />
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
     </>
   );
 }
