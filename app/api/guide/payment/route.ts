@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
 
     const body = {
       item_name:    book.title,
-      item_price:   String(book.price),
+      item_price:   book.price,
       currency:     "XOF",
       ref_command:  refCmd,
       command_name: `Achat — ${book.title}`,
@@ -66,8 +66,12 @@ export async function POST(req: NextRequest) {
     console.log("[guide/payment] PayTech response:", JSON.stringify(data));
 
     if (data.success !== 1) {
-      console.error("[guide/payment] PayTech rejected:", data.errors ?? data);
-      const msg = Array.isArray(data.errors) ? (data.errors as string[]).join(", ") : "Erreur PayTech.";
+      // PayTech returns errors in "error" (singular), not "errors"
+      const errArr = Array.isArray(data.error) ? data.error : (Array.isArray(data.errors) ? data.errors : null);
+      const msg = errArr
+        ? (errArr as string[]).join(", ")
+        : (typeof data.message === "string" ? data.message : "Erreur PayTech.");
+      console.error("[guide/payment] PayTech rejected:", msg);
       return NextResponse.json({ error: msg }, { status: 502 });
     }
 
