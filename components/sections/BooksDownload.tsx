@@ -118,15 +118,13 @@ function PurchaseModal({
             <span className="font-body text-xs" style={{ color: "rgba(255,255,255,0.40)" }}>Paiement via :</span>
             <Image src="/images/logo-wave.png" alt="Wave" width={48} height={20} className="object-contain" style={{ height: 20, width: "auto" }} />
             <Image src="/images/logo-orange-money.png" alt="Orange Money" width={72} height={20} className="object-contain" style={{ height: 20, width: "auto" }} />
-            {["Carte bancaire", "PayPal"].map((m) => (
-              <span
-                key={m}
-                className="font-body text-[10px] font-semibold px-2 py-0.5 rounded"
-                style={{ background: "rgba(200,168,75,0.10)", color: GOLD }}
-              >
-                {m}
-              </span>
-            ))}
+            <Image src="/images/logo_paypal.png" alt="PayPal" width={56} height={20} className="object-contain" style={{ height: 20, width: "auto" }} />
+            <span
+              className="font-body text-[10px] font-semibold px-2 py-0.5 rounded"
+              style={{ background: "rgba(200,168,75,0.10)", color: GOLD }}
+            >
+              Carte bancaire
+            </span>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-3">
