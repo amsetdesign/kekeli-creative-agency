@@ -12,8 +12,8 @@ const DARK = "#0C0B09";
 function BookCover({ src, alt, hovered }: { src: string; alt: string; hovered: boolean }) {
   return (
     <div
+      className="w-[110px] sm:w-[150px] md:w-[130px] lg:w-[160px] xl:w-[180px]"
       style={{
-        width: 180,
         position: "relative",
         transform: hovered ? "translateY(-8px) scale(1.03)" : "translateY(0) scale(1)",
         transition: "transform 0.45s cubic-bezier(0.22,1,0.36,1)",
@@ -88,7 +88,7 @@ function PurchaseModal({
       >
         <div style={{ height: 3, background: `linear-gradient(90deg, ${book.accentColor} 0%, transparent 100%)` }} />
 
-        <div className="p-8">
+        <div className="p-5 sm:p-8">
           <button onClick={onClose} className="absolute top-5 right-5 text-white/40 hover:text-white transition-colors">
             <X size={18} />
           </button>

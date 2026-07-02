@@ -69,7 +69,7 @@ export default function AProposContent() {
 
           <FadeIn direction="up" delay={0.1}>
             <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-gold mb-4">{a.identityEyebrow}</p>
-            <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl text-white leading-tight mb-8">KEKELI</h1>
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-tight mb-8">KEKELI</h1>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.2}>

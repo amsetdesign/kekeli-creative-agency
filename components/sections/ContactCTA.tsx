@@ -42,7 +42,7 @@ export default function ContactCTA() {
             {tr.contact.badge}
           </span>
 
-          <h2 className="font-display text-5xl md:text-6xl text-white mb-4 leading-tight">
+          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-white mb-4 leading-tight">
             {tr.contact.title1}&nbsp;{" "}
             <em className="not-italic" style={{ color: "#C8A84B" }}>{tr.contact.titleHighlight}</em>
           </h2>

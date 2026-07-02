@@ -37,7 +37,7 @@ export default function SondageTeaser() {
           />
         </FadeIn>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 mb-10">
           {profiles.map((profile, i) => (
             <FadeIn key={profile.href} delay={i * 0.09} direction="up">
               <Link href={profile.href} className="block h-full">
