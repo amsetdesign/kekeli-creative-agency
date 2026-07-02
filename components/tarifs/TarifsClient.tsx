@@ -82,21 +82,28 @@ const ARTISTE_CATS: Category[] = [
     packs: [
       {
         name: "Lyric Video",
-        price: "75 000 – 150 000",
+        price: "30 000 – 75 000",
         color: VIOLET,
         items: ["Animation texte sur mesure", "Motion design", "Livraison Full HD", "Délai 3–5 jours"],
         waMsg: "Bonjour KEKELI 👋 Je veux créer une lyric video pour mon morceau. Pouvez-vous me donner les détails ?",
       },
       {
+        name: "Visualizer",
+        price: "50 000 – 100 000",
+        color: VIOLET,
+        items: ["Animation visuelle sur le son", "Motion design artistique", "Livraison Full HD", "Délai 5–7 jours"],
+        waMsg: "Bonjour KEKELI 👋 Je veux créer un visualizer pour mon morceau. Pouvez-vous me donner les détails ?",
+      },
+      {
         name: "Clip Vidéo Basique",
-        price: "200 000 – 600 000",
+        price: "100 000 – 300 000",
         color: VIOLET,
         items: ["Tournage 1 jour", "1–2 lieux de tournage", "Montage professionnel", "Color grading inclus"],
         waMsg: "Bonjour KEKELI 👋 Je veux produire un clip vidéo. Pouvez-vous me donner les détails et disponibilités ?",
       },
       {
         name: "Clip Vidéo Premium",
-        price: "600 000 – 2 000 000",
+        price: "500 000 – 2 000 000",
         popular: true,
         color: VIOLET,
         items: ["Tournage multi-jours", "Équipe complète (réal, chef op, sound)", "Décors & costumes", "VFX & post-production avancée"],
@@ -111,7 +118,7 @@ const ARTISTE_CATS: Category[] = [
     packs: [
       {
         name: "Shooting Artiste",
-        price: "75 000 – 200 000",
+        price: "50 000 – 100 000",
         color: VIOLET2,
         items: ["2–3 heures de shooting", "2–3 looks différents", "20+ photos retouchées", "Livraison HD & réseaux"],
         waMsg: "Bonjour KEKELI 👋 Je veux un shooting photo professionnel. Quelles sont vos disponibilités et tarifs ?",
@@ -226,14 +233,14 @@ const ENTREPRISE_CATS: Category[] = [
     packs: [
       {
         name: "Site Vitrine",
-        price: "250 000 – 800 000",
+        price: "200 000 – 600 000",
         color: "#0EA5E9",
         items: ["5–10 pages", "Design responsive", "SEO de base", "Livraison 3–4 semaines"],
         waMsg: "Bonjour KEKELI 👋 Je veux créer un site vitrine pour mon entreprise. Quels sont vos délais et tarifs ?",
       },
       {
         name: "Site E-commerce",
-        price: "500 000 – 2 000 000",
+        price: "400 000 – 1 500 000",
         popular: true,
         color: "#0EA5E9",
         items: ["Catalogue produits illimité", "Paiement Wave / Orange Money / CB", "Gestion des commandes", "Formation administration incluse"],
